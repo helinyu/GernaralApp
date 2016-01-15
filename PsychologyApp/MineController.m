@@ -8,6 +8,7 @@
 
 #import "MineController.h"
 #import "FLTableViewCell.h"
+#import "AccountLogin.h"
 
 @interface MineController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -25,6 +26,8 @@
                        @[@"关注/粉丝",@"分享好友",@"反馈意见",@"设置"]
                        ];
     NSLog(@"coutn is : %ld",_arrays.count);
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 
@@ -43,5 +46,16 @@
     [cell cellWithImage:[UIImage imageNamed:@"icon_mine_header"] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
     return cell;
 }
+
+
+- (IBAction)onAccountLoginTap:(id)sender {
+    
+    NSLog(@"accountLogin");
+    
+    AccountLogin *accountLogin = [[UIStoryboard storyboardWithName:@"Account" bundle:nil]instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class])];
+    [self.navigationController pushViewController:accountLogin animated:YES];
+    
+}
+
 
 @end
