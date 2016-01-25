@@ -12,6 +12,8 @@
 		DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B141C47E1A500D3FB61 /* AccountLogin.m */; };
 		DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC022B161C47E86D00D3FB61 /* Account.storyboard */; };
 		DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B1A1C48110800D3FB61 /* GMToast.m */; };
+		DC207FE81C564E050011D8C4 /* FLViewLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DC207FE71C564E050011D8C4 /* FLViewLine.m */; };
+		DC207FEC1C565A670011D8C4 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC207FEB1C565A670011D8C4 /* FLButton.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
 		DC992DA71C46947400382DFB /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA61C46947400382DFB /* SplashScreen.m */; };
@@ -22,6 +24,7 @@
 		DC992DD91C469ACF00382DFB /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DD81C469ACF00382DFB /* MainController.m */; };
 		DC992DE01C46A04200382DFB /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DDF1C46A04200382DFB /* MineController.m */; };
 		DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DE11C46B59E00382DFB /* Main.storyboard */; };
+		DCEC4EF11C56421B003FFC3A /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		DC022B161C47E86D00D3FB61 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		DC022B191C48110800D3FB61 /* GMToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMToast.h; sourceTree = "<group>"; };
 		DC022B1A1C48110800D3FB61 /* GMToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMToast.m; sourceTree = "<group>"; };
+		DC207FE61C564E050011D8C4 /* FLViewLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLViewLine.h; sourceTree = "<group>"; };
+		DC207FE71C564E050011D8C4 /* FLViewLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLViewLine.m; sourceTree = "<group>"; };
+		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
+		DC207FEA1C565A670011D8C4 /* FLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLButton.h; sourceTree = "<group>"; };
+		DC207FEB1C565A670011D8C4 /* FLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLButton.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC992DA01C46947400382DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC992DA21C46947400382DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,12 +75,12 @@
 		DC992DC01C46947400382DFB /* PsychologyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC992DC41C46947400382DFB /* PsychologyAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologyAppUITests.m; sourceTree = "<group>"; };
 		DC992DC61C46947400382DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC992DD61C4697BF00382DFB /* AppDefinton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinton.h; sourceTree = "<group>"; };
 		DC992DD71C469ACF00382DFB /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		DC992DD81C469ACF00382DFB /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		DC992DDE1C46A04200382DFB /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		DC992DDF1C46A04200382DFB /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		DC992DE21C46B59E00382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,25 @@
 			name = "UI+externds";
 			sourceTree = "<group>";
 		};
+		DC207FE41C564D820011D8C4 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				DC207FE51C564DDF0011D8C4 /* UI+subclass */,
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		DC207FE51C564DDF0011D8C4 /* UI+subclass */ = {
+			isa = PBXGroup;
+			children = (
+				DC207FE61C564E050011D8C4 /* FLViewLine.h */,
+				DC207FE71C564E050011D8C4 /* FLViewLine.m */,
+				DC207FEA1C565A670011D8C4 /* FLButton.h */,
+				DC207FEB1C565A670011D8C4 /* FLButton.m */,
+			);
+			name = "UI+subclass";
+			sourceTree = "<group>";
+		};
 		DC992D931C46947400382DFB = {
 			isa = PBXGroup;
 			children = (
@@ -153,12 +180,13 @@
 		DC992D9E1C46947400382DFB /* PsychologyApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC992DD61C4697BF00382DFB /* AppDefinton.h */,
+				DC207FE91C564E9C0011D8C4 /* AppDefinition.h */,
 				DC992DA21C46947400382DFB /* AppDelegate.h */,
 				DC992DA31C46947400382DFB /* AppDelegate.m */,
 				DC992DD41C4695A500382DFB /* models */,
 				DC992DD21C46959000382DFB /* storyboards */,
 				DC992DD31C46959800382DFB /* controllers */,
+				DC207FE41C564D820011D8C4 /* external */,
 				DC992DD51C46970100382DFB /* libraries */,
 				DC992D9F1C46947400382DFB /* Supporting Files */,
 			);
@@ -199,6 +227,7 @@
 			children = (
 				DC992DE11C46B59E00382DFB /* Main.storyboard */,
 				DC022B161C47E86D00D3FB61 /* Account.storyboard */,
+				DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -375,6 +404,7 @@
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
+				DCEC4EF11C56421B003FFC3A /* SplashScreen.storyboard in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,9 +481,11 @@
 				DC992DD91C469ACF00382DFB /* MainController.m in Sources */,
 				DC992DA71C46947400382DFB /* SplashScreen.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
+				DC207FEC1C565A670011D8C4 /* FLButton.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
+				DC207FE81C564E050011D8C4 /* FLViewLine.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 			);

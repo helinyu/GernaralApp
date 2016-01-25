@@ -43,15 +43,37 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FLTableViewCell class]) forIndexPath:indexPath];
-    [cell cellWithImage:[UIImage imageNamed:@"icon_mine_header"] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
+    
+    [cell cellWithImage:[UIImage imageNamed:@"icon_timeOfAppointment"] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
     return cell;
 }
+
+
+#pragma mark --tableViewDelegate 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.section) {
+        case 0:
+            switch (indexPath.row) {
+                case 0:
+                    NSLog(@"第一段的第一行");
+                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Account" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class])] animated:YES];
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 
 - (IBAction)onAccountLoginTap:(id)sender {
     
     NSLog(@"accountLogin");
-    
     AccountLogin *accountLogin = [[UIStoryboard storyboardWithName:@"Account" bundle:nil]instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class])];
     [self.navigationController pushViewController:accountLogin animated:YES];
     
