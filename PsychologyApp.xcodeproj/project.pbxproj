@@ -14,6 +14,9 @@
 		DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B1A1C48110800D3FB61 /* GMToast.m */; };
 		DC207FE81C564E050011D8C4 /* FLViewLine.m in Sources */ = {isa = PBXBuildFile; fileRef = DC207FE71C564E050011D8C4 /* FLViewLine.m */; };
 		DC207FEC1C565A670011D8C4 /* FLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC207FEB1C565A670011D8C4 /* FLButton.m */; };
+		DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E21C5671DF00BB3FA9 /* RestInterface.m */; };
+		DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */; };
+		DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E91C567CE000BB3FA9 /* UserService.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
 		DC992DA71C46947400382DFB /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA61C46947400382DFB /* SplashScreen.m */; };
@@ -60,6 +63,12 @@
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
 		DC207FEA1C565A670011D8C4 /* FLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLButton.h; sourceTree = "<group>"; };
 		DC207FEB1C565A670011D8C4 /* FLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLButton.m; sourceTree = "<group>"; };
+		DC7917E11C5671DF00BB3FA9 /* RestInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestInterface.h; sourceTree = "<group>"; };
+		DC7917E21C5671DF00BB3FA9 /* RestInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestInterface.m; sourceTree = "<group>"; };
+		DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestStructRequest.h; sourceTree = "<group>"; };
+		DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestStructRequest.m; sourceTree = "<group>"; };
+		DC7917E81C567CE000BB3FA9 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		DC7917E91C567CE000BB3FA9 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC992DA01C46947400382DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC992DA21C46947400382DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,6 +164,27 @@
 			name = "UI+subclass";
 			sourceTree = "<group>";
 		};
+		DC7917E01C5671B500BB3FA9 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				DC7917E41C567BD200BB3FA9 /* accounts */,
+				DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */,
+				DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */,
+				DC7917E11C5671DF00BB3FA9 /* RestInterface.h */,
+				DC7917E21C5671DF00BB3FA9 /* RestInterface.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		DC7917E41C567BD200BB3FA9 /* accounts */ = {
+			isa = PBXGroup;
+			children = (
+				DC7917E81C567CE000BB3FA9 /* UserService.h */,
+				DC7917E91C567CE000BB3FA9 /* UserService.m */,
+			);
+			name = accounts;
+			sourceTree = "<group>";
+		};
 		DC992D931C46947400382DFB = {
 			isa = PBXGroup;
 			children = (
@@ -183,9 +213,10 @@
 				DC207FE91C564E9C0011D8C4 /* AppDefinition.h */,
 				DC992DA21C46947400382DFB /* AppDelegate.h */,
 				DC992DA31C46947400382DFB /* AppDelegate.m */,
-				DC992DD41C4695A500382DFB /* models */,
 				DC992DD21C46959000382DFB /* storyboards */,
 				DC992DD31C46959800382DFB /* controllers */,
+				DC7917E01C5671B500BB3FA9 /* services */,
+				DC992DD41C4695A500382DFB /* models */,
 				DC207FE41C564D820011D8C4 /* external */,
 				DC992DD51C46970100382DFB /* libraries */,
 				DC992D9F1C46947400382DFB /* Supporting Files */,
@@ -479,10 +510,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC992DD91C469ACF00382DFB /* MainController.m in Sources */,
+				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
 				DC992DA71C46947400382DFB /* SplashScreen.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC207FEC1C565A670011D8C4 /* FLButton.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
+				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
+				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC207FE81C564E050011D8C4 /* FLViewLine.m in Sources */,
