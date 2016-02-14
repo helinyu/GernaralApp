@@ -1,21 +1,22 @@
 //
 //  GMViewLine.m
 //  guimiquan
-//  Created by felix on 16/1/13.
-//  Copyright © 2016年 felix. All rights reserved.
+//
+//  Created by Daly on 15/4/9.
+//  Copyright (c) 2015年 Vanchu. All rights reserved.
 //
 
-#import "FLViewLine.h"
+#import "VCViewLine.h"
 #import "AppDefinition.h"
 
-@interface FLViewLine()
+@interface VCViewLine()
 @property (strong, nonatomic) CALayer *borderTop;
 @property (strong, nonatomic) CALayer *borderRight;
 @property (strong, nonatomic) CALayer *borderBottom;
 @property (strong, nonatomic) CALayer *borderLeft;
 @end
 
-@implementation FLViewLine
+@implementation VCViewLine
 
 /*
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -109,8 +110,8 @@
     if (self.borderTop) {
         [self.borderTop removeFromSuperlayer];
     }
-    borderWidth = [FLViewLine lineWidthWith:borderWidth WithFilament:self.filament];
-    self.borderTop = [FLViewLine CreateLineWithColor:color andWidth:borderWidth];
+    borderWidth = [VCViewLine lineWidthWith:borderWidth WithFilament:self.filament];
+    self.borderTop = [VCViewLine CreateLineWithColor:color andWidth:borderWidth];
     self.borderTop.frame = CGRectMake(0, 0, self.frame.size.width, borderWidth);
     [self.layer addSublayer:self.borderTop];
 }
@@ -119,8 +120,8 @@
     if (self.borderRight) {
         [self.borderRight removeFromSuperlayer];
     }
-    borderWidth = [FLViewLine lineWidthWith:borderWidth WithFilament:self.filament];
-    self.borderRight = [FLViewLine CreateLineWithColor:color andWidth:borderWidth];
+    borderWidth = [VCViewLine lineWidthWith:borderWidth WithFilament:self.filament];
+    self.borderRight = [VCViewLine CreateLineWithColor:color andWidth:borderWidth];
     self.borderRight.frame = CGRectMake(self.frame.size.width - borderWidth, 0, borderWidth, self.frame.size.height);
     [self.layer addSublayer:self.borderRight];
 }
@@ -129,9 +130,9 @@
     if (self.borderBottom) {
         [self.borderBottom removeFromSuperlayer];
     }
-    borderWidth = [FLViewLine lineWidthWith:borderWidth WithFilament:self.filament];
+    borderWidth = [VCViewLine lineWidthWith:borderWidth WithFilament:self.filament];
 
-    self.borderBottom = [FLViewLine CreateLineWithColor:color andWidth:borderWidth];
+    self.borderBottom = [VCViewLine CreateLineWithColor:color andWidth:borderWidth];
     
     self.borderBottom.frame = CGRectMake(0, self.frame.size.height - borderWidth, self.frame.size.width, borderWidth);
     [self.layer addSublayer:self.borderBottom];
@@ -141,9 +142,9 @@
     if (self.borderLeft) {
         [self.borderLeft removeFromSuperlayer];
     }
-    borderWidth = [FLViewLine lineWidthWith:borderWidth WithFilament:self.filament];
+    borderWidth = [VCViewLine lineWidthWith:borderWidth WithFilament:self.filament];
 
-    self.borderLeft = [FLViewLine CreateLineWithColor:color andWidth:borderWidth];
+    self.borderLeft = [VCViewLine CreateLineWithColor:color andWidth:borderWidth];
     self.borderLeft.frame = CGRectMake(0, 0, borderWidth, self.frame.size.height);
     [self.layer addSublayer:self.borderLeft];
 }

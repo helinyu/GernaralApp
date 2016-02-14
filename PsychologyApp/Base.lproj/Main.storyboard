@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="1450" y="-93"/>
         </scene>
-        <!--Title-->
+        <!--我的-->
         <scene sceneID="ayf-KJ-Twv">
             <objects>
                 <viewController id="KxX-z3-giT" customClass="MineController" sceneMemberID="viewController">
@@ -163,9 +163,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="Q5b-wK-CFG">
-                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="xDF-3o-wgW" userLabel="返回"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="GIk-hO-23I" userLabel="完成"/>
+                    <navigationItem key="navigationItem" title="我的" id="Q5b-wK-CFG">
+                        <barButtonItem key="leftBarButtonItem" id="xDF-3o-wgW" userLabel="返回"/>
+                        <barButtonItem key="rightBarButtonItem" id="GIk-hO-23I" userLabel="完成"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -200,7 +200,6 @@
     </scenes>
     <resources>
         <image name="advisements_back" width="1506" height="612"/>
-        <image name="icon_back" width="10" height="17"/>
         <image name="icon_mine_default_header_protriat" width="76" height="76"/>
         <image name="icon_timeOfAppointment" width="24" height="24"/>
     </resources>

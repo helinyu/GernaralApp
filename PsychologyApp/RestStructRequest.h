@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <JSONModel.h>
 
 @interface RestStructRequest : NSObject
 
+@property (strong, nonatomic) NSMutableDictionary *params;
+- (NSData *) toPostBody;
+
+@end
+
+@interface RestStructRegisterByPhoneRequest : RestStructRequest
+@property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *password;
 @end

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VCLoading">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6l-Hw-lOx" userLabel="WrapperView">
+                    <rect key="frame" x="250" y="252" width="100" height="97"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0lg-Ye-ecb">
+                            <rect key="frame" x="32" y="20" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="j6N-lF-MUd"/>
+                                <constraint firstAttribute="width" constant="37" id="sqf-gb-zj4"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在加载" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-km-1pb">
+                            <rect key="frame" x="8" y="66" width="84" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="Vfr-zo-uCZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4jN-km-1pb" firstAttribute="top" secondItem="0lg-Ye-ecb" secondAttribute="bottom" constant="9" id="3tv-gj-XmS"/>
+                        <constraint firstAttribute="bottom" secondItem="4jN-km-1pb" secondAttribute="bottom" constant="13" id="97F-sN-Dal"/>
+                        <constraint firstItem="0lg-Ye-ecb" firstAttribute="top" secondItem="N6l-Hw-lOx" secondAttribute="top" constant="20" id="A9L-vR-Whb"/>
+                        <constraint firstAttribute="trailing" secondItem="4jN-km-1pb" secondAttribute="trailing" constant="8" id="MnI-0o-nDW"/>
+                        <constraint firstAttribute="centerX" secondItem="0lg-Ye-ecb" secondAttribute="centerX" constant="-0.5" id="nKy-3f-7qo"/>
+                        <constraint firstItem="4jN-km-1pb" firstAttribute="leading" secondItem="N6l-Hw-lOx" secondAttribute="leading" constant="8" id="nfV-m0-Igr"/>
+                        <constraint firstAttribute="centerX" secondItem="4jN-km-1pb" secondAttribute="centerX" id="uwD-bf-Pkt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="N6l-Hw-lOx" secondAttribute="centerY" id="9nE-Yk-CuU"/>
+                <constraint firstAttribute="centerX" secondItem="N6l-Hw-lOx" secondAttribute="centerX" id="kCe-bA-xXt"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicatorView" destination="0lg-Ye-ecb" id="Biu-OA-vLC"/>
+                <outlet property="messageView" destination="4jN-km-1pb" id="EtA-4H-mug"/>
+                <outlet property="wrapperView" destination="N6l-Hw-lOx" id="sd9-fw-XTn"/>
+            </connections>
+        </view>
+    </objects>
+</document>

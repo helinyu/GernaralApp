@@ -19,7 +19,6 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-  
 }
 
 - (IBAction)loadWeb:(id)sender {
