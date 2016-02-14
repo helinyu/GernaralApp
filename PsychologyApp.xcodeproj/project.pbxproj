@@ -396,6 +396,7 @@
 				TargetAttributes = {
 					DC992D9B1C46947400382DFB = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = D2XBEJ6876;
 					};
 					DC992DB41C46947400382DFB = {
 						CreatedOnToolsVersion = 7.2;
@@ -663,6 +664,7 @@
 			baseConfigurationReference = 8900394E29DB661B93AC5989 /* Pods-PsychologyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PsychologyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.felix.PsychologyApp;
@@ -675,6 +677,7 @@
 			baseConfigurationReference = 2243071602447811C20C3E26 /* Pods-PsychologyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PsychologyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.felix.PsychologyApp;

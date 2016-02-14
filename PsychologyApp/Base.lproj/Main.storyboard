@@ -127,8 +127,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_timeOfAppointment" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-oS-cRy">
-                                                    <rect key="frame" x="13" y="10" width="24" height="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_timeOfAppointment" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-oS-cRy">
+                                                    <rect key="frame" x="8" y="9" width="24" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="9eV-5g-w0V"/>
                                                     </constraints>
