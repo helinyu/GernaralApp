@@ -152,6 +152,7 @@ static CGFloat const kDefalultTextInset = 10.0;
                                                CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.font} context:nil].size;
 	}
 	else {
+#pragma warning --这里应该使用新的方法来区分一下
 		bounds.size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.maxWidth - self.textInsets.left - self.textInsets.right,
 																					 CGFLOAT_MAX)];
 	}

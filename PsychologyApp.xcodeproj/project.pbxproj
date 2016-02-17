@@ -30,7 +30,6 @@
 		DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
-		DC992DA71C46947400382DFB /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA61C46947400382DFB /* SplashScreen.m */; };
 		DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC992DAB1C46947400382DFB /* Assets.xcassets */; };
 		DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DAD1C46947400382DFB /* LaunchScreen.storyboard */; };
 		DC992DBA1C46947400382DFB /* PsychologyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DB91C46947400382DFB /* PsychologyAppTests.m */; };
@@ -38,7 +37,9 @@
 		DC992DD91C469ACF00382DFB /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DD81C469ACF00382DFB /* MainController.m */; };
 		DC992DE01C46A04200382DFB /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DDF1C46A04200382DFB /* MineController.m */; };
 		DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DE11C46B59E00382DFB /* Main.storyboard */; };
-		DCEC4EF11C56421B003FFC3A /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */; };
+		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
+		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
+		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,8 +106,6 @@
 		DC992DA01C46947400382DFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC992DA21C46947400382DFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC992DA31C46947400382DFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DC992DA51C46947400382DFB /* SplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
-		DC992DA61C46947400382DFB /* SplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		DC992DAB1C46947400382DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC992DAE1C46947400382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC992DB01C46947400382DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +120,12 @@
 		DC992DDE1C46A04200382DFB /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		DC992DDF1C46A04200382DFB /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		DC992DE21C46B59E00382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebRequest.h"; sourceTree = "<group>"; };
+		DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebRequest.m"; sourceTree = "<group>"; };
+		DC9DEF0B1C7486A800C1A1AE /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
+		DC9DEF0C1C7486A800C1A1AE /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
+		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC9DEF0A1C74869300C1A1AE /* app */,
 				DC7917E41C567BD200BB3FA9 /* accounts */,
 				DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */,
 				DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */,
@@ -279,6 +284,7 @@
 				DC992DD41C4695A500382DFB /* models */,
 				DC207FE41C564D820011D8C4 /* external */,
 				DC992DD51C46970100382DFB /* libraries */,
+				DC9DEF031C74860700C1A1AE /* Categories */,
 				DC992D9F1C46947400382DFB /* Supporting Files */,
 			);
 			path = PsychologyApp;
@@ -318,7 +324,6 @@
 			children = (
 				DC992DE11C46B59E00382DFB /* Main.storyboard */,
 				DC022B161C47E86D00D3FB61 /* Account.storyboard */,
-				DCEC4EF01C56421B003FFC3A /* SplashScreen.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -362,8 +367,8 @@
 		DC992DDB1C469ADA00382DFB /* splashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DC992DA51C46947400382DFB /* SplashScreen.h */,
-				DC992DA61C46947400382DFB /* SplashScreen.m */,
+				DC9DEF111C74881100C1A1AE /* SplashScreen.h */,
+				DC9DEF121C74881100C1A1AE /* SplashScreen.m */,
 			);
 			name = splashScreen;
 			sourceTree = "<group>";
@@ -377,6 +382,24 @@
 				DC022B101C47DCC100D3FB61 /* FLTableViewCell.m */,
 			);
 			name = Mine;
+			sourceTree = "<group>";
+		};
+		DC9DEF031C74860700C1A1AE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
+				DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		DC9DEF0A1C74869300C1A1AE /* app */ = {
+			isa = PBXGroup;
+			children = (
+				DC9DEF0B1C7486A800C1A1AE /* AppService.h */,
+				DC9DEF0C1C7486A800C1A1AE /* AppService.m */,
+			);
+			name = app;
 			sourceTree = "<group>";
 		};
 		DF0A591797B8082647A87384 /* Frameworks */ = {
@@ -498,7 +521,6 @@
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
-				DCEC4EF11C56421B003FFC3A /* SplashScreen.storyboard in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,8 +595,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC992DD91C469ACF00382DFB /* MainController.m in Sources */,
+				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
-				DC992DA71C46947400382DFB /* SplashScreen.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
@@ -589,7 +611,9 @@
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
+				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,
+				DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */,
 				DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */,
 				DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */,
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,

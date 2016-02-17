@@ -1,13 +1,14 @@
+
 //
-//  SplashScreen.h
+//  AppService.m
 //  PsychologyApp
 //
 //  Created by felix on 16/2/17.
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AppService.h"
 
-@interface SplashScreen : UIViewController
+@implementation AppService
 
 @end

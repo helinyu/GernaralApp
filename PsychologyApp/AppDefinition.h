@@ -10,4 +10,10 @@
 #define AppDefinition_h
 
 
+//屏幕尺寸
+#define LOW @"low"
+#define MIDDLE @"middle"
+#define HIGH @"high"
+
+
 #endif /* AppDefinition_h */

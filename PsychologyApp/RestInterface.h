@@ -12,9 +12,11 @@
 
 @interface RestInterface : NSObject
 
-//通过手机登录
+//通过手机注册
 + (void)invokeRegisterWithRequest:(RestStructRegisterByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock ;
 
 
+//通过手机进行登录
++ (void)invokeLoginWithRequest:(RestStructLoginByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock ;
 
 @end

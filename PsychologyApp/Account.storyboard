@@ -126,6 +126,21 @@
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="0.84181034480000005" alpha="0.84516289889999996" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLoginWithMobileClicked:" destination="nJn-ah-7i7" eventType="touchUpInside" id="1kq-eq-SSs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-Bn-asU">
+                                <rect key="frame" x="111" y="368" width="46" height="30"/>
+                                <state key="normal" title="微博"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-jq-ePV">
+                                <rect key="frame" x="253" y="370" width="46" height="30"/>
+                                <state key="normal" title="qq"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjs-Xn-5jv">
+                                <rect key="frame" x="367" y="372" width="46" height="30"/>
+                                <state key="normal" title="微信"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,13 +154,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="登录" id="HeI-Ya-5gc">
-                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="KVf-4u-BUJ"/>
+                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="KVf-4u-BUJ">
+                            <connections>
+                                <action selector="onBackClicked:" destination="nJn-ah-7i7" id="Nkh-hO-rWv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="注册" id="vxZ-UN-hcH">
                             <connections>
                                 <segue destination="YOV-ks-MWI" kind="show" identifier="SegueToRegister" id="Yba-Bj-8tr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Xyu-hN-7WO" id="LRN-PU-d2Q"/>
+                        <outlet property="phoneTextField" destination="7aV-WI-TLu" id="Vgk-gX-VSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFv-FU-SRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

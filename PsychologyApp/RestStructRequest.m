@@ -75,3 +75,29 @@
 }
 
 @end
+
+#pragma mark --login
+@implementation RestStructLoginByPhoneRequest
+
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        _phone = @"";
+        _password = @"";
+    }
+    return self;
+}
+
+- (void)setPhone:(NSString *)phone{
+    _phone = phone;
+    [self.params setObject:phone forKey:@"phone"];
+}
+
+- (void)setPassword:(NSString *)password{
+    _password = password;
+    [self.params setObject:_password forKey:@"password"];
+}
+
+@end
+
+

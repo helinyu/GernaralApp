@@ -20,3 +20,8 @@
 @property (strong, nonatomic) NSString *phone;
 @property (strong, nonatomic) NSString *password;
 @end
+
+@interface RestStructLoginByPhoneRequest : RestStructRequest
+@property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *password;
+@end
