@@ -1,25 +1,22 @@
 //
-//  SplashScreen.m
+//  MainIndex.m
 //  PsychologyApp
 //
-//  Created by felix on 16/2/17.
+//  Created by felix on 16/2/19.
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import "SplashScreen.h"
 #import "MainIndex.h"
 
-@interface SplashScreen ()
+@interface MainIndex ()
 
 @end
 
-@implementation SplashScreen
+@implementation MainIndex
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,6 +25,12 @@
 		DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */; };
 		DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */; };
 		DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */; };
+		DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD951C76227700E5AF6F /* MainIndex.m */; };
+		DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD981C7622B500E5AF6F /* MainController.m */; };
+		DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD711C7624CD004ED442 /* MainHomePage.m */; };
+		DC10FD771C762501004ED442 /* MainReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD761C762501004ED442 /* MainReading.m */; };
+		DC10FD7B1C762530004ED442 /* MainQA.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainQA.m */; };
+		DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7E1C762546004ED442 /* MainConsult.m */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -47,7 +53,6 @@
 		DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DAD1C46947400382DFB /* LaunchScreen.storyboard */; };
 		DC992DBA1C46947400382DFB /* PsychologyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DB91C46947400382DFB /* PsychologyAppTests.m */; };
 		DC992DC51C46947400382DFB /* PsychologyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DC41C46947400382DFB /* PsychologyAppUITests.m */; };
-		DC992DD91C469ACF00382DFB /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DD81C469ACF00382DFB /* MainController.m */; };
 		DC992DE01C46A04200382DFB /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DDF1C46A04200382DFB /* MineController.m */; };
 		DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DE11C46B59E00382DFB /* Main.storyboard */; };
 		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
@@ -108,6 +113,18 @@
 		DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageCenter.m; sourceTree = "<group>"; };
 		DC0FCD911C7615F800E5AF6F /* MineBookingManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBookingManagement.h; sourceTree = "<group>"; };
 		DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBookingManagement.m; sourceTree = "<group>"; };
+		DC0FCD941C76227700E5AF6F /* MainIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainIndex.h; sourceTree = "<group>"; };
+		DC0FCD951C76227700E5AF6F /* MainIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainIndex.m; sourceTree = "<group>"; };
+		DC0FCD971C7622B500E5AF6F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		DC0FCD981C7622B500E5AF6F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		DC10FD701C7624CD004ED442 /* MainHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHomePage.h; sourceTree = "<group>"; };
+		DC10FD711C7624CD004ED442 /* MainHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHomePage.m; sourceTree = "<group>"; };
+		DC10FD751C762501004ED442 /* MainReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainReading.h; sourceTree = "<group>"; };
+		DC10FD761C762501004ED442 /* MainReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainReading.m; sourceTree = "<group>"; };
+		DC10FD791C762530004ED442 /* MainQA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainQA.h; sourceTree = "<group>"; };
+		DC10FD7A1C762530004ED442 /* MainQA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainQA.m; sourceTree = "<group>"; };
+		DC10FD7D1C762546004ED442 /* MainConsult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConsult.h; sourceTree = "<group>"; };
+		DC10FD7E1C762546004ED442 /* MainConsult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConsult.m; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
@@ -153,8 +170,6 @@
 		DC992DC01C46947400382DFB /* PsychologyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC992DC41C46947400382DFB /* PsychologyAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologyAppUITests.m; sourceTree = "<group>"; };
 		DC992DC61C46947400382DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC992DD71C469ACF00382DFB /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		DC992DD81C469ACF00382DFB /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		DC992DDE1C46A04200382DFB /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		DC992DDF1C46A04200382DFB /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		DC992DE21C46B59E00382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -329,6 +344,51 @@
 			name = "Booking Management";
 			sourceTree = "<group>";
 		};
+		DC10FD6E1C76238D004ED442 /* MainIndex */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD941C76227700E5AF6F /* MainIndex.h */,
+				DC0FCD951C76227700E5AF6F /* MainIndex.m */,
+			);
+			name = MainIndex;
+			sourceTree = "<group>";
+		};
+		DC10FD6F1C76248E004ED442 /* home page */ = {
+			isa = PBXGroup;
+			children = (
+				DC10FD701C7624CD004ED442 /* MainHomePage.h */,
+				DC10FD711C7624CD004ED442 /* MainHomePage.m */,
+			);
+			name = "home page";
+			sourceTree = "<group>";
+		};
+		DC10FD741C7624E7004ED442 /* Reading */ = {
+			isa = PBXGroup;
+			children = (
+				DC10FD751C762501004ED442 /* MainReading.h */,
+				DC10FD761C762501004ED442 /* MainReading.m */,
+			);
+			name = Reading;
+			sourceTree = "<group>";
+		};
+		DC10FD781C76251D004ED442 /* Q&A */ = {
+			isa = PBXGroup;
+			children = (
+				DC10FD791C762530004ED442 /* MainQA.h */,
+				DC10FD7A1C762530004ED442 /* MainQA.m */,
+			);
+			name = "Q&A";
+			sourceTree = "<group>";
+		};
+		DC10FD7C1C762539004ED442 /* consult */ = {
+			isa = PBXGroup;
+			children = (
+				DC10FD7D1C762546004ED442 /* MainConsult.h */,
+				DC10FD7E1C762546004ED442 /* MainConsult.m */,
+			);
+			name = consult;
+			sourceTree = "<group>";
+		};
 		DC207FE41C564D820011D8C4 /* external */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,9 +538,13 @@
 		DC992DD31C46959800382DFB /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC992DDB1C469ADA00382DFB /* splashScreen */,
 				DC022B121C47E18C00D3FB61 /* Account */,
 				DC992DDD1C46A00400382DFB /* Mine */,
-				DC992DDB1C469ADA00382DFB /* splashScreen */,
+				DC10FD7C1C762539004ED442 /* consult */,
+				DC10FD781C76251D004ED442 /* Q&A */,
+				DC10FD741C7624E7004ED442 /* Reading */,
+				DC10FD6F1C76248E004ED442 /* home page */,
 				DC992DDA1C469AD600382DFB /* main */,
 			);
 			name = controllers;
@@ -505,8 +569,9 @@
 		DC992DDA1C469AD600382DFB /* main */ = {
 			isa = PBXGroup;
 			children = (
-				DC992DD71C469ACF00382DFB /* MainController.h */,
-				DC992DD81C469ACF00382DFB /* MainController.m */,
+				DC10FD6E1C76238D004ED442 /* MainIndex */,
+				DC0FCD971C7622B500E5AF6F /* MainController.h */,
+				DC0FCD981C7622B500E5AF6F /* MainController.m */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -754,18 +819,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC992DD91C469ACF00382DFB /* MainController.m in Sources */,
+				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
+				DC10FD771C762501004ED442 /* MainReading.m in Sources */,
 				DC60BD5B1C70643500CFDC56 /* Service.m in Sources */,
 				DC60BD421C704EB900CFDC56 /* VCViewLine.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
+				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
 				DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */,
 				DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */,
@@ -780,16 +847,19 @@
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
+				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,
 				DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */,
 				DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */,
 				DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */,
+				DC10FD7B1C762530004ED442 /* MainQA.m in Sources */,
 				DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */,
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
+				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
