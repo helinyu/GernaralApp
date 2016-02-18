@@ -45,6 +45,7 @@
         
         if (ret == 0) {
             [[VCToast make:@"登录成功"] show];
+            [self.navigationController popViewControllerAnimated:YES];
         }else{
             [[VCToast make:@"登录失败"] show];
         }

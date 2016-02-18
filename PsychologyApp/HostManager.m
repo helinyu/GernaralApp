@@ -39,11 +39,11 @@
 }
 
 - (void)switchToTest {
-    _data.commonHost = @"localhost:9000/";
+    _data.commonHost = @"localhost:9000";
 }
 
 - (void)switchToRelease {
-    _data.commonHost = @"10.104.145.237:9000/";
+    _data.commonHost = @"10.104.145.237:9000";
     }
 
 - (HostManagerDataServer *)get {

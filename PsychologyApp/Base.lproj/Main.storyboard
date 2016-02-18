@@ -18,15 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aV9-1j-l5K" userLabel="back View">
-                                <rect key="frame" x="82" y="72" width="600" height="536"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aV9-1j-l5K" userLabel="back View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-Vm-e74">
                                         <rect key="frame" x="267" y="174" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="KxX-z3-giT" kind="show" identifier="SegueToMineController" id="eoF-G0-k9x"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.70467101980000002" blue="0.95070327170000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="-93"/>
+            <point key="canvasLocation" x="1352" y="-137"/>
         </scene>
         <!--我的-->
         <scene sceneID="ayf-KJ-Twv">
@@ -122,13 +119,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYo-G2-TVy">
-                                                    <rect key="frame" x="47" y="9" width="42" height="21"/>
+                                                    <rect key="frame" x="47" y="9" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_timeOfAppointment" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-oS-cRy">
-                                                    <rect key="frame" x="8" y="9" width="24" height="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_timeOfAppointment" translatesAutoresizingMaskIntoConstraints="NO" id="TPx-oS-cRy">
+                                                    <rect key="frame" x="13" y="9" width="24" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="9eV-5g-w0V"/>
                                                     </constraints>
@@ -177,7 +174,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2129" y="-118"/>
+            <point key="canvasLocation" x="2039" y="-131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GGj-e9-8oj">
@@ -195,7 +192,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELR-pf-azz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="-111"/>
+            <point key="canvasLocation" x="679" y="-137"/>
         </scene>
     </scenes>
     <resources>

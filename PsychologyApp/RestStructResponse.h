@@ -12,8 +12,15 @@
 
 @end
 
-
+//注册的返回码
 @interface RestStructRegisterResponse : RestStructResponse
+
+@property (assign ,nonatomic) NSInteger ret;
+
+@end
+
+//登录的返回码
+@interface RestStructLoginResponse : RestStructResponse
 
 @property (assign ,nonatomic) NSInteger ret;
 

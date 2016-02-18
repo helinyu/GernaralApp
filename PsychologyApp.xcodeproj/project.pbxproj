@@ -12,6 +12,19 @@
 		DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B141C47E1A500D3FB61 /* AccountLogin.m */; };
 		DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC022B161C47E86D00D3FB61 /* Account.storyboard */; };
 		DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B1A1C48110800D3FB61 /* GMToast.m */; };
+		DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD641C76038F00E5AF6F /* MineSetting.m */; };
+		DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */; };
+		DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD6A1C760D8600E5AF6F /* MineFeedback.m */; };
+		DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD6E1C760EAF00E5AF6F /* MineShareFriend.m */; };
+		DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD721C760EF400E5AF6F /* MineAttentionOrFan.m */; };
+		DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD761C76117300E5AF6F /* MineEditProfile.m */; };
+		DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD7A1C7611A700E5AF6F /* MineConsultingexpert.m */; };
+		DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD7E1C76136100E5AF6F /* MineArticle.m */; };
+		DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD821C76139200E5AF6F /* MineQA.m */; };
+		DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD861C7613A900E5AF6F /* MineTest.m */; };
+		DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */; };
+		DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */; };
+		DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -70,6 +83,31 @@
 		DC022B161C47E86D00D3FB61 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		DC022B191C48110800D3FB61 /* GMToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMToast.h; sourceTree = "<group>"; };
 		DC022B1A1C48110800D3FB61 /* GMToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMToast.m; sourceTree = "<group>"; };
+		DC0FCD631C76038F00E5AF6F /* MineSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSetting.h; sourceTree = "<group>"; };
+		DC0FCD641C76038F00E5AF6F /* MineSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSetting.m; sourceTree = "<group>"; };
+		DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		DC0FCD691C760D8600E5AF6F /* MineFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineFeedback.h; sourceTree = "<group>"; };
+		DC0FCD6A1C760D8600E5AF6F /* MineFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineFeedback.m; sourceTree = "<group>"; };
+		DC0FCD6D1C760EAF00E5AF6F /* MineShareFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineShareFriend.h; sourceTree = "<group>"; };
+		DC0FCD6E1C760EAF00E5AF6F /* MineShareFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineShareFriend.m; sourceTree = "<group>"; };
+		DC0FCD711C760EF400E5AF6F /* MineAttentionOrFan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineAttentionOrFan.h; sourceTree = "<group>"; };
+		DC0FCD721C760EF400E5AF6F /* MineAttentionOrFan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineAttentionOrFan.m; sourceTree = "<group>"; };
+		DC0FCD751C76117300E5AF6F /* MineEditProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineEditProfile.h; sourceTree = "<group>"; };
+		DC0FCD761C76117300E5AF6F /* MineEditProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineEditProfile.m; sourceTree = "<group>"; };
+		DC0FCD791C7611A700E5AF6F /* MineConsultingexpert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineConsultingexpert.h; sourceTree = "<group>"; };
+		DC0FCD7A1C7611A700E5AF6F /* MineConsultingexpert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineConsultingexpert.m; sourceTree = "<group>"; };
+		DC0FCD7D1C76136100E5AF6F /* MineArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineArticle.h; sourceTree = "<group>"; };
+		DC0FCD7E1C76136100E5AF6F /* MineArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineArticle.m; sourceTree = "<group>"; };
+		DC0FCD811C76139200E5AF6F /* MineQA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineQA.h; sourceTree = "<group>"; };
+		DC0FCD821C76139200E5AF6F /* MineQA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineQA.m; sourceTree = "<group>"; };
+		DC0FCD851C7613A900E5AF6F /* MineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTest.h; sourceTree = "<group>"; };
+		DC0FCD861C7613A900E5AF6F /* MineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTest.m; sourceTree = "<group>"; };
+		DC0FCD891C7613D400E5AF6F /* MineCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCollection.h; sourceTree = "<group>"; };
+		DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCollection.m; sourceTree = "<group>"; };
+		DC0FCD8D1C7615D300E5AF6F /* MineMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageCenter.h; sourceTree = "<group>"; };
+		DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineMessageCenter.m; sourceTree = "<group>"; };
+		DC0FCD911C7615F800E5AF6F /* MineBookingManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineBookingManagement.h; sourceTree = "<group>"; };
+		DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBookingManagement.m; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
@@ -181,6 +219,114 @@
 				DC022B1A1C48110800D3FB61 /* GMToast.m */,
 			);
 			name = "UI+externds";
+			sourceTree = "<group>";
+		};
+		DC0FCD621C76035100E5AF6F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD631C76038F00E5AF6F /* MineSetting.h */,
+				DC0FCD641C76038F00E5AF6F /* MineSetting.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		DC0FCD681C760D7300E5AF6F /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD691C760D8600E5AF6F /* MineFeedback.h */,
+				DC0FCD6A1C760D8600E5AF6F /* MineFeedback.m */,
+			);
+			name = Feedback;
+			sourceTree = "<group>";
+		};
+		DC0FCD6C1C760E8800E5AF6F /* ShareFriend */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD6D1C760EAF00E5AF6F /* MineShareFriend.h */,
+				DC0FCD6E1C760EAF00E5AF6F /* MineShareFriend.m */,
+			);
+			name = ShareFriend;
+			sourceTree = "<group>";
+		};
+		DC0FCD701C760ED900E5AF6F /* Attention/fan */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD711C760EF400E5AF6F /* MineAttentionOrFan.h */,
+				DC0FCD721C760EF400E5AF6F /* MineAttentionOrFan.m */,
+			);
+			name = Attention/fan;
+			sourceTree = "<group>";
+		};
+		DC0FCD741C76116400E5AF6F /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD751C76117300E5AF6F /* MineEditProfile.h */,
+				DC0FCD761C76117300E5AF6F /* MineEditProfile.m */,
+			);
+			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		DC0FCD781C76119300E5AF6F /* Consulting expert */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD791C7611A700E5AF6F /* MineConsultingexpert.h */,
+				DC0FCD7A1C7611A700E5AF6F /* MineConsultingexpert.m */,
+			);
+			name = "Consulting expert";
+			sourceTree = "<group>";
+		};
+		DC0FCD7C1C76135100E5AF6F /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD7D1C76136100E5AF6F /* MineArticle.h */,
+				DC0FCD7E1C76136100E5AF6F /* MineArticle.m */,
+			);
+			name = Article;
+			sourceTree = "<group>";
+		};
+		DC0FCD801C76137E00E5AF6F /* Q&A */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD811C76139200E5AF6F /* MineQA.h */,
+				DC0FCD821C76139200E5AF6F /* MineQA.m */,
+			);
+			name = "Q&A";
+			sourceTree = "<group>";
+		};
+		DC0FCD841C76139900E5AF6F /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD851C7613A900E5AF6F /* MineTest.h */,
+				DC0FCD861C7613A900E5AF6F /* MineTest.m */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		DC0FCD881C7613B400E5AF6F /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD891C7613D400E5AF6F /* MineCollection.h */,
+				DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		DC0FCD8C1C7615B400E5AF6F /* Message Center */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD8D1C7615D300E5AF6F /* MineMessageCenter.h */,
+				DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */,
+			);
+			name = "Message Center";
+			sourceTree = "<group>";
+		};
+		DC0FCD901C7615E800E5AF6F /* Booking Management */ = {
+			isa = PBXGroup;
+			children = (
+				DC0FCD911C7615F800E5AF6F /* MineBookingManagement.h */,
+				DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */,
+			);
+			name = "Booking Management";
 			sourceTree = "<group>";
 		};
 		DC207FE41C564D820011D8C4 /* external */ = {
@@ -324,6 +470,7 @@
 			children = (
 				DC992DE11C46B59E00382DFB /* Main.storyboard */,
 				DC022B161C47E86D00D3FB61 /* Account.storyboard */,
+				DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -376,6 +523,18 @@
 		DC992DDD1C46A00400382DFB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				DC0FCD901C7615E800E5AF6F /* Booking Management */,
+				DC0FCD8C1C7615B400E5AF6F /* Message Center */,
+				DC0FCD881C7613B400E5AF6F /* Collection */,
+				DC0FCD841C76139900E5AF6F /* Test */,
+				DC0FCD801C76137E00E5AF6F /* Q&A */,
+				DC0FCD7C1C76135100E5AF6F /* Article */,
+				DC0FCD781C76119300E5AF6F /* Consulting expert */,
+				DC0FCD741C76116400E5AF6F /* Edit Profile */,
+				DC0FCD701C760ED900E5AF6F /* Attention/fan */,
+				DC0FCD6C1C760E8800E5AF6F /* ShareFriend */,
+				DC0FCD681C760D7300E5AF6F /* Feedback */,
+				DC0FCD621C76035100E5AF6F /* Setting */,
 				DC992DDE1C46A04200382DFB /* MineController.h */,
 				DC992DDF1C46A04200382DFB /* MineController.m */,
 				DC022B0F1C47DCC100D3FB61 /* FLTableViewCell.h */,
@@ -520,6 +679,7 @@
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
+				DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 			);
@@ -597,28 +757,40 @@
 				DC992DD91C469ACF00382DFB /* MainController.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
+				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
 				DC60BD5B1C70643500CFDC56 /* Service.m in Sources */,
 				DC60BD421C704EB900CFDC56 /* VCViewLine.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
+				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
+				DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */,
+				DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */,
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
 				DC60BD411C704EB900CFDC56 /* VCView.m in Sources */,
+				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
+				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
+				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
+				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
+				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
+				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,
 				DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */,
+				DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */,
 				DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */,
 				DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */,
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
+				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

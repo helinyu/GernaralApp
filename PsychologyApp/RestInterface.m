@@ -40,6 +40,7 @@
         
         if (error) {
             NSLog(@"发送网络请求出现错误，没有返回正常的值返回");
+            return ;
         }
         
         NSError *errorJson = nil;
@@ -49,20 +50,24 @@
 }
 
 //登录
-+ (void)invokeLoginWithRequest:(RestStructLoginByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock{
++ (void)invokeLoginWithRequest:(RestStructLoginByPhoneRequest*)request withComplete:(void(^)(RestStructLoginResponse *response,NSError *error))completeBlock{
+    
     [RestInterface _invokeWithUrl:@"login" withRequest:request withComplete:^(NSData *data, NSError *error) {
-        NSLog(@"实现进行登录");
+        
+        if (error) {
+            NSLog(@"发送网络请求出现错误，没有返回正常的值返回");
+            return ;
+        }
+        
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dict is : %@",dict);
         NSLog(@"error is :%@",error);
         
-        if (error) {
-            NSLog(@"发送网络请求出现错误，没有返回正常的值返回");
-        }
         
         NSError *errorJson = nil;
-        RestStructRegisterResponse *response = [[RestStructRegisterResponse alloc] initWithData:data error:&errorJson];
+        RestStructLoginResponse *response = [[RestStructLoginResponse alloc] initWithData:data error:&errorJson];
         completeBlock(response,errorJson);
+
     }];
 }
 

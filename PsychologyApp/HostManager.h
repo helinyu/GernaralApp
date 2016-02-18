@@ -26,6 +26,4 @@
 - (void)switchToTest;
 - (void)switchToRelease;
 
-
-
 @end

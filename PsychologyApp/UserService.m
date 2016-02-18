@@ -34,8 +34,13 @@
     RestStructLoginByPhoneRequest *request = [RestStructLoginByPhoneRequest new];
     request.phone = phone;
     request.password = password;
-    [RestInterface invokeLoginWithRequest:request withComplete:^(RestStructRegisterResponse *response, NSError *error) {
+    [RestInterface invokeLoginWithRequest:request withComplete:^(RestStructLoginResponse *response, NSError *error) {
         NSLog(@"response");
+        
+        if (error) {
+            NSLog(@"数据转化失败");
+            return ;
+        }
         
         completeBlock(response.ret);
     }];
