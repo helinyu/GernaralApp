@@ -19,7 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //导航栏存在的时候
+    if (self.navigationItem) {
+        //这个就可以实现了 "<返回" 这个效果
+        UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+        self.navigationItem.backBarButtonItem = backBarButton;
+    }
+    
     [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
+}
+- (IBAction)onMainIndexClicked:(id)sender {
+    
+    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
