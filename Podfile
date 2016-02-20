@@ -7,6 +7,7 @@ target 'PsychologyApp' do
  pod 'AFNetworking'
  pod 'JSONModel'
  pod 'SDWebImage'
+ pod 'MJRefresh'
 
 
 end

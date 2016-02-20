@@ -60,22 +60,11 @@
                         <viewControllerLayoutGuide type="bottom" id="3Nb-7V-Lvg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Efc-jj-OQ8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-RG-4FA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.13739224137931033" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2X-lx-WZj">
-                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aft-b2-OyQ"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="咨询" id="aft-b2-OyQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asn-GO-97j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FWj-dg-qo3"/>
+                    <navigationItem key="navigationItem" title="问答" id="FWj-dg-qo3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wO9-R3-sJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,7 +299,7 @@
                             <constraint firstItem="fEJ-ea-1E5" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="z8K-Sr-xdi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zl7-Iw-9ye"/>
+                    <navigationItem key="navigationItem" title="阅读" id="Zl7-Iw-9ye"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUB-OQ-CC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,7 +492,7 @@
         <!--咨询-->
         <scene sceneID="0ad-Ja-qcK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bR-7C-5Uu" sceneMemberID="viewController">
+                <navigationController title="咨询" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="5bR-7C-5Uu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="咨询" image="consult_page" id="Bds-Mc-Hl7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLH-ad-Ly6">

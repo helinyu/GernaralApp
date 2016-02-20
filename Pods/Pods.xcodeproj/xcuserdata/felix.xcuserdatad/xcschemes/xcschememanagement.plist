@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PsychologyApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>599557E0815BC22C1D3C14ACD1D783A2</key>
+		<key>3877ED851AEA1D6F827401EEA1568634</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2675436D304C7014728F7256EF9A312</key>
+		<key>E7EA7297C9BD0B937E80D20519AF30D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

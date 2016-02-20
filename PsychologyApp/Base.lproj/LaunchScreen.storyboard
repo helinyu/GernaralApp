@@ -16,7 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_lanch" translatesAutoresizingMaskIntoConstraints="NO" id="wuJ-iy-fxv">
+                                <rect key="frame" x="260" y="124" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="舒  从  心  来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gc0-ID-MIU">
+                                <rect key="frame" x="255.5" y="214" width="89.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="健康心理，健康人生" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMR-wN-Qa3">
+                                <rect key="frame" x="223.5" y="546.5" width="153" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gc0-ID-MIU" firstAttribute="top" secondItem="wuJ-iy-fxv" secondAttribute="bottom" constant="10" id="FhI-xx-mCi"/>
+                            <constraint firstItem="wuJ-iy-fxv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ai2-QG-oeh"/>
+                            <constraint firstItem="gc0-ID-MIU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="czd-SV-3Rp"/>
+                            <constraint firstItem="WMR-wN-Qa3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="drD-GU-LQb"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="WMR-wN-Qa3" secondAttribute="bottom" constant="33" id="eJn-bV-0Ze"/>
+                            <constraint firstItem="wuJ-iy-fxv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="104" id="wua-QI-uP1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +49,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app_lanch" width="80" height="80"/>
+    </resources>
 </document>
