@@ -9,11 +9,13 @@
 #import "MainHomePage.h"
 #import "MJBannnerPlayer.h"
 #import "ImageAndTitleCell.h"
+#import "ArticleAndTestCell.h"
 
-@interface MainHomePage ()<MJBannnerPlayerDeledage,UICollectionViewDataSource,UICollectionViewDelegate>
+@interface MainHomePage ()<MJBannnerPlayerDeledage,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MJBannnerPlayer *bannerPlayerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *ImageTextCollectionView;
+@property (weak, nonatomic) IBOutlet UITableView *articleAndTestTableView;
 
 @end
 
@@ -36,6 +38,11 @@
     
     //注册CollectionViewCell
     [self.ImageTextCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ImageAndTitleCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([ImageAndTitleCell class])];
+    
+    //register UITableViewCell
+    [self.articleAndTestTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ArticleAndTestCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ArticleAndTestCell class])];
+    
+    
 }
 
 
@@ -58,6 +65,36 @@
     return cell;
 }
 
+
+#pragma mark -- UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ArticleAndTestCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ArticleAndTestCell class]) forIndexPath:indexPath];
+
+    switch (indexPath.row) {
+        case 0:
+            cell.backgroundColor  = [UIColor yellowColor];
+            break;
+        case 1:
+            cell.backgroundColor = [UIColor greenColor];
+            break;
+        case 2:
+            cell.backgroundColor = [UIColor blueColor];
+            break;
+        default:
+            break;
+    }
+    return cell;
+}
+
+
+//这里应该设置高度
 
 #pragma mark --UiCollectionViewDelegate
 

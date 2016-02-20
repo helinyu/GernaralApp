@@ -66,6 +66,8 @@
 		DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFECA841C787B52000A4BC9 /* MJBannnerPlayer.m */; };
 		DCFECA8B1C78860A000A4BC9 /* ImageAndTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFECA891C78860A000A4BC9 /* ImageAndTitleCell.m */; };
 		DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA8A1C78860A000A4BC9 /* ImageAndTitleCell.xib */; };
+		DCFECA921C78BA05000A4BC9 /* ArticleAndTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFECA901C78BA05000A4BC9 /* ArticleAndTestCell.m */; };
+		DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA911C78BA05000A4BC9 /* ArticleAndTestCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +199,9 @@
 		DCFECA881C78860A000A4BC9 /* ImageAndTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTitleCell.h; sourceTree = "<group>"; };
 		DCFECA891C78860A000A4BC9 /* ImageAndTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTitleCell.m; sourceTree = "<group>"; };
 		DCFECA8A1C78860A000A4BC9 /* ImageAndTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageAndTitleCell.xib; sourceTree = "<group>"; };
+		DCFECA8F1C78BA05000A4BC9 /* ArticleAndTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleAndTestCell.h; sourceTree = "<group>"; };
+		DCFECA901C78BA05000A4BC9 /* ArticleAndTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleAndTestCell.m; sourceTree = "<group>"; };
+		DCFECA911C78BA05000A4BC9 /* ArticleAndTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleAndTestCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,7 +415,6 @@
 		DC207FE41C564D820011D8C4 /* external */ = {
 			isa = PBXGroup;
 			children = (
-				DCFECA861C7885B3000A4BC9 /* xib */,
 				DC207FE51C564DDF0011D8C4 /* UI+subclass */,
 			);
 			name = external;
@@ -511,6 +515,7 @@
 				DC992DD51C46970100382DFB /* libraries */,
 				DC9DEF031C74860700C1A1AE /* Categories */,
 				DCFECA811C787B33000A4BC9 /* framwork */,
+				DCFECA8D1C78B901000A4BC9 /* component */,
 				DC992D9F1C46947400382DFB /* Supporting Files */,
 			);
 			path = PsychologyApp;
@@ -668,22 +673,33 @@
 			name = "pictures player";
 			sourceTree = "<group>";
 		};
-		DCFECA861C7885B3000A4BC9 /* xib */ = {
-			isa = PBXGroup;
-			children = (
-				DCFECA871C7885BD000A4BC9 /* CollectionViewCell */,
-			);
-			name = xib;
-			sourceTree = "<group>";
-		};
-		DCFECA871C7885BD000A4BC9 /* CollectionViewCell */ = {
+		DCFECA871C7885BD000A4BC9 /* homepageImageAndTitleCell */ = {
 			isa = PBXGroup;
 			children = (
 				DCFECA881C78860A000A4BC9 /* ImageAndTitleCell.h */,
 				DCFECA891C78860A000A4BC9 /* ImageAndTitleCell.m */,
 				DCFECA8A1C78860A000A4BC9 /* ImageAndTitleCell.xib */,
 			);
-			name = CollectionViewCell;
+			name = homepageImageAndTitleCell;
+			sourceTree = "<group>";
+		};
+		DCFECA8D1C78B901000A4BC9 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
+				DCFECA871C7885BD000A4BC9 /* homepageImageAndTitleCell */,
+			);
+			name = component;
+			sourceTree = "<group>";
+		};
+		DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */ = {
+			isa = PBXGroup;
+			children = (
+				DCFECA8F1C78BA05000A4BC9 /* ArticleAndTestCell.h */,
+				DCFECA901C78BA05000A4BC9 /* ArticleAndTestCell.m */,
+				DCFECA911C78BA05000A4BC9 /* ArticleAndTestCell.xib */,
+			);
+			name = homepageArticleAndTest;
 			sourceTree = "<group>";
 		};
 		DF0A591797B8082647A87384 /* Frameworks */ = {
@@ -811,6 +827,7 @@
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
+				DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */,
 				DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */,
 				DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */,
 			);
@@ -885,6 +902,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFECA921C78BA05000A4BC9 /* ArticleAndTestCell.m in Sources */,
 				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
