@@ -62,9 +62,20 @@
                     <view key="view" contentMode="scaleToFill" id="Efc-jj-OQ8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-RG-4FA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.13739224137931033" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2X-lx-WZj">
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="咨询" image="consult_page" id="Bds-Mc-Hl7"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asn-GO-97j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,7 +263,51 @@
                     <view key="view" contentMode="scaleToFill" id="adr-Gt-42d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-ea-1E5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HKa-6c-hV4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-gq-EV4">
+                                <rect key="frame" x="0.0" y="50" width="600" height="501"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vn-DO-sS2">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8FO-LV-6Ae"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0vn-DO-sS2" firstAttribute="top" secondItem="ydq-gq-EV4" secondAttribute="top" id="9r5-YU-F9B"/>
+                                    <constraint firstItem="0vn-DO-sS2" firstAttribute="leading" secondItem="ydq-gq-EV4" secondAttribute="leading" id="S97-yV-BwE"/>
+                                    <constraint firstAttribute="trailing" secondItem="0vn-DO-sS2" secondAttribute="trailing" id="UAU-9D-RN2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kK1-pp-QDF">
+                                <rect key="frame" x="0.0" y="90" width="600" height="461"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kK1-pp-QDF" firstAttribute="trailing" secondItem="ydq-gq-EV4" secondAttribute="trailing" id="0BG-m2-fTq"/>
+                            <constraint firstAttribute="trailing" secondItem="fEJ-ea-1E5" secondAttribute="trailing" id="BxN-dU-EUL"/>
+                            <constraint firstItem="ydq-gq-EV4" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="D58-LS-55Y"/>
+                            <constraint firstItem="fEJ-ea-1E5" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="L2u-Be-sFA"/>
+                            <constraint firstItem="kK1-pp-QDF" firstAttribute="bottom" secondItem="ydq-gq-EV4" secondAttribute="bottom" id="aTf-us-j8A"/>
+                            <constraint firstItem="T5o-4U-Mz7" firstAttribute="top" secondItem="ydq-gq-EV4" secondAttribute="bottom" id="dPH-3V-tZm"/>
+                            <constraint firstItem="kK1-pp-QDF" firstAttribute="top" secondItem="0vn-DO-sS2" secondAttribute="bottom" id="nQJ-u0-Bjg"/>
+                            <constraint firstItem="ydq-gq-EV4" firstAttribute="top" secondItem="fEJ-ea-1E5" secondAttribute="bottom" id="nWP-B3-v76"/>
+                            <constraint firstAttribute="trailing" secondItem="ydq-gq-EV4" secondAttribute="trailing" id="riq-hm-bRj"/>
+                            <constraint firstItem="kK1-pp-QDF" firstAttribute="leading" secondItem="ydq-gq-EV4" secondAttribute="leading" id="ymc-Jz-kfg"/>
+                            <constraint firstItem="fEJ-ea-1E5" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="z8K-Sr-xdi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="阅读" image="read_book" id="RMy-Yv-0rS"/>
                 </viewController>
@@ -271,9 +326,71 @@
                     <view key="view" contentMode="scaleToFill" id="Q6E-gH-4lf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bsn-hF-rcJ" userLabel="advertising View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai3-Pr-7a3">
+                                        <rect key="frame" x="240" y="70" width="46" height="30"/>
+                                        <state key="normal" title="滑动广告"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59215686270000001" green="0.34509803919999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="tal-Zt-8Nc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-lX-bxX" userLabel="some content View">
+                                <rect key="frame" x="0.0" y="150" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvh-eV-bni">
+                                        <rect key="frame" x="240" y="24" width="46" height="30"/>
+                                        <state key="normal" title="具体模块可以配置的内容"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EX0-kP-ddF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSa-RX-dHQ" userLabel="hot topic View">
+                                <rect key="frame" x="0.0" y="260" width="600" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQZ-hq-9SP">
+                                        <rect key="frame" x="244" y="27" width="46" height="30"/>
+                                        <state key="normal" title="热门话题"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bQy-6q-t1a"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jjP-tQ-nhB">
+                                <rect key="frame" x="0.0" y="410" width="600" height="190"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.16078431369999999" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="jjP-tQ-nhB" secondAttribute="bottom" id="16x-mS-bZU"/>
+                            <constraint firstItem="BSa-RX-dHQ" firstAttribute="top" secondItem="Pd4-lX-bxX" secondAttribute="bottom" constant="10" id="2Hs-7C-lnO"/>
+                            <constraint firstItem="jjP-tQ-nhB" firstAttribute="leading" secondItem="Q6E-gH-4lf" secondAttribute="leading" id="AEu-W4-PRy"/>
+                            <constraint firstItem="Bsn-hF-rcJ" firstAttribute="leading" secondItem="Q6E-gH-4lf" secondAttribute="leading" id="D82-rQ-YwQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Bsn-hF-rcJ" secondAttribute="trailing" id="HGH-e2-qbs"/>
+                            <constraint firstItem="jjP-tQ-nhB" firstAttribute="top" secondItem="BSa-RX-dHQ" secondAttribute="bottom" id="TqV-gM-CQl"/>
+                            <constraint firstItem="BSa-RX-dHQ" firstAttribute="leading" secondItem="Q6E-gH-4lf" secondAttribute="leading" id="UAO-EZ-azp"/>
+                            <constraint firstAttribute="trailing" secondItem="jjP-tQ-nhB" secondAttribute="trailing" id="UdO-Q2-gxi"/>
+                            <constraint firstItem="Pd4-lX-bxX" firstAttribute="leading" secondItem="Q6E-gH-4lf" secondAttribute="leading" id="VFO-TB-Pqt"/>
+                            <constraint firstAttribute="trailing" secondItem="BSa-RX-dHQ" secondAttribute="trailing" id="duz-uo-Sgx"/>
+                            <constraint firstAttribute="trailing" secondItem="Pd4-lX-bxX" secondAttribute="trailing" id="gm0-jg-CcF"/>
+                            <constraint firstItem="Bsn-hF-rcJ" firstAttribute="top" secondItem="nde-Xe-zpU" secondAttribute="bottom" id="oKo-pV-ggN"/>
+                            <constraint firstItem="Pd4-lX-bxX" firstAttribute="top" secondItem="Bsn-hF-rcJ" secondAttribute="bottom" id="xJO-af-uvd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="home_page" id="0o6-dP-BxR"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzy-Zq-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
