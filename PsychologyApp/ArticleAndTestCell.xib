@@ -32,15 +32,15 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSz-nQ-i96">
-                        <rect key="frame" x="10" y="172.5" width="353" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG2-Hu-fzg">
+                        <rect key="frame" x="10" y="199.5" width="353" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SG2-Hu-fzg">
-                        <rect key="frame" x="10" y="199.5" width="353" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSz-nQ-i96">
+                        <rect key="frame" x="10" y="174" width="353" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -64,7 +64,14 @@
                     <constraint firstItem="skk-Sn-2bT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xM3-kl-rOq"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="339.5" y="415.5"/>
+            <connections>
+                <outlet property="cellTyleNameLabel" destination="skk-Sn-2bT" id="uBd-qe-Md6"/>
+                <outlet property="dataLabel" destination="SG2-Hu-fzg" id="N2C-P5-6ji"/>
+                <outlet property="detailLabel" destination="tSz-nQ-i96" id="reR-7J-kdb"/>
+                <outlet property="firstimageView" destination="spR-7K-aek" id="NMo-Z3-pIo"/>
+                <outlet property="titleLabel" destination="92f-5V-bCY" id="yjj-2D-whh"/>
+            </connections>
+            <point key="canvasLocation" x="278.5" y="396.5"/>
         </tableViewCell>
     </objects>
 </document>

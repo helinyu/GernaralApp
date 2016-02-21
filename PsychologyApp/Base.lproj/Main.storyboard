@@ -318,11 +318,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBG-pI-TQd">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBG-pI-TQd">
                                 <rect key="frame" x="0.0" y="44" width="600" height="712"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rX-vi-INu" userLabel="content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="772"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="572"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-F1-aM1" userLabel="View advertisement" customClass="MJBannnerPlayer">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
@@ -524,11 +524,11 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-Er-AH7" userLabel="View recomend">
-                                                <rect key="frame" x="0.0" y="372" width="600" height="100"/>
+                                                <rect key="frame" x="0.0" y="372" width="600" height="200"/>
                                                 <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-5U-PuU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="110" sectionHeaderHeight="1" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="UnF-5U-PuU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <view key="tableHeaderView" contentMode="scaleToFill" id="Kbp-vM-nqE">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -549,8 +549,8 @@
                                                             </constraints>
                                                         </view>
                                                         <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="NLq-WI-E9W">
-                                                                <rect key="frame" x="0.0" y="68" width="600" height="110"/>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleAndTestCell" rowHeight="110" id="NLq-WI-E9W" customClass="ArticleAndTestCell">
+                                                                <rect key="frame" x="0.0" y="89.5" width="600" height="110"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLq-WI-E9W" id="mp8-lu-2hb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="109.5"/>
@@ -571,7 +571,7 @@
                                                     <constraint firstItem="UnF-5U-PuU" firstAttribute="top" secondItem="3M8-Er-AH7" secondAttribute="top" id="DWX-Ui-Clm"/>
                                                     <constraint firstAttribute="trailing" secondItem="UnF-5U-PuU" secondAttribute="trailing" id="DwT-rA-EVS"/>
                                                     <constraint firstItem="UnF-5U-PuU" firstAttribute="leading" secondItem="3M8-Er-AH7" secondAttribute="leading" id="Gpd-gz-gBQ"/>
-                                                    <constraint firstAttribute="height" constant="100" id="aHJ-GD-AUw"/>
+                                                    <constraint firstAttribute="height" constant="200" id="aHJ-GD-AUw"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -579,7 +579,7 @@
                                         <constraints>
                                             <constraint firstItem="ge0-Y3-gYJ" firstAttribute="leading" secondItem="7rX-vi-INu" secondAttribute="leading" id="3qD-UK-1L5"/>
                                             <constraint firstItem="SzR-MZ-z2B" firstAttribute="top" secondItem="ge0-Y3-gYJ" secondAttribute="bottom" id="6PO-yb-F7G"/>
-                                            <constraint firstAttribute="bottom" secondItem="3M8-Er-AH7" secondAttribute="bottom" constant="300" id="7Xc-wS-h7R"/>
+                                            <constraint firstAttribute="bottom" secondItem="3M8-Er-AH7" secondAttribute="bottom" id="7Xc-wS-h7R"/>
                                             <constraint firstAttribute="trailing" secondItem="SzR-MZ-z2B" secondAttribute="trailing" id="EAV-36-Ko2"/>
                                             <constraint firstItem="SzR-MZ-z2B" firstAttribute="leading" secondItem="7rX-vi-INu" secondAttribute="leading" id="M5L-Kx-ApT"/>
                                             <constraint firstItem="Bp6-F1-aM1" firstAttribute="top" secondItem="7rX-vi-INu" secondAttribute="top" id="PYX-3k-Yxz"/>
@@ -619,6 +619,8 @@
                         <outlet property="ImageTextCollectionView" destination="Nbm-9y-P9R" id="dYr-LS-CMK"/>
                         <outlet property="articleAndTestTableView" destination="UnF-5U-PuU" id="j76-4i-11Y"/>
                         <outlet property="bannerPlayerView" destination="Bp6-F1-aM1" id="TA9-N8-vQ9"/>
+                        <outlet property="cellFatherViewHeightConstraint" destination="aHJ-GD-AUw" id="cTV-qE-iCw"/>
+                        <outlet property="fatherScrollView" destination="OBG-pI-TQd" id="b08-Gc-PxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzy-Zq-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
