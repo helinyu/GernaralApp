@@ -7,8 +7,13 @@
 //
 
 #import "MainReading.h"
+#import "ReadingTitleLabelCell.h"
 
-@interface MainReading ()
+@interface MainReading ()<UICollectionViewDataSource,UICollectionViewDelegate>
+{
+    NSArray *_titles;
+}
+@property (weak, nonatomic) IBOutlet UICollectionView *titleCollectionView;
 
 @end
 
@@ -16,12 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //标题
+    NSString *titlePath = [[NSBundle mainBundle] pathForResource:@"ReadingTitle" ofType:@"plist"];
+    _titles = [NSArray arrayWithContentsOfFile:titlePath];
+    
+    //注册titleCell
+    [self.titleCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ReadingTitleLabelCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([ReadingTitleLabelCell class])];
+
 }
+
+
+#pragma mark -- UICollectionDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return _titles.count;
+}
+
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ReadingTitleLabelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ReadingTitleLabelCell class]) forIndexPath:indexPath];
+    cell.titleTextLabel.text= _titles[indexPath.row];
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

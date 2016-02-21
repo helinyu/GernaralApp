@@ -46,6 +46,9 @@
 		DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E21C5671DF00BB3FA9 /* RestInterface.m */; };
 		DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */; };
 		DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E91C567CE000BB3FA9 /* UserService.m */; };
+		DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */; };
+		DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */; };
+		DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3921C79D1710067B19E /* ReadingTitle.plist */; };
 		DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
@@ -165,6 +168,10 @@
 		DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestStructRequest.m; sourceTree = "<group>"; };
 		DC7917E81C567CE000BB3FA9 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		DC7917E91C567CE000BB3FA9 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		DC7CE38D1C79CD6D0067B19E /* ReadingTitleLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingTitleLabelCell.h; sourceTree = "<group>"; };
+		DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingTitleLabelCell.m; sourceTree = "<group>"; };
+		DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingTitleLabelCell.xib; sourceTree = "<group>"; };
+		DC7CE3921C79D1710067B19E /* ReadingTitle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReadingTitle.plist; sourceTree = "<group>"; };
 		DC8BA9FA1C703EEF00184CD8 /* AccountRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegister.h; sourceTree = "<group>"; };
 		DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegister.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -479,6 +486,16 @@
 			name = accounts;
 			sourceTree = "<group>";
 		};
+		DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7CE38D1C79CD6D0067B19E /* ReadingTitleLabelCell.h */,
+				DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */,
+				DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */,
+			);
+			name = ReadingTitleLabelCell;
+			sourceTree = "<group>";
+		};
 		DC992D931C46947400382DFB = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +550,7 @@
 				DC992DAD1C46947400382DFB /* LaunchScreen.storyboard */,
 				DC992DB01C46947400382DFB /* Info.plist */,
 				DC992DA01C46947400382DFB /* main.m */,
+				DC7CE3921C79D1710067B19E /* ReadingTitle.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -686,6 +704,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */,
 				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
 				DCFECA871C7885BD000A4BC9 /* homepageImageAndTitleCell */,
 			);
@@ -825,9 +844,11 @@
 				DCFECA801C787B08000A4BC9 /* pageView@2x.png in Resources */,
 				DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
+				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
 				DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */,
+				DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */,
 				DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */,
 				DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */,
 			);
@@ -926,6 +947,7 @@
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
+				DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
