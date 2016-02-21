@@ -49,6 +49,8 @@
 		DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */; };
 		DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */; };
 		DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3921C79D1710067B19E /* ReadingTitle.plist */; };
+		DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */; };
+		DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */; };
 		DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
@@ -172,6 +174,9 @@
 		DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingTitleLabelCell.m; sourceTree = "<group>"; };
 		DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingTitleLabelCell.xib; sourceTree = "<group>"; };
 		DC7CE3921C79D1710067B19E /* ReadingTitle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReadingTitle.plist; sourceTree = "<group>"; };
+		DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingDetailCell.h; sourceTree = "<group>"; };
+		DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingDetailCell.m; sourceTree = "<group>"; };
+		DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingDetailCell.xib; sourceTree = "<group>"; };
 		DC8BA9FA1C703EEF00184CD8 /* AccountRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegister.h; sourceTree = "<group>"; };
 		DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegister.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,6 +501,16 @@
 			name = ReadingTitleLabelCell;
 			sourceTree = "<group>";
 		};
+		DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */,
+				DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */,
+				DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */,
+			);
+			name = ReadingDetailCell;
+			sourceTree = "<group>";
+		};
 		DC992D931C46947400382DFB = {
 			isa = PBXGroup;
 			children = (
@@ -704,6 +719,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
 				DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */,
 				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
 				DCFECA871C7885BD000A4BC9 /* homepageImageAndTitleCell */,
@@ -839,6 +855,7 @@
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
+				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
 				DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
 				DCFECA801C787B08000A4BC9 /* pageView@2x.png in Resources */,
@@ -944,6 +961,7 @@
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
 				DC60BD411C704EB900CFDC56 /* VCView.m in Sources */,
 				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
+				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
