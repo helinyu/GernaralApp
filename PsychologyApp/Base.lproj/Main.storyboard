@@ -60,12 +60,56 @@
                         <viewControllerLayoutGuide type="top" id="E0v-W8-cGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="3Nb-7V-Lvg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Efc-jj-OQ8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="tPq-Bp-wdy">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="556"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="咨询" id="aft-b2-OyQ"/>
+                    <navigationItem key="navigationItem" id="089-L1-1RX" userLabel="navigation Item">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="consult_funnel" id="p3A-ee-iGI"/>
+                        <view key="titleView" contentMode="scaleToFill" id="qMv-fv-W4i" userLabel="title view" customClass="VCButton">
+                            <rect key="frame" x="120" y="5.5" width="160" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3H-bP-uOv" userLabel="Button left">
+                                    <rect key="frame" x="0.0" y="1" width="80" height="30"/>
+                                    <state key="normal" title="话题榜">
+                                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkW-3i-ZK3" userLabel="Button right">
+                                    <rect key="frame" x="80" y="1.5" width="80" height="30"/>
+                                    <state key="normal" title="专家榜">
+                                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.55374461210000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="XkW-3i-ZK3" firstAttribute="leading" secondItem="X3H-bP-uOv" secondAttribute="trailing" id="8dI-Iw-9xo"/>
+                                <constraint firstItem="XkW-3i-ZK3" firstAttribute="width" secondItem="X3H-bP-uOv" secondAttribute="width" id="GW6-u7-Qzl"/>
+                                <constraint firstItem="X3H-bP-uOv" firstAttribute="leading" secondItem="qMv-fv-W4i" secondAttribute="leading" id="Mfv-ps-xJt"/>
+                                <constraint firstItem="XkW-3i-ZK3" firstAttribute="top" secondItem="X3H-bP-uOv" secondAttribute="top" id="Tks-fk-PL2"/>
+                                <constraint firstItem="X3H-bP-uOv" firstAttribute="top" secondItem="qMv-fv-W4i" secondAttribute="top" constant="1" id="Z4j-6j-1fU"/>
+                                <constraint firstAttribute="trailing" secondItem="XkW-3i-ZK3" secondAttribute="trailing" id="khb-u5-bK8"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="b8V-hu-pQ8"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Asn-GO-97j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -663,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzy-Zq-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2393" y="-1206"/>
+            <point key="canvasLocation" x="2389" y="-1316"/>
         </scene>
         <!--Main Index-->
         <scene sceneID="SsC-2K-6uv">
@@ -704,7 +748,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldp-XS-1aT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="-1269"/>
+            <point key="canvasLocation" x="1723" y="-1316"/>
         </scene>
         <!--咨询-->
         <scene sceneID="0ad-Ja-qcK">
@@ -786,6 +830,7 @@
     </scenes>
     <resources>
         <image name="advisements_back" width="1506" height="612"/>
+        <image name="consult_funnel" width="22" height="23"/>
         <image name="consult_page" width="32" height="32"/>
         <image name="home_page" width="32" height="32"/>
         <image name="home_page_counselor" width="32" height="32"/>
