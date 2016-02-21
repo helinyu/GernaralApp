@@ -51,6 +51,8 @@
 		DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3921C79D1710067B19E /* ReadingTitle.plist */; };
 		DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */; };
 		DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */; };
+		DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE39C1C7A05920067B19E /* QAMainCell.m */; };
+		DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE39D1C7A05920067B19E /* QAMainCell.xib */; };
 		DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
@@ -177,6 +179,9 @@
 		DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingDetailCell.h; sourceTree = "<group>"; };
 		DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingDetailCell.m; sourceTree = "<group>"; };
 		DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingDetailCell.xib; sourceTree = "<group>"; };
+		DC7CE39B1C7A05920067B19E /* QAMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAMainCell.h; sourceTree = "<group>"; };
+		DC7CE39C1C7A05920067B19E /* QAMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAMainCell.m; sourceTree = "<group>"; };
+		DC7CE39D1C7A05920067B19E /* QAMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QAMainCell.xib; sourceTree = "<group>"; };
 		DC8BA9FA1C703EEF00184CD8 /* AccountRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegister.h; sourceTree = "<group>"; };
 		DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegister.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -511,6 +516,16 @@
 			name = ReadingDetailCell;
 			sourceTree = "<group>";
 		};
+		DC7CE39A1C7A05670067B19E /* QAMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC7CE39B1C7A05920067B19E /* QAMainCell.h */,
+				DC7CE39C1C7A05920067B19E /* QAMainCell.m */,
+				DC7CE39D1C7A05920067B19E /* QAMainCell.xib */,
+			);
+			name = QAMainCell;
+			sourceTree = "<group>";
+		};
 		DC992D931C46947400382DFB = {
 			isa = PBXGroup;
 			children = (
@@ -719,6 +734,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DC7CE39A1C7A05670067B19E /* QAMainCell */,
 				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
 				DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */,
 				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
@@ -852,6 +868,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */,
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
@@ -986,6 +1003,7 @@
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
+				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

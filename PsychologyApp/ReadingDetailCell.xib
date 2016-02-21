@@ -92,7 +92,7 @@
                 <outlet property="numberLabel" destination="0s1-a2-zaC" id="ttJ-do-ORF"/>
                 <outlet property="titleLabel" destination="Vfe-f7-TY9" id="vPu-qU-3pK"/>
             </connections>
-            <point key="canvasLocation" x="215.5" y="-11"/>
+            <point key="canvasLocation" x="188.5" y="-11"/>
         </collectionViewCell>
     </objects>
     <resources>
