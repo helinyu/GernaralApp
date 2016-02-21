@@ -74,7 +74,7 @@
         <!--我的-->
         <scene sceneID="ayf-KJ-Twv">
             <objects>
-                <viewController id="KxX-z3-giT" customClass="MineController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MineController" id="KxX-z3-giT" customClass="MineController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7T2-0V-v4O"/>
                         <viewControllerLayoutGuide type="bottom" id="3rA-23-mS2"/>
@@ -84,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-E6-bie">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="VXB-Of-3Kq" userLabel="header View">
                                     <rect key="frame" x="0.0" y="44" width="600" height="150"/>
@@ -184,7 +184,7 @@
                             <constraint firstItem="3rA-23-mS2" firstAttribute="top" secondItem="ZYl-E6-bie" secondAttribute="bottom" id="HeD-uM-jDr"/>
                             <constraint firstAttribute="trailing" secondItem="ZYl-E6-bie" secondAttribute="trailing" id="JAc-bl-pi4"/>
                             <constraint firstItem="ZYl-E6-bie" firstAttribute="leading" secondItem="ebZ-26-Ed6" secondAttribute="leading" id="VCo-yD-oGv"/>
-                            <constraint firstItem="ZYl-E6-bie" firstAttribute="top" secondItem="7T2-0V-v4O" secondAttribute="bottom" constant="-44" id="gPt-vv-1OV"/>
+                            <constraint firstItem="ZYl-E6-bie" firstAttribute="top" secondItem="7T2-0V-v4O" secondAttribute="bottom" id="gPt-vv-1OV"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -446,14 +446,16 @@
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-3G-Mp0">
-                                                                        <rect key="frame" x="250" y="0.0" width="50" height="128"/>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_page_qa" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-3G-Mp0">
+                                                                        <rect key="frame" x="258" y="21.5" width="32" height="32"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.44181034479999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="fVZ-0u-s7f" firstAttribute="leading" secondItem="u6z-hK-dS5" secondAttribute="leading" constant="10" id="0Id-g4-YJk"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Wgv-3G-Mp0" secondAttribute="trailing" constant="10" id="GCG-Mp-0jU"/>
                                                                     <constraint firstItem="Euy-qo-MsA" firstAttribute="leading" secondItem="fVZ-0u-s7f" secondAttribute="leading" id="Hv9-uj-wti"/>
+                                                                    <constraint firstItem="Wgv-3G-Mp0" firstAttribute="centerY" secondItem="u6z-hK-dS5" secondAttribute="centerY" id="Mz5-MK-b00"/>
                                                                     <constraint firstItem="Euy-qo-MsA" firstAttribute="top" secondItem="fVZ-0u-s7f" secondAttribute="bottom" constant="8" id="v0Z-DX-OSV"/>
                                                                     <constraint firstAttribute="bottom" secondItem="fVZ-0u-s7f" secondAttribute="bottom" multiplier="2" id="vMA-7r-Ka1"/>
                                                                 </constraints>
@@ -625,7 +627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzy-Zq-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2403" y="-1278"/>
+            <point key="canvasLocation" x="2393" y="-1206"/>
         </scene>
         <!--Main Index-->
         <scene sceneID="SsC-2K-6uv">
@@ -750,6 +752,7 @@
         <image name="consult_page" width="32" height="32"/>
         <image name="home_page" width="32" height="32"/>
         <image name="home_page_counselor" width="32" height="32"/>
+        <image name="home_page_qa" width="32" height="32"/>
         <image name="hot_topic" width="32" height="32"/>
         <image name="icon_mine_default_header_protriat" width="76" height="76"/>
         <image name="icon_timeOfAppointment" width="24" height="24"/>
