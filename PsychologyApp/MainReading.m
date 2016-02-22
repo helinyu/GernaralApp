@@ -10,7 +10,7 @@
 #import "ReadingTitleLabelCell.h"
 #import "ReadingDetailCell.h"
 
-@interface MainReading ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface MainReading ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_titles;
 }
@@ -46,9 +46,16 @@
     
     ReadingTitleLabelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ReadingTitleLabelCell class]) forIndexPath:indexPath];
     cell.titleTextLabel.text= _titles[indexPath.row];
-
+    cell.backgroundColor = [UIColor yellowColor];
+    cell.contentView.backgroundColor = [UIColor yellowColor];
     return cell;
 }
+
+#pragma mark =--flow
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(50, 50);
+}
+
 
 #pragma mark -- UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
