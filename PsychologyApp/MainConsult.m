@@ -15,9 +15,13 @@ typedef NS_ENUM(NSInteger, TopicType) {
     TopicType2
 };
 
+
+#define HOTCELLID NSStringFromClass([ConsultMainSummarizeCell class])
+#define NEWCELLID @"ConsultNewTopicCell"
+
 @interface MainConsult () <UITableViewDataSource,UITableViewDelegate>
 {
-    NSInteger _hotTopicIndex;
+    NSInteger _topicIndex;
 }
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *titleswitchControl;
@@ -33,13 +37,13 @@ typedef NS_ENUM(NSInteger, TopicType) {
     [super viewDidLoad];
     
     //tableView 注册cell  r热门话题
-    [self.consultMianSummarizeTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ConsultMainSummarizeCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ConsultMainSummarizeCell class])];
+    [self.consultMianSummarizeTableView registerNib:[UINib nibWithNibName:HOTCELLID bundle:nil] forCellReuseIdentifier:HOTCELLID];
     
-//    最新话题
+    //最新话题
+    [self.consultMianSummarizeTableView registerNib:[UINib nibWithNibName:NEWCELLID bundle:nil] forCellReuseIdentifier:NEWCELLID];
 
     //默认的类型
-    _hotTopicIndex = TopicType1;
-
+    _topicIndex = TopicType1;
 }
 
 #pragma mark --UItableViewDatasource
@@ -47,7 +51,7 @@ typedef NS_ENUM(NSInteger, TopicType) {
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSInteger number;
     
-    switch (_hotTopicIndex) {
+    switch (_topicIndex) {
         case TopicType1:
             number = 10;
             break;
@@ -68,7 +72,7 @@ typedef NS_ENUM(NSInteger, TopicType) {
     
     UITableViewCell* cellT;
     
-    switch (_hotTopicIndex) {
+    switch (_topicIndex) {
         case TopicType1:
         {
             ConsultMainSummarizeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ConsultMainSummarizeCell class]) forIndexPath:indexPath];
@@ -81,11 +85,9 @@ typedef NS_ENUM(NSInteger, TopicType) {
             
         case TopicType2:
         {
-            ConsultMainSummarizeCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ConsultMainSummarizeCell class]) forIndexPath:indexPath];
-            
-            [cell setBackgroundImageView:@"4.jpg" withPersonHeadImageView:@"portrait_head" withPersonNameLabel:@"何林郁" withPersonSummarizeLabel:@"单亲父母应该怎么处理孩子青春期的问题" withConsultNumerLabel:1];
+            ConsultMainSummarizeCell *cell = [tableView dequeueReusableCellWithIdentifier:NEWCELLID forIndexPath:indexPath];
+            [cell setPersonHeadImageView:@"portrait_head" withPersonNameNewLabel:@"名字" withPersonJobNewLabel:@"心理咨询师" withArticleTitleNewLabel:@"极客学院》全套VIP视频下载，百度网盘文章标题极客学院》全套VIP视频下载，百度网盘" withArticleSumNewLabel:@"造字工房全套（16款）正版中文设计个人字体免费下载烧脑神剧：《毛骗》终结篇回归 收费版10集完整版下载" withConsultNumberNewLabel:@"0人咨询过" withMarkNewLabel:@"心理应用"];
             cellT = cell;
-            
         }
             break;
             
@@ -99,13 +101,22 @@ typedef NS_ENUM(NSInteger, TopicType) {
     NSLog(@"切换了按钮");
     
     UIButton *button = (UIButton*)sender ;
-    
     switch (button.tag-20) {
         case TopicType1:
-            _hotTopicIndex = TopicType1;
+        {
+            _topicIndex = TopicType1;
+            [_hotTopicButton setTitleColor:[UIColor colorWithRed:0.0/255 green:122.0/255 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
+            [_newestTopicButton setTitleColor:[UIColor colorWithRed:170/255 green:170/255 blue:170/225 alpha:1.0] forState:UIControlStateNormal];
+        }
             break;
+            
         case TopicType2:
-            _hotTopicIndex = TopicType2;
+        {
+            _topicIndex = TopicType2;
+            [_newestTopicButton setTitleColor:[UIColor colorWithRed:0.0/255 green:122.0/255 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
+            [_hotTopicButton setTitleColor:[UIColor colorWithRed:170/255 green:170/255 blue:170/225 alpha:1.0] forState:UIControlStateNormal];
+
+        }
             break;
         default:
             break;

@@ -69,7 +69,9 @@
                                 <subviews>
                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-i4-ko5" userLabel="Button left">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
-                                        <state key="normal" title="热门话题"/>
+                                        <state key="normal" title="热门话题">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="onChangeHopTopicClicked:" destination="X35-Uf-VnE" eventType="touchUpInside" id="Nin-vr-oE4"/>
                                         </connections>
@@ -97,9 +99,50 @@
                                     <constraint firstItem="tlT-i4-ko5" firstAttribute="leading" secondItem="WK1-c8-S0w" secondAttribute="leading" id="xAt-BB-ouG"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-nn-VDn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-g4-bn1" userLabel="4 title View">
+                                <rect key="frame" x="0.0" y="0.0" width="580" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsY-l7-zro">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
+                                        <state key="normal" title="热门推荐"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJe-Zj-GmS">
+                                        <rect key="frame" x="145" y="0.0" width="145" height="40"/>
+                                        <state key="normal" title="评价更高"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9q-PR-9aI">
+                                        <rect key="frame" x="290" y="0.0" width="145" height="40"/>
+                                        <state key="normal" title="预约最多"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-Nl-KIN">
+                                        <rect key="frame" x="435" y="0.0" width="145" height="40"/>
+                                        <state key="normal" title="最新加入"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1J6-5W-xpx"/>
+                                    <constraint firstItem="4fQ-Nl-KIN" firstAttribute="height" secondItem="h9q-PR-9aI" secondAttribute="height" id="1ga-6o-MBy"/>
+                                    <constraint firstItem="4fQ-Nl-KIN" firstAttribute="leading" secondItem="h9q-PR-9aI" secondAttribute="trailing" id="ATk-DF-BLS"/>
+                                    <constraint firstItem="h9q-PR-9aI" firstAttribute="top" secondItem="cJe-Zj-GmS" secondAttribute="top" id="Id9-Gp-n7N"/>
+                                    <constraint firstItem="4fQ-Nl-KIN" firstAttribute="top" secondItem="Urq-g4-bn1" secondAttribute="top" id="MwU-i0-nYk"/>
+                                    <constraint firstItem="4fQ-Nl-KIN" firstAttribute="width" secondItem="h9q-PR-9aI" secondAttribute="width" id="NYy-Z2-yRf"/>
+                                    <constraint firstItem="cJe-Zj-GmS" firstAttribute="leading" secondItem="ZsY-l7-zro" secondAttribute="trailing" id="Wz3-J8-dc2"/>
+                                    <constraint firstAttribute="trailing" secondItem="4fQ-Nl-KIN" secondAttribute="trailing" id="b6d-Hc-hNR"/>
+                                    <constraint firstItem="ZsY-l7-zro" firstAttribute="height" secondItem="Urq-g4-bn1" secondAttribute="height" id="e63-AC-yiX"/>
+                                    <constraint firstItem="h9q-PR-9aI" firstAttribute="height" secondItem="cJe-Zj-GmS" secondAttribute="height" id="f6f-ud-kTL"/>
+                                    <constraint firstItem="cJe-Zj-GmS" firstAttribute="height" secondItem="ZsY-l7-zro" secondAttribute="height" id="nrw-iJ-ruT"/>
+                                    <constraint firstItem="cJe-Zj-GmS" firstAttribute="top" secondItem="Urq-g4-bn1" secondAttribute="top" id="qb4-eE-oWd"/>
+                                    <constraint firstItem="h9q-PR-9aI" firstAttribute="width" secondItem="cJe-Zj-GmS" secondAttribute="width" id="s64-mn-NqR"/>
+                                    <constraint firstItem="ZsY-l7-zro" firstAttribute="leading" secondItem="Urq-g4-bn1" secondAttribute="leading" id="su2-IX-zNA"/>
+                                    <constraint firstItem="ZsY-l7-zro" firstAttribute="top" secondItem="Urq-g4-bn1" secondAttribute="top" id="t6e-zf-7GR"/>
+                                    <constraint firstItem="cJe-Zj-GmS" firstAttribute="width" secondItem="ZsY-l7-zro" secondAttribute="width" id="vvT-5f-5ot"/>
+                                    <constraint firstItem="h9q-PR-9aI" firstAttribute="leading" secondItem="cJe-Zj-GmS" secondAttribute="trailing" id="y1h-6t-VSk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="154" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-nn-VDn">
                                 <rect key="frame" x="0.0" y="40" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="fxg-GL-FBj">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -107,7 +150,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ConsultMainSummarizeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ConsultMainSummarizeCell" rowHeight="154" id="KVW-dd-nGQ" customClass="ConsultMainSummarizeCell">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="154"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="600" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KVW-dd-nGQ" id="cMi-Ye-00D">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="153.5"/>
@@ -128,16 +171,19 @@
                             <constraint firstItem="3Nb-7V-Lvg" firstAttribute="top" secondItem="cFe-nn-VDn" secondAttribute="bottom" id="C2o-DP-1cH"/>
                             <constraint firstItem="WK1-c8-S0w" firstAttribute="leading" secondItem="tPq-Bp-wdy" secondAttribute="leading" id="G2n-pj-AsL"/>
                             <constraint firstAttribute="trailing" secondItem="WK1-c8-S0w" secondAttribute="trailing" id="VdG-ky-bxP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Urq-g4-bn1" secondAttribute="trailing" id="fvS-2h-gJY"/>
                             <constraint firstItem="cFe-nn-VDn" firstAttribute="leading" secondItem="tPq-Bp-wdy" secondAttribute="leading" id="g6Q-PH-j7N"/>
                             <constraint firstItem="WK1-c8-S0w" firstAttribute="top" secondItem="E0v-W8-cGZ" secondAttribute="bottom" id="hos-3L-a53"/>
                             <constraint firstItem="cFe-nn-VDn" firstAttribute="top" secondItem="WK1-c8-S0w" secondAttribute="bottom" id="kmu-y8-Rxc"/>
+                            <constraint firstItem="Urq-g4-bn1" firstAttribute="leading" secondItem="tPq-Bp-wdy" secondAttribute="leading" id="mT9-ot-QOs"/>
+                            <constraint firstItem="Urq-g4-bn1" firstAttribute="top" secondItem="E0v-W8-cGZ" secondAttribute="bottom" id="zYq-bA-Zag"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="089-L1-1RX" userLabel="navigation Item">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="consult_funnel" id="p3A-ee-iGI"/>
-                        <segmentedControl key="titleView" multipleTouchEnabled="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" momentary="YES" id="4g5-AW-S6d">
-                            <rect key="frame" x="59" y="7" width="486" height="30"/>
+                        <segmentedControl key="titleView" multipleTouchEnabled="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" momentary="YES" id="4g5-AW-S6d">
+                            <rect key="frame" x="112" y="7" width="376" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.97647058819999999" green="0.078431372550000003" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                             <segments>
