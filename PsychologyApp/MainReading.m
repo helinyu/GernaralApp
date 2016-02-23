@@ -39,6 +39,7 @@
 
 #pragma mark -- UICollectionDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
     return _titles.count;
 }
 

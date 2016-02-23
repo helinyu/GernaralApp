@@ -65,6 +65,9 @@
 		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
+		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
+		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
+		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
 		DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA771C787AFE000A4BC9 /* 1.png */; };
 		DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA781C787AFE000A4BC9 /* 2.png */; };
 		DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA791C787AFE000A4BC9 /* 3.jpg */; };
@@ -206,6 +209,10 @@
 		DC9DEF0C1C7486A800C1A1AE /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
+		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
+		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
+		DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultNewTopicCell.xib; sourceTree = "<group>"; };
 		DCFECA771C787AFE000A4BC9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		DCFECA781C787AFE000A4BC9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		DCFECA791C787AFE000A4BC9 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -704,6 +711,17 @@
 			name = app;
 			sourceTree = "<group>";
 		};
+		DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */ = {
+			isa = PBXGroup;
+			children = (
+				DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */,
+				DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */,
+				DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */,
+				DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */,
+			);
+			name = ConsultMainSummarizeCell;
+			sourceTree = "<group>";
+		};
 		DCFECA811C787B33000A4BC9 /* framwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -734,6 +752,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
 				DC7CE39A1C7A05670067B19E /* QAMainCell */,
 				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
 				DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */,
@@ -870,6 +889,7 @@
 			files = (
 				DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */,
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
+				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
@@ -881,6 +901,7 @@
 				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
+				DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */,
 				DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */,
 				DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */,
 				DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */,
@@ -984,6 +1005,7 @@
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
 				DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
+				DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */,
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
