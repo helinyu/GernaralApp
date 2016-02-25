@@ -92,36 +92,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WK1-c8-S0w" userLabel="2 title View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlT-i4-ko5" userLabel="Button left">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
-                                        <state key="normal" title="热门话题">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                    <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-IV-za8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="41"/>
+                                        <segments>
+                                            <segment title="热门话题"/>
+                                            <segment title="最新话题"/>
+                                        </segments>
                                         <connections>
-                                            <action selector="onChangeHopTopicClicked:" destination="X35-Uf-VnE" eventType="touchUpInside" id="Nin-vr-oE4"/>
+                                            <action selector="onChangeHopTopicClicked:" destination="X35-Uf-VnE" eventType="valueChanged" id="vnP-pJ-3dR"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iL-CF-G5N" userLabel="Button right">
-                                        <rect key="frame" x="300" y="0.0" width="300" height="40"/>
-                                        <state key="normal" title="最新话题">
-                                            <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onChangeHopTopicClicked:" destination="X35-Uf-VnE" eventType="touchUpInside" id="eZF-c6-lzv"/>
-                                        </connections>
-                                    </button>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5iL-CF-G5N" secondAttribute="trailing" id="Glc-G8-hMu"/>
-                                    <constraint firstAttribute="bottom" secondItem="tlT-i4-ko5" secondAttribute="bottom" id="Iq2-AH-BMn"/>
-                                    <constraint firstItem="5iL-CF-G5N" firstAttribute="leading" secondItem="tlT-i4-ko5" secondAttribute="trailing" id="JyA-F8-wPb"/>
-                                    <constraint firstItem="tlT-i4-ko5" firstAttribute="top" secondItem="WK1-c8-S0w" secondAttribute="top" id="NaH-d2-4hQ"/>
+                                    <constraint firstItem="2aD-IV-za8" firstAttribute="top" secondItem="WK1-c8-S0w" secondAttribute="top" id="0S9-pS-K5d"/>
+                                    <constraint firstAttribute="bottom" secondItem="2aD-IV-za8" secondAttribute="bottom" id="2PL-7N-uc0"/>
                                     <constraint firstAttribute="height" constant="40" id="Q1A-cA-ZT1"/>
-                                    <constraint firstItem="5iL-CF-G5N" firstAttribute="width" secondItem="tlT-i4-ko5" secondAttribute="width" id="VQA-wx-MXC"/>
-                                    <constraint firstItem="5iL-CF-G5N" firstAttribute="top" secondItem="WK1-c8-S0w" secondAttribute="top" id="gH0-ZG-tXt"/>
-                                    <constraint firstAttribute="bottom" secondItem="5iL-CF-G5N" secondAttribute="bottom" id="khh-C3-AVw"/>
-                                    <constraint firstItem="tlT-i4-ko5" firstAttribute="leading" secondItem="WK1-c8-S0w" secondAttribute="leading" id="xAt-BB-ouG"/>
+                                    <constraint firstAttribute="trailing" secondItem="2aD-IV-za8" secondAttribute="trailing" id="UrT-oA-nFj"/>
+                                    <constraint firstItem="2aD-IV-za8" firstAttribute="leading" secondItem="WK1-c8-S0w" secondAttribute="leading" id="zn2-p2-rYf"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="154" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-nn-VDn">
@@ -183,8 +171,6 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="consultMianSummarizeTableView" destination="cFe-nn-VDn" id="rjh-yA-PTH"/>
-                        <outlet property="hotTopicButton" destination="tlT-i4-ko5" id="dLA-ie-WvX"/>
-                        <outlet property="newestTopicButton" destination="5iL-CF-G5N" id="uD1-Ug-Cgv"/>
                         <outlet property="titleSegmentedControl" destination="SES-qn-J26" id="DLm-cL-vcy"/>
                         <outlet property="twoTitleView" destination="WK1-c8-S0w" id="VOV-Ay-Ey7"/>
                     </connections>

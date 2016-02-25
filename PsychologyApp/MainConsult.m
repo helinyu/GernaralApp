@@ -137,12 +137,11 @@ typedef NS_ENUM(NSInteger ,ListType){
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return  _cellHeight;
 }
-
 - (IBAction)onChangeHopTopicClicked:(id)sender {
 
+    UISegmentedControl *segmentedControl = (UISegmentedControl*)sender;
     
-    UIButton *button = (UIButton*)sender ;
-    switch (button.tag-20) {
+    switch (segmentedControl.selectedSegmentIndex) {
         case TopicType0:
         {
             _topicIndex = TopicType0;
