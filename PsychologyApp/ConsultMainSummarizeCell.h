@@ -10,7 +10,7 @@
 
 @interface ConsultMainSummarizeCell : UITableViewCell
 
-- (void)setBackgroundImageView:(NSString *)backgroundImageViewText withPersonHeadImageView:(NSString *)personHeadImageViewText withPersonNameLabel:(NSString *)personNameLabelText withPersonSummarizeLabel:(NSString *)personSummarizeLabelText withConsultNumerLabel:(NSInteger)consultNumber;
+- (CGFloat)setBackgroundImageView:(NSString *)backgroundImageViewText withPersonHeadImageView:(NSString *)personHeadImageViewText withPersonNameLabel:(NSString *)personNameLabelText withPersonSummarizeLabel:(NSString *)personSummarizeLabelText withConsultNumerLabel:(NSInteger)consultNumber;
 
 - (void)setPersonHeadImageView:(NSString *)personHeadImageViewText
         withPersonNameNewLabel:(NSString*)personNameNewLabelText
@@ -19,5 +19,7 @@
         withArticleSumNewLabel:(NSString *)articleSumNewLabelText
      withConsultNumberNewLabel:(NSString *)consultNumberNewLabelText
               withMarkNewLabel:(NSString *)markNewLabelText;
+
+- (CGFloat)setPersonHeadExpertImageView:(NSString*) personHeadExpertImageViewText withPersonNameExpertLabel:(NSString *)personNameExpertText withPersonMottoDetailLabel:(NSString*)personMottoDetailText withPersonSummarizeDetailLabel:(NSString*)personSummarizeDetailText withPersonConsultNumberDateilLabel:(NSString*)personConsultNumberDateilText;
 
 @end

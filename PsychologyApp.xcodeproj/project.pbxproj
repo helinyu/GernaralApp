@@ -65,6 +65,7 @@
 		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
+		DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */; };
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
@@ -209,6 +210,7 @@
 		DC9DEF0C1C7486A800C1A1AE /* AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppService.m; sourceTree = "<group>"; };
 		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailCell.xib; sourceTree = "<group>"; };
 		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
@@ -718,6 +720,7 @@
 				DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */,
 				DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */,
 				DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */,
+				DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */,
 			);
 			name = ConsultMainSummarizeCell;
 			sourceTree = "<group>";
@@ -887,6 +890,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */,
 				DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */,
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
