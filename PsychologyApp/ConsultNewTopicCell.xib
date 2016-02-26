@@ -22,7 +22,7 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="265" y="250.5"/>
+            <point key="canvasLocation" x="257" y="244.5"/>
         </tableViewCell>
     </objects>
 </document>
