@@ -66,6 +66,9 @@
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
 		DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */; };
+		DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F761C8086600075FBDD /* Helper+Style.m */; };
+		DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */; };
+		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
@@ -211,6 +214,12 @@
 		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailCell.xib; sourceTree = "<group>"; };
+		DCB33F751C8086600075FBDD /* Helper+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+Style.h"; sourceTree = "<group>"; };
+		DCB33F761C8086600075FBDD /* Helper+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+Style.m"; sourceTree = "<group>"; };
+		DCB33F791C8086F10075FBDD /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
+		DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
+		DCB33F7C1C8087480075FBDD /* Helper+System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+System.h"; sourceTree = "<group>"; };
+		DCB33F7D1C8087480075FBDD /* Helper+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+System.m"; sourceTree = "<group>"; };
 		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
@@ -713,6 +722,19 @@
 			name = app;
 			sourceTree = "<group>";
 		};
+		DCB33F781C80866C0075FBDD /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				DCB33F791C8086F10075FBDD /* UIColor+Helper.h */,
+				DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */,
+				DCB33F751C8086600075FBDD /* Helper+Style.h */,
+				DCB33F761C8086600075FBDD /* Helper+Style.m */,
+				DCB33F7C1C8087480075FBDD /* Helper+System.h */,
+				DCB33F7D1C8087480075FBDD /* Helper+System.m */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
 		DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +777,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DCB33F781C80866C0075FBDD /* helper */,
 				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
 				DC7CE39A1C7A05670067B19E /* QAMainCell */,
 				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
@@ -993,6 +1016,7 @@
 				DC10FD771C762501004ED442 /* MainReading.m in Sources */,
 				DC60BD5B1C70643500CFDC56 /* Service.m in Sources */,
 				DC60BD421C704EB900CFDC56 /* VCViewLine.m in Sources */,
+				DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
@@ -1003,6 +1027,7 @@
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
 				DC60BD411C704EB900CFDC56 /* VCView.m in Sources */,
 				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
+				DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */,
 				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
@@ -1029,6 +1054,7 @@
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
+				DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */,
 				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
 			);

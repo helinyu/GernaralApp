@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Helper+Style.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //设置导航栏
+    [Helper setupStyle];
+    
     return YES;
 }
 
