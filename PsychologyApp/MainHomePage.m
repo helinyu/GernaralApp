@@ -60,7 +60,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    NSLog(@"+++++++++++");
+//    NSLog(@"+++++++++++");
     self.cellFatherViewHeightConstraint.constant = 3*(_cellHeight+20)+40;
     
     [self.articleAndTestTableView reloadData];
@@ -101,7 +101,7 @@
     ArticleAndTestCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ArticleAndTestCell class]) forIndexPath:indexPath];
 
    _cellHeight =  [cell setcellTyleNameLabel:@"文章" withFirstImageView:@"1" withTitleLabel:@"文章的标题" withDetailLabel:@"幸福来自信服感，但幸福不等于幸福感" withDataLabel:@"1234"]+25;
-    NSLog(@"cellHeight is : %f",_cellHeight);
+//    NSLog(@"cellHeight is : %f",_cellHeight);
     
     switch (indexPath.section) {
         case 0:
