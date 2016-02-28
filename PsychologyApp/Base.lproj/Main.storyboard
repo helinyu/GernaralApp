@@ -155,7 +155,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="consult_funnel" id="p3A-ee-iGI"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="SES-qn-J26">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <rect key="frame" x="179" y="7" width="242" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="话题榜"/>
@@ -511,14 +511,14 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReadingTitleLabelCell" id="0Wp-OU-j2k" customClass="ReadingTitleLabelCell">
-                                                <rect key="frame" x="0.0" y="2.5" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="2.5" width="100" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <size key="customSize" width="50" height="50"/>
+                                                <size key="customSize" width="100" height="50"/>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>

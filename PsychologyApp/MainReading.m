@@ -54,7 +54,7 @@
 
 #pragma mark =--flow
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(50, 50);
+    return CGSizeMake(100, 50);
 }
 
 

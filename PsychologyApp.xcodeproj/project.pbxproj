@@ -69,6 +69,7 @@
 		DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F761C8086600075FBDD /* Helper+Style.m */; };
 		DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */; };
 		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
+		DCB33F811C808C620075FBDD /* ValidateService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F801C808C620075FBDD /* ValidateService.m */; };
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
@@ -220,6 +221,8 @@
 		DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		DCB33F7C1C8087480075FBDD /* Helper+System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+System.h"; sourceTree = "<group>"; };
 		DCB33F7D1C8087480075FBDD /* Helper+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+System.m"; sourceTree = "<group>"; };
+		DCB33F7F1C808C620075FBDD /* ValidateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateService.h; sourceTree = "<group>"; };
+		DCB33F801C808C620075FBDD /* ValidateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateService.m; sourceTree = "<group>"; };
 		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
@@ -716,6 +719,8 @@
 		DC9DEF0A1C74869300C1A1AE /* app */ = {
 			isa = PBXGroup;
 			children = (
+				DCB33F7F1C808C620075FBDD /* ValidateService.h */,
+				DCB33F801C808C620075FBDD /* ValidateService.m */,
 				DC9DEF0B1C7486A800C1A1AE /* AppService.h */,
 				DC9DEF0C1C7486A800C1A1AE /* AppService.m */,
 			);
@@ -1043,6 +1048,7 @@
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
+				DCB33F811C808C620075FBDD /* ValidateService.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,
 				DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */,
 				DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */,
