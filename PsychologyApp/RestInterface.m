@@ -71,4 +71,27 @@
     }];
 }
 
+//闪屏接口
++ (void)invokeSplashScreenWithRequest:(RestStructSplashScreenRequest *)request withComplete:(void (^)(RestStructSplashScreenResponse *response,NSError *error))completeBlock{
+    
+    NSLog(@"resquest is: %@",request);
+    [RestInterface _invokeWithUrl:@"mobi/v1/config/splash.json" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code) {
+            completeBlock(nil,error);
+            return;
+        }
+        
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:data
+                              options:kNilOptions
+                              error:&error];
+        NSLog(@"json's dat is :  %@",json);
+        NSError *restError = nil;
+        RestStructSplashScreenResponse *restResponse = [[RestStructSplashScreenResponse alloc] initWithData:data error:&restError];
+        NSLog(@"response is  ： %@",restResponse);
+        completeBlock(restResponse,error);
+    }];
+}
+
+
 @end

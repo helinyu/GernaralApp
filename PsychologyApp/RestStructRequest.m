@@ -100,4 +100,14 @@
 
 @end
 
+#pragma mark --闪屏请求与响应
+@implementation RestStructSplashScreenRequest
+
+- (void)setSize:(NSString *)size{
+    _size = size;
+    [self.params setObject:size forKey:@"size"];
+}
+
+@end
+
 

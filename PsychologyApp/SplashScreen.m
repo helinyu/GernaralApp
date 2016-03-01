@@ -8,8 +8,18 @@
 
 #import "SplashScreen.h"
 #import "MainIndex.h"
+#import "ServiceManager.h"
+#import "AppDefinition.h"
+#import "UIImageView+WebRequest.h"
+#import "AppService.h"
 
 @interface SplashScreen ()
+{
+    NSString* _btnLinkStr;
+}
+@property (weak, nonatomic) IBOutlet UIButton *configureAdClicksButton;
+@property (weak, nonatomic) IBOutlet UIImageView *configureAdClicksImageView;
+@property (weak, nonatomic) IBOutlet UIView *configureAdClicksView;
 
 @end
 
@@ -17,7 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSLog(@"screenis ; %f,%f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
     
     //导航栏存在的时候
     if (self.navigationItem) {
@@ -25,19 +36,93 @@
         UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
         self.navigationItem.backBarButtonItem = backBarButton;
     }
-    
-    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
+    [self loadAdvisements];
 }
-- (IBAction)onMainIndexClicked:(id)sender {
-    
-    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
 
+//配置当前的屏幕的大小
+- (NSString *)currentScreeenSize{
+    NSString *size = PICTURE2;
+    CGSize appSize = [[UIScreen mainScreen] bounds].size;
+    CGFloat appWidth = appSize.width;
+    CGFloat appHigh = appSize.height;
+  
+    //320*480 320*480 375*667 414*736
+    if (appWidth == 320) {
+        if (appHigh == 480) {
+            size = PICTURE0;
+        }else{
+            size = PICTURE1;
+        }
+    }else if(appWidth == 414){
+        size = PICTURE2;
+    }else{
+        size = PICTURE3;
+    }
     
+    return size;
+}
+
+- (void)loadAdvisements{
+    NSString *size = [self currentScreeenSize];
+    
+    [OBTAIN_SERVICE(AppService) requestSplashScreenWithSize:size withComplete:^(AppServiceSplashScreenData *appServiceSplashScreenData, NSError *error) {
+        //这类使用图片的设置
+        
+        if (error.code) {
+            //没有显示图片
+            [self hidenAdvisements:YES];
+            return ;
+        }
+        
+        if (appServiceSplashScreenData.img.length == 0) {
+            [self hidenAdvisements:YES];
+        }else{
+            _btnLinkStr = appServiceSplashScreenData.btnLink;
+            if ([[NSDate date] timeIntervalSince1970] < appServiceSplashScreenData.endTimestamp ) {
+                [self hidenAdvisements:NO];
+                _btnLinkStr = appServiceSplashScreenData.btnLink;
+                [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.img];
+                [self configureAdClicksButtonNoMoreThanTen:appServiceSplashScreenData.btnDesc];
+            }
+        }
+    }];
+    
+    //跳转
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"SegueToMainControler" sender:self];
+    });
+}
+
+
+//配置按钮
+- (void)configureAdClicksButtonNoMoreThanTen:(NSString *)buttonStr{
+    
+    if (buttonStr == nil) {
+        [_configureAdClicksButton setHidden:YES];
+        return;
+    }
+    
+    if (buttonStr.length >10) {
+        [_configureAdClicksButton setTitle:[buttonStr substringToIndex:10] forState:UIControlStateNormal];
+    }else{
+        [_configureAdClicksButton setTitle:buttonStr forState:UIControlStateNormal];
+    }
+}
+
+//隐藏广告
+- (void)hidenAdvisements:(BOOL)ishiden{
+    self.configureAdClicksButton.hidden = ishiden;
+    self.configureAdClicksImageView.hidden = ishiden;
+    self.configureAdClicksView.hidden = ishiden;
+}
+
+- (IBAction)onMainIndexClicked:(id)sender {
+    //有广告点击之后的情况
+    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

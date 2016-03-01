@@ -19,38 +19,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aV9-1j-l5K" userLabel="back View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-HR-cZb" userLabel="configureAdClickedView" customClass="UIControl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-Vm-e74">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-ob-oRQ">
+                                        <rect key="frame" x="484" y="522" width="100" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <inset key="contentEdgeInsets" minX="2" minY="5" maxX="2" maxY="5"/>
+                                        <state key="normal" title="广告按钮提醒"/>
                                         <connections>
-                                            <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofh-4n-RaM"/>
+                                            <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihu-Cb-M9u"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-hP-Gtk">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.70467101980000002" blue="0.95070327170000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wH6-hP-Gtk" secondAttribute="trailing" id="FgD-jC-VB8"/>
+                                    <constraint firstItem="s0b-ob-oRQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f7b-HR-cZb" secondAttribute="leading" constant="16" id="N8s-GP-XRa"/>
+                                    <constraint firstItem="wH6-hP-Gtk" firstAttribute="top" secondItem="f7b-HR-cZb" secondAttribute="top" id="NRL-NP-4nQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="s0b-ob-oRQ" secondAttribute="trailing" constant="16" id="Nfd-gl-NGd"/>
+                                    <constraint firstAttribute="bottom" secondItem="wH6-hP-Gtk" secondAttribute="bottom" id="kvn-6t-69b"/>
+                                    <constraint firstAttribute="bottom" secondItem="s0b-ob-oRQ" secondAttribute="bottom" constant="48" id="lHg-9g-2Ir"/>
+                                    <constraint firstItem="wH6-hP-Gtk" firstAttribute="leading" secondItem="f7b-HR-cZb" secondAttribute="leading" id="xxp-Ge-yyf"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="EyT-j4-PI1"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-L7-gxV" userLabel="configureNoAdView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-hj-gfZ">
+                                        <rect key="frame" x="260" y="104" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Xw-Q5e">
+                                        <rect key="frame" x="249" y="214" width="102" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="l8H-91-BOU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理健康 心理健康" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-Lq-PwB">
+                                        <rect key="frame" x="230" y="523" width="141" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="B7C-Uy-UIJ"/>
+                                            <constraint firstAttribute="width" constant="141" id="ppK-mh-ZRf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PNC-Lq-PwB" secondAttribute="bottom" constant="56" id="0hN-Ta-wR7"/>
+                                    <constraint firstItem="PNC-Lq-PwB" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="Hgd-pe-Z35"/>
+                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="top" secondItem="c2B-hj-gfZ" secondAttribute="bottom" constant="30" id="KGe-vD-wWP"/>
+                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="top" secondItem="wc0-L7-gxV" secondAttribute="top" constant="104" id="Zho-TV-fRd"/>
+                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="centerX" secondItem="c2B-hj-gfZ" secondAttribute="centerX" id="gSl-7X-dAx"/>
+                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="gVT-Ty-IIi"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aV9-1j-l5K" secondAttribute="trailing" id="DKF-Pd-6H4"/>
-                            <constraint firstItem="aV9-1j-l5K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gnR-QY-4o6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aV9-1j-l5K" secondAttribute="bottom" id="gvC-Xt-bDe"/>
-                            <constraint firstItem="aV9-1j-l5K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zjg-19-RNT"/>
+                            <constraint firstItem="f7b-HR-cZb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BZY-dl-UkX"/>
+                            <constraint firstItem="wc0-L7-gxV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="BlW-Ph-ziL"/>
+                            <constraint firstAttribute="trailing" secondItem="f7b-HR-cZb" secondAttribute="trailing" id="CBi-Wa-fp8"/>
+                            <constraint firstItem="wc0-L7-gxV" firstAttribute="leading" secondItem="f7b-HR-cZb" secondAttribute="leading" id="Jbr-cY-1M1"/>
+                            <constraint firstItem="f7b-HR-cZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tw2-oC-46y"/>
+                            <constraint firstItem="wc0-L7-gxV" firstAttribute="trailing" secondItem="f7b-HR-cZb" secondAttribute="trailing" id="VfG-DV-fTi"/>
+                            <constraint firstItem="wc0-L7-gxV" firstAttribute="top" secondItem="f7b-HR-cZb" secondAttribute="top" id="lcd-fx-2w1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f7b-HR-cZb" secondAttribute="bottom" id="tls-CL-IS5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Buc-J9-uZu"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="f3r-Vt-klP" kind="show" id="DdK-cp-y2f"/>
+                        <outlet property="configureAdClicksButton" destination="s0b-ob-oRQ" id="i7x-hD-WcY"/>
+                        <outlet property="configureAdClicksImageView" destination="wH6-hP-Gtk" id="fTZ-eY-J9L"/>
+                        <outlet property="configureAdClicksView" destination="f7b-HR-cZb" id="L3m-P1-Ncr"/>
+                        <segue destination="f3r-Vt-klP" kind="show" identifier="SegueToMainControler" id="DdK-cp-y2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469" y="537"/>
+            <point key="canvasLocation" x="562" y="531"/>
         </scene>
         <!--咨询-->
         <scene sceneID="ftH-cO-ApC">
@@ -921,7 +981,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7x-T6-aSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="537"/>
+            <point key="canvasLocation" x="1276" y="537"/>
         </scene>
         <!--首页-->
         <scene sceneID="LuB-0R-yWj">
@@ -1040,6 +1100,7 @@
         <image name="home_page_counselor" width="32" height="32"/>
         <image name="home_page_qa" width="32" height="32"/>
         <image name="hot_topic" width="32" height="32"/>
+        <image name="icon_logo" width="80" height="80"/>
         <image name="icon_mine_default_header_protriat" width="76" height="76"/>
         <image name="icon_timeOfAppointment" width="24" height="24"/>
         <image name="my_page" width="32" height="32"/>

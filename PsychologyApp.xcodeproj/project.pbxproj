@@ -31,6 +31,7 @@
 		DC10FD771C762501004ED442 /* MainReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD761C762501004ED442 /* MainReading.m */; };
 		DC10FD7B1C762530004ED442 /* MainQA.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainQA.m */; };
 		DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7E1C762546004ED442 /* MainConsult.m */; };
+		DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC185B981C82E041001A0DD1 /* AppServiceData.m */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -150,6 +151,8 @@
 		DC10FD7A1C762530004ED442 /* MainQA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainQA.m; sourceTree = "<group>"; };
 		DC10FD7D1C762546004ED442 /* MainConsult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConsult.h; sourceTree = "<group>"; };
 		DC10FD7E1C762546004ED442 /* MainConsult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConsult.m; sourceTree = "<group>"; };
+		DC185B971C82E041001A0DD1 /* AppServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServiceData.h; sourceTree = "<group>"; };
+		DC185B981C82E041001A0DD1 /* AppServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServiceData.m; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
@@ -450,6 +453,15 @@
 			name = consult;
 			sourceTree = "<group>";
 		};
+		DC185B961C82E034001A0DD1 /* serviceData */ = {
+			isa = PBXGroup;
+			children = (
+				DC185B971C82E041001A0DD1 /* AppServiceData.h */,
+				DC185B981C82E041001A0DD1 /* AppServiceData.m */,
+			);
+			name = serviceData;
+			sourceTree = "<group>";
+		};
 		DC207FE41C564D820011D8C4 /* external */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +502,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC185B961C82E034001A0DD1 /* serviceData */,
 				DC9DEF0A1C74869300C1A1AE /* app */,
 				DC7917E41C567BD200BB3FA9 /* accounts */,
 				DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */,
@@ -1045,6 +1058,7 @@
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
 				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
+				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,

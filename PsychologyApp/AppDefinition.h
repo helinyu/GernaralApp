@@ -9,11 +9,10 @@
 #ifndef AppDefinition_h
 #define AppDefinition_h
 
-
 //屏幕尺寸
-#define LOW @"low"
-#define MIDDLE @"middle"
-#define HIGH @"high"
-
+#define PICTURE0 @"PICTURE0"
+#define PICTURE1 @"PICTURE1"
+#define PICTURE2 @"PICTURE2"
+#define PICTURE3 @"PICTURE3"
 
 #endif /* AppDefinition_h */

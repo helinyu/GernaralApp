@@ -25,3 +25,8 @@
 @property (strong, nonatomic) NSString *phone;
 @property (strong, nonatomic) NSString *password;
 @end
+
+#pragma mark --闪屏请求与响应
+@interface RestStructSplashScreenRequest : RestStructRequest
+@property (strong, nonatomic) NSString *size;
+@end

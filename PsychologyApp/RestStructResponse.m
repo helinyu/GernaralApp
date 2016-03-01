@@ -41,3 +41,31 @@
 }
 
 @end
+
+
+//闪屏广告
+@implementation RestStructSplashScreenResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _btnDesc = @"";
+        _btnLink= @"";
+        _endTimestamp = 0;
+        _img = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"data.btnDesc":@"btnDesc",
+                                                       @"data.btnLink": @"btnLink",
+                                                       @"data.endTimestamp": @"endTimestamp",
+                                                       @"data.img":@"img"
+                                                       }];
+}
+
+@end
+

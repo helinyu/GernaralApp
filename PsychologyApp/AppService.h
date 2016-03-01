@@ -7,7 +7,11 @@
 //
 
 #import "Service.h"
+#import "AppServiceData.h"
+#import "RestStructRequest.h"
 
 @interface AppService : Service
+
+- (void)requestSplashScreenWithSize:(NSString *)sizeType withComplete:(void (^)(AppServiceSplashScreenData *, NSError *))completeBlock;
 
 @end
