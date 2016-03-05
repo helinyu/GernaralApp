@@ -10,4 +10,5 @@
 
 @interface MainIndex : UITabBarController
 
+- (void)setADLink:(NSString *)link with:(BOOL)isClicked;
 @end

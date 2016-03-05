@@ -9,14 +9,15 @@
 #import "MineBookingManagement.h"
 
 @interface MineBookingManagement ()
-
 @end
 
 @implementation MineBookingManagement
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

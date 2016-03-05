@@ -16,6 +16,7 @@
 @interface SplashScreen ()
 {
     NSString* _btnLinkStr;
+    BOOL _isClicked;
 }
 @property (weak, nonatomic) IBOutlet UIButton *configureAdClicksButton;
 @property (weak, nonatomic) IBOutlet UIImageView *configureAdClicksImageView;
@@ -39,6 +40,12 @@
     
     //test advitisements
     self.configureAdClicksImageView.image = [UIImage imageNamed:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+    _btnLinkStr = @"http://baidu.com";
+    //跳转
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"SegueToMainControler" sender:self];
+    });
+    
 //    [self loadAdvisements];
 }
 
@@ -130,21 +137,28 @@
 
 - (IBAction)onMainIndexClicked:(id)sender {
     //有广告点击之后的情况
-    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
+    NSLog(@"到广告的页面中区");
+    _isClicked = YES ;
+    
+//    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MainIndex class])] animated:YES];
+}
+
+#pragma mark - Navigation
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"SegueToMainControler"]) {
+        MainIndex *main  = segue.destinationViewController;
+        if (_isClicked) {
+            [main setADLink:_btnLinkStr with:_isClicked];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

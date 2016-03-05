@@ -10,12 +10,18 @@
 
 @interface MineMessageCenter ()
 
+@property (nonatomic,strong) NSArray * informations;
+
 @end
 
 @implementation MineMessageCenter
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    _informations = @[@"消息",@"评论",@"系统通知"];
+
     // Do any additional setup after loading the view.
 }
 
@@ -24,6 +30,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -- UITableViewDatasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _informations.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableView" forIndexPath:indexPath];
+    return  cell;
+}
 /*
 #pragma mark - Navigation
 

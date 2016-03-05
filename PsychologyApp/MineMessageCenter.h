@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineMessageCenter : UIViewController
+@interface MineMessageCenter : UITableViewController
+
+
 
 @end

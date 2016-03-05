@@ -10,12 +10,24 @@
 
 @interface MainIndex ()
 
+@property (nonatomic,copy) NSString *link;
+@property (nonatomic,assign) BOOL isClicked;
+
 @end
 
 @implementation MainIndex
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (self.isClicked) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link]];
+    }
+}
+
+- (void)setADLink:(NSString *)link with:(BOOL)isClicked {
+    self.link = link;
+    self.isClicked = isClicked;
 }
 
 - (void)didReceiveMemoryWarning {

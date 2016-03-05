@@ -58,7 +58,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-HR-cZb" userLabel="configureAdClickedView" customClass="UIControl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-hP-Gtk">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-hP-Gtk">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-ob-oRQ">
@@ -82,7 +82,7 @@
                                     <constraint firstItem="wH6-hP-Gtk" firstAttribute="leading" secondItem="f7b-HR-cZb" secondAttribute="leading" id="xxp-Ge-yyf"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="EyT-j4-PI1"/>
+                                    <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JoW-Z2-6u8"/>
                                 </connections>
                             </view>
                         </subviews>
