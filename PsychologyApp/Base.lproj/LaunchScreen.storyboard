@@ -8,10 +8,48 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController"/>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rAU-5v-ITh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghS-7A-cYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fpq-cu-08r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z8k-j0-TvC">
+                                <rect key="frame" x="260" y="124" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理健康  心理健康" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-yi-pg5">
+                                <rect key="frame" x="227.5" y="523.5" width="145" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfk-A6-SJB">
+                                <rect key="frame" x="249" y="234" width="102" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ghS-7A-cYM" firstAttribute="top" secondItem="yQv-yi-pg5" secondAttribute="bottom" constant="56" id="3qc-6S-Kvf"/>
+                            <constraint firstItem="Z8k-j0-TvC" firstAttribute="centerX" secondItem="fpq-cu-08r" secondAttribute="centerX" id="5Kl-c8-AN2"/>
+                            <constraint firstItem="bfk-A6-SJB" firstAttribute="centerX" secondItem="Z8k-j0-TvC" secondAttribute="centerX" id="7xZ-7q-PI0"/>
+                            <constraint firstItem="bfk-A6-SJB" firstAttribute="top" secondItem="Z8k-j0-TvC" secondAttribute="bottom" constant="30" id="FCc-18-IG2"/>
+                            <constraint firstItem="yQv-yi-pg5" firstAttribute="centerX" secondItem="fpq-cu-08r" secondAttribute="centerX" id="ezQ-Ba-OMP"/>
+                            <constraint firstItem="Z8k-j0-TvC" firstAttribute="top" secondItem="rAU-5v-ITh" secondAttribute="bottom" constant="104" id="rfu-jO-6Rn"/>
+                        </constraints>
+                    </view>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_logo" width="80" height="80"/>
+    </resources>
 </document>

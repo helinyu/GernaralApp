@@ -36,7 +36,10 @@
         UIBarButtonItem *backBarButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
         self.navigationItem.backBarButtonItem = backBarButton;
     }
-    [self loadAdvisements];
+    
+    //test advitisements
+    self.configureAdClicksImageView.image = [UIImage imageNamed:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+//    [self loadAdvisements];
 }
 
 //配置当前的屏幕的大小
@@ -81,11 +84,20 @@
             if ([[NSDate date] timeIntervalSince1970] < appServiceSplashScreenData.endTimestamp ) {
                 [self hidenAdvisements:NO];
                 _btnLinkStr = appServiceSplashScreenData.btnLink;
-                [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.img];
+                
+//                [[self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.img];
+//                /Users/felix/mysql_PsychologyApp/PICTURE0.png  //图片链接
+                [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+                
                 [self configureAdClicksButtonNoMoreThanTen:appServiceSplashScreenData.btnDesc];
             }
         }
     }];
+    
+    //test 使用与测试的网络
+    [self hidenAdvisements:NO];
+    [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+    [self configureAdClicksButtonNoMoreThanTen:@"到广告中去"];
     
     //跳转
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

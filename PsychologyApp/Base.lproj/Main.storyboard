@@ -19,9 +19,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-L7-gxV" userLabel="configureNoAdView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-hj-gfZ">
+                                        <rect key="frame" x="260" y="104" width="80" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Xw-Q5e">
+                                        <rect key="frame" x="249" y="214" width="102" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="l8H-91-BOU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理健康 心理健康" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-Lq-PwB">
+                                        <rect key="frame" x="230" y="523" width="141" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="B7C-Uy-UIJ"/>
+                                            <constraint firstAttribute="width" constant="141" id="ppK-mh-ZRf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PNC-Lq-PwB" secondAttribute="bottom" constant="56" id="0hN-Ta-wR7"/>
+                                    <constraint firstItem="PNC-Lq-PwB" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="Hgd-pe-Z35"/>
+                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="top" secondItem="c2B-hj-gfZ" secondAttribute="bottom" constant="30" id="KGe-vD-wWP"/>
+                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="top" secondItem="wc0-L7-gxV" secondAttribute="top" constant="104" id="Zho-TV-fRd"/>
+                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="centerX" secondItem="c2B-hj-gfZ" secondAttribute="centerX" id="gSl-7X-dAx"/>
+                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="gVT-Ty-IIi"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-HR-cZb" userLabel="configureAdClickedView" customClass="UIControl">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-hP-Gtk">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-ob-oRQ">
                                         <rect key="frame" x="484" y="522" width="100" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -31,9 +70,6 @@
                                             <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihu-Cb-M9u"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-hP-Gtk">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -48,42 +84,6 @@
                                 <connections>
                                     <action selector="onMainIndexClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="EyT-j4-PI1"/>
                                 </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-L7-gxV" userLabel="configureNoAdView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-hj-gfZ">
-                                        <rect key="frame" x="260" y="104" width="80" height="80"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Xw-Q5e">
-                                        <rect key="frame" x="249" y="214" width="102" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="l8H-91-BOU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理健康 心理健康" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-Lq-PwB">
-                                        <rect key="frame" x="230" y="523" width="141" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="B7C-Uy-UIJ"/>
-                                            <constraint firstAttribute="width" constant="141" id="ppK-mh-ZRf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="PNC-Lq-PwB" secondAttribute="bottom" constant="56" id="0hN-Ta-wR7"/>
-                                    <constraint firstItem="PNC-Lq-PwB" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="Hgd-pe-Z35"/>
-                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="top" secondItem="c2B-hj-gfZ" secondAttribute="bottom" constant="30" id="KGe-vD-wWP"/>
-                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="top" secondItem="wc0-L7-gxV" secondAttribute="top" constant="104" id="Zho-TV-fRd"/>
-                                    <constraint firstItem="9J5-Xw-Q5e" firstAttribute="centerX" secondItem="c2B-hj-gfZ" secondAttribute="centerX" id="gSl-7X-dAx"/>
-                                    <constraint firstItem="c2B-hj-gfZ" firstAttribute="centerX" secondItem="wc0-L7-gxV" secondAttribute="centerX" id="gVT-Ty-IIi"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
