@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineEditProfile : UIViewController
+@interface MineEditProfile : UITableViewController
 
 @end
+

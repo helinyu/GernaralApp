@@ -22,10 +22,10 @@
         }
         
         AppServiceSplashScreenData *appServiceSplashScreenData = [AppServiceSplashScreenData new];
-        appServiceSplashScreenData.img = response.img;
-        appServiceSplashScreenData.btnDesc = response.btnDesc;
-        appServiceSplashScreenData.btnLink = response.btnLink;
-        appServiceSplashScreenData.endTimestamp = response.endTimestamp;
+//        appServiceSplashScreenData.img = response.img;
+//        appServiceSplashScreenData.btnDesc = response.btnDesc;
+//        appServiceSplashScreenData.btnLink = response.btnLink;
+//        appServiceSplashScreenData.endTimestamp = response.endTimestamp;
         
         completeBlock(appServiceSplashScreenData,nil);
         

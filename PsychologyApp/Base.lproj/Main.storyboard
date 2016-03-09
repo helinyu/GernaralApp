@@ -22,10 +22,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wc0-L7-gxV" userLabel="configureNoAdView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-hj-gfZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-hj-gfZ">
                                         <rect key="frame" x="260" y="104" width="80" height="80"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Xw-Q5e">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="心理应用简语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J5-Xw-Q5e">
                                         <rect key="frame" x="249" y="214" width="102" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="l8H-91-BOU"/>
@@ -288,22 +288,6 @@
                                         <constraint firstItem="2r5-AF-yjQ" firstAttribute="leading" secondItem="VXB-Of-3Kq" secondAttribute="leading" id="e7n-kL-zep"/>
                                         <constraint firstAttribute="bottom" secondItem="2r5-AF-yjQ" secondAttribute="bottom" id="fW4-33-n2o"/>
                                         <constraint firstItem="2r5-AF-yjQ" firstAttribute="top" secondItem="VXB-Of-3Kq" secondAttribute="top" id="jbb-cc-MDv"/>
-                                    </constraints>
-                                </view>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="QvQ-fM-xEW" userLabel="footer View">
-                                    <rect key="frame" x="0.0" y="291.5" width="600" height="105"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advisements_back" translatesAutoresizingMaskIntoConstraints="NO" id="btu-Xy-StD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="105"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.48608196217902255" green="1" blue="0.42957921987523673" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="btu-Xy-StD" firstAttribute="top" secondItem="QvQ-fM-xEW" secondAttribute="top" id="JVx-lx-VM0"/>
-                                        <constraint firstAttribute="trailing" secondItem="btu-Xy-StD" secondAttribute="trailing" id="KH6-1b-3eC"/>
-                                        <constraint firstItem="btu-Xy-StD" firstAttribute="leading" secondItem="QvQ-fM-xEW" secondAttribute="leading" id="Lac-Jo-fpl"/>
-                                        <constraint firstAttribute="bottom" secondItem="btu-Xy-StD" secondAttribute="bottom" id="xCd-T7-m4S"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -1092,7 +1076,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="advisements_back" width="1506" height="612"/>
         <image name="blue_helper" width="32" height="32"/>
         <image name="consult_funnel" width="22" height="23"/>
         <image name="consult_page" width="32" height="32"/>

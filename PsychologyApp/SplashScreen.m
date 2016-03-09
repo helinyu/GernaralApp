@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self hidenAdvisements:NO];
+
     
     NSLog(@"screenis ; %f,%f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
     
@@ -39,14 +41,14 @@
     }
     
     //test advitisements
-    self.configureAdClicksImageView.image = [UIImage imageNamed:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
-    _btnLinkStr = @"http://baidu.com";
+//    self.configureAdClicksImageView.image = [UIImage imageNamed:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+//    _btnLinkStr = @"http://baidu.com";
     //跳转
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self performSegueWithIdentifier:@"SegueToMainControler" sender:self];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self performSegueWithIdentifier:@"SegueToMainControler" sender:self];
+//    });
     
-//    [self loadAdvisements];
+    [self loadAdvisements];
 }
 
 //配置当前的屏幕的大小
@@ -73,37 +75,32 @@
 }
 
 - (void)loadAdvisements{
-    NSString *size = [self currentScreeenSize];
+//    NSString *size = [self currentScreeenSize];
     
-    [OBTAIN_SERVICE(AppService) requestSplashScreenWithSize:size withComplete:^(AppServiceSplashScreenData *appServiceSplashScreenData, NSError *error) {
-        //这类使用图片的设置
-        
-        if (error.code) {
-            //没有显示图片
-            [self hidenAdvisements:YES];
-            return ;
-        }
-        
-        if (appServiceSplashScreenData.img.length == 0) {
-            [self hidenAdvisements:YES];
-        }else{
-            _btnLinkStr = appServiceSplashScreenData.btnLink;
-            if ([[NSDate date] timeIntervalSince1970] < appServiceSplashScreenData.endTimestamp ) {
-                [self hidenAdvisements:NO];
-                _btnLinkStr = appServiceSplashScreenData.btnLink;
-                
-//                [[self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.img];
-//                /Users/felix/mysql_PsychologyApp/PICTURE0.png  //图片链接
-                [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
-                
-                [self configureAdClicksButtonNoMoreThanTen:appServiceSplashScreenData.btnDesc];
-            }
-        }
-    }];
+//    [OBTAIN_SERVICE(AppService) requestSplashScreenWithSize:size withComplete:^(AppServiceSplashScreenData *appServiceSplashScreenData, NSError *error) {
+//        //这类使用图片的设置
+//        
+//        if (error.code) {
+//            //没有显示图片
+//            [self hidenAdvisements:YES];
+//            return ;
+//        }
+//        
+//        if (appServiceSplashScreenData.image_name.length == 0) {
+//            [self hidenAdvisements:YES];
+//        }else{
+//            [self hidenAdvisements:NO];
+//            _btnLinkStr = appServiceSplashScreenData.image_link;
+//            [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.image_name];
+////                /Users/felix/mysql_PsychologyApp/PICTURE0.png  //图片链接
+////                [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+//            [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:appServiceSplashScreenData.image_name];
+////            }
+//        }
+//    }];
     
     //test 使用与测试的网络
-    [self hidenAdvisements:NO];
-    [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"/Users/felix/mysql_PsychologyApp/PICTURE0.png"];
+    [self.configureAdClicksImageView setImageWithAbsoluteUrlStr:@"http://localhost/background/content/../images/splashscreen/PICTURE2.png"];
     [self configureAdClicksButtonNoMoreThanTen:@"到广告中去"];
     
     //跳转

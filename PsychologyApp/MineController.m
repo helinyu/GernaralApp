@@ -39,7 +39,7 @@
 - (void)viewDidLoad{
     _arrays = @[
                @[@"消息中心",@"预约管理"],
-               @[@"文章",@"问答",@"测试",@"收藏"],
+               @[@"收藏",@"测试",@"问答",@"文章"],
                @[@"编辑资料",@"专家注入"],
                @[@"关注/粉丝",@"分享好友",@"反馈意见",@"设置"]
                ];
@@ -74,14 +74,13 @@
             //第一段的分类
             switch (indexPath.row) {
                 case 0:
-                    NSLog(@"第一段的第一行");
-                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineBookingManagement class])] animated:YES];
-                    break;
-                case 1:
-                    NSLog(@"第一段的第一行");
                     [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineMessageCenter class])] animated:YES];
                     break;
-    
+
+                 case 1:
+                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineBookingManagement class])] animated:YES];
+                    break;
+
                 default:
                     break;
             }
@@ -115,11 +114,11 @@
         case 2:
             switch (indexPath.row) {
                 case 0:{
-                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineAttentionOrFan class])] animated:YES];
+                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineEditProfile class])] animated:YES];
                     break;
                 }
                 case 1:{
-                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineShareFriend class])] animated:YES];
+                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineConsultingexpert class])] animated:YES];
                     break;
                 }
                 default:

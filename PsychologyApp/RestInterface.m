@@ -16,7 +16,7 @@
     NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     sessionConfig.timeoutIntervalForRequest = 30;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
-    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/%@",OBTAIN_COMMON_HOST,urlStr]]];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",OBTAIN_COMMON_HOST,urlStr]]];
     
     urlRequest.HTTPBody = [request toPostBody];
     urlRequest.HTTPMethod = @"POST";
@@ -75,7 +75,7 @@
 + (void)invokeSplashScreenWithRequest:(RestStructSplashScreenRequest *)request withComplete:(void (^)(RestStructSplashScreenResponse *response,NSError *error))completeBlock{
     
     NSLog(@"resquest is: %@",request);
-    [RestInterface _invokeWithUrl:@"mobi/v1/config/splash.json" withRequest:request withComplete:^(NSData *data, NSError *error) {
+    [RestInterface _invokeWithUrl:@"content/splashscreen.json" withRequest:request withComplete:^(NSData *data, NSError *error) {
         if (error.code) {
             completeBlock(nil,error);
             return;

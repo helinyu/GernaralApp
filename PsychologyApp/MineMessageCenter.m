@@ -11,6 +11,7 @@
 @interface MineMessageCenter ()
 
 @property (nonatomic,strong) NSArray * informations;
+@property (nonatomic,strong) NSArray * images;
 
 @end
 
@@ -21,6 +22,7 @@
     
     
     _informations = @[@"消息",@"评论",@"系统通知"];
+    _images = @[@"icon_information",@"icon_text_message",@"icon_system_information"];
 
     // Do any additional setup after loading the view.
 }
@@ -38,8 +40,24 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableView" forIndexPath:indexPath];
-    return  cell;
+    //为什么使用官方的时候使用下面的方法不可以呢？
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableView" forIndexPath:indexPath];
+
+    static NSString *identifier = @"Identifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:identifier];
+//        cell.selectionStyle =UITableViewCellSelectionStyleNone;
+    }
+    cell.textLabel.text = [_informations objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:_images[indexPath.row]];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 60.0;
 }
 /*
 #pragma mark - Navigation

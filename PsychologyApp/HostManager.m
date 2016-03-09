@@ -39,7 +39,7 @@
 }
 
 - (void)switchToTest {
-    _data.commonHost = @"localhost:9000";
+    _data.commonHost = @"localhost/background/";
 }
 
 - (void)switchToRelease {

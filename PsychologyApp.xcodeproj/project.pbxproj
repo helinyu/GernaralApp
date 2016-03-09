@@ -71,6 +71,7 @@
 		DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */; };
 		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
 		DCB33F811C808C620075FBDD /* ValidateService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F801C808C620075FBDD /* ValidateService.m */; };
+		DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */; };
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
@@ -226,6 +227,8 @@
 		DCB33F7D1C8087480075FBDD /* Helper+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+System.m"; sourceTree = "<group>"; };
 		DCB33F7F1C808C620075FBDD /* ValidateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateService.h; sourceTree = "<group>"; };
 		DCB33F801C808C620075FBDD /* ValidateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateService.m; sourceTree = "<group>"; };
+		DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileCell.h; sourceTree = "<group>"; };
+		DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileCell.m; sourceTree = "<group>"; };
 		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 			children = (
 				DC0FCD751C76117300E5AF6F /* MineEditProfile.h */,
 				DC0FCD761C76117300E5AF6F /* MineEditProfile.m */,
+				DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */,
+				DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */,
 			);
 			name = "Edit Profile";
 			sourceTree = "<group>";
@@ -1039,6 +1044,7 @@
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
 				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
+				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
 				DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */,
 				DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */,

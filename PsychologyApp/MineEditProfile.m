@@ -6,9 +6,16 @@
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import "MineEditProfile.h"
 
-@interface MineEditProfile ()
+
+
+#import "MineEditProfile.h"
+#import "EditProfileCell.h"
+
+@interface MineEditProfile () <UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,strong) NSArray *profiles;
+
 
 @end
 
@@ -16,13 +23,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.profiles = @[@"昵称",@"性别",@"年龄",@"地区",@"简介"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark -- 修改资料
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.profiles.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    EditProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([EditProfileCell class]) forIndexPath:indexPath];
+    cell.atrributeLabel.text = self.profiles[indexPath.row];
+    cell.valueLabel.text  = self.profiles[indexPath.row];
+    return  cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+        return 40;
+}
+
+#pragma mark --UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            
+        }
+            break;
+        case 4:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 
 /*
 #pragma mark - Navigation
@@ -35,3 +95,6 @@
 */
 
 @end
+
+
+

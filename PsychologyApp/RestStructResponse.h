@@ -24,8 +24,12 @@
 
 //闪屏广告
 @interface RestStructSplashScreenResponse : RestStructResponse
-@property (strong,nonatomic) NSString * btnDesc;
-@property (strong,nonatomic) NSString * btnLink;
-@property (assign,nonatomic) NSTimeInterval endTimestamp;
-@property (strong,nonatomic) NSString * img;
+
+@property (strong, nonatomic) NSString * image_name;
+@property (strong, nonatomic) NSString * image_link;
+
+//@property (strong,nonatomic) NSString * btnDesc;
+//@property (strong,nonatomic) NSString * btnLink;
+//@property (assign,nonatomic) NSTimeInterval endTimestamp;
+//@property (strong,nonatomic) NSString * img;
 @end

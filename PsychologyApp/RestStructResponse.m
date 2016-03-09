@@ -50,22 +50,31 @@
 {
     self = [super init];
     if (self) {
-        _btnDesc = @"";
-        _btnLink= @"";
-        _endTimestamp = 0;
-        _img = @"";
+//        _btnDesc = @"";
+//        _btnLink= @"";
+//        _endTimestamp = 0;
+//        _img = @"";
+        _image_link = @"";
+        _image_name = @"";
     }
     return self;
 }
 
-+ (JSONKeyMapper *)keyMapper
-{
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"data.btnDesc":@"btnDesc",
-                                                       @"data.btnLink": @"btnLink",
-                                                       @"data.endTimestamp": @"endTimestamp",
-                                                       @"data.img":@"img"
-                                                       }];
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"image_name":@"image_name",
+                                                      @"image_link":@"image_link"
+                                                      }];
 }
+//+ (JSONKeyMapper *)keyMapper
+//{
+//    return [[JSONKeyMapper alloc] initWithDictionary:@{@"data.btnDesc":@"btnDesc",
+//                                                       @"data.btnLink": @"btnLink",
+//                                                       @"data.endTimestamp": @"endTimestamp",
+//                                                       @"data.img":@"img"
+//                                                       }];
+//}
 
 @end
 
