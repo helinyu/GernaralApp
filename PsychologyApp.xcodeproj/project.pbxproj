@@ -72,6 +72,8 @@
 		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
 		DCB33F811C808C620075FBDD /* ValidateService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F801C808C620075FBDD /* ValidateService.m */; };
 		DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */; };
+		DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A0391C8FBF2D002E9287 /* Entity.m */; };
+		DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A03C1C8FBF4B002E9287 /* Model.m */; };
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
@@ -229,6 +231,10 @@
 		DCB33F801C808C620075FBDD /* ValidateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateService.m; sourceTree = "<group>"; };
 		DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileCell.h; sourceTree = "<group>"; };
 		DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileCell.m; sourceTree = "<group>"; };
+		DCD6A0381C8FBF2D002E9287 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		DCD6A0391C8FBF2D002E9287 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		DCD6A03B1C8FBF4B002E9287 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		DCD6A03C1C8FBF4B002E9287 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		DCEF80CC1C7B66B20017DDE6 /* ConsultMainSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultMainSummarizeCell.h; sourceTree = "<group>"; };
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
@@ -596,7 +602,7 @@
 				DC992DD21C46959000382DFB /* storyboards */,
 				DC992DD31C46959800382DFB /* controllers */,
 				DC7917E01C5671B500BB3FA9 /* services */,
-				DC992DD41C4695A500382DFB /* models */,
+				DCD6A0371C8FBEE5002E9287 /* Models */,
 				DC207FE41C564D820011D8C4 /* external */,
 				DC992DD51C46970100382DFB /* libraries */,
 				DC9DEF031C74860700C1A1AE /* Categories */,
@@ -665,13 +671,6 @@
 				DC992DDA1C469AD600382DFB /* main */,
 			);
 			name = controllers;
-			sourceTree = "<group>";
-		};
-		DC992DD41C4695A500382DFB /* models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = models;
 			sourceTree = "<group>";
 		};
 		DC992DD51C46970100382DFB /* libraries */ = {
@@ -756,6 +755,17 @@
 				DCB33F7D1C8087480075FBDD /* Helper+System.m */,
 			);
 			name = helper;
+			sourceTree = "<group>";
+		};
+		DCD6A0371C8FBEE5002E9287 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCD6A03B1C8FBF4B002E9287 /* Model.h */,
+				DCD6A03C1C8FBF4B002E9287 /* Model.m */,
+				DCD6A0381C8FBF2D002E9287 /* Entity.h */,
+				DCD6A0391C8FBF2D002E9287 /* Entity.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */ = {
@@ -1028,6 +1038,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */,
 				DCFECA921C78BA05000A4BC9 /* ArticleAndTestCell.m in Sources */,
 				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
@@ -1039,6 +1050,7 @@
 				DC10FD771C762501004ED442 /* MainReading.m in Sources */,
 				DC60BD5B1C70643500CFDC56 /* Service.m in Sources */,
 				DC60BD421C704EB900CFDC56 /* VCViewLine.m in Sources */,
+				DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */,
 				DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
