@@ -71,6 +71,14 @@
 		DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */; };
 		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
 		DCB33F811C808C620075FBDD /* ValidateService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F801C808C620075FBDD /* ValidateService.m */; };
+		DCB966FC1C958291004E3229 /* PschologyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB966FB1C958291004E3229 /* PschologyTest.m */; };
+		DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB966FD1C9582A5004E3229 /* HomePage.storyboard */; };
+		DCB967031C95836E004E3229 /* PschologyTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB967011C95836E004E3229 /* PschologyTestCell.m */; };
+		DCB967041C95836E004E3229 /* PschologyTestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB967021C95836E004E3229 /* PschologyTestCell.xib */; };
+		DCB967061C958C2E004E3229 /* icon_test_header.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB967051C958C2E004E3229 /* icon_test_header.png */; };
+		DCB9670C1C95A921004E3229 /* PschologyTestSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9670B1C95A921004E3229 /* PschologyTestSummary.m */; };
+		DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */; };
+		DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB967121C95D0F8004E3229 /* HomePageService.m */; };
 		DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */; };
 		DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A0391C8FBF2D002E9287 /* Entity.m */; };
 		DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A03C1C8FBF4B002E9287 /* Model.m */; };
@@ -229,6 +237,19 @@
 		DCB33F7D1C8087480075FBDD /* Helper+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+System.m"; sourceTree = "<group>"; };
 		DCB33F7F1C808C620075FBDD /* ValidateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateService.h; sourceTree = "<group>"; };
 		DCB33F801C808C620075FBDD /* ValidateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateService.m; sourceTree = "<group>"; };
+		DCB966FA1C958291004E3229 /* PschologyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTest.h; sourceTree = "<group>"; };
+		DCB966FB1C958291004E3229 /* PschologyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTest.m; sourceTree = "<group>"; };
+		DCB966FD1C9582A5004E3229 /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		DCB967001C95836E004E3229 /* PschologyTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestCell.h; sourceTree = "<group>"; };
+		DCB967011C95836E004E3229 /* PschologyTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestCell.m; sourceTree = "<group>"; };
+		DCB967021C95836E004E3229 /* PschologyTestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PschologyTestCell.xib; sourceTree = "<group>"; };
+		DCB967051C958C2E004E3229 /* icon_test_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_test_header.png; sourceTree = "<group>"; };
+		DCB9670A1C95A921004E3229 /* PschologyTestSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestSummary.h; sourceTree = "<group>"; };
+		DCB9670B1C95A921004E3229 /* PschologyTestSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestSummary.m; sourceTree = "<group>"; };
+		DCB9670D1C95C209004E3229 /* PschologyTestDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestDetail.h; sourceTree = "<group>"; };
+		DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestDetail.m; sourceTree = "<group>"; };
+		DCB967111C95D0F8004E3229 /* HomePageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageService.h; sourceTree = "<group>"; };
+		DCB967121C95D0F8004E3229 /* HomePageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageService.m; sourceTree = "<group>"; };
 		DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileCell.h; sourceTree = "<group>"; };
 		DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileCell.m; sourceTree = "<group>"; };
 		DCD6A0381C8FBF2D002E9287 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -431,6 +452,7 @@
 		DC10FD6F1C76248E004ED442 /* home page */ = {
 			isa = PBXGroup;
 			children = (
+				DCB966F91C95825B004E3229 /* PschologyTest */,
 				DC10FD701C7624CD004ED442 /* MainHomePage.h */,
 				DC10FD711C7624CD004ED442 /* MainHomePage.m */,
 			);
@@ -513,21 +535,22 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				DC185B961C82E034001A0DD1 /* serviceData */,
-				DC9DEF0A1C74869300C1A1AE /* app */,
-				DC7917E41C567BD200BB3FA9 /* accounts */,
+				DC60BD591C70643500CFDC56 /* Service.h */,
+				DC60BD5A1C70643500CFDC56 /* Service.m */,
+				DC60BD561C7063CD00CFDC56 /* ServiceManager.h */,
+				DC60BD571C7063CD00CFDC56 /* ServiceManager.m */,
 				DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */,
 				DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */,
 				DC60BD531C70616700CFDC56 /* RestStructResponse.h */,
 				DC60BD541C70616700CFDC56 /* RestStructResponse.m */,
-				DC7917E11C5671DF00BB3FA9 /* RestInterface.h */,
-				DC7917E21C5671DF00BB3FA9 /* RestInterface.m */,
+				DCB967101C95D0C3004E3229 /* HomePageServices */,
+				DC185B961C82E034001A0DD1 /* serviceData */,
+				DC9DEF0A1C74869300C1A1AE /* app */,
+				DC7917E41C567BD200BB3FA9 /* accounts */,
 				DC60BD4D1C70573300CFDC56 /* HostManager.h */,
 				DC60BD4E1C70573300CFDC56 /* HostManager.m */,
-				DC60BD561C7063CD00CFDC56 /* ServiceManager.h */,
-				DC60BD571C7063CD00CFDC56 /* ServiceManager.m */,
-				DC60BD591C70643500CFDC56 /* Service.h */,
-				DC60BD5A1C70643500CFDC56 /* Service.m */,
+				DC7917E11C5671DF00BB3FA9 /* RestInterface.h */,
+				DC7917E21C5671DF00BB3FA9 /* RestInterface.m */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -616,6 +639,7 @@
 		DC992D9F1C46947400382DFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCB967051C958C2E004E3229 /* icon_test_header.png */,
 				DCFECA7F1C787B08000A4BC9 /* pageView@2x.png */,
 				DCFECA771C787AFE000A4BC9 /* 1.png */,
 				DCFECA781C787AFE000A4BC9 /* 2.png */,
@@ -654,6 +678,7 @@
 				DC992DE11C46B59E00382DFB /* Main.storyboard */,
 				DC022B161C47E86D00D3FB61 /* Account.storyboard */,
 				DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */,
+				DCB966FD1C9582A5004E3229 /* HomePage.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -757,6 +782,38 @@
 			name = helper;
 			sourceTree = "<group>";
 		};
+		DCB966F91C95825B004E3229 /* PschologyTest */ = {
+			isa = PBXGroup;
+			children = (
+				DCB966FA1C958291004E3229 /* PschologyTest.h */,
+				DCB966FB1C958291004E3229 /* PschologyTest.m */,
+				DCB9670A1C95A921004E3229 /* PschologyTestSummary.h */,
+				DCB9670B1C95A921004E3229 /* PschologyTestSummary.m */,
+				DCB9670D1C95C209004E3229 /* PschologyTestDetail.h */,
+				DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */,
+			);
+			name = PschologyTest;
+			sourceTree = "<group>";
+		};
+		DCB966FF1C95833B004E3229 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DCB967001C95836E004E3229 /* PschologyTestCell.h */,
+				DCB967011C95836E004E3229 /* PschologyTestCell.m */,
+				DCB967021C95836E004E3229 /* PschologyTestCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DCB967101C95D0C3004E3229 /* HomePageServices */ = {
+			isa = PBXGroup;
+			children = (
+				DCB967111C95D0F8004E3229 /* HomePageService.h */,
+				DCB967121C95D0F8004E3229 /* HomePageService.m */,
+			);
+			name = HomePageServices;
+			sourceTree = "<group>";
+		};
 		DCD6A0371C8FBEE5002E9287 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,6 +867,7 @@
 		DCFECA8D1C78B901000A4BC9 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DCB966FF1C95833B004E3229 /* Cells */,
 				DCB33F781C80866C0075FBDD /* helper */,
 				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
 				DC7CE39A1C7A05670067B19E /* QAMainCell */,
@@ -952,17 +1010,20 @@
 				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
+				DCB967041C95836E004E3229 /* PschologyTestCell.xib in Resources */,
 				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
 				DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
 				DCFECA801C787B08000A4BC9 /* pageView@2x.png in Resources */,
 				DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */,
+				DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
 				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
 				DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */,
 				DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */,
+				DCB967061C958C2E004E3229 /* icon_test_header.png in Resources */,
 				DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */,
 				DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */,
 				DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */,
@@ -1041,9 +1102,11 @@
 				DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */,
 				DCFECA921C78BA05000A4BC9 /* ArticleAndTestCell.m in Sources */,
 				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
+				DCB967031C95836E004E3229 /* PschologyTestCell.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
+				DCB9670C1C95A921004E3229 /* PschologyTestSummary.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
@@ -1063,6 +1126,7 @@
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
 				DC60BD411C704EB900CFDC56 /* VCView.m in Sources */,
 				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
+				DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */,
 				DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */,
 				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
@@ -1076,6 +1140,7 @@
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
 				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
+				DCB966FC1C958291004E3229 /* PschologyTest.m in Sources */,
 				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
@@ -1092,6 +1157,7 @@
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
+				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,
 				DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */,
 				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,

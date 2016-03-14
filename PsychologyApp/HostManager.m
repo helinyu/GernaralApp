@@ -39,7 +39,7 @@
 }
 
 - (void)switchToTest {
-    _data.commonHost = @"localhost/background/";
+    _data.commonHost = @"localhost/foreheard";
 }
 
 - (void)switchToRelease {

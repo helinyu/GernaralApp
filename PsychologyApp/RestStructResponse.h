@@ -28,8 +28,24 @@
 @property (strong, nonatomic) NSString * image_name;
 @property (strong, nonatomic) NSString * image_link;
 
-//@property (strong,nonatomic) NSString * btnDesc;
-//@property (strong,nonatomic) NSString * btnLink;
-//@property (assign,nonatomic) NSTimeInterval endTimestamp;
-//@property (strong,nonatomic) NSString * img;
 @end
+
+//心理测试
+@protocol RestStructPsychologyTestResponseItem <NSObject>
+@end
+@interface RestStructPsychologyTestResponseItem : RestStructResponse
+@property (assign, nonatomic) NSInteger id;
+@property (strong, nonatomic) NSString * header_image;
+@property (strong, nonatomic) NSString * title;
+@property (assign, nonatomic) NSInteger test_number;
+@property (assign, nonatomic) NSInteger comment_number;
+@end
+
+@interface RestStructPsychologyTestResponse : RestStructResponse
+@property (strong, nonatomic) NSArray<RestStructPsychologyTestResponseItem>* item;
+
+
+@end
+
+
+

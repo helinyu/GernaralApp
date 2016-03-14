@@ -78,3 +78,58 @@
 
 @end
 
+//心理测试
+
+@implementation RestStructPsychologyTestResponseItem
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _id = 0;
+        _header_image = @"";
+        _title  = @"";
+        _test_number = 0 ;
+        _comment_number = 0;
+    }
+    return self;
+}
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]
+            initWithDictionary:@{
+                                 @"item.id":@"id",
+                       @"item.header_image":@"header_image",
+                                 @"item.title":@"title",
+                                 @"item.test_number":@"test_number" ,
+                                 @"item.comment_number":@"comment_number"
+                                 }];
+}
+
+//+ (BOOL)propertyIsOptional:(NSString *)propertyName{
+//    return YES;
+//}
+
+@end
+
+@implementation RestStructPsychologyTestResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _item = (NSArray<RestStructPsychologyTestResponseItem> *)@[];
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]initWithDictionary:@{@"item":@"item"}];
+}
+
+//+ (BOOL)propertyIsOptional:(NSString *)propertyName{
+//    return YES;
+//}
+
+@end
+
+

@@ -93,5 +93,23 @@
     }];
 }
 
+//心理测试
++ (void)invokeFromHomePageServiceOfPyschologyServiceWithComplete:(void(^)(RestStructPsychologyTestResponse *response ,NSError *errro)) completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_test.php" withRequest:[RestStructRequest new] withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *errorOfResponse = nil;
+        RestStructPsychologyTestResponse *response = [[RestStructPsychologyTestResponse alloc] initWithData:data error:&errorOfResponse];
+        
+        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"arr is ;%@",arr);
+        
+    }];
+}
 
 @end

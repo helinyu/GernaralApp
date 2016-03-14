@@ -15,4 +15,11 @@
 #define PICTURE2 @"PICTURE2"
 #define PICTURE3 @"PICTURE3"
 
+//tabBarController 中的viewController的selectIndex
+#define HOME_MAIN_SELECTINDEX 0
+#define CONSULT_SELECTINDEX 1
+#define READING_SELECTINDEX 2
+#define AQ_SELECTINDEX 3
+#define MIME_SELECTINDEX 4
+
 #endif /* AppDefinition_h */

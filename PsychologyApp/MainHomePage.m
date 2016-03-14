@@ -10,8 +10,11 @@
 #import "MJBannnerPlayer.h"
 #import "ImageAndTitleCell.h"
 #import "ArticleAndTestCell.h"
+#import "AppDefinition.h"
 
 #import "MJRefresh.h"
+
+#import "PschologyTest.h"
 
 
 @interface MainHomePage ()<MJBannnerPlayerDeledage,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -60,7 +63,6 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    NSLog(@"+++++++++++");
     self.cellFatherViewHeightConstraint.constant = 3*(_cellHeight+20)+40;
     
     [self.articleAndTestTableView reloadData];
@@ -79,9 +81,42 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ImageAndTitleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ImageAndTitleCell class]) forIndexPath:indexPath];
-    [cell setImageTitle:@"btn_main_vr_location" andTextTitle:@"hello"];
+    switch (indexPath.row) {
+        case 0:
+            [cell setImageTitle:@"btn_main_vr_location" andTextTitle:@"读文章"];
+            break;
+            
+        case 1:
+            [cell setImageTitle:@"btn_main_vr_location" andTextTitle:@"做测试"];
+            break;
+            
+        default:
+            break;
+    }
     cell.backgroundColor = [UIColor yellowColor];
     return cell;
+}
+
+#pragma mark -- UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"index is ; %ld",indexPath.row);
+    
+    switch (indexPath.row) {
+        case 0:
+            self.tabBarController.selectedIndex = 2;
+            break;
+            
+        case 1:
+        {
+            PschologyTest *pyschologiTest = [[UIStoryboard storyboardWithName:@"HomePage" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PschologyTest class])];
+            [self.navigationController pushViewController:pyschologiTest animated:true];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 
@@ -89,7 +124,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;
-}// Default is 1 if not implemented
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

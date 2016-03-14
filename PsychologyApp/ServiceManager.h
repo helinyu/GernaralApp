@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HomePageService.h"
 
 #define OBTAIN_SERVICE(classname) ((classname *)[[ServiceManager sharedInstance] serviceWithClass:classname.class])
 
