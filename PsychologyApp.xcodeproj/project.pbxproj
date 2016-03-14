@@ -44,6 +44,7 @@
 		DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD541C70616700CFDC56 /* RestStructResponse.m */; };
 		DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD571C7063CD00CFDC56 /* ServiceManager.m */; };
 		DC60BD5B1C70643500CFDC56 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD5A1C70643500CFDC56 /* Service.m */; };
+		DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F2E6C1C96E4B600738E03 /* HomePageServiceData.m */; };
 		DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E21C5671DF00BB3FA9 /* RestInterface.m */; };
 		DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */; };
 		DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E91C567CE000BB3FA9 /* UserService.m */; };
@@ -188,6 +189,8 @@
 		DC60BD571C7063CD00CFDC56 /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
 		DC60BD591C70643500CFDC56 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 		DC60BD5A1C70643500CFDC56 /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		DC6F2E6B1C96E4B600738E03 /* HomePageServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageServiceData.h; sourceTree = "<group>"; };
+		DC6F2E6C1C96E4B600738E03 /* HomePageServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageServiceData.m; sourceTree = "<group>"; };
 		DC7917E11C5671DF00BB3FA9 /* RestInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestInterface.h; sourceTree = "<group>"; };
 		DC7917E21C5671DF00BB3FA9 /* RestInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestInterface.m; sourceTree = "<group>"; };
 		DC7917E51C567C3400BB3FA9 /* RestStructRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestStructRequest.h; sourceTree = "<group>"; };
@@ -532,9 +535,19 @@
 			name = helper;
 			sourceTree = "<group>";
 		};
+		DC6F2E6A1C96E46C00738E03 /* ServiceDatas */ = {
+			isa = PBXGroup;
+			children = (
+				DC6F2E6B1C96E4B600738E03 /* HomePageServiceData.h */,
+				DC6F2E6C1C96E4B600738E03 /* HomePageServiceData.m */,
+			);
+			name = ServiceDatas;
+			sourceTree = "<group>";
+		};
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC6F2E6A1C96E46C00738E03 /* ServiceDatas */,
 				DC60BD591C70643500CFDC56 /* Service.h */,
 				DC60BD5A1C70643500CFDC56 /* Service.m */,
 				DC60BD561C7063CD00CFDC56 /* ServiceManager.h */,
@@ -1155,6 +1168,7 @@
 				DCFECA8B1C78860A000A4BC9 /* ImageAndTitleCell.m in Sources */,
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
+				DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,

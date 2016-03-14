@@ -106,9 +106,27 @@
         NSError *errorOfResponse = nil;
         RestStructPsychologyTestResponse *response = [[RestStructPsychologyTestResponse alloc] initWithData:data error:&errorOfResponse];
         
-        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"arr is ;%@",arr);
+        completeToService(response,errorOfResponse);
+//        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//        NSLog(@"arr is ;%@",arr);
         
+    }];
+}
+
+//心理概要
++ (void)invokeFromHomePageServiceOfPschologyTestSummaryServiceWithComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError *error))completeToService {
+    
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_summary.php" withRequest:[RestStructRequest new] withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return;
+        }
+
+        NSError * errorOfResponse = nil;
+        RestStructPschologyTestSummaryResponse *summaryResponse = [[RestStructPschologyTestSummaryResponse alloc]initWithData:data error:&errorOfResponse];
+//        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//        NSLog(@"arr is ;%@",arr);
+        completeToService(summaryResponse,nil);
     }];
 }
 

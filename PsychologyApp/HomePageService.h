@@ -7,10 +7,17 @@
 //
 
 #import "Service.h"
+#import "HomePageServiceData.h"
 
 @interface HomePageService : Service
 
 //心理测试的界面
-- (void)requestfromViewControllerPsychologyTest:(void(^)(NSString *imageUrl, NSString *testTitle, NSInteger testNumber , NSInteger commentNumber))completeToViewData;
+- (void)requestfromViewControllerPsychologyTest:(void(^)(PschologyTestServiceData * serviceData , NSError *error))completeToViewData;
+
+//心理概述阐述
+- (void)requestfromViewControllerPschologyTestSummary:(void(^)(PschologyTestSummary_ServiceData * serviceData , NSError *error))completeToViewData;
+
+
+
 
 @end

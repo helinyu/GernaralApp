@@ -8,15 +8,16 @@
 
 #import "PschologyTestSummary.h"
 #import "PschologyTestDetail.h"
+#import "ServiceManager.h"
 
 @interface PschologyTestSummaryCell ()
 @property (weak, nonatomic) IBOutlet UILabel *cententLabel;
 
 @end
 @implementation PschologyTestSummaryCell
+
 - (void)setcontentLabel:(NSString *)contentText{
     self.cententLabel.text = contentText;
-    
 }
 
 @end
@@ -25,6 +26,8 @@
 {
     NSString * _headerTitle;
     CGFloat _headerHeight;
+    
+    PschologyTestSummary_ServiceData *_summaryData ;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
@@ -40,13 +43,37 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    _summaryData = [PschologyTestSummary_ServiceData new];
+    
     self.navigationItem.title = @"心理测试";
     self.headerTitleLabel.text = _headerTitle;
-
-    self.headerContentLabel.backgroundColor = [UIColor blueColor];
-        self.headerContentLabel.text = @"delete 语句用于删除表中的数据, 基本用法为:delete from 表名称 where 删除条件;使用示例:删除id为2的行: delete from students where id=2;删除所有年龄小于21岁的数据: delete from students where age<20;删除表中的所有数据: delete from students;"; 
     
-     _headerHeight = [self.headerContentLabel.text boundingRectWithSize:CGSizeMake(([UIScreen mainScreen].bounds.size.width - 60), 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil].size.height;
+    [self loadSummaryData];
+    
+#warning 这个方法要在设置文字的后面
+    [self setheaderViewFrame];
+    
+}
+
+- (void)loadSummaryData{
+    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPschologyTestSummary:^(PschologyTestSummary_ServiceData *serviceData, NSError *error) {
+        if (error.code != 0 ) {
+            NSLog(@"网络或者其他错误view界面");
+            return ;
+        }
+        _summaryData = serviceData;
+        NSString *text =  [(PschologyTestSummaryItem_ServiceData* )_summaryData.data[0] content];
+        self.headerContentLabel.text = text;
+        [self.headerContentLabel layoutIfNeeded];
+     
+    }];
+}
+
+
+- (void)setheaderViewFrame{
+    self.headerContentLabel.backgroundColor = [UIColor blueColor];
+    _headerHeight = [self.headerContentLabel.text boundingRectWithSize:CGSizeMake(([UIScreen mainScreen].bounds.size.width - 60), 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil].size.height;
     self.headerContentHeightConstraint.constant = _headerHeight;
     self.headerHeightConstraint.constant = 114 + _headerHeight;
     self.headerScrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, self.headerHeightConstraint.constant);
@@ -74,6 +101,9 @@
     
     return cell;
 }
+
+
+
 
 - (IBAction)onBeginTestClicked:(id)sender {
     NSLog(@"开始测试");

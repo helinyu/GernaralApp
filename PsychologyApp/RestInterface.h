@@ -25,5 +25,7 @@
 //心理测试
 + (void)invokeFromHomePageServiceOfPyschologyServiceWithComplete:(void(^)(RestStructPsychologyTestResponse *response ,NSError *errro)) completeToService;
 
+//心理概述
++ (void)invokeFromHomePageServiceOfPschologyTestSummaryServiceWithComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError * error))completeToService ;
 
 @end

@@ -43,9 +43,20 @@
 
 @interface RestStructPsychologyTestResponse : RestStructResponse
 @property (strong, nonatomic) NSArray<RestStructPsychologyTestResponseItem>* item;
-
-
 @end
+
+//心理概要
+@protocol RestStructPschologyTestSummaryResponseItem <NSObject>
+@end
+@interface RestStructPschologyTestSummaryResponseItem : RestStructResponse
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *content;
+@end
+
+@interface RestStructPschologyTestSummaryResponse : RestStructResponse
+@property (strong, nonatomic) NSArray<RestStructPschologyTestSummaryResponseItem>* data;
+@end
+
 
 
 

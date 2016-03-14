@@ -12,7 +12,7 @@
 #import "ServiceManager.h"
 
 @interface PschologyTest ()
-
+@property (nonatomic,strong) PschologyTestServiceData * psychologyTestData;
 @end
 
 @implementation PschologyTest
@@ -21,15 +21,22 @@
     [super viewDidLoad];
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PschologyTestCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([PschologyTestCell class])];
-    
+
     [self loadTestCellData];
     
 }
 
 - (void)loadTestCellData{
-    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPsychologyTest:^(NSString *imageUrl, NSString *testTitle, NSInteger testNumber, NSInteger commentNumber) {
-        
+    
+    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPsychologyTest:^(PschologyTestServiceData *serviceData, NSError *error) {
+        if (error.code != 0) {
+            NSLog(@"网络或者解析出现错误");
+            return ;
+        }
+        self.psychologyTestData = serviceData;
+        [self.tableView reloadData];
     }];
+   
 }
 
 
@@ -38,20 +45,30 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.psychologyTestData.item.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     PschologyTestCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PschologyTestCell class]) forIndexPath:indexPath];
-    [cell setHeaderImageView:@"icon_test_header" withTittleLabel:@"标题" withTestImageView:@"icon_test" withTestNumberLabel:@"测评人数" withCommentImageView:@"icon_comments" withCommentNumberLabelText:@"评价人数"];
+    
+    NSString * headerImageText = [(PschologyTestItem_ServiceData*)self.psychologyTestData.item[indexPath.row] header_image ];
+    
+    NSString *title = [(PschologyTestItem_ServiceData*)self.psychologyTestData.item[indexPath.row] title ];
+    NSInteger testNum = [(PschologyTestItem_ServiceData*)self.psychologyTestData.item[indexPath.row] test_number];
+    NSInteger commentNum = [(PschologyTestItem_ServiceData*)self.psychologyTestData.item[indexPath.row] comment_number];
+    
+    [cell setHeaderImageView:headerImageText withTittleLabel:title withTestImageView:@"icon_test" withTestNumberLabel:[NSString stringWithFormat:@"%ld",testNum] withCommentImageView:@"icon_comments" withCommentNumberLabelText:[NSString stringWithFormat:@"%ld",commentNum]];
 
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PschologyTestSummary *testSummary = [[UIStoryboard storyboardWithName:@"HomePage" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PschologyTestSummary class])];
-    [testSummary setHeaderTitleLabelWithText:@"标题值传入"];
+    
+    NSString *title = [(PschologyTestItem_ServiceData*)self.psychologyTestData.item[indexPath.row] title ];
+    [testSummary setHeaderTitleLabelWithText:title];
     [self.navigationController pushViewController:testSummary animated:true];
 }
 
@@ -60,7 +77,6 @@
 }
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

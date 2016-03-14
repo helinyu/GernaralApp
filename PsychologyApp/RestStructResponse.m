@@ -67,49 +67,10 @@
                                                       @"image_link":@"image_link"
                                                       }];
 }
-//+ (JSONKeyMapper *)keyMapper
-//{
-//    return [[JSONKeyMapper alloc] initWithDictionary:@{@"data.btnDesc":@"btnDesc",
-//                                                       @"data.btnLink": @"btnLink",
-//                                                       @"data.endTimestamp": @"endTimestamp",
-//                                                       @"data.img":@"img"
-//                                                       }];
-//}
 
 @end
 
 //心理测试
-
-@implementation RestStructPsychologyTestResponseItem
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _id = 0;
-        _header_image = @"";
-        _title  = @"";
-        _test_number = 0 ;
-        _comment_number = 0;
-    }
-    return self;
-}
-+ (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc]
-            initWithDictionary:@{
-                                 @"item.id":@"id",
-                       @"item.header_image":@"header_image",
-                                 @"item.title":@"title",
-                                 @"item.test_number":@"test_number" ,
-                                 @"item.comment_number":@"comment_number"
-                                 }];
-}
-
-//+ (BOOL)propertyIsOptional:(NSString *)propertyName{
-//    return YES;
-//}
-
-@end
 
 @implementation RestStructPsychologyTestResponse
 
@@ -126,10 +87,85 @@
     return [[JSONKeyMapper alloc]initWithDictionary:@{@"item":@"item"}];
 }
 
-//+ (BOOL)propertyIsOptional:(NSString *)propertyName{
-//    return YES;
-//}
+@end
+
+@implementation RestStructPsychologyTestResponseItem
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _id = 0;
+        _header_image = @"";
+        _title  = @"";
+        _test_number = 0 ;
+        _comment_number = 0;
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]
+            initWithDictionary:@{
+                                 @"id":@"id",
+                                 @"header_image":@"header_image",
+                                 @"title":@"title",
+                                 @"test_number":@"test_number" ,
+                                 @"comment_number":@"comment_number"
+                                 }
+            ];
+}
 
 @end
+
+
+//心理测试概要
+@implementation RestStructPschologyTestSummaryResponseItem
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"";
+        _content = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]
+            initWithDictionary:@{
+                                 @"title":@"title",
+                                 @"content":@"content",
+                                 }
+            ];
+}
+
+@end
+
+@implementation RestStructPschologyTestSummaryResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _data = (NSArray<RestStructPschologyTestSummaryResponseItem> *)@[];
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]
+            initWithDictionary:@{
+                                 @"data":@"data",
+                                 }
+            ];
+}
+
+
+@end
+
+
+
 
 

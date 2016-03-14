@@ -7,6 +7,7 @@
 //
 
 #import "PschologyTestCell.h"
+#import "UIImageView+WebRequest.h"
 
 @interface PschologyTestCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
@@ -31,8 +32,8 @@
 }
 
 - (void)setHeaderImageView:(NSString *)headerImageViewText withTittleLabel:(NSString *)titleLabelText withTestImageView:(NSString *)testImageViewText withTestNumberLabel:(NSString *)testNumberLabelText withCommentImageView:(NSString *)commentImageViewText withCommentNumberLabelText:(NSString *) commentNumberLabelTest{
-  
-    self.headerImageView.image = [UIImage imageNamed:headerImageViewText];
+    
+    [self.headerImageView setImageWithAbsoluteUrlStr:headerImageViewText];
     self.titleLabel.text = titleLabelText;
     self.testImageView.image = [UIImage imageNamed:testImageViewText];
     self.testNumberLabel.text = testNumberLabelText;
