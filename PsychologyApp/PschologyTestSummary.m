@@ -102,9 +102,6 @@
     return cell;
 }
 
-
-
-
 - (IBAction)onBeginTestClicked:(id)sender {
     NSLog(@"开始测试");
     PschologyTestDetail *testDetail = [[UIStoryboard storyboardWithName:@"HomePage" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PschologyTestDetail class])];
