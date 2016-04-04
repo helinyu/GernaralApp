@@ -208,6 +208,25 @@
 
 @end
 
+@implementation RestStructUpdateResponse
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _url = @"";
+        _version = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"data.version":@"version",
+                                                      @"data.url":@"url",
+                                                      }];
+}
+
+@end
 
 

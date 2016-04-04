@@ -153,7 +153,8 @@ static CGFloat const kDefalultTextInset = 10.0;
 	}
 	else {
 #pragma warning --这里应该使用新的方法来区分一下
-		bounds.size = [self.text sizeWithFont:self.font constrainedToSize:CGSizeMake(self.maxWidth - self.textInsets.left - self.textInsets.right,
+		bounds.size = [self.text
+                       sizeWithFont:self.font constrainedToSize:CGSizeMake(self.maxWidth - self.textInsets.left - self.textInsets.right,
 																					 CGFLOAT_MAX)];
 	}
     return bounds;

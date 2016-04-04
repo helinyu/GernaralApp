@@ -8,6 +8,8 @@
 
 #import "MainIndex.h"
 #import <Crashlytics/Crashlytics.h>
+#import "ServiceManager.h"
+#import "MineSetting.h"
 
 @interface MainIndex ()
 
@@ -21,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-       
+//    检查更新
+    [[MineSetting new] onCheckUpdateClicked:nil];
+        
     if (self.isClicked) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link]];
     }

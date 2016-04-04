@@ -41,6 +41,11 @@
 		DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995371CB24B7800ACA64B /* EntityApp.m */; };
 		DC39953C1CB24D9A00ACA64B /* EntityUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39953B1CB24D9A00ACA64B /* EntityUser.m */; };
 		DC39953E1CB24F1E00ACA64B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */; };
+		DC3995441CB2822600ACA64B /* SettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995431CB2822600ACA64B /* SettingService.m */; };
+		DC3995471CB2831900ACA64B /* SettingServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995461CB2831900ACA64B /* SettingServiceData.m */; };
+		DC39954C1CB28D8100ACA64B /* VCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39954A1CB28D8100ACA64B /* VCAlertView.m */; };
+		DC39954D1CB28D8100ACA64B /* VCAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC39954B1CB28D8100ACA64B /* VCAlertView.xib */; };
+		DC3995501CB28E4500ACA64B /* UIView+FrameMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -191,6 +196,15 @@
 		DC39953A1CB24D9A00ACA64B /* EntityUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityUser.h; sourceTree = "<group>"; };
 		DC39953B1CB24D9A00ACA64B /* EntityUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityUser.m; sourceTree = "<group>"; };
 		DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DC3995421CB2822600ACA64B /* SettingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingService.h; sourceTree = "<group>"; };
+		DC3995431CB2822600ACA64B /* SettingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingService.m; sourceTree = "<group>"; };
+		DC3995451CB2831900ACA64B /* SettingServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingServiceData.h; sourceTree = "<group>"; };
+		DC3995461CB2831900ACA64B /* SettingServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingServiceData.m; sourceTree = "<group>"; };
+		DC3995491CB28D8100ACA64B /* VCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCAlertView.h; sourceTree = "<group>"; };
+		DC39954A1CB28D8100ACA64B /* VCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCAlertView.m; sourceTree = "<group>"; };
+		DC39954B1CB28D8100ACA64B /* VCAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCAlertView.xib; sourceTree = "<group>"; };
+		DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameMethods.h"; sourceTree = "<group>"; };
+		DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameMethods.m"; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
 		DC60BD371C704EB900CFDC56 /* VCLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCLoading.xib; sourceTree = "<group>"; };
@@ -585,6 +599,35 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		DC39953F1CB281EC00ACA64B /* MineServices */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995411CB2820800ACA64B /* MineSettings */,
+			);
+			name = MineServices;
+			sourceTree = "<group>";
+		};
+		DC3995411CB2820800ACA64B /* MineSettings */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995421CB2822600ACA64B /* SettingService.h */,
+				DC3995431CB2822600ACA64B /* SettingService.m */,
+				DC3995451CB2831900ACA64B /* SettingServiceData.h */,
+				DC3995461CB2831900ACA64B /* SettingServiceData.m */,
+			);
+			name = MineSettings;
+			sourceTree = "<group>";
+		};
+		DC3995481CB28D7500ACA64B /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995491CB28D8100ACA64B /* VCAlertView.h */,
+				DC39954A1CB28D8100ACA64B /* VCAlertView.m */,
+				DC39954B1CB28D8100ACA64B /* VCAlertView.xib */,
+			);
+			name = alert;
+			sourceTree = "<group>";
+		};
 		DC60BD431C704F0D00CFDC56 /* helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +659,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC39953F1CB281EC00ACA64B /* MineServices */,
 				DC3995341CB247C100ACA64B /* AppServices */,
 				DC6F2E6A1C96E46C00738E03 /* ServiceDatas */,
 				DC60BD591C70643500CFDC56 /* Service.h */,
@@ -835,6 +879,8 @@
 		DC9DEF031C74860700C1A1AE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */,
+				DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */,
 				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
 				DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */,
 			);
@@ -952,6 +998,7 @@
 		DCFECA8D1C78B901000A4BC9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995481CB28D7500ACA64B /* alert */,
 				DC39951E1CB2125400ACA64B /* dates */,
 				DCB966FF1C95833B004E3229 /* Cells */,
 				DCB33F781C80866C0075FBDD /* helper */,
@@ -1102,6 +1149,7 @@
 				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
 				DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
+				DC39954D1CB28D8100ACA64B /* VCAlertView.xib in Resources */,
 				DCFECA801C787B08000A4BC9 /* pageView@2x.png in Resources */,
 				DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */,
 				DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */,
@@ -1220,6 +1268,7 @@
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
+				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
 				DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */,
 				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
@@ -1235,11 +1284,13 @@
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
 				DC39952C1CB226FE00ACA64B /* FLDatePicker.m in Sources */,
+				DC39954C1CB28D8100ACA64B /* VCAlertView.m in Sources */,
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
 				DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC39953C1CB24D9A00ACA64B /* EntityUser.m in Sources */,
 				DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */,
+				DC3995471CB2831900ACA64B /* SettingServiceData.m in Sources */,
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
@@ -1263,6 +1314,7 @@
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC3995301CB23E9400ACA64B /* NSString+Time.m in Sources */,
 				DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */,
+				DC3995501CB28E4500ACA64B /* UIView+FrameMethods.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,

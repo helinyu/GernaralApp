@@ -71,3 +71,10 @@
 @property (strong, nonatomic) NSArray<RestStructPschologyTestDetailResponseItem>* data;
 @end
 
+//update
+@interface RestStructUpdateResponse : RestStructResponse
+@property (strong,nonatomic) NSString *version;
+@property (strong,nonatomic) NSString *url;
+@end
+
+

@@ -133,20 +133,38 @@
 + (void)invokeFromHomePageServiceOfPschologyTestDServiceDetail:(RestStructRequest*)request WithComplete:(void (^)(RestStructPschologyTestDetailResponse *response, NSError * error))completeToService{
     
     [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_detail.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
-        
         if (error.code != 0) {
             completeToService(nil,error);
             return ;
         }
-        
         NSError *errorOfResponse = nil;
         RestStructPschologyTestDetailResponse *detailResponse = [[RestStructPschologyTestDetailResponse alloc]initWithData:data error:&errorOfResponse];
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-
-        NSLog(@"arr is : %@",arr);
-        
-        completeToService(detailResponse,nil);
+              completeToService(detailResponse,nil);
     }];
 }
 
+
+//UPDATE
++ (void)invokeUpdateWithComplete:(void (^)(RestStructUpdateResponse *response, NSError * error))completeToService{
+
+    [RestInterface _invokeWithUrl:@"/updates/update.php" withRequest:[RestStructRequest new] withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0 ) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"arr is : %@",arr);
+
+        NSError *errorOfResponse = nil;
+        RestStructUpdateResponse *updateResponse = [[RestStructUpdateResponse alloc]initWithData:data error:&errorOfResponse];
+        
+        
+        completeToService(updateResponse,nil);
+    }];
+    
+}
+
 @end
+

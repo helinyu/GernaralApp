@@ -10,4 +10,6 @@
 
 @interface MineSetting : UIViewController
 
+- (IBAction)onCheckUpdateClicked:(id)sender;
+
 @end

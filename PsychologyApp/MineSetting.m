@@ -12,6 +12,11 @@
 #import "NSDate+NSString.h"
 #import "AppDefinition.h"
 #import "Model.h"
+#import "ServiceManager.h"
+#import "Helper+App.h"
+#import "VCAlertView.h"
+#import "VCToast.h"
+
 
 @interface MineSetting ()
 {
@@ -83,6 +88,27 @@
     [picker showInView:self.view withConfirm:^(NSDate *date, NSInteger index) {
         NSLog(@"date is ;%@",date);
         self.timeToLabel.text = [date dateToStringDisplayHourMinuteSecond];
+    }];
+}
+
+- (IBAction)onCheckUpdateClicked:(id)sender {
+    NSLog(@"更新");    
+    [OBTAIN_SERVICE(SettingService) requestUpdate:^(SettingServiceData *serviceData, NSError *error) {
+        NSLog(@"servidata version is ; %@",serviceData.version);
+        
+        NSString *localVersion = [Helper getAppVersion];
+        NSString *latestversion = serviceData.version;
+        
+        if ( [localVersion compare:latestversion options:NSNumericSearch] == NSOrderedAscending) {
+            NSString *upgradeTitle = [NSString stringWithFormat:@"发现新版本(%@)", latestversion];            
+            [[VCAlertView new] showWithTitle:upgradeTitle message:@"升级提示" cancelButtonTitle:@"取消" otherButtonTitle:@"立刻升级" tapBlock:^(NSInteger buttonIndex) {
+                if (buttonIndex == 0) {
+                    [[VCToast make:@"取消升级"] show];
+                } else if (buttonIndex == 1) {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:serviceData.url]];
+                }
+            }];
+        }
     }];
 }
 

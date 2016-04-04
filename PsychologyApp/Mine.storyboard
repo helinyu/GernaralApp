@@ -88,20 +88,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IoN-IJ-HSI" userLabel="View 3">
                                 <rect key="frame" x="0.0" y="214" width="600" height="54"/>
                                 <subviews>
-                                    <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBO-NE-FNf">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
-                                        <state key="normal" title="新版本检测"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTj-yi-h14" userLabel="检查更新">
+                                        <rect key="frame" x="272" y="12.5" width="56" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="检查更新"/>
                                         <connections>
-                                            <action selector="onCheckUpUPdateClicked:" destination="x8B-bg-o7L" eventType="touchUpInside" id="zga-AU-15e"/>
+                                            <action selector="onCheckUpdateClicked:" destination="x8B-bg-o7L" eventType="touchUpInside" id="cGb-Tk-dGa"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="GBO-NE-FNf" secondAttribute="bottom" id="9pH-ne-lPT"/>
-                                    <constraint firstAttribute="trailing" secondItem="GBO-NE-FNf" secondAttribute="trailing" id="QEL-Ev-hRZ"/>
-                                    <constraint firstItem="GBO-NE-FNf" firstAttribute="leading" secondItem="IoN-IJ-HSI" secondAttribute="leading" id="bAu-ks-SKy"/>
-                                    <constraint firstItem="GBO-NE-FNf" firstAttribute="top" secondItem="IoN-IJ-HSI" secondAttribute="top" id="okZ-Y9-a1z"/>
+                                    <constraint firstItem="bTj-yi-h14" firstAttribute="centerY" secondItem="IoN-IJ-HSI" secondAttribute="centerY" id="GqW-dp-iYH"/>
+                                    <constraint firstItem="bTj-yi-h14" firstAttribute="centerX" secondItem="IoN-IJ-HSI" secondAttribute="centerX" id="ggS-QE-pIX"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUr-ak-kHp" userLabel="View 4">
