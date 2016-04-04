@@ -32,4 +32,8 @@
 
 //更新
 + (void)invokeUpdateWithComplete:(void (^)(RestStructUpdateResponse *response, NSError * error))completeToService;
+
+//编辑资料请求
++ (void)invokeEditProfile:(RestStructEditProfileRequest*)request withComplete:(void(^)(RestStructEditProfileResponse* response,NSError *error))completeToService;
+
 @end

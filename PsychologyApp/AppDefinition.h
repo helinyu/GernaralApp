@@ -28,4 +28,13 @@
 #define LOGIN_PHONE @"LOGIN_PHONE"
 #define IS_LOGINED @"IS_LOGINED"
 
+#define EVENT_APP_ENTER_BACKGROUND  @"EVENT_APP_ENTER_BACKGROUND"
+
+
+//attribute
+#define SWITCH_ON @"switch_on"
+
+//plist file name
+#define ATTRIBUTE @"attribute"
+
 #endif /* AppDefinition_h */

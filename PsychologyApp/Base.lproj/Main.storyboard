@@ -347,6 +347,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="headerImageView" destination="qwi-iO-0tC" id="vnt-l5-NO2"/>
                         <outlet property="loginUserLabel" destination="IIa-hZ-p6b" id="86t-FX-b7F"/>
                         <outlet property="tableView" destination="ZYl-E6-bie" id="w1w-uK-lyW"/>
                     </connections>

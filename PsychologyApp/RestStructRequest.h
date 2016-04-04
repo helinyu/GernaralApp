@@ -40,3 +40,8 @@
 @interface RestTestDetailRequest : RestStructRequest
 @property (strong,nonatomic) NSString *title;
 @end
+
+
+@interface RestStructEditProfileRequest : RestStructRequest
+@property (strong,nonatomic) NSString *phone;
+@end

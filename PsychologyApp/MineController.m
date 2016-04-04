@@ -39,6 +39,7 @@
 }
 @property (weak, nonatomic) IBOutlet UILabel *loginUserLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 
 @end
 
@@ -153,7 +154,12 @@
         case 2:
             switch (indexPath.row) {
                 case 0:{
-                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineEditProfile class])] animated:YES];
+                    MineEditProfile *profile = [[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineEditProfile class])];
+                    
+                    [profile setHeaderName:self.loginUserLabel.text withHeaderImage:self.headerImageView.image];
+                    
+                    [self.navigationController pushViewController:profile animated:true];
+                   
                     break;
                 }
                 case 1:{

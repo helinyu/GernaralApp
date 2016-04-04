@@ -10,6 +10,8 @@
 #import "Helper+Style.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import "AppDefinition.h"
+#import "AuthOfLocalNotification.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +26,8 @@
     [Fabric with:@[[Crashlytics class]]];
     //设置导航栏
     
+//    注册本地推送
+    [AuthOfLocalNotification registerLocalPush];
  
     
     return YES;
@@ -37,6 +41,9 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:EVENT_APP_ENTER_BACKGROUND object:nil];
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

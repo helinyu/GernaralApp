@@ -16,7 +16,10 @@
 #import "Helper+App.h"
 #import "VCAlertView.h"
 #import "VCToast.h"
+#import "NSString+plist.h"
 
+#define From_Time @"From_Time"
+#define To_time @"To_Time"
 
 @interface MineSetting ()
 {
@@ -40,6 +43,23 @@
       _isLogined =[[NSUserDefaults standardUserDefaults] boolForKey:IS_LOGINED] ;
     [self configureSignOutBtn:_isLogined];
     
+    
+    // 查看switch是否是开启的
+    [self correctWakeUpSwitch];
+}
+
+//更正switchon 按钮
+- (void)correctWakeUpSwitch{
+    BOOL switchOn = [NSString getAttribute_PlistWithKeyWord:SWITCH_ON withFileName:ATTRIBUTE];
+    if (switchOn != self.wakeUpSwitch.on) {
+        [NSString setAttributeForKeyword:SWITCH_ON withValue:[NSString stringWithFormat:@"%d",self.wakeUpSwitch.on] withFileName:ATTRIBUTE];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.timeBeingLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:From_Time];
+    self.timeToLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:To_time];
 }
 
 - (void)configureSignOutBtn:(BOOL)flag{
@@ -63,17 +83,18 @@
     EntityUser *user = [[Model sharedInstance] loadUseByUId:phone];
     user.isLogined = false ;
     [[Model sharedInstance] commitUser];
-    
     [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (IBAction)onCheckUpUPdateClicked:(id)sender {
     NSLog(@"检查更新");
+    
 }
 
 - (IBAction)onWakeUpSwitchClicked:(id)sender {
     UISwitch *switchTime = (UISwitch*)sender;
     NSLog(@"%d",switchTime.on);
+    [NSString setAttributeForKeyword:SWITCH_ON withValue:[NSString stringWithFormat:@"%d",switchTime.on] withFileName:ATTRIBUTE];
 }
 
 - (IBAction)onTimeBeginClicked:(id)sender {
@@ -81,6 +102,7 @@
     [picker showInView:self.view withConfirm:^(NSDate *date, NSInteger index) {
         NSLog(@"date is ;%@",date);
         self.timeBeingLabel.text = [date dateToStringDisplayHourMinuteSecond];
+        [[NSUserDefaults standardUserDefaults] setObject:self.timeBeingLabel.text forKey:From_Time];
     }];
 }
 - (IBAction)onTimeToClicked:(id)sender {
@@ -88,6 +110,7 @@
     [picker showInView:self.view withConfirm:^(NSDate *date, NSInteger index) {
         NSLog(@"date is ;%@",date);
         self.timeToLabel.text = [date dateToStringDisplayHourMinuteSecond];
+        [[NSUserDefaults standardUserDefaults] setObject:self.timeToLabel.text forKey:To_time];
     }];
 }
 
@@ -108,6 +131,8 @@
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:serviceData.url]];
                 }
             }];
+        }else{
+            [[VCToast make:@"暂时没有更新"] show];
         }
     }];
 }

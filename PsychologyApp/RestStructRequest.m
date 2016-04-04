@@ -127,3 +127,12 @@
 @end
 
 
+@implementation RestStructEditProfileRequest
+
+- (void)setPhone:(NSString *)phone{
+    _phone = phone;
+    [self.params setObject:phone forKey:@"phone"];
+}
+
+@end
+

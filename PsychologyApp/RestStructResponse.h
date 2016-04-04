@@ -77,4 +77,16 @@
 @property (strong,nonatomic) NSString *url;
 @end
 
+//编辑资料
+@interface RestStructEditProfileResponse : RestStructResponse
+
+@property (nonatomic,strong) NSString *phone;
+@property (nonatomic,strong) NSString *password;
+@property (nonatomic,strong) NSString *nickname;
+@property (nonatomic,assign) NSInteger age;
+@property (nonatomic,assign) BOOL sex;
+@property (nonatomic,strong) NSString *region;
+@property (nonatomic,strong) NSString *briefIntroduction;
+
+@end
 

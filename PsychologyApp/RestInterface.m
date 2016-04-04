@@ -153,18 +153,34 @@
             return ;
         }
         
-        
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"arr is : %@",arr);
-
         NSError *errorOfResponse = nil;
         RestStructUpdateResponse *updateResponse = [[RestStructUpdateResponse alloc]initWithData:data error:&errorOfResponse];
         
         
         completeToService(updateResponse,nil);
     }];
-    
 }
+
+//EditProfile
++ (void)invokeEditProfile:(RestStructEditProfileRequest*)request withComplete:(void(^)(RestStructEditProfileResponse* response,NSError *error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/mine/editprofile.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        RestStructEditProfileResponse *response = [[RestStructEditProfileResponse alloc]initWithData:data error:&restError];
+        completeToService(response,nil);
+    }];
+}
+
 
 @end
 

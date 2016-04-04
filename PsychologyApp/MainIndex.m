@@ -10,6 +10,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import "ServiceManager.h"
 #import "MineSetting.h"
+#import "AppDefinition.h"
 
 @interface MainIndex ()
 
@@ -23,12 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppEnterBackground:) name:EVENT_APP_ENTER_BACKGROUND object:nil];
+
+    
 //    检查更新
     [[MineSetting new] onCheckUpdateClicked:nil];
         
     if (self.isClicked) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link]];
     }
+}
+
+
+- (void)onAppEnterBackground:(NSNotification *)notification {
+    // initialize back local push
+    [OBTAIN_SERVICE(LocalPushService) scheduleBackActivity];
 }
 
 

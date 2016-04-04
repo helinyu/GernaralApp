@@ -230,3 +230,34 @@
 @end
 
 
+@implementation RestStructEditProfileResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _briefIntroduction = @"";
+        _sex = 0 ;
+        _age = 0 ;
+        _phone = @"";
+        _region = @"";
+        _nickname = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper *)keyMapper {
+    return  [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                       @"data.briefIntroduction":@"briefIntroduction",
+                                                       @"data.phone":@"phone",
+                                                       @"data.password":@"password",
+                                                       @"data.nickname":@"nickname",
+                                                       @"data.age":@"age",
+                                                       @"data.sex":@"sex",
+                                                       @"data.region":@"region",
+                                                       }];
+}
+
+@end
+
+

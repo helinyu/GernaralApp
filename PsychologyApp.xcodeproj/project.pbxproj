@@ -46,6 +46,12 @@
 		DC39954C1CB28D8100ACA64B /* VCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39954A1CB28D8100ACA64B /* VCAlertView.m */; };
 		DC39954D1CB28D8100ACA64B /* VCAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC39954B1CB28D8100ACA64B /* VCAlertView.xib */; };
 		DC3995501CB28E4500ACA64B /* UIView+FrameMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */; };
+		DC3995541CB296C400ACA64B /* AuthOfLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995531CB296C400ACA64B /* AuthOfLocalNotification.m */; };
+		DC3995571CB296D200ACA64B /* LocalPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995561CB296D200ACA64B /* LocalPushService.m */; };
+		DC3995591CB2999200ACA64B /* attribute.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC3995581CB2999200ACA64B /* attribute.plist */; };
+		DC39955F1CB29A3900ACA64B /* NSString+plist.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39955E1CB29A3900ACA64B /* NSString+plist.m */; };
+		DC3995661CB2B62F00ACA64B /* EditProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995651CB2B62F00ACA64B /* EditProfileService.m */; };
+		DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -205,6 +211,17 @@
 		DC39954B1CB28D8100ACA64B /* VCAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCAlertView.xib; sourceTree = "<group>"; };
 		DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameMethods.h"; sourceTree = "<group>"; };
 		DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameMethods.m"; sourceTree = "<group>"; };
+		DC3995521CB296C400ACA64B /* AuthOfLocalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthOfLocalNotification.h; sourceTree = "<group>"; };
+		DC3995531CB296C400ACA64B /* AuthOfLocalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthOfLocalNotification.m; sourceTree = "<group>"; };
+		DC3995551CB296D200ACA64B /* LocalPushService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPushService.h; sourceTree = "<group>"; };
+		DC3995561CB296D200ACA64B /* LocalPushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPushService.m; sourceTree = "<group>"; };
+		DC3995581CB2999200ACA64B /* attribute.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = attribute.plist; path = ../attribute.plist; sourceTree = "<group>"; };
+		DC39955D1CB29A3900ACA64B /* NSString+plist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+plist.h"; sourceTree = "<group>"; };
+		DC39955E1CB29A3900ACA64B /* NSString+plist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+plist.m"; sourceTree = "<group>"; };
+		DC3995641CB2B62F00ACA64B /* EditProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileService.h; sourceTree = "<group>"; };
+		DC3995651CB2B62F00ACA64B /* EditProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileService.m; sourceTree = "<group>"; };
+		DC3995671CB2B69200ACA64B /* EditProfileServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileServiceData.h; sourceTree = "<group>"; };
+		DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileServiceData.m; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
 		DC60BD371C704EB900CFDC56 /* VCLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCLoading.xib; sourceTree = "<group>"; };
@@ -602,6 +619,7 @@
 		DC39953F1CB281EC00ACA64B /* MineServices */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995601CB2B5FB00ACA64B /* MineEditProfile */,
 				DC3995411CB2820800ACA64B /* MineSettings */,
 			);
 			name = MineServices;
@@ -626,6 +644,56 @@
 				DC39954B1CB28D8100ACA64B /* VCAlertView.xib */,
 			);
 			name = alert;
+			sourceTree = "<group>";
+		};
+		DC3995511CB296B300ACA64B /* localPushServices */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995521CB296C400ACA64B /* AuthOfLocalNotification.h */,
+				DC3995531CB296C400ACA64B /* AuthOfLocalNotification.m */,
+				DC3995551CB296D200ACA64B /* LocalPushService.h */,
+				DC3995561CB296D200ACA64B /* LocalPushService.m */,
+			);
+			name = localPushServices;
+			sourceTree = "<group>";
+		};
+		DC39955A1CB299AE00ACA64B /* plists */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995581CB2999200ACA64B /* attribute.plist */,
+			);
+			name = plists;
+			sourceTree = "<group>";
+		};
+		DC39955B1CB29A0A00ACA64B /* UI+ */ = {
+			isa = PBXGroup;
+			children = (
+				DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */,
+				DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */,
+				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
+				DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */,
+			);
+			name = "UI+";
+			sourceTree = "<group>";
+		};
+		DC39955C1CB29A1500ACA64B /* NS+ */ = {
+			isa = PBXGroup;
+			children = (
+				DC39955D1CB29A3900ACA64B /* NSString+plist.h */,
+				DC39955E1CB29A3900ACA64B /* NSString+plist.m */,
+			);
+			name = "NS+";
+			sourceTree = "<group>";
+		};
+		DC3995601CB2B5FB00ACA64B /* MineEditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995641CB2B62F00ACA64B /* EditProfileService.h */,
+				DC3995651CB2B62F00ACA64B /* EditProfileService.m */,
+				DC3995671CB2B69200ACA64B /* EditProfileServiceData.h */,
+				DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */,
+			);
+			name = MineEditProfile;
 			sourceTree = "<group>";
 		};
 		DC60BD431C704F0D00CFDC56 /* helper */ = {
@@ -659,6 +727,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995511CB296B300ACA64B /* localPushServices */,
 				DC39953F1CB281EC00ACA64B /* MineServices */,
 				DC3995341CB247C100ACA64B /* AppServices */,
 				DC6F2E6A1C96E46C00738E03 /* ServiceDatas */,
@@ -765,6 +834,7 @@
 		DC992D9F1C46947400382DFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC39955A1CB299AE00ACA64B /* plists */,
 				DCB967051C958C2E004E3229 /* icon_test_header.png */,
 				DCFECA7F1C787B08000A4BC9 /* pageView@2x.png */,
 				DCFECA771C787AFE000A4BC9 /* 1.png */,
@@ -879,10 +949,8 @@
 		DC9DEF031C74860700C1A1AE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */,
-				DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */,
-				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
-				DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */,
+				DC39955C1CB29A1500ACA64B /* NS+ */,
+				DC39955B1CB29A0A00ACA64B /* UI+ */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1154,6 +1222,7 @@
 				DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */,
 				DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
+				DC3995591CB2999200ACA64B /* attribute.plist in Resources */,
 				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
 				DC39952D1CB226FE00ACA64B /* FLDatePicker.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
@@ -1258,6 +1327,7 @@
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
 				DCB9670C1C95A921004E3229 /* PschologyTestSummary.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
+				DC3995571CB296D200ACA64B /* LocalPushService.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
 				DC10FD771C762501004ED442 /* MainReading.m in Sources */,
@@ -1280,6 +1350,7 @@
 				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
 				DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */,
 				DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */,
+				DC3995541CB296C400ACA64B /* AuthOfLocalNotification.m in Sources */,
 				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
@@ -1300,12 +1371,14 @@
 				DCB966FC1C958291004E3229 /* PschologyTest.m in Sources */,
 				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
+				DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DCB33F811C808C620075FBDD /* ValidateService.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,
 				DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */,
 				DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */,
+				DC3995661CB2B62F00ACA64B /* EditProfileService.m in Sources */,
 				DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */,
 				DC10FD7B1C762530004ED442 /* MainQA.m in Sources */,
 				DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */,
@@ -1319,6 +1392,7 @@
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,
 				DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */,
+				DC39955F1CB29A3900ACA64B /* NSString+plist.m in Sources */,
 				DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */,
 				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,

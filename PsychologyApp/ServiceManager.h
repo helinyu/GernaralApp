@@ -20,3 +20,5 @@
 
 #import "HomePageService.h"
 #import "SettingService.h"
+#import "LocalPushService.h"
+#import "EditProfileService.h"
