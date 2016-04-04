@@ -7,6 +7,7 @@
 //
 
 #import "MainIndex.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface MainIndex ()
 
@@ -20,10 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+       
     if (self.isClicked) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.link]];
     }
 }
+
+
 
 - (void)setADLink:(NSString *)link with:(BOOL)isClicked {
     self.link = link;

@@ -27,18 +27,28 @@
 @property (strong, nonatomic) NSArray<PschologyTestItem_ServiceData>* item;
 @end
 
-
 //心理概要
-
 @protocol PschologyTestSummaryItem_ServiceData <NSObject>
 @end
 @interface PschologyTestSummaryItem_ServiceData : HomePageServiceData
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *content;
 @end
-
 @interface PschologyTestSummary_ServiceData : HomePageServiceData
 @property (strong, nonatomic) NSArray<PschologyTestSummaryItem_ServiceData>* data;
+@end
+
+@protocol PschologyTestDetailItem_ServiceData <NSObject>
+@end
+@interface PschologyTestDetailItem_ServiceData : HomePageServiceData
+@property (strong,nonatomic) NSString *title;
+@property (strong,nonatomic) NSString *aChoice;
+@property (strong,nonatomic) NSString *bChoice;
+@property (strong,nonatomic) NSString *cChoice;
+@property (strong,nonatomic) NSString *dChoice;
+@end
+@interface PschologyTestDetail_ServiceData : HomePageServiceData
+@property (strong,nonatomic) NSMutableArray<PschologyTestDetailItem_ServiceData> * dataItem;
 @end
 
 

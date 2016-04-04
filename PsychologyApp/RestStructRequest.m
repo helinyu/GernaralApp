@@ -110,4 +110,20 @@
 
 @end
 
+@implementation RestTestSummaryRequest
+
+- (void)setTitle:(NSString *)title{
+    _title = title;
+    [self.params setObject:title forKey:@"title"];
+}
+
+@end
+
+@implementation RestTestDetailRequest
+- (void)setTitle:(NSString *)title{
+    _title = title;
+    [self.params setObject:title forKey:@"title"];
+}
+@end
+
 

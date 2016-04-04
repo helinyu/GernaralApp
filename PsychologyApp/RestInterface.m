@@ -17,7 +17,6 @@
     sessionConfig.timeoutIntervalForRequest = 30;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",OBTAIN_COMMON_HOST,urlStr]]];
-    
     urlRequest.HTTPBody = [request toPostBody];
     urlRequest.HTTPMethod = @"POST";
     NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -32,8 +31,8 @@
 
 //注册
 + (void)invokeRegisterWithRequest:(RestStructRegisterByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock{
-    
-    [RestInterface _invokeWithUrl:@"register" withRequest:request withComplete:^(NSData *data, NSError *error) {
+
+    [RestInterface _invokeWithUrl:@"/Login/account_register.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dict is : %@",dict);
         NSLog(@"error is :%@",error);
@@ -42,7 +41,7 @@
             NSLog(@"发送网络请求出现错误，没有返回正常的值返回");
             return ;
         }
-        
+
         NSError *errorJson = nil;
         RestStructRegisterResponse *response = [[RestStructRegisterResponse alloc] initWithData:data error:&errorJson];
         completeBlock(response,errorJson);
@@ -52,7 +51,7 @@
 //登录
 + (void)invokeLoginWithRequest:(RestStructLoginByPhoneRequest*)request withComplete:(void(^)(RestStructLoginResponse *response,NSError *error))completeBlock{
     
-    [RestInterface _invokeWithUrl:@"login" withRequest:request withComplete:^(NSData *data, NSError *error) {
+    [RestInterface _invokeWithUrl:@"/Login/account_login.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
         
         if (error) {
             NSLog(@"发送网络请求出现错误，没有返回正常的值返回");
@@ -114,9 +113,9 @@
 }
 
 //心理概要
-+ (void)invokeFromHomePageServiceOfPschologyTestSummaryServiceWithComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError *error))completeToService {
++ (void)invokeFromHomePageServiceOfPschologyTestSummaryService:(RestTestSummaryRequest*)request withComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError *error))completeToService {
     
-    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_summary.php" withRequest:[RestStructRequest new] withComplete:^(NSData *data, NSError *error) {
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_summary.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
         if (error.code != 0) {
             completeToService(nil,error);
             return;
@@ -124,9 +123,29 @@
 
         NSError * errorOfResponse = nil;
         RestStructPschologyTestSummaryResponse *summaryResponse = [[RestStructPschologyTestSummaryResponse alloc]initWithData:data error:&errorOfResponse];
-//        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"arr is ;%@",arr);
+        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"arr is ;%@",arr);
         completeToService(summaryResponse,nil);
+    }];
+}
+
+//测试的题目
++ (void)invokeFromHomePageServiceOfPschologyTestDServiceDetail:(RestStructRequest*)request WithComplete:(void (^)(RestStructPschologyTestDetailResponse *response, NSError * error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/fetch_Pschology_detail.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *errorOfResponse = nil;
+        RestStructPschologyTestDetailResponse *detailResponse = [[RestStructPschologyTestDetailResponse alloc]initWithData:data error:&errorOfResponse];
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+
+        NSLog(@"arr is : %@",arr);
+        
+        completeToService(detailResponse,nil);
     }];
 }
 

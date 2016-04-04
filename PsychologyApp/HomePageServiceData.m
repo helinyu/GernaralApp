@@ -19,6 +19,31 @@
 
 @implementation PschologyTestSummaryItem_ServiceData
 @end
-
 @implementation PschologyTestSummary_ServiceData
+@end
+
+@implementation PschologyTestDetailItem_ServiceData
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"";
+        _aChoice = @"";
+        _bChoice = @"";
+        _cChoice = @"";
+        _dChoice = @"";
+    }
+    return self;
+}
+@end
+@implementation PschologyTestDetail_ServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _dataItem = (NSMutableArray<PschologyTestDetailItem_ServiceData>*)[NSMutableArray new];
+    }
+    return self;
+}
 @end

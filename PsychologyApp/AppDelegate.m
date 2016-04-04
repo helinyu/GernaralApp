@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Helper+Style.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -19,8 +21,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [Fabric with:@[[Crashlytics class]]];
     //设置导航栏
-    [Helper setupStyle];
+    
+ 
     
     return YES;
 }

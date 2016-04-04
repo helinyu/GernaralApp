@@ -22,4 +22,10 @@
 #define AQ_SELECTINDEX 3
 #define MIME_SELECTINDEX 4
 
+
+//有关通知
+#define REGISTER_PHONE @"REGISTER_PHONE"
+#define LOGIN_PHONE @"LOGIN_PHONE"
+#define IS_LOGINED @"IS_LOGINED"
+
 #endif /* AppDefinition_h */

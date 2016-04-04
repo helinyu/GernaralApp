@@ -32,6 +32,15 @@
 		DC10FD7B1C762530004ED442 /* MainQA.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainQA.m */; };
 		DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7E1C762546004ED442 /* MainConsult.m */; };
 		DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC185B981C82E041001A0DD1 /* AppServiceData.m */; };
+		DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39950E1CB2085900ACA64B /* Helper+App.m */; };
+		DC3995181CB2105C00ACA64B /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995171CB2105C00ACA64B /* NSString+Helper.m */; };
+		DC39952C1CB226FE00ACA64B /* FLDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39952A1CB226FE00ACA64B /* FLDatePicker.m */; };
+		DC39952D1CB226FE00ACA64B /* FLDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC39952B1CB226FE00ACA64B /* FLDatePicker.xib */; };
+		DC3995301CB23E9400ACA64B /* NSString+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39952F1CB23E9400ACA64B /* NSString+Time.m */; };
+		DC3995331CB23EBB00ACA64B /* NSDate+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995321CB23EBB00ACA64B /* NSDate+NSString.m */; };
+		DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995371CB24B7800ACA64B /* EntityApp.m */; };
+		DC39953C1CB24D9A00ACA64B /* EntityUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39953B1CB24D9A00ACA64B /* EntityUser.m */; };
+		DC39953E1CB24F1E00ACA64B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -166,6 +175,22 @@
 		DC185B971C82E041001A0DD1 /* AppServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServiceData.h; sourceTree = "<group>"; };
 		DC185B981C82E041001A0DD1 /* AppServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServiceData.m; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
+		DC39950D1CB2085900ACA64B /* Helper+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+App.h"; sourceTree = "<group>"; };
+		DC39950E1CB2085900ACA64B /* Helper+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+App.m"; sourceTree = "<group>"; };
+		DC3995161CB2105C00ACA64B /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		DC3995171CB2105C00ACA64B /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		DC3995291CB226FE00ACA64B /* FLDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLDatePicker.h; sourceTree = "<group>"; };
+		DC39952A1CB226FE00ACA64B /* FLDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLDatePicker.m; sourceTree = "<group>"; };
+		DC39952B1CB226FE00ACA64B /* FLDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FLDatePicker.xib; sourceTree = "<group>"; };
+		DC39952E1CB23E9400ACA64B /* NSString+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Time.h"; sourceTree = "<group>"; };
+		DC39952F1CB23E9400ACA64B /* NSString+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Time.m"; sourceTree = "<group>"; };
+		DC3995311CB23EBB00ACA64B /* NSDate+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSString.h"; sourceTree = "<group>"; };
+		DC3995321CB23EBB00ACA64B /* NSDate+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSString.m"; sourceTree = "<group>"; };
+		DC3995361CB24B7800ACA64B /* EntityApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityApp.h; sourceTree = "<group>"; };
+		DC3995371CB24B7800ACA64B /* EntityApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityApp.m; sourceTree = "<group>"; };
+		DC39953A1CB24D9A00ACA64B /* EntityUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityUser.h; sourceTree = "<group>"; };
+		DC39953B1CB24D9A00ACA64B /* EntityUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityUser.m; sourceTree = "<group>"; };
+		DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
 		DC60BD371C704EB900CFDC56 /* VCLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCLoading.xib; sourceTree = "<group>"; };
@@ -283,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC39953E1CB24F1E00ACA64B /* libsqlite3.tbd in Frameworks */,
 				184F1243EDB74A828314F2AE /* libPods-PsychologyApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,13 +550,56 @@
 			name = "UI+subclass";
 			sourceTree = "<group>";
 		};
+		DC39951E1CB2125400ACA64B /* dates */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995291CB226FE00ACA64B /* FLDatePicker.h */,
+				DC39952A1CB226FE00ACA64B /* FLDatePicker.m */,
+				DC39952B1CB226FE00ACA64B /* FLDatePicker.xib */,
+			);
+			name = dates;
+			sourceTree = "<group>";
+		};
+		DC3995341CB247C100ACA64B /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppServices;
+			sourceTree = "<group>";
+		};
+		DC3995351CB24B5B00ACA64B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DC3995361CB24B7800ACA64B /* EntityApp.h */,
+				DC3995371CB24B7800ACA64B /* EntityApp.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		DC3995391CB24D8D00ACA64B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				DC39953A1CB24D9A00ACA64B /* EntityUser.h */,
+				DC39953B1CB24D9A00ACA64B /* EntityUser.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		DC60BD431C704F0D00CFDC56 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995161CB2105C00ACA64B /* NSString+Helper.h */,
+				DC3995171CB2105C00ACA64B /* NSString+Helper.m */,
+				DC39952E1CB23E9400ACA64B /* NSString+Time.h */,
+				DC39952F1CB23E9400ACA64B /* NSString+Time.m */,
+				DC3995311CB23EBB00ACA64B /* NSDate+NSString.h */,
+				DC3995321CB23EBB00ACA64B /* NSDate+NSString.m */,
 				DC60BD441C704F1900CFDC56 /* Helper+Time.h */,
 				DC60BD451C704F1900CFDC56 /* Helper+Time.m */,
 				DC60BD471C704F2F00CFDC56 /* Helper.h */,
 				DC60BD481C704F2F00CFDC56 /* Helper.m */,
+				DC39950D1CB2085900ACA64B /* Helper+App.h */,
+				DC39950E1CB2085900ACA64B /* Helper+App.m */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -547,6 +616,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995341CB247C100ACA64B /* AppServices */,
 				DC6F2E6A1C96E46C00738E03 /* ServiceDatas */,
 				DC60BD591C70643500CFDC56 /* Service.h */,
 				DC60BD5A1C70643500CFDC56 /* Service.m */,
@@ -640,10 +710,9 @@
 				DC7917E01C5671B500BB3FA9 /* services */,
 				DCD6A0371C8FBEE5002E9287 /* Models */,
 				DC207FE41C564D820011D8C4 /* external */,
+				DCFECA8D1C78B901000A4BC9 /* components */,
 				DC992DD51C46970100382DFB /* libraries */,
-				DC9DEF031C74860700C1A1AE /* Categories */,
 				DCFECA811C787B33000A4BC9 /* framwork */,
-				DCFECA8D1C78B901000A4BC9 /* component */,
 				DC992D9F1C46947400382DFB /* Supporting Files */,
 			);
 			path = PsychologyApp;
@@ -714,6 +783,7 @@
 		DC992DD51C46970100382DFB /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				DC9DEF031C74860700C1A1AE /* Categories */,
 				DC60BD431C704F0D00CFDC56 /* helper */,
 				DC022B181C4810C900D3FB61 /* UI+externds */,
 			);
@@ -830,6 +900,8 @@
 		DCD6A0371C8FBEE5002E9287 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC3995391CB24D8D00ACA64B /* User */,
+				DC3995351CB24B5B00ACA64B /* App */,
 				DCD6A03B1C8FBF4B002E9287 /* Model.h */,
 				DCD6A03C1C8FBF4B002E9287 /* Model.m */,
 				DCD6A0381C8FBF2D002E9287 /* Entity.h */,
@@ -877,9 +949,10 @@
 			name = homepageImageAndTitleCell;
 			sourceTree = "<group>";
 		};
-		DCFECA8D1C78B901000A4BC9 /* component */ = {
+		DCFECA8D1C78B901000A4BC9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DC39951E1CB2125400ACA64B /* dates */,
 				DCB966FF1C95833B004E3229 /* Cells */,
 				DCB33F781C80866C0075FBDD /* helper */,
 				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
@@ -889,7 +962,7 @@
 				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
 				DCFECA871C7885BD000A4BC9 /* homepageImageAndTitleCell */,
 			);
-			name = component;
+			name = components;
 			sourceTree = "<group>";
 		};
 		DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */ = {
@@ -905,6 +978,7 @@
 		DF0A591797B8082647A87384 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */,
 				50D03B2D88032C5AE65A73AF /* libPods-PsychologyApp.a */,
 			);
 			name = Frameworks;
@@ -923,6 +997,7 @@
 				DC992D9A1C46947400382DFB /* Resources */,
 				8500D679D83139DB26783C59 /* Embed Pods Frameworks */,
 				C5AEFE36584D5488555A91AF /* Copy Pods Resources */,
+				DCC4D46F1CA2198400A8E97D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1032,6 +1107,7 @@
 				DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
 				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
+				DC39952D1CB226FE00ACA64B /* FLDatePicker.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
 				DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */,
@@ -1105,6 +1181,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PsychologyApp/Pods-PsychologyApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DCC4D46F1CA2198400A8E97D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6a4f5337edaeb0d2545b34be2e82b552f082cbdf 711731d3859c452780d26f954b27f9390c195efe6dfe510a01c77e2f48c9c6b3";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1131,6 +1220,7 @@
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
+				DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */,
 				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
@@ -1144,14 +1234,17 @@
 				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
 				DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */,
+				DC39952C1CB226FE00ACA64B /* FLDatePicker.m in Sources */,
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
 				DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
+				DC39953C1CB24D9A00ACA64B /* EntityUser.m in Sources */,
 				DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */,
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
+				DC3995331CB23EBB00ACA64B /* NSDate+NSString.m in Sources */,
 				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
 				DCB966FC1C958291004E3229 /* PschologyTest.m in Sources */,
 				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,
@@ -1168,13 +1261,16 @@
 				DCFECA8B1C78860A000A4BC9 /* ImageAndTitleCell.m in Sources */,
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
+				DC3995301CB23E9400ACA64B /* NSString+Time.m in Sources */,
 				DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
 				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,
+				DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */,
 				DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */,
 				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
+				DC3995181CB2105C00ACA64B /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1317,6 +1413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = PsychologyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (

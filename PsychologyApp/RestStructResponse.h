@@ -58,5 +58,16 @@
 @end
 
 
-
+@protocol RestStructPschologyTestDetailResponseItem <NSObject>
+@end
+@interface RestStructPschologyTestDetailResponseItem : RestStructResponse
+@property (nonatomic,strong) NSString *tilte;
+@property (nonatomic,strong) NSString *aChoice;
+@property (nonatomic,strong) NSString *bChoice;
+@property (nonatomic,strong) NSString *cChoice;
+@property (nonatomic,strong) NSString *dChoice;
+@end
+@interface RestStructPschologyTestDetailResponse : RestStructResponse
+@property (strong, nonatomic) NSArray<RestStructPschologyTestDetailResponseItem>* data;
+@end
 

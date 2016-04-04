@@ -7,48 +7,110 @@
 //
 
 #import "PschologyTestDetail.h"
+#import "ServiceManager.h"
+
+
+#define NUMBERLABEL_OF_DETAIL 4
 
 @interface PschologyTestDetail ()
 
+@property (strong,nonatomic) PschologyTestDetail_ServiceData *testDetailData;
+@property (strong,nonatomic) PschologyTestDetailItem_ServiceData *testDetailItemData;
+
 @end
 
+
 @implementation PschologyTestDetail
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadTestData];
     self.navigationItem.title = @"测试";
+}
+
+- (void)loadTestData{
+    
+    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPschologyTestDetail:self.paramTitle andComplete:^(PschologyTestDetail_ServiceData *serviceData, NSError *error) {
+        _testDetailData = [PschologyTestDetail_ServiceData new];
+        _testDetailItemData = [PschologyTestDetailItem_ServiceData new];
+        _testDetailData = (PschologyTestDetail_ServiceData*)serviceData;
+        [self.tableView reloadData];
+        [self.tableView layoutIfNeeded];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return [(NSMutableArray*)_testDetailData.dataItem count];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return NUMBERLABEL_OF_DETAIL;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    NSMutableString *title = [NSMutableString new];
+    [title appendString:@"   题目:"];
+    [title appendString:_testDetailItemData.title];
+    return title;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    _testDetailItemData = _testDetailData.dataItem[indexPath.section] ;
     static NSString *cellIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-//    [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    cell.textLabel.text = @"你好呀";
     
+    NSMutableString *cellLabelStr = [NSMutableString new ];
+    switch (indexPath.row) {
+        case 0:
+            [cellLabelStr appendString:@"A:"];
+            [cellLabelStr appendString: [_testDetailItemData aChoice]];
+            break;
+        case 1:
+            [cellLabelStr appendString:@"B:"];
+            [cellLabelStr appendString:[_testDetailItemData bChoice]];
+            break;
+        case 2:
+            [cellLabelStr appendString:@"C:"];
+            [cellLabelStr appendString:[_testDetailItemData cChoice]];
+            break;
+        case 3:
+            [cellLabelStr appendString:@"D:"];
+            [cellLabelStr appendString:[_testDetailItemData dChoice]];
+            break;
+        default:
+            break;
+    }
+    
+    cell.textLabel.text = cellLabelStr;
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+
+- (IBAction)onComputeClicked:(id)sender {
+    
+    
+    
+    NSLog(@"查询结果");
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -93,5 +155,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//http://localhost/foreheard/homePage/psychology_test/fetch_Pschology_detail.php
 
 @end

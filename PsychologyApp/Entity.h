@@ -10,6 +10,4 @@
 #import <UIKit/UIKit.h>
 
 @interface Entity : JSONModel
-
-
 @end

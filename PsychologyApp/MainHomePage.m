@@ -75,7 +75,7 @@
 
 #pragma mark --UiCollectionViewDatasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return 2;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -99,8 +99,7 @@
 
 #pragma mark -- UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"index is ; %ld",indexPath.row);
-    
+//    NSLog(@"index is ; %ld",indexPath.row);
     switch (indexPath.row) {
         case 0:
             self.tabBarController.selectedIndex = 2;

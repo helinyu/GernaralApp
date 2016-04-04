@@ -10,4 +10,6 @@
 
 @interface PschologyTestDetail : UITableViewController
 
+@property (strong,nonatomic) NSString * paramTitle;
+
 @end

@@ -30,3 +30,13 @@
 @interface RestStructSplashScreenRequest : RestStructRequest
 @property (strong, nonatomic) NSString *size;
 @end
+
+#pragma mark ---概述
+
+@interface RestTestSummaryRequest : RestStructRequest
+@property (strong,nonatomic) NSString *title;
+@end
+
+@interface RestTestDetailRequest : RestStructRequest
+@property (strong,nonatomic) NSString *title;
+@end

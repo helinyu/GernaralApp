@@ -10,9 +10,6 @@
 #import "RestStructResponse.h"
 
 @interface UserService : NSObject
-- (void)requestLoginWithMobile:(NSString *)phone withPassword:(NSString *)password withDeviceToken:(NSString *)deviceToken ;
-
-//- (void)requestRegisterWithMobile:(NSString *)phone withPassword:(NSString *)password;
 
 - (void)requestRegisterWithMobile:(NSString *)phone withPassword:(NSString *)password withComplete:(void (^)(NSInteger ret))completeBlock;
 

@@ -45,6 +45,7 @@
         
         if (ret == 0) {
             [[VCToast make:@"登录成功"] show];
+            [[NSNotificationCenter defaultCenter] postNotificationName:LOGIN_PHONE object:nil userInfo:@{LOGIN_PHONE:self.phoneTextField.text}];
             [self.navigationController popViewControllerAnimated:YES];
         }else{
             [[VCToast make:@"登录失败"] show];

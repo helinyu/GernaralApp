@@ -162,9 +162,51 @@
             ];
 }
 
+@end
+
+@implementation RestStructPschologyTestDetailResponseItem
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _tilte = @"";
+        _aChoice = @"";
+        _bChoice = @"";
+        _cChoice = @"";
+        _dChoice = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper* )keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"title":@"title",
+                                                      @"aChoice":@"aChoice",
+                                                      @"bChoice":@"bChoice",
+                                                      @"cChoice":@"cChoice",
+                                                      @"dChoice":@"dChoice",
+                                                      }];
+}
 
 @end
 
+@implementation RestStructPschologyTestDetailResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _data = (NSArray<RestStructPschologyTestDetailResponseItem>*)@[];
+    }
+    return self;
+}
+
++ (JSONKeyMapper* )keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{@"data":@"data"}];
+}
+
+@end
 
 
 

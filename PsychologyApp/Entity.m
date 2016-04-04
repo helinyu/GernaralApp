@@ -10,6 +10,7 @@
 
 @implementation Entity
 
+
 + (BOOL)propertyIsOptional:(NSString* )propertyName {
     return YES;
 }

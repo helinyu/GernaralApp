@@ -30,8 +30,7 @@
     [super viewDidLoad];
     [self hidenAdvisements:NO];
 
-    
-    NSLog(@"screenis ; %f,%f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
+//    NSLog(@"screenis ; %f,%f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height);
     
     //导航栏存在的时候
     if (self.navigationItem) {

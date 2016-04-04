@@ -26,6 +26,7 @@
 + (void)invokeFromHomePageServiceOfPyschologyServiceWithComplete:(void(^)(RestStructPsychologyTestResponse *response ,NSError *errro)) completeToService;
 
 //心理概述
-+ (void)invokeFromHomePageServiceOfPschologyTestSummaryServiceWithComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError * error))completeToService ;
-
++ (void)invokeFromHomePageServiceOfPschologyTestSummaryService:(RestTestSummaryRequest*)request withComplete:(void (^)(RestStructPschologyTestSummaryResponse *response, NSError *error))completeToService ;
+//心理测试的题目
++ (void)invokeFromHomePageServiceOfPschologyTestDServiceDetail:(RestStructRequest*)request WithComplete:(void (^)(RestStructPschologyTestDetailResponse *response, NSError * error))completeToService;
 @end

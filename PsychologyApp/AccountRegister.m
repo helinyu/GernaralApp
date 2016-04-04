@@ -20,8 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
 }
 
 - (IBAction)onBackToLoginClicked:(id)sender {
@@ -33,10 +31,10 @@
 }
 
 - (IBAction)confirmRegister:(id)sender {
-    NSLog(@"确认注册");
-    NSLog(@"密码是：%@",self.passwordTextfield.text);
-    NSLog(@"确认是：%@",self.confirmTextfield.text);
-    NSLog(@"手机号码：%@",self.phoneTexfield.text);
+//    NSLog(@"确认注册");
+//    NSLog(@"密码是：%@",self.passwordTextfield.text);
+//    NSLog(@"确认是：%@",self.confirmTextfield.text);
+//    NSLog(@"手机号码：%@",self.phoneTexfield.text);
     
     if (([self.passwordTextfield.text isEqualToString:@""]) || ([self.confirmTextfield.text isEqualToString:@""])) {
         NSLog(@"password is not will be nil");
@@ -50,7 +48,9 @@
             NSLog(@"ret is ： %ld",ret);
             if (ret == 0) {
                 [[VCToast make:@"注册成功"] show];
-                [self.navigationController popViewControllerAnimated:YES];
+                [[NSNotificationCenter defaultCenter] postNotificationName:REGISTER_PHONE object:nil userInfo:@{REGISTER_PHONE:self.phoneTexfield.text}];
+                
+                [self.navigationController popToRootViewControllerAnimated:true];
             } else{
                 [[VCToast make:@"注册失败"] show];
             }
@@ -58,14 +58,5 @@
       }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

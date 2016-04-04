@@ -25,11 +25,20 @@
 #import "MineBookingManagement.h"
 #import "MineMessageCenter.h"
 
+#import "AppDefinition.h"
+
+#import "Model.h"
+
+#define EditProfileIndexPathSection 2
+#define EditProfileIndexPathRow 0
 
 @interface MineController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_arrays;
+    BOOL _isLogined;
 }
+@property (weak, nonatomic) IBOutlet UILabel *loginUserLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -43,9 +52,41 @@
                @[@"编辑资料",@"专家注入"],
                @[@"关注/粉丝",@"分享好友",@"反馈意见",@"设置"]
                ];
-    NSLog(@"coutn is : %ld",_arrays.count);
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByRegister:) name:REGISTER_PHONE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByLogin:) name:LOGIN_PHONE object:nil];
     self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self isLogined];
+}
+
+- (void)isLogined{
+    //    数据处理
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString* userId =  [userDefaults objectForKey:LOGIN_PHONE];
+    //数据的处理
+    Model *model = [Model sharedInstance];
+    EntityUser *user = [model loadUseByUId:userId];
+    _isLogined  = user.isLogined;
+
+    [userDefaults setBool:_isLogined forKey:IS_LOGINED];
+    [userDefaults synchronize];
+
+    if (_isLogined == true) {
+        self.loginUserLabel.text = user.uId ;
+    }else{
+        self.loginUserLabel.text = @"请登录";
+    }
+}
+
+-  (void)fetchNotificationByRegister:(NSNotification*)notification{
+    self.loginUserLabel.text = [notification.userInfo objectForKey:REGISTER_PHONE];
+}
+
+-  (void)fetchNotificationByLogin:(NSNotification*)notification{
+    self.loginUserLabel.text = [notification.userInfo objectForKey:LOGIN_PHONE];
 }
 
 
@@ -54,7 +95,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_arrays[section] count];
 }
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return _arrays.count;
 }
@@ -65,7 +105,6 @@
     [cell cellWithImage:[UIImage imageNamed:@"icon_timeOfAppointment"] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
     return cell;
 }
-
 
 #pragma mark --tableViewDelegate 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -156,14 +195,16 @@
     }
 }
 
-
-
 - (IBAction)onAccountLoginTap:(id)sender {
     
     NSLog(@"accountLogin");
+    
+    if ( _isLogined == true) {
+        [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:EditProfileIndexPathRow inSection:EditProfileIndexPathSection]];
+        return ;
+    }
     AccountLogin *accountLogin = [[UIStoryboard storyboardWithName:@"Account" bundle:nil]instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class])];
     [self.navigationController pushViewController:accountLogin animated:YES];
-    
 }
 
 

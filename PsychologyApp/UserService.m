@@ -9,6 +9,8 @@
 #import "UserService.h"
 #import "RestStructRequest.h"
 #import "RestInterface.h"
+#import "Model.h"
+#import "AppDefinition.h"
 
 @implementation UserService
 
@@ -26,6 +28,16 @@
             NSLog(@"数据解析出现错误");
             return ;
         }
+        
+        NSUserDefaults *useDefualt = [NSUserDefaults standardUserDefaults];
+        [useDefualt setObject:structRegisterByPhoneRequest.phone forKey:LOGIN_PHONE];
+        [useDefualt synchronize];
+        
+        EntityUser *user = [Model sharedInstance].user;
+        user.uId = structRegisterByPhoneRequest.phone;
+        user.isLogined = true;
+        [[Model sharedInstance] commitUser];
+
         completeBlock(response.ret);
     }];
 }
@@ -39,8 +51,19 @@
         
         if (error) {
             NSLog(@"数据转化失败");
+            completeBlock(error.code);
             return ;
         }
+        
+        
+        NSUserDefaults *useDefualt = [NSUserDefaults standardUserDefaults];
+        [useDefualt setObject:request.phone forKey:LOGIN_PHONE];
+        [useDefualt synchronize];
+        
+        EntityUser *user = [Model sharedInstance].user;
+        user.uId = request.phone;
+        user.isLogined = true;
+        [[Model sharedInstance] commitUser];
         
         completeBlock(response.ret);
     }];

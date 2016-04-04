@@ -32,8 +32,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerContentLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerContentHeightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIScrollView *headerScrollView;
 
 @end
@@ -57,7 +55,8 @@
 }
 
 - (void)loadSummaryData{
-    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPschologyTestSummary:^(PschologyTestSummary_ServiceData *serviceData, NSError *error) {
+    
+    [OBTAIN_SERVICE(HomePageService) requestfromViewControllerPschologyTestSummaryWith:_headerTitle andComplete:^(PschologyTestSummary_ServiceData *serviceData, NSError *error) {
         if (error.code != 0 ) {
             NSLog(@"网络或者其他错误view界面");
             return ;
@@ -66,17 +65,16 @@
         NSString *text =  [(PschologyTestSummaryItem_ServiceData* )_summaryData.data[0] content];
         self.headerContentLabel.text = text;
         [self.headerContentLabel layoutIfNeeded];
-     
+
     }];
 }
 
-
 - (void)setheaderViewFrame{
-    self.headerContentLabel.backgroundColor = [UIColor blueColor];
+    self.headerContentLabel.backgroundColor = [UIColor grayColor];
     _headerHeight = [self.headerContentLabel.text boundingRectWithSize:CGSizeMake(([UIScreen mainScreen].bounds.size.width - 60), 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]} context:nil].size.height;
-    self.headerContentHeightConstraint.constant = _headerHeight;
-    self.headerHeightConstraint.constant = 114 + _headerHeight;
-    self.headerScrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, self.headerHeightConstraint.constant);
+//    self.headerContentHeightConstraint.constant = _headerHeight;
+//    self.headerHeightConstraint.constant = 114 + _headerHeight;
+//    self.headerScrollView.contentSize = CGSizeMake([[UIScreen mainScreen] bounds].size.width, self.headerHeightConstraint.constant);
     [self.headerScrollView setNeedsDisplay];
 }
 
@@ -103,15 +101,16 @@
 }
 
 - (IBAction)onBeginTestClicked:(id)sender {
-    NSLog(@"开始测试");
     PschologyTestDetail *testDetail = [[UIStoryboard storyboardWithName:@"HomePage" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([PschologyTestDetail class])];
+    testDetail.paramTitle = _headerTitle;
     [self.navigationController pushViewController:testDetail animated:true];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-
     return  56;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.
