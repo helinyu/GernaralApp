@@ -27,3 +27,16 @@
 }
 
 @end
+
+@implementation EditProfileFinishedServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0;
+    }
+    return self;
+}
+
+@end

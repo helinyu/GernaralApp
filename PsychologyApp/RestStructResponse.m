@@ -261,3 +261,18 @@
 @end
 
 
+@implementation RestStructFinishedEditProfileResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0;
+    }
+    return self;
+}
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"ret":@"ret",}];
+}
+
+@end

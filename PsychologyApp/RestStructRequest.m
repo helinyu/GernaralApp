@@ -136,3 +136,40 @@
 
 @end
 
+
+@implementation RestStructFinishedEditProfileRequest
+
+- (void)setPhone:(NSString *)phone{
+    _phone = phone;
+    [self.params setObject:phone forKey:@"phone"];
+}
+
+- (void)setPassword:(NSString *)password{
+    _password = password;
+    [self.params setObject:password forKey:@"password"];
+}
+- (void)setAge:(NSInteger)age{
+    _age = age;
+    [self.params setObject:@(age) forKey:@"age"];
+}
+-(void)setSex:(BOOL)sex{
+    _sex = sex;
+    [self.params setObject:@(sex) forKey:@"sex"];
+}
+
+- (void)setNickname:(NSString *)nickname{
+    _nickname = nickname;
+    [self.params setObject:nickname forKey:@"nickname"];
+}
+
+- (void)setRegion:(NSString *)region{
+    _region = region;
+    [self.params setObject:region forKey:@"region"];
+}
+
+- (void)setBriefIntroduction:(NSString *)briefIntroduction{
+    _briefIntroduction = briefIntroduction;
+    [self.params setObject:briefIntroduction forKey:@"briefIntroduction"];
+}
+@end
+

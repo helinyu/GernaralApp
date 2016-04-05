@@ -11,6 +11,6 @@
 @interface EditProfileCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *atrributeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 
 @end

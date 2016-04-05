@@ -13,4 +13,7 @@
 
 - (void)requestEditProfie:(NSString*)phone withComplete:(void(^)(EditProfileServiceData* serviceData ,NSError *error)) completeToView ;
 
+
+- (void)requestFinishedEditProfie:(NSString*)phone  withPassword:(NSString*)password withAge:(NSInteger)age withSex:(BOOL)sex withRegion:(NSString*)region withBriefIntroduction:(NSString*)briefIntroduction withNickname:(NSString*)nickname withComplete:(void(^)(EditProfileFinishedServiceData* serviceData ,NSError *error)) completeToView;
+
 @end

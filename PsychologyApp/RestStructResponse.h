@@ -90,3 +90,9 @@
 
 @end
 
+
+@interface RestStructFinishedEditProfileResponse : RestStructResponse
+
+@property (nonatomic,assign) NSInteger ret;
+
+@end

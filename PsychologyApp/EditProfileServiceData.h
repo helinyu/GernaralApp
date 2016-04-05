@@ -19,3 +19,9 @@
 @property (nonatomic,strong) NSString *briefIntroduction;
 
 @end
+
+@interface EditProfileFinishedServiceData : ServiceData
+
+@property (nonatomic,assign) NSInteger ret;
+
+@end

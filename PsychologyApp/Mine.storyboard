@@ -195,20 +195,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAj-We-e1k">
-                                <rect key="frame" x="32" y="80" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="写入你的反馈意见">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入建议" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-94-hwR">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Sp2-hK-71J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rnj-94-hwR" firstAttribute="leading" secondItem="UcE-Cl-tju" secondAttribute="leading" id="4fJ-2r-NxK"/>
+                            <constraint firstAttribute="trailing" secondItem="rnj-94-hwR" secondAttribute="trailing" id="8TB-W0-LPr"/>
+                            <constraint firstItem="rnj-94-hwR" firstAttribute="top" secondItem="2LY-Rc-BNT" secondAttribute="bottom" id="eHK-ib-SxF"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="反馈意见" id="9zt-nI-1hc">
@@ -217,10 +219,18 @@
                                 <action selector="onBackClicked:" destination="9ur-hv-flA" id="TJg-UV-vfy"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="cwE-UE-7Ay"/>
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="cwE-UE-7Ay">
+                            <connections>
+                                <action selector="onFinishedClicked:" destination="9ur-hv-flA" id="H4U-RR-0Ie"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="rnj-94-hwR" id="wzO-Fp-QXM"/>
+                        <outlet property="textViewTopConstraint" destination="eHK-ib-SxF" id="F59-is-wxZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBV-Fq-pni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -497,28 +507,28 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-pa-U81">
-                                            <rect key="frame" x="10" y="19.5" width="42" height="20.5"/>
+                                            <rect key="frame" x="10" y="19" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="433-LS-wB0">
-                                            <rect key="frame" x="60" y="19.5" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-dW-4ek">
+                                            <rect key="frame" x="69" y="21.5" width="516" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Ye6-dW-4ek" firstAttribute="leading" secondItem="Vrn-pa-U81" secondAttribute="trailing" constant="17" id="0mK-uY-bS3"/>
                                         <constraint firstItem="Vrn-pa-U81" firstAttribute="leading" secondItem="Jyz-yc-8j9" secondAttribute="leading" constant="10" id="UO9-5C-PoN"/>
-                                        <constraint firstItem="433-LS-wB0" firstAttribute="centerY" secondItem="Jyz-yc-8j9" secondAttribute="centerY" id="YaO-tw-txl"/>
-                                        <constraint firstItem="433-LS-wB0" firstAttribute="leading" secondItem="Jyz-yc-8j9" secondAttribute="leading" constant="60" id="bKJ-tB-gO5"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ye6-dW-4ek" secondAttribute="trailing" constant="15" id="WCB-Db-kLp"/>
+                                        <constraint firstItem="Ye6-dW-4ek" firstAttribute="centerY" secondItem="Vrn-pa-U81" secondAttribute="centerY" id="m5v-Tr-4FK"/>
                                         <constraint firstItem="Vrn-pa-U81" firstAttribute="centerY" secondItem="Jyz-yc-8j9" secondAttribute="centerY" id="suN-Za-WrH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="atrributeLabel" destination="Vrn-pa-U81" id="zUg-Ke-e0m"/>
-                                    <outlet property="valueLabel" destination="433-LS-wB0" id="fVp-tu-k2V"/>
+                                    <outlet property="valueTextField" destination="Ye6-dW-4ek" id="EmC-oS-ta2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -527,7 +537,13 @@
                             <outlet property="delegate" destination="uPf-kg-LFU" id="fIj-G4-gTI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="修改资料" id="EFY-ii-yFl"/>
+                    <navigationItem key="navigationItem" title="修改资料" id="EFY-ii-yFl">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="T6L-Vd-NvA" userLabel="完成">
+                            <connections>
+                                <action selector="onfinishedEditingClicked:" destination="uPf-kg-LFU" id="HI7-3H-SKc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="headerPersonNameLabel" destination="SlK-NW-eGg" id="hlK-Rh-QI0"/>

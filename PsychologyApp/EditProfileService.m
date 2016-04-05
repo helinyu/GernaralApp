@@ -37,4 +37,27 @@
     }];
 }
 
+- (void)requestFinishedEditProfie:(NSString*)phone  withPassword:(NSString*)password withAge:(NSInteger)age withSex:(BOOL)sex withRegion:(NSString*)region withBriefIntroduction:(NSString*)briefIntroduction withNickname:(NSString*)nickname withComplete:(void(^)(EditProfileFinishedServiceData* serviceData ,NSError *error)) completeToView {
+    
+    RestStructFinishedEditProfileRequest *request = [RestStructFinishedEditProfileRequest new];
+    request.phone = phone;
+    request.password = password;
+    request.age = age;
+    request.sex = sex;
+    request.region = region;
+    request.briefIntroduction = briefIntroduction;
+    request.nickname = nickname;
+    
+    [RestInterface invokeFinishedEditProfile:request withComplete:^(RestStructFinishedEditProfileResponse *response, NSError *error) {
+        if (error != nil) {
+            completeToView(nil,error);
+            return ;
+        }
+        
+        EditProfileFinishedServiceData *serviceData = [EditProfileFinishedServiceData new];
+        serviceData.ret = response.ret;
+        completeToView(serviceData,nil);
+    }];
+}
+
 @end

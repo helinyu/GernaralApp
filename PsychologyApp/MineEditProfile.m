@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "ServiceManager.h"
 #import "EditProfileServiceData.h"
+#import "VCToast.h"
 
 
 @interface MineEditProfile () <UITableViewDataSource,UITableViewDelegate>
@@ -25,6 +26,8 @@
 @property (nonatomic,strong) NSMutableArray *profilesAttibutes;
 @property (weak, nonatomic) IBOutlet UILabel *headerPersonNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *personHeaderImageView;
+
+
 
 @end
 
@@ -40,7 +43,7 @@
     
     _profileValueS = [EditProfileServiceData new];
     
-    self.profiles = @[@"昵称:",@"性别:",@"年龄:",@"地区:",@"简介:"];
+    self.profiles = @[@"昵称:",@"密码:",@"性别:",@"年龄:",@"地区:",@"简介:"];
     _profilesAttibutes = [NSMutableArray new];
     
 //    请求数据
@@ -56,6 +59,8 @@
     [OBTAIN_SERVICE(EditProfileService) requestEditProfie:_personName withComplete:^(EditProfileServiceData *serviceData, NSError *error) {
         NSLog(@"serviceData si : %@",serviceData);
         _profileValueS = serviceData;
+        [self.tableView reloadData];
+//        NSLog(@"_profileValueS is : %@",_profileValueS);
     }];
 }
 
@@ -77,27 +82,36 @@
     switch (indexPath.row) {
         case 0:
         {
-            cell.valueLabel.text = _profileValueS.nickname ;
+            cell.valueTextField.text = _profileValueS.nickname;
         }
             break;
         case 1:
         {
-            cell.valueLabel.text = [NSString stringWithFormat:@"%d",_profileValueS.sex];
+            cell.valueTextField.text = _profileValueS.password ;
         }
             break;
         case 2:
         {
-            cell.valueLabel.text = [NSString stringWithFormat:@"%ld",(long)_profileValueS.age];
+            if (_profileValueS.sex == 0) {
+                cell.valueTextField.text = @"女";
+            }else{
+                cell.valueTextField.text = @"男";
+            }
         }
             break;
         case 3:
         {
-            cell.valueLabel.text = _profileValueS.region;
+            cell.valueTextField.text = [NSString stringWithFormat:@"%ld",(long)_profileValueS.age];
         }
             break;
         case 4:
         {
-            cell.valueLabel.text = _profileValueS.briefIntroduction;
+            cell.valueTextField.text = _profileValueS.region;
+        }
+            break;
+        case 5:
+        {
+            cell.valueTextField.text = _profileValueS.briefIntroduction;
         }
             break;
         default:
@@ -115,6 +129,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
   
 }
+
+
+//这里应该需要监听UITextfield的代理方法
+- (IBAction)onfinishedEditingClicked:(id)sender {
+    NSLog(@"完成编辑");
+
+    [OBTAIN_SERVICE(EditProfileService) requestFinishedEditProfie:@"12345678900" withPassword:@"1ll456" withAge:22 withSex:true withRegion:@"zhognguo" withBriefIntroduction:@"jieshoa" withNickname:@"nickname" withComplete:^(EditProfileFinishedServiceData *serviceData, NSError *error) {
+        
+        if (error != nil) {
+            NSLog(@"出现错误");
+            return ;
+        }
+
+        [[VCToast make:@"编辑并保存成成功"] show];
+        [self.navigationController popViewControllerAnimated:true];
+    }];
+    
+//    插入数据的请求
+}
+
 
 
 /*

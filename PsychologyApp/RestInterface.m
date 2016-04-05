@@ -177,10 +177,30 @@
         
         NSError *restError = nil;
         RestStructEditProfileResponse *response = [[RestStructEditProfileResponse alloc]initWithData:data error:&restError];
-        completeToService(response,nil);
+        completeToService(response,error);
+//        dispatch_async(dispatch_get_main_queue(), ^{ completeToService(response, error);});
+//        为什么使用主线程？？？
     }];
 }
 
++ (void)invokeFinishedEditProfile:(RestStructFinishedEditProfileRequest*)request withComplete:(void(^)(RestStructFinishedEditProfileResponse* response,NSError *error))completeToService{
+    [RestInterface _invokeWithUrl:@"/mine/finishedEditProfile.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        RestStructFinishedEditProfileResponse *response = [[RestStructFinishedEditProfileResponse alloc]initWithData:data error:&restError];
+        completeToService(response,error);
+    }];
+
+}
 
 @end
 
