@@ -661,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				DC3995581CB2999200ACA64B /* attribute.plist */,
+				DC7CE3921C79D1710067B19E /* ReadingTitle.plist */,
 			);
 			name = plists;
 			sourceTree = "<group>";
@@ -845,7 +846,6 @@
 				DC992DAD1C46947400382DFB /* LaunchScreen.storyboard */,
 				DC992DB01C46947400382DFB /* Info.plist */,
 				DC992DA01C46947400382DFB /* main.m */,
-				DC7CE3921C79D1710067B19E /* ReadingTitle.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

@@ -90,9 +90,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)onFinishedClicked:(id)sender {
-//    发送后台
+    //发送后台
     
-//    返回
+    
+    //返回
     [self.navigationController popViewControllerAnimated:true];
 
 }
