@@ -23,8 +23,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [NSStringFromClass(@"WebView") _enableRemoteInspector];
+
+    
     [Fabric with:@[[Crashlytics class]]];
     //设置导航栏
+    
     
 //    注册本地推送
     [AuthOfLocalNotification registerLocalPush];

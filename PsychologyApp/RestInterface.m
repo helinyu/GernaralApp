@@ -29,6 +29,8 @@
     [task resume];
 }
 
+
+
 //注册
 + (void)invokeRegisterWithRequest:(RestStructRegisterByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock{
 
@@ -201,6 +203,7 @@
     }];
 
 }
+
 
 @end
 

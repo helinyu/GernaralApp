@@ -7,6 +7,7 @@
 //
 
 #import "ReadingDetailCell.h"
+#import "UIImageView+WebRequest.h"
 
 @interface ReadingDetailCell ()
 
@@ -27,15 +28,16 @@
 - (void)setLeftImageView:(NSString *)leftImageText
           withTitleLabel:(NSString*)titleText
          withDetailLabel:(NSString*)detailText
-         withNumberLabel:(NSInteger)number{
+         withNumberLabel:(NSString*)number{
 
     //设置cell的高度
     self.cellWidthConstraint.constant = [UIScreen mainScreen].bounds.size.width;
     
-    self.leftImageView.image = [UIImage imageNamed:leftImageText];
+//    self.leftImageView.image = [UIImage imageNamed:leftImageText];
+    [self.leftImageView setImageWithAbsoluteUrlStr:leftImageText];
     self.titleLabel.text = titleText;
     self.detailLabel.text = detailText;
-    self.numberLabel.text = [NSString stringWithFormat:@"%ld",number];
+    self.numberLabel.text = number;
 }
 
 @end

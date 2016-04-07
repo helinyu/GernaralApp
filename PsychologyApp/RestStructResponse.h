@@ -90,9 +90,11 @@
 
 @end
 
-
 @interface RestStructFinishedEditProfileResponse : RestStructResponse
-
 @property (nonatomic,assign) NSInteger ret;
+@end
+
+//婚恋
+@interface RestStructMarriageLoveResponse: RestStructResponse
 
 @end

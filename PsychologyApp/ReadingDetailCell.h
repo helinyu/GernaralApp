@@ -13,6 +13,6 @@
 - (void)setLeftImageView:(NSString *)leftImageText
           withTitleLabel:(NSString*)titleText
          withDetailLabel:(NSString*)detailText
-         withNumberLabel:(NSInteger)number;
+         withNumberLabel:(NSString*)number;
 
 @end

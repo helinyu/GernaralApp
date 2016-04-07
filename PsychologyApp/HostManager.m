@@ -40,11 +40,14 @@
 
 - (void)switchToTest {
     _data.commonHost = @"localhost/foreheard";
+    _data.yiApiHost = @"yiapi.xinli001.com";
 }
 
 - (void)switchToRelease {
     _data.commonHost = @"10.104.145.237:9000";
-    }
+    _data.yiApiHost = @"yiapi.xinli001.com";
+
+}
 
 - (HostManagerDataServer *)get {
     return _data;

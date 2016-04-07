@@ -22,3 +22,4 @@
 #import "SettingService.h"
 #import "LocalPushService.h"
 #import "EditProfileService.h"
+#import "ReadingService.h"

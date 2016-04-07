@@ -12,6 +12,8 @@
 		DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B141C47E1A500D3FB61 /* AccountLogin.m */; };
 		DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC022B161C47E86D00D3FB61 /* Account.storyboard */; };
 		DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B1A1C48110800D3FB61 /* GMToast.m */; };
+		DC06FD8F1CB6876400C67C45 /* ReadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06FD8E1CB6876400C67C45 /* ReadingService.m */; };
+		DC06FD921CB688A800C67C45 /* MarriageLoveServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06FD911CB688A800C67C45 /* MarriageLoveServiceData.m */; };
 		DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD641C76038F00E5AF6F /* MineSetting.m */; };
 		DC0FCD671C7603AC00E5AF6F /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */; };
 		DC0FCD6B1C760D8600E5AF6F /* MineFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD6A1C760D8600E5AF6F /* MineFeedback.m */; };
@@ -68,8 +70,6 @@
 		DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E21C5671DF00BB3FA9 /* RestInterface.m */; };
 		DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */; };
 		DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E91C567CE000BB3FA9 /* UserService.m */; };
-		DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */; };
-		DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */; };
 		DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3921C79D1710067B19E /* ReadingTitle.plist */; };
 		DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */; };
 		DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */; };
@@ -84,6 +84,8 @@
 		DC992DC51C46947400382DFB /* PsychologyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DC41C46947400382DFB /* PsychologyAppUITests.m */; };
 		DC992DE01C46A04200382DFB /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DDF1C46A04200382DFB /* MineController.m */; };
 		DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DE11C46B59E00382DFB /* Main.storyboard */; };
+		DC9A10411CB56222007CC468 /* ReadingTitleLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9A103F1CB56222007CC468 /* ReadingTitleLabelCell.m */; };
+		DC9A10421CB56222007CC468 /* ReadingTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9A10401CB56222007CC468 /* ReadingTitleLabelCell.xib */; };
 		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
@@ -146,6 +148,11 @@
 		DC022B161C47E86D00D3FB61 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		DC022B191C48110800D3FB61 /* GMToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMToast.h; sourceTree = "<group>"; };
 		DC022B1A1C48110800D3FB61 /* GMToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMToast.m; sourceTree = "<group>"; };
+		DC06FD8D1CB6876400C67C45 /* ReadingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingService.h; sourceTree = "<group>"; };
+		DC06FD8E1CB6876400C67C45 /* ReadingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingService.m; sourceTree = "<group>"; };
+		DC06FD901CB688A800C67C45 /* MarriageLoveServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarriageLoveServiceData.h; sourceTree = "<group>"; };
+		DC06FD911CB688A800C67C45 /* MarriageLoveServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarriageLoveServiceData.m; sourceTree = "<group>"; };
+		DC06FD961CB68D7600C67C45 /* AppOutDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppOutDefinition.h; sourceTree = "<group>"; };
 		DC0FCD631C76038F00E5AF6F /* MineSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSetting.h; sourceTree = "<group>"; };
 		DC0FCD641C76038F00E5AF6F /* MineSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSetting.m; sourceTree = "<group>"; };
 		DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
@@ -253,9 +260,6 @@
 		DC7917E61C567C3400BB3FA9 /* RestStructRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestStructRequest.m; sourceTree = "<group>"; };
 		DC7917E81C567CE000BB3FA9 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		DC7917E91C567CE000BB3FA9 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
-		DC7CE38D1C79CD6D0067B19E /* ReadingTitleLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingTitleLabelCell.h; sourceTree = "<group>"; };
-		DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingTitleLabelCell.m; sourceTree = "<group>"; };
-		DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingTitleLabelCell.xib; sourceTree = "<group>"; };
 		DC7CE3921C79D1710067B19E /* ReadingTitle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ReadingTitle.plist; sourceTree = "<group>"; };
 		DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingDetailCell.h; sourceTree = "<group>"; };
 		DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingDetailCell.m; sourceTree = "<group>"; };
@@ -281,6 +285,9 @@
 		DC992DDE1C46A04200382DFB /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		DC992DDF1C46A04200382DFB /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		DC992DE21C46B59E00382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC9A103E1CB56222007CC468 /* ReadingTitleLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingTitleLabelCell.h; sourceTree = "<group>"; };
+		DC9A103F1CB56222007CC468 /* ReadingTitleLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingTitleLabelCell.m; sourceTree = "<group>"; };
+		DC9A10401CB56222007CC468 /* ReadingTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingTitleLabelCell.xib; sourceTree = "<group>"; };
 		DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebRequest.h"; sourceTree = "<group>"; };
 		DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebRequest.m"; sourceTree = "<group>"; };
 		DC9DEF0B1C7486A800C1A1AE /* AppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppService.h; sourceTree = "<group>"; };
@@ -388,6 +395,17 @@
 				DC022B1A1C48110800D3FB61 /* GMToast.m */,
 			);
 			name = "UI+externds";
+			sourceTree = "<group>";
+		};
+		DC06FD8C1CB6874D00C67C45 /* reading */ = {
+			isa = PBXGroup;
+			children = (
+				DC06FD8D1CB6876400C67C45 /* ReadingService.h */,
+				DC06FD8E1CB6876400C67C45 /* ReadingService.m */,
+				DC06FD901CB688A800C67C45 /* MarriageLoveServiceData.h */,
+				DC06FD911CB688A800C67C45 /* MarriageLoveServiceData.m */,
+			);
+			name = reading;
 			sourceTree = "<group>";
 		};
 		DC0FCD621C76035100E5AF6F /* Setting */ = {
@@ -728,6 +746,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC06FD8C1CB6874D00C67C45 /* reading */,
 				DC3995511CB296B300ACA64B /* localPushServices */,
 				DC39953F1CB281EC00ACA64B /* MineServices */,
 				DC3995341CB247C100ACA64B /* AppServices */,
@@ -764,9 +783,9 @@
 		DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */ = {
 			isa = PBXGroup;
 			children = (
-				DC7CE38D1C79CD6D0067B19E /* ReadingTitleLabelCell.h */,
-				DC7CE38E1C79CD6D0067B19E /* ReadingTitleLabelCell.m */,
-				DC7CE38F1C79CD6D0067B19E /* ReadingTitleLabelCell.xib */,
+				DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */,
+				DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */,
+				DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */,
 			);
 			name = ReadingTitleLabelCell;
 			sourceTree = "<group>";
@@ -774,9 +793,9 @@
 		DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */ = {
 			isa = PBXGroup;
 			children = (
-				DC7CE3951C79D7D50067B19E /* ReadingDetailCell.h */,
-				DC7CE3961C79D7D50067B19E /* ReadingDetailCell.m */,
-				DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */,
+				DC9A103E1CB56222007CC468 /* ReadingTitleLabelCell.h */,
+				DC9A103F1CB56222007CC468 /* ReadingTitleLabelCell.m */,
+				DC9A10401CB56222007CC468 /* ReadingTitleLabelCell.xib */,
 			);
 			name = ReadingDetailCell;
 			sourceTree = "<group>";
@@ -817,6 +836,7 @@
 			isa = PBXGroup;
 			children = (
 				DC207FE91C564E9C0011D8C4 /* AppDefinition.h */,
+				DC06FD961CB68D7600C67C45 /* AppOutDefinition.h */,
 				DC992DA21C46947400382DFB /* AppDelegate.h */,
 				DC992DA31C46947400382DFB /* AppDelegate.m */,
 				DC992DD21C46959000382DFB /* storyboards */,
@@ -1209,6 +1229,7 @@
 			files = (
 				DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */,
 				DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */,
+				DC9A10421CB56222007CC468 /* ReadingTitleLabelCell.xib in Resources */,
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
@@ -1223,7 +1244,6 @@
 				DCB966FE1C9582A5004E3229 /* HomePage.storyboard in Resources */,
 				DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */,
 				DC3995591CB2999200ACA64B /* attribute.plist in Resources */,
-				DC7CE3911C79CD6D0067B19E /* ReadingTitleLabelCell.xib in Resources */,
 				DC39952D1CB226FE00ACA64B /* FLDatePicker.xib in Resources */,
 				DC992DAC1C46947400382DFB /* Assets.xcassets in Resources */,
 				DCFECA7E1C787AFE000A4BC9 /* 4.jpg in Resources */,
@@ -1336,6 +1356,7 @@
 				DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */,
 				DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
+				DC9A10411CB56222007CC468 /* ReadingTitleLabelCell.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
 				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
@@ -1357,7 +1378,6 @@
 				DC39952C1CB226FE00ACA64B /* FLDatePicker.m in Sources */,
 				DC39954C1CB28D8100ACA64B /* VCAlertView.m in Sources */,
 				DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */,
-				DC7CE3901C79CD6D0067B19E /* ReadingTitleLabelCell.m in Sources */,
 				DC992DA41C46947400382DFB /* AppDelegate.m in Sources */,
 				DC39953C1CB24D9A00ACA64B /* EntityUser.m in Sources */,
 				DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */,
@@ -1372,6 +1392,7 @@
 				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,
 				DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */,
 				DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */,
+				DC06FD8F1CB6876400C67C45 /* ReadingService.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DCB33F811C808C620075FBDD /* ValidateService.m in Sources */,
@@ -1380,6 +1401,7 @@
 				DC0FCD771C76117300E5AF6F /* MineEditProfile.m in Sources */,
 				DC3995661CB2B62F00ACA64B /* EditProfileService.m in Sources */,
 				DC60BD551C70616700CFDC56 /* RestStructResponse.m in Sources */,
+				DC06FD921CB688A800C67C45 /* MarriageLoveServiceData.m in Sources */,
 				DC10FD7B1C762530004ED442 /* MainQA.m in Sources */,
 				DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */,
 				DCFECA8B1C78860A000A4BC9 /* ImageAndTitleCell.m in Sources */,

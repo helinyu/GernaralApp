@@ -6,7 +6,6 @@
 //  Copyright © 2016年 felix. All rights reserved.
 
 #import "MainConsult.h"
-#import "ReadingTitleLabelCell.h"
 #import "ConsultMainSummarizeCell.h"
 
 typedef NS_ENUM(NSInteger, TopicType) {

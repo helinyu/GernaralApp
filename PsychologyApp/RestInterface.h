@@ -39,5 +39,4 @@
 //编辑之后保存请求
 + (void)invokeFinishedEditProfile:(RestStructFinishedEditProfileRequest*)request withComplete:(void(^)(RestStructFinishedEditProfileResponse* response,NSError *error))completeToService;
 
-
 @end

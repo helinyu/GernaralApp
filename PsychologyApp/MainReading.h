@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@interface TitleCategoryCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@end
+
+@interface ReadingContentCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UITableView *contentTableView;
+@end
+
 @interface MainReading : UIViewController
 
 @end
+
+

@@ -173,3 +173,39 @@
 }
 @end
 
+@implementation RestStructMarriageLoveRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _limit = 0;
+        _category_id = 0;
+        _offset = 0;
+        _key = @"";
+    }
+    return self;
+}
+
+- (void)setLimit:(NSInteger)limit{
+    _limit = limit;
+    [self.params setObject: @(limit) forKey:@"limit"];
+}
+
+- (void)setOffset:(NSInteger)offset{
+    _offset = offset;
+    [self.params setObject:@(offset) forKey:@"offset"];
+}
+
+- (void)setKey:(NSString *)key{
+    _key = key;
+    [self.params setObject:key forKey:@"key"];
+}
+
+- (void)setCategory_id:(NSInteger)category_id{
+    _category_id = category_id;
+    [self.params setObject:@(category_id) forKey:@"category_id"];
+}
+
+@end
+

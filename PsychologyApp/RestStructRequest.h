@@ -55,3 +55,10 @@
 @property (nonatomic,strong) NSString *region;
 @property (nonatomic,strong) NSString *briefIntroduction;
 @end
+
+@interface RestStructMarriageLoveRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger category_id;
+@property (nonatomic,strong) NSString *key;
+@property (nonatomic,assign) NSInteger offset;
+@property (nonatomic,assign) NSInteger limit;
+@end
