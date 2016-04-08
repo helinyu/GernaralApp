@@ -11,18 +11,35 @@
 #import "ServiceManager.h"
 #import "AppOutDefinition.h"
 #import "ReadingService.h"
+#import "VCRefreshHeader.h"
+#import "VCRefreshFooter.h"
 
 @implementation TitleCategoryCell
 @end
 
 @implementation ReadingContentCell
+
+- (void)awakeFromNib{
+    
+//    self.contentTableView.mj_footer = 
+    
+}
 @end
+
+
+#define limitAdd 10
 
 @interface MainReading ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_titles;
     NSMutableArray *_dataSource;
+    
+//    记录元素
+    NSInteger _collectionCellIndex;
+    NSInteger _offset;
+    NSInteger _limit;
 }
+
 @property (weak, nonatomic) IBOutlet UICollectionView *titleCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *contentCollectionView;
 
@@ -33,14 +50,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    //标题
-    NSString *titlePath = [[NSBundle mainBundle] pathForResource:@"ReadingTitle" ofType:@"plist"];
-    _titles = [NSArray arrayWithContentsOfFile:titlePath];
+    [self initBaseVariable];
+
+    [self feedDataAtInitState:0];
     
-    _dataSource = [NSMutableArray new];
-    
+
 }
 
+- (void)initBaseVariable{
+    
+//标题
+    NSString *titlePath = [[NSBundle mainBundle] pathForResource:@"ReadingTitle" ofType:@"plist"];
+    _titles = [NSArray arrayWithContentsOfFile:titlePath];
+
+//存储数据
+    _dataSource = [NSMutableArray new];
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    ReadingContentCell* cell = (ReadingContentCell*)self.contentCollectionView.visibleCells.firstObject;
+    cell.contentTableView.mj_footer = [VCRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(pullAndLoadData)];
+}
 
 #pragma mark -- UICollectionDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -56,9 +87,7 @@
         return cell;
     }else{
         ReadingContentCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ReadingContentCell class]) forIndexPath:indexPath];
-        cell.contentTableView.backgroundColor = [UIColor redColor];
         [cell.contentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ReadingDetailCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ReadingDetailCell class])];
-        
         return cell;
     }
 }
@@ -66,22 +95,56 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"index pahthis ; %ld",indexPath.row);
     [self.contentCollectionView selectItemAtIndexPath:indexPath animated:true scrollPosition:UICollectionViewScrollPositionLeft];
+    [self feedDataAtInitState:indexPath.row];
+}
+
+- (void)feedDataAtInitState:(NSInteger)index{
     
-           [OBTAIN_SERVICE(ReadingService) requestMarriageLove:indexPath.row withOffset:10 withLimit:10 withComplete:^(NSData *data, NSError *error) {
-               
-               if (error.code != 0) {
-                   return  ;
-               }
-               
-               NSError *structError = nil  ;
-               NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-               NSLog(@"arr1 is : %@",dict[@"data"]);
-               NSArray *tmpDatasource = dict[@"data"];
-               NSLog(@"datasoruce is : %ld",tmpDatasource.count);
-               [_dataSource setArray:tmpDatasource];
-               ReadingContentCell* cell = (ReadingContentCell*)self.contentCollectionView.visibleCells.firstObject;
-               [cell.contentTableView reloadData];
-           }];
+    _collectionCellIndex = index;
+    _limit = 10;
+    _offset = 10;
+    
+    
+    [OBTAIN_SERVICE(ReadingService) requestMarriageLove:index withOffset:10 withLimit:10 withComplete:^(NSData *data, NSError *error) {
+        
+        
+        if (error.code != 0) {
+            return  ;
+        }
+        
+        NSError *structError = nil  ;
+        NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr1 is : %@",dict[@"data"]);
+        NSArray *tmpDatasource = dict[@"data"];
+        NSLog(@"datasoruce is : %ld",tmpDatasource.count);
+        [_dataSource setArray:tmpDatasource];
+        ReadingContentCell* cell = (ReadingContentCell*)self.contentCollectionView.visibleCells.firstObject;
+        [cell.contentTableView reloadData];
+    }];
+}
+
+- (void)pullAndLoadData{
+    NSInteger index = _collectionCellIndex;
+    _offset += _limit;
+    [OBTAIN_SERVICE(ReadingService) requestMarriageLove:index withOffset:_offset withLimit:_limit withComplete:^(NSData *data, NSError *error) {
+        
+        ReadingContentCell* cell = (ReadingContentCell*)self.contentCollectionView.visibleCells.firstObject;
+        [cell.contentTableView.mj_footer endRefreshing];
+        
+        if (error.code != 0) {
+            return  ;
+        }
+        
+        NSError *structError = nil  ;
+        NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr1 is : %@",dict[@"data"]);
+        NSArray *tmpDatasource = dict[@"data"];
+        NSLog(@"datasoruce is : %ld",tmpDatasource.count);
+//        [_dataSource setArray:tmpDatasource];
+        [_dataSource addObjectsFromArray:tmpDatasource];
+        [cell.contentTableView reloadData];
+    }];
+
 }
 
 #pragma mark -- UICollectionViewDelegateFlowLayout
@@ -106,12 +169,23 @@
     NSLog(@"tags is : %@",_dataSource[indexPath.row][@"tags"]);
     NSLog(@"viewnum is : %@",_dataSource[indexPath.row][@"viewnum"]);
     [cell setLeftImageView:_dataSource[indexPath.row][@"cover"] withTitleLabel:_dataSource[indexPath.row][@"app_title"] withDetailLabel:_dataSource[indexPath.row][@"tags"] withNumberLabel:_dataSource[indexPath.row][@"viewnum"]];
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
+
+#pragma mark -- UIScrollviewDelegate
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    NSLog(@"%@",scrollView.bounds);
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

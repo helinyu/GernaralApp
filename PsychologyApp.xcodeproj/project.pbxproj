@@ -90,6 +90,11 @@
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
 		DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */; };
+		DCAFD6BD1CB6C7CE00E668ED /* AutomationTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6B81CB6C7CE00E668ED /* AutomationTextLabel.m */; };
+		DCAFD6BE1CB6C7CE00E668ED /* VCRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6BA1CB6C7CE00E668ED /* VCRefreshFooter.m */; };
+		DCAFD6BF1CB6C7CE00E668ED /* VCRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6BC1CB6C7CE00E668ED /* VCRefreshHeader.m */; };
+		DCAFD6C31CB6C80B00E668ED /* LoadOnAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6C21CB6C80B00E668ED /* LoadOnAnimateView.m */; };
+		DCAFD6C61CB6C83200E668ED /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6C51CB6C83200E668ED /* UIView+Helper.m */; };
 		DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F761C8086600075FBDD /* Helper+Style.m */; };
 		DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7A1C8086F10075FBDD /* UIColor+Helper.m */; };
 		DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB33F7D1C8087480075FBDD /* Helper+System.m */; };
@@ -295,6 +300,16 @@
 		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailCell.xib; sourceTree = "<group>"; };
+		DCAFD6B71CB6C7CE00E668ED /* AutomationTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomationTextLabel.h; sourceTree = "<group>"; };
+		DCAFD6B81CB6C7CE00E668ED /* AutomationTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomationTextLabel.m; sourceTree = "<group>"; };
+		DCAFD6B91CB6C7CE00E668ED /* VCRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRefreshFooter.h; sourceTree = "<group>"; };
+		DCAFD6BA1CB6C7CE00E668ED /* VCRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRefreshFooter.m; sourceTree = "<group>"; };
+		DCAFD6BB1CB6C7CE00E668ED /* VCRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRefreshHeader.h; sourceTree = "<group>"; };
+		DCAFD6BC1CB6C7CE00E668ED /* VCRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCRefreshHeader.m; sourceTree = "<group>"; };
+		DCAFD6C11CB6C80B00E668ED /* LoadOnAnimateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadOnAnimateView.h; sourceTree = "<group>"; };
+		DCAFD6C21CB6C80B00E668ED /* LoadOnAnimateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadOnAnimateView.m; sourceTree = "<group>"; };
+		DCAFD6C41CB6C83200E668ED /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
+		DCAFD6C51CB6C83200E668ED /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		DCB33F751C8086600075FBDD /* Helper+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+Style.h"; sourceTree = "<group>"; };
 		DCB33F761C8086600075FBDD /* Helper+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+Style.m"; sourceTree = "<group>"; };
 		DCB33F791C8086F10075FBDD /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
@@ -687,6 +702,8 @@
 		DC39955B1CB29A0A00ACA64B /* UI+ */ = {
 			isa = PBXGroup;
 			children = (
+				DCAFD6C41CB6C83200E668ED /* UIView+Helper.h */,
+				DCAFD6C51CB6C83200E668ED /* UIView+Helper.m */,
 				DC39954E1CB28E4500ACA64B /* UIView+FrameMethods.h */,
 				DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */,
 				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
@@ -986,6 +1003,21 @@
 			name = app;
 			sourceTree = "<group>";
 		};
+		DCAFD6C01CB6C7D900E668ED /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				DCAFD6C11CB6C80B00E668ED /* LoadOnAnimateView.h */,
+				DCAFD6C21CB6C80B00E668ED /* LoadOnAnimateView.m */,
+				DCAFD6B71CB6C7CE00E668ED /* AutomationTextLabel.h */,
+				DCAFD6B81CB6C7CE00E668ED /* AutomationTextLabel.m */,
+				DCAFD6B91CB6C7CE00E668ED /* VCRefreshFooter.h */,
+				DCAFD6BA1CB6C7CE00E668ED /* VCRefreshFooter.m */,
+				DCAFD6BB1CB6C7CE00E668ED /* VCRefreshHeader.h */,
+				DCAFD6BC1CB6C7CE00E668ED /* VCRefreshHeader.m */,
+			);
+			name = Refresh;
+			sourceTree = "<group>";
+		};
 		DCB33F781C80866C0075FBDD /* helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,6 +1118,7 @@
 		DCFECA8D1C78B901000A4BC9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DCAFD6C01CB6C7D900E668ED /* Refresh */,
 				DC3995481CB28D7500ACA64B /* alert */,
 				DC39951E1CB2125400ACA64B /* dates */,
 				DCB966FF1C95833B004E3229 /* Cells */,
@@ -1345,9 +1378,11 @@
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
+				DCAFD6C31CB6C80B00E668ED /* LoadOnAnimateView.m in Sources */,
 				DCB9670C1C95A921004E3229 /* PschologyTestSummary.m in Sources */,
 				DC60BD581C7063CD00CFDC56 /* ServiceManager.m in Sources */,
 				DC3995571CB296D200ACA64B /* LocalPushService.m in Sources */,
+				DCAFD6BD1CB6C7CE00E668ED /* AutomationTextLabel.m in Sources */,
 				DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */,
 				DC60BD461C704F1900CFDC56 /* Helper+Time.m in Sources */,
 				DC10FD771C762501004ED442 /* MainReading.m in Sources */,
@@ -1357,6 +1392,7 @@
 				DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */,
 				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC9A10411CB56222007CC468 /* ReadingTitleLabelCell.m in Sources */,
+				DCAFD6BE1CB6C7CE00E668ED /* VCRefreshFooter.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
 				DC7917EA1C567CE000BB3FA9 /* UserService.m in Sources */,
 				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
@@ -1371,6 +1407,7 @@
 				DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */,
 				DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */,
 				DCB33F7E1C8087480075FBDD /* Helper+System.m in Sources */,
+				DCAFD6C61CB6C83200E668ED /* UIView+Helper.m in Sources */,
 				DC3995541CB296C400ACA64B /* AuthOfLocalNotification.m in Sources */,
 				DC7CE3981C79D7D50067B19E /* ReadingDetailCell.m in Sources */,
 				DC7917E71C567C3400BB3FA9 /* RestStructRequest.m in Sources */,
@@ -1385,6 +1422,7 @@
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
 				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
+				DCAFD6BF1CB6C7CE00E668ED /* VCRefreshHeader.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
 				DC3995331CB23EBB00ACA64B /* NSDate+NSString.m in Sources */,
 				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
