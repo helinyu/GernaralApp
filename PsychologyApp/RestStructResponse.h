@@ -98,3 +98,18 @@
 @interface RestStructMarriageLoveResponse: RestStructResponse
 
 @end
+
+@protocol restStructTopicItemResponse <NSObject>
+@end
+@interface restStructTopicItemResponse : RestStructResponse
+@property (nonatomic,strong) NSString* headerImageViewStr;
+@property (nonatomic,strong) NSString * title;
+@property (nonatomic,strong) NSString * time;
+@property (nonatomic,strong) NSString * theme;
+@property (nonatomic,strong) NSString * location;
+@property (nonatomic,assign) NSInteger loveNum;
+@property (nonatomic,assign) NSInteger commentsNum;
+@end
+@interface restStructTopicsResponse: RestStructResponse
+@property (nonatomic,strong) NSArray<restStructTopicItemResponse>* topic;
+@end

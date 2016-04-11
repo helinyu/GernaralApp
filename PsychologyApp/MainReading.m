@@ -13,6 +13,7 @@
 #import "ReadingService.h"
 #import "VCRefreshHeader.h"
 #import "VCRefreshFooter.h"
+#import "CommonWeb.h"
 
 @implementation TitleCategoryCell
 @end
@@ -54,7 +55,6 @@
 
     [self feedDataAtInitState:0];
     
-
 }
 
 - (void)initBaseVariable{
@@ -103,7 +103,6 @@
     _collectionCellIndex = index;
     _limit = 10;
     _offset = 10;
-    
     
     [OBTAIN_SERVICE(ReadingService) requestMarriageLove:index withOffset:10 withLimit:10 withComplete:^(NSData *data, NSError *error) {
         
@@ -177,14 +176,24 @@
     return 100;
 }
 
+// UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@",[_dataSource[indexPath.row] objectForKey:@"id"]);
+    
+    NSString *_id = [_dataSource[indexPath.row] objectForKey:@"id"];
+    
+    CommonWeb *web = [[UIStoryboard storyboardWithName:@"Common" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonWeb class])];
+    web.pageId = [NSString stringWithFormat:@"%@",_id];
+    [self.navigationController pushViewController:web animated:true];
+   
+}
+
 #pragma mark -- UIScrollviewDelegate
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
-    NSLog(@"%@",scrollView.bounds);
-    
-    
-}
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    
+//    NSLog(@"%@",scrollView.bounds);
+//}
 
 
 - (void)didReceiveMemoryWarning {

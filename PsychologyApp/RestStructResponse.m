@@ -276,3 +276,41 @@
 }
 
 @end
+
+@implementation restStructTopicItemResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"";
+        _time = @"";
+        _theme = @"";
+        _theme = @"";
+        _loveNum = 0;
+        _commentsNum = 0;
+    }
+    return self;
+}
+
+//+ (JSONKeyMapper*)keyMapper{
+//    return <#expression#>
+//}
+
+@end
+
+//restStructTopicsResponse
+@implementation restStructTopicsResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic = (NSArray<restStructTopicItemResponse>*)@[];
+    }
+    return self;
+}
+
+//+ (JSONKeyMapper)
+
+@end

@@ -14,4 +14,6 @@
 
 - (void)requestMarriageLove:(NSInteger)category_id withOffset:(NSInteger)offset withLimit:(NSInteger)limit withComplete:(void (^)(NSData *data,NSError *error))completeBlock;
 
+//- (void)requestMarriageLoveDetail:(NSString*)_id withComplete:(void (^)(NSData *data,NSError *error))completeBlock;
+
 @end

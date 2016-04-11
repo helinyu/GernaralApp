@@ -30,4 +30,24 @@
 }
 
 
+//http://yiapi.xinli001.com/v2/yi/article-detail.json/?token=b3c24fad78542428c51df328c485da71&key=e110509c8317557ef50ce777d107f4b3
+//
+//- (void)requestMarriageLoveDetail:(NSString*)_id withComplete:(void (^)(NSData *data,NSError *error))completeBlock{
+//    NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    sessionConfig.timeoutIntervalForRequest = 30;
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+//    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"]]];
+//    urlRequest.HTTPMethod = @"GET";
+//    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        if (error) {
+//            completeBlock(nil,error);
+//        }else{
+//            completeBlock(data,nil);
+//        }
+//    }];
+//    [task resume];
+//}
+
+
+
 @end

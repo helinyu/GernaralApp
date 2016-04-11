@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+@protocol QAMainCellDelegate <NSObject>
+@required
+- (void)hasCommentClicked;
+@end
 
 @interface QAMainCell : UITableViewCell
 
-- (CGFloat)setTitleTextLabel:(NSString *)titleText
-               withTimeLabel:(NSString *)timeText
-        withTextContentLabel:(NSString *)textContentText
-        withTypeConsultLabel:(NSString *)typeConsultText
-         withNumberTextLabel:(NSInteger )number;
+@property (nonatomic,weak,nullable) id<QAMainCellDelegate> mainCellDelegate;
+
+- (CGFloat)setHeaderImageViewText:(NSString *)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum;
 
 @end

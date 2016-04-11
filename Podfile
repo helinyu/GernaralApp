@@ -11,7 +11,6 @@ target 'PsychologyApp' do
  pod 'Fabric'
  pod 'Crashlytics'
 
-
 end
 
 target 'PsychologyAppTests' do
