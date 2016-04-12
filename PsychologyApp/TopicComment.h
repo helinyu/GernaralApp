@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopicServiceData.h"
 
 @interface TopicComment : UIViewController
-
+@property (nonatomic,strong) TopicItemServiceData *personServiceData;
 @end

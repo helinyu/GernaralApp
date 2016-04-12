@@ -57,11 +57,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="创建话题" id="ES3-fo-uzo"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="创建话题" id="ES3-fo-uzo">
+                        <barButtonItem key="rightBarButtonItem" title="完成编辑" id="nqc-wB-YPd">
+                            <connections>
+                                <action selector="onCreateTopicClicked:" destination="xbM-lK-Rnn" id="ioX-PQ-zNv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqw-nN-I52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="363" y="771"/>
         </scene>
         <!--评论-->
         <scene sceneID="brx-Ep-jry">
@@ -138,6 +147,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dut-bR-la2" id="z7f-Fb-BO1"/>
+                                    <outlet property="delegate" destination="dut-bR-la2" id="zLo-vx-VOe"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,6 +165,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="commentTableView" destination="pdq-lc-K4z" id="CWj-fe-pEV"/>
+                        <outlet property="locationLabel" destination="apk-RC-AzQ" id="SKT-kS-V2n"/>
+                        <outlet property="ownerHeaderImageView" destination="zh6-dc-IvB" id="LDx-JM-u6S"/>
+                        <outlet property="ownerNameLabel" destination="eUx-j9-sFM" id="jrt-Hc-Ben"/>
+                        <outlet property="themeLabel" destination="kyw-0y-t86" id="3Lm-KT-lmb"/>
+                        <outlet property="timeLabel" destination="YV9-ba-aBx" id="yht-7p-dgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDZ-xH-bpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,6 +178,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image_default" width="150" height="150"/>
+        <image name="image_default" width="75" height="75"/>
     </resources>
 </document>

@@ -227,3 +227,73 @@
 
 @end
 
+
+@implementation CommentCreationRequest
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _theme = @"";
+        _owner = @"";
+        _location = @"";
+        _praiseNum = 0;
+        _commentsNum = 0;
+        _time = @"";
+        _headerImageUrl = @"";
+    }
+    return self;
+}
+
+- (void)setTheme:(NSString *)theme{
+    _theme = theme;
+    [self.params setObject:theme forKey:@"theme"];
+}
+
+- (void)setOwner:(NSString *)owner{
+    _owner = owner;
+    [self.params setObject:owner forKey:@"owner"];
+}
+
+- (void)setLocation:(NSString *)location{
+    _location = location;
+    [self.params setObject:location forKey:@"location"];
+}
+
+- (void)setPraiseNum:(NSInteger)praiseNum{
+    _praiseNum = praiseNum;
+    [self.params setObject:@(praiseNum) forKey:@"praiseNum"];
+}
+
+- (void)setCommentsNum:(NSInteger)commentsNum{
+    _commentsNum = commentsNum;
+    [self.params setObject:@(commentsNum) forKey:@"commentsNum"];
+}
+
+- (void)setTime:(NSString *)time {
+    _time = time;
+    [self.params setObject:time forKey:@"time"];
+}
+
+- (void)setHeaderImageUrl:(NSString *)headerImageUrl{
+    _headerImageUrl = headerImageUrl;
+    [self.params setObject:headerImageUrl forKey:@"headerImageUrl"];
+}
+@end
+
+@implementation TopicCommentsRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic_id = 0;
+    }
+    return self;
+}
+
+- (void)setTopic_id:(NSInteger)topic_id{
+    _topic_id = topic_id;
+    [self.params setObject:@(topic_id) forKey:@"topic_id"];
+}
+
+@end

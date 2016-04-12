@@ -71,4 +71,29 @@
 @end
 
 
+@implementation CommentsCreationServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0;
+    }
+    return self;
+}
+
+@end
+
+@implementation TopicCommentsServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _content=@"";
+    }
+    return self;
+}
+
+@end
 

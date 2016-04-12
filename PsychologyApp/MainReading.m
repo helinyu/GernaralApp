@@ -190,12 +190,6 @@
 
 #pragma mark -- UIScrollviewDelegate
 
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    
-//    NSLog(@"%@",scrollView.bounds);
-//}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

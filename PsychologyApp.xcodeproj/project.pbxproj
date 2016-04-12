@@ -74,7 +74,6 @@
 		DC60BD5B1C70643500CFDC56 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD5A1C70643500CFDC56 /* Service.m */; };
 		DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F2E6C1C96E4B600738E03 /* HomePageServiceData.m */; };
 		DC76B8461CBA993500526662 /* Topic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC76B8451CBA993500526662 /* Topic.storyboard */; };
-		DC76B8491CBA994700526662 /* TopicDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DC76B8481CBA994700526662 /* TopicDetail.m */; };
 		DC76B84C1CBAA3AA00526662 /* CreateTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = DC76B84B1CBAA3AA00526662 /* CreateTopic.m */; };
 		DC76B84F1CBAA98000526662 /* TopicComment.m in Sources */ = {isa = PBXBuildFile; fileRef = DC76B84E1CBAA98000526662 /* TopicComment.m */; };
 		DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7917E21C5671DF00BB3FA9 /* RestInterface.m */; };
@@ -280,8 +279,6 @@
 		DC6F2E6B1C96E4B600738E03 /* HomePageServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageServiceData.h; sourceTree = "<group>"; };
 		DC6F2E6C1C96E4B600738E03 /* HomePageServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageServiceData.m; sourceTree = "<group>"; };
 		DC76B8451CBA993500526662 /* Topic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Topic.storyboard; sourceTree = "<group>"; };
-		DC76B8471CBA994700526662 /* TopicDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicDetail.h; sourceTree = "<group>"; };
-		DC76B8481CBA994700526662 /* TopicDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicDetail.m; sourceTree = "<group>"; };
 		DC76B84A1CBAA3AA00526662 /* CreateTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTopic.h; sourceTree = "<group>"; };
 		DC76B84B1CBAA3AA00526662 /* CreateTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTopic.m; sourceTree = "<group>"; };
 		DC76B84D1CBAA98000526662 /* TopicComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicComment.h; sourceTree = "<group>"; };
@@ -593,8 +590,6 @@
 			children = (
 				DC10FD791C762530004ED442 /* MainTopic.h */,
 				DC10FD7A1C762530004ED442 /* MainTopic.m */,
-				DC76B8471CBA994700526662 /* TopicDetail.h */,
-				DC76B8481CBA994700526662 /* TopicDetail.m */,
 				DC76B84D1CBAA98000526662 /* TopicComment.h */,
 				DC76B84E1CBAA98000526662 /* TopicComment.m */,
 				DC76B84A1CBAA3AA00526662 /* CreateTopic.h */,
@@ -1455,7 +1450,6 @@
 				DC76B84C1CBAA3AA00526662 /* CreateTopic.m in Sources */,
 				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
 				DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */,
-				DC76B8491CBA994700526662 /* TopicDetail.m in Sources */,
 				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
 				DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,

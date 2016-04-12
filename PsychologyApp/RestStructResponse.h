@@ -128,4 +128,13 @@
 @property (nonatomic,strong) NSArray<CommentItemStructReponse>* data;
 @end
 
+//话题创建 应该改为topic
+@interface CommentsCreationResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger ret;
+@end
+
+//获取话题的评论
+@interface TopicCommentsResponse : RestStructResponse
+@property (nonatomic,strong) NSString *content;
+@end
 

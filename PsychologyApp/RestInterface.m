@@ -232,9 +232,9 @@
             return ;
         }
         
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         CommentsStructResponse *response = [[CommentsStructResponse alloc]initWithData:data error:&restError];
@@ -242,6 +242,46 @@
     }];
 }
 
+
+//话题创建
++ (void)invokeCommentCreation:(CommentCreationRequest*)request WithComplete:(void(^)(CommentsCreationResponse* response,NSError *error))completeToService{
+    [RestInterface _invokeWithUrl:@"/topics/topicCreate.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+      
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        NSError *restError = nil;
+     
+        CommentsCreationResponse *response = [[CommentsCreationResponse alloc]initWithData:data error:&restError];
+        completeToService(response,error);
+        
+    }];
+}
+
+//话题对应的评论
+//+ (void)invokeCommentCreation:(CommentCreationRequest*)request WithComplete:(void(^)(CommentsCreationResponse* response,NSError *error))completeToService{
+//    [RestInterface _invokeWithUrl:@"/topics/topicCreate.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+//        
+//        if (error.code != 0) {
+//            completeToService(nil,error);
+//            return ;
+//        }
+//        
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
+//        NSError *restError = nil;
+//        
+////        CommentsCreationResponse *response = [[CommentsCreationResponse alloc]initWithData:data error:&restError];
+//        completeToService(response,error);
+//        
+//    }];
+//}
 
 @end
 

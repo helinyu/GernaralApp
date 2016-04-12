@@ -57,6 +57,9 @@
 
 - (IBAction)onPraiseClicked:(id)sender {
     NSLog(@"点赞");
+       NSInteger praiseNumber = [self.praiseBtn.titleLabel.text integerValue];
+    praiseNumber ++;
+    [self.praiseBtn setTitle:[NSString stringWithFormat:@"%ld",(long)praiseNumber] forState:UIControlStateNormal];
 }
 
 - (IBAction)onCommentClicked:(id)sender {

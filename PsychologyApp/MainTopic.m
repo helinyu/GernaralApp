@@ -9,7 +9,6 @@
 #import "MainTopic.h"
 #import "QAMainCell.h"
 #import "MJRefresh.h"
-#import "TopicDetail.h"
 #import "CreateTopic.h"
 #import "TopicComment.h"
 #import "ServiceManager.h"
@@ -76,7 +75,6 @@
     _topicItemData = _tmpServiceData[indexPath.row];
     
 //    这里可以优化
-//    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withComments:_topicItemData.commentsNum withCommentIndex:_topicItemData.topic_id];
     CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withComments:_topicItemData.commentsNum withCommentsIndex:_topicItemData.topic_id];
     _cellHeight = cellHeight;
     cell.mainCellDelegate = self;
@@ -88,13 +86,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-//    TopicDetail *td = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([TopicDetail class])];
-//    [self.navigationController pushViewController:td animated:true];
-    
-    TopicComment * cell = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
-//    _topicItemData = _tmpServiceData[]
-    [self.navigationController pushViewController:cell animated:true];
+    TopicComment * comment = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
+    comment.personServiceData = _tmpServiceData[indexPath.row];
+    [self.navigationController pushViewController:comment animated:true];
 }
 
 - (IBAction)onCreateTopicClicked:(id)sender {

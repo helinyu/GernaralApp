@@ -336,3 +336,37 @@
 }
 
 @end
+
+@implementation CommentsCreationResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret= 0;
+    }
+    return self;
+}
+
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"ret":@"ret",}];
+}
+
+@end
+
+@implementation TopicCommentsResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _content = @"";
+    }
+    return self;
+}
+
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"content":@"content",}];
+}
+
+@end

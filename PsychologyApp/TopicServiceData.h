@@ -37,3 +37,12 @@
 @property (nonatomic,assign) NSInteger number;
 @property (nonatomic,strong) NSMutableArray<commentItemServiceData> *datas;
 @end
+
+//创建评论的结果
+@interface CommentsCreationServiceData: ServiceData
+@property (nonatomic,assign) NSInteger ret;
+@end
+
+@interface  TopicCommentsServiceData: ServiceData
+@property (nonatomic,strong) NSString *content;
+@end

@@ -45,4 +45,7 @@
 //topic_comments
 + (void)invokeCommets:(CommentsRequest*)request WithComplete:(void(^)(CommentsStructResponse* response,NSError *error))completeToService;
 
+//topic creation
++ (void)invokeCommentCreation:(CommentCreationRequest*)request WithComplete:(void(^)(CommentsCreationResponse* response,NSError *error))completeToService;
+
 @end

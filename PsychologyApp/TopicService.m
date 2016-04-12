@@ -54,9 +54,33 @@
             commentItemServiceData *itemServiceData = [commentItemServiceData new];
             itemServiceData.content = item.content;
         }
-        
         completeToView(serviceData,nil);
     }];
 }
 
+
+
+
+- (void)requestCreateComments:(NSString*)theme withOwner:(NSString *)owner withLocation:(NSString *)location withPraiseNum:(NSInteger)praiseNum withCommentsNum:(NSInteger)commentsNum withTime:(NSString*)time withHeaderImageUrl:(NSString *)headerImageUrl WithComplete:(void(^)(CommentsCreationServiceData* servicTeData ,NSError *error)) completeToView{
+    
+    CommentCreationRequest *request = [CommentCreationRequest new];
+    request.theme = theme;
+    request.owner = owner;
+    request.location = location;
+    request.praiseNum = praiseNum;
+    request.commentsNum = commentsNum;
+    request.time = time;
+    request.headerImageUrl  = headerImageUrl;
+    
+    [RestInterface invokeCommentCreation:request WithComplete:^(CommentsCreationResponse *response, NSError *error) {
+        if (error != nil) {
+            completeToView(nil,error);
+            return ;
+        }
+        CommentsCreationServiceData *creationServiceData = [CommentsCreationServiceData new];
+        creationServiceData.ret = response.ret;
+        completeToView(creationServiceData,nil);
+    }];
+
+}
 @end

@@ -10,4 +10,11 @@
 
 @interface CommentsCell : UITableViewCell
 
+@property (nonatomic,strong) NSString * headerViewUrl ;
+@property (nonatomic,strong) NSString * ownerName;
+@property (nonatomic,strong) NSString * time;
+@property (nonatomic,assign) NSInteger praiseNum;
+
+@property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
+
 @end
