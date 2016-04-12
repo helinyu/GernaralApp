@@ -12,10 +12,14 @@
 #import "TopicDetail.h"
 #import "CreateTopic.h"
 #import "TopicComment.h"
+#import "ServiceManager.h"
 
 @interface MainTopic ()<UITableViewDataSource,UITableViewDelegate,QAMainCellDelegate>
 {
        CGFloat _cellHeight;
+    TopicServiceData *_topicData ;
+    NSMutableArray<TopicItemServiceData> *_tmpServiceData ;
+    TopicItemServiceData *_topicItemData;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
@@ -28,35 +32,54 @@
     [super viewDidLoad];
 
     [self setInitVariable];
+    [self loadDataAtInitState];
 }
 
 - (void)setInitVariable{
     self.automaticallyAdjustsScrollViewInsets = NO;
-
+    
+    _topicData = [TopicServiceData new];
+    _tmpServiceData = (NSMutableArray<TopicItemServiceData>*)[NSMutableArray new];
+    _topicItemData = [TopicItemServiceData new];
+    
     //注册tableViewcell
     [self.mainTableView registerNib:[UINib nibWithNibName:NSStringFromClass([QAMainCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([QAMainCell class])];
     
-    self.mainTableView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(doSomethings)];
+//    self.mainTableView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(doSomethings)];
+}
+
+- (void)loadDataAtInitState{
+    [OBTAIN_SERVICE(TopicService) requestTopicsWithComplete:^(TopicServiceData *servicTeData, NSError *error) {
+        
+        if (error.code != 0) {
+            printf("数据转化出现错误");
+            return ;
+        }
+         _topicData = servicTeData;
+        
+        [self.mainTableView reloadData];
+    }];
 }
 
 - (void)doSomethings{
     NSLog(@"doSomethings");
 }
+
 #pragma mark --tableDatasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 12;
+    return _topicData.number;
 }
-
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     QAMainCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([QAMainCell class]) forIndexPath:indexPath];
+    _tmpServiceData = _topicData.topics;
+    _topicItemData = _tmpServiceData[indexPath.row];
     
-    CGFloat cellHeight = [cell setHeaderImageViewText:@"flower_person" withTittleText:@"何林郁" withTimeText:@"上午9时" withMainTopicText:@"讨论的主题,讨论的主题讨论的主题讨论的主题讨论的主题" withLocationText:@"位置深圳" withPriceBtn:12 withComments:23];
-    
+//    这里可以优化
+//    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withComments:_topicItemData.commentsNum withCommentIndex:_topicItemData.topic_id];
+    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withComments:_topicItemData.commentsNum withCommentsIndex:_topicItemData.topic_id];
     _cellHeight = cellHeight;
-    
     cell.mainCellDelegate = self;
-    
     return cell;
 }
 
@@ -66,8 +89,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TopicDetail *td = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([TopicDetail class])];
-    [self.navigationController pushViewController:td animated:true];
+//    TopicDetail *td = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([TopicDetail class])];
+//    [self.navigationController pushViewController:td animated:true];
+    
+    TopicComment * cell = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
+//    _topicItemData = _tmpServiceData[]
+    [self.navigationController pushViewController:cell animated:true];
 }
 
 - (IBAction)onCreateTopicClicked:(id)sender {
@@ -77,9 +104,8 @@
     [self.navigationController pushViewController:newTopic animated:true];
 }
 
-- (void)hasCommentClicked{
-    TopicComment * cell = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
-    [self.navigationController pushViewController:cell animated:true];
+- (void)hasCommentClicked:(NSInteger)commentIndex{
+    [self tableView:self.mainTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:commentIndex inSection:0]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -36,6 +36,10 @@
 		DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC185B981C82E041001A0DD1 /* AppServiceData.m */; };
 		DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C07F91CB81E4300726592 /* CommonWeb.m */; };
 		DC2C07FE1CB8219E00726592 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2C07FD1CB8219E00726592 /* Common.storyboard */; };
+		DC2C10821CBBF577003D3FD3 /* TopicService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C10811CBBF577003D3FD3 /* TopicService.m */; };
+		DC2C10931CBBFE97003D3FD3 /* TopicServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C10921CBBFE97003D3FD3 /* TopicServiceData.m */; };
+		DC2C10971CBC75F3003D3FD3 /* CommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C10951CBC75F3003D3FD3 /* CommentsCell.m */; };
+		DC2C10981CBC75F3003D3FD3 /* CommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC2C10961CBC75F3003D3FD3 /* CommentsCell.xib */; };
 		DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39950E1CB2085900ACA64B /* Helper+App.m */; };
 		DC3995181CB2105C00ACA64B /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995171CB2105C00ACA64B /* NSString+Helper.m */; };
 		DC39952C1CB226FE00ACA64B /* FLDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39952A1CB226FE00ACA64B /* FLDatePicker.m */; };
@@ -207,6 +211,13 @@
 		DC2C07F81CB81E4300726592 /* CommonWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWeb.h; sourceTree = "<group>"; };
 		DC2C07F91CB81E4300726592 /* CommonWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWeb.m; sourceTree = "<group>"; };
 		DC2C07FD1CB8219E00726592 /* Common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		DC2C10801CBBF577003D3FD3 /* TopicService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicService.h; sourceTree = "<group>"; };
+		DC2C10811CBBF577003D3FD3 /* TopicService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicService.m; sourceTree = "<group>"; };
+		DC2C10911CBBFE97003D3FD3 /* TopicServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicServiceData.h; sourceTree = "<group>"; };
+		DC2C10921CBBFE97003D3FD3 /* TopicServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicServiceData.m; sourceTree = "<group>"; };
+		DC2C10941CBC75F3003D3FD3 /* CommentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsCell.h; sourceTree = "<group>"; };
+		DC2C10951CBC75F3003D3FD3 /* CommentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsCell.m; sourceTree = "<group>"; };
+		DC2C10961CBC75F3003D3FD3 /* CommentsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
 		DC39950D1CB2085900ACA64B /* Helper+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Helper+App.h"; sourceTree = "<group>"; };
 		DC39950E1CB2085900ACA64B /* Helper+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Helper+App.m"; sourceTree = "<group>"; };
 		DC3995161CB2105C00ACA64B /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
@@ -646,6 +657,17 @@
 			name = CommonWeb;
 			sourceTree = "<group>";
 		};
+		DC2C107F1CBBF564003D3FD3 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				DC2C10801CBBF577003D3FD3 /* TopicService.h */,
+				DC2C10811CBBF577003D3FD3 /* TopicService.m */,
+				DC2C10911CBBFE97003D3FD3 /* TopicServiceData.h */,
+				DC2C10921CBBFE97003D3FD3 /* TopicServiceData.m */,
+			);
+			name = Topic;
+			sourceTree = "<group>";
+		};
 		DC39951E1CB2125400ACA64B /* dates */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,6 +681,10 @@
 		DC3995341CB247C100ACA64B /* AppServices */ = {
 			isa = PBXGroup;
 			children = (
+				DCB33F7F1C808C620075FBDD /* ValidateService.h */,
+				DCB33F801C808C620075FBDD /* ValidateService.m */,
+				DC9DEF0B1C7486A800C1A1AE /* AppService.h */,
+				DC9DEF0C1C7486A800C1A1AE /* AppService.m */,
 			);
 			name = AppServices;
 			sourceTree = "<group>";
@@ -795,6 +821,7 @@
 		DC7917E01C5671B500BB3FA9 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				DC2C107F1CBBF564003D3FD3 /* Topic */,
 				DC06FD8C1CB6874D00C67C45 /* reading */,
 				DC3995511CB296B300ACA64B /* localPushServices */,
 				DC39953F1CB281EC00ACA64B /* MineServices */,
@@ -810,7 +837,6 @@
 				DC60BD541C70616700CFDC56 /* RestStructResponse.m */,
 				DCB967101C95D0C3004E3229 /* HomePageServices */,
 				DC185B961C82E034001A0DD1 /* serviceData */,
-				DC9DEF0A1C74869300C1A1AE /* app */,
 				DC7917E41C567BD200BB3FA9 /* accounts */,
 				DC60BD4D1C70573300CFDC56 /* HostManager.h */,
 				DC60BD4E1C70573300CFDC56 /* HostManager.m */,
@@ -849,14 +875,17 @@
 			name = ReadingDetailCell;
 			sourceTree = "<group>";
 		};
-		DC7CE39A1C7A05670067B19E /* QAMainCell */ = {
+		DC7CE39A1C7A05670067B19E /* Topic_QAMainCell */ = {
 			isa = PBXGroup;
 			children = (
 				DC7CE39B1C7A05920067B19E /* QAMainCell.h */,
 				DC7CE39C1C7A05920067B19E /* QAMainCell.m */,
 				DC7CE39D1C7A05920067B19E /* QAMainCell.xib */,
+				DC2C10941CBC75F3003D3FD3 /* CommentsCell.h */,
+				DC2C10951CBC75F3003D3FD3 /* CommentsCell.m */,
+				DC2C10961CBC75F3003D3FD3 /* CommentsCell.xib */,
 			);
-			name = QAMainCell;
+			name = Topic_QAMainCell;
 			sourceTree = "<group>";
 		};
 		DC992D931C46947400382DFB = {
@@ -1025,17 +1054,6 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		DC9DEF0A1C74869300C1A1AE /* app */ = {
-			isa = PBXGroup;
-			children = (
-				DCB33F7F1C808C620075FBDD /* ValidateService.h */,
-				DCB33F801C808C620075FBDD /* ValidateService.m */,
-				DC9DEF0B1C7486A800C1A1AE /* AppService.h */,
-				DC9DEF0C1C7486A800C1A1AE /* AppService.m */,
-			);
-			name = app;
-			sourceTree = "<group>";
-		};
 		DCAFD6C01CB6C7D900E668ED /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1158,7 +1176,7 @@
 				DCB966FF1C95833B004E3229 /* Cells */,
 				DCB33F781C80866C0075FBDD /* helper */,
 				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
-				DC7CE39A1C7A05670067B19E /* QAMainCell */,
+				DC7CE39A1C7A05670067B19E /* Topic_QAMainCell */,
 				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
 				DC7CE38C1C79CCF40067B19E /* ReadingTitleLabelCell */,
 				DCFECA8E1C78B9A9000A4BC9 /* homepageArticleAndTest */,
@@ -1320,6 +1338,7 @@
 				DCFECA931C78BA05000A4BC9 /* ArticleAndTestCell.xib in Resources */,
 				DCB967061C958C2E004E3229 /* icon_test_header.png in Resources */,
 				DC7CE3931C79D1710067B19E /* ReadingTitle.plist in Resources */,
+				DC2C10981CBC75F3003D3FD3 /* CommentsCell.xib in Resources */,
 				DCFECA8C1C78860A000A4BC9 /* ImageAndTitleCell.xib in Resources */,
 				DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */,
 			);
@@ -1413,6 +1432,7 @@
 				DCB967031C95836E004E3229 /* PschologyTestCell.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
+				DC2C10821CBBF577003D3FD3 /* TopicService.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
 				DC76B84F1CBAA98000526662 /* TopicComment.m in Sources */,
 				DCAFD6C31CB6C80B00E668ED /* LoadOnAnimateView.m in Sources */,
@@ -1440,6 +1460,7 @@
 				DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
+				DC2C10971CBC75F3003D3FD3 /* CommentsCell.m in Sources */,
 				DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */,
 				DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */,
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
@@ -1465,6 +1486,7 @@
 				DCAFD6BF1CB6C7CE00E668ED /* VCRefreshHeader.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,
 				DC3995331CB23EBB00ACA64B /* NSDate+NSString.m in Sources */,
+				DC2C10931CBBFE97003D3FD3 /* TopicServiceData.m in Sources */,
 				DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */,
 				DCB966FC1C958291004E3229 /* PschologyTest.m in Sources */,
 				DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */,

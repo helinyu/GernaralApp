@@ -201,7 +201,45 @@
         RestStructFinishedEditProfileResponse *response = [[RestStructFinishedEditProfileResponse alloc]initWithData:data error:&restError];
         completeToService(response,error);
     }];
+}
 
++ (void)invokeTopicsWithComplete:(void(^)(RestStructTopicResponse* response,NSError *error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/topics/topicMain.php" withRequest:[RestStructRequest new] withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        RestStructTopicResponse *response = [[RestStructTopicResponse alloc]initWithData:data error:&restError];
+        completeToService(response,error);
+    }];
+    
+}
+
+//话题
++ (void)invokeCommets:(CommentsRequest*)request WithComplete:(void(^)(CommentsStructResponse* response,NSError *error))completeToService{
+    [RestInterface _invokeWithUrl:@"/topics/topicComments.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        CommentsStructResponse *response = [[CommentsStructResponse alloc]initWithData:data error:&restError];
+        completeToService(response,error);
+    }];
 }
 
 

@@ -62,3 +62,8 @@
 @property (nonatomic,assign) NSInteger offset;
 @property (nonatomic,assign) NSInteger limit;
 @end
+
+//评论
+@interface CommentsRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger topic_id;
+@end

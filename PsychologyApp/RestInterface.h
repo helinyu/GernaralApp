@@ -39,4 +39,10 @@
 //编辑之后保存请求
 + (void)invokeFinishedEditProfile:(RestStructFinishedEditProfileRequest*)request withComplete:(void(^)(RestStructFinishedEditProfileResponse* response,NSError *error))completeToService;
 
+//topic
++ (void)invokeTopicsWithComplete:(void(^)(RestStructTopicResponse* response,NSError *error))completeToService;
+
+//topic_comments
++ (void)invokeCommets:(CommentsRequest*)request WithComplete:(void(^)(CommentsStructResponse* response,NSError *error))completeToService;
+
 @end

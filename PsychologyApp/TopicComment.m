@@ -7,8 +7,10 @@
 //
 
 #import "TopicComment.h"
+#import "CommentsCell.h"
 
-@interface TopicComment ()
+@interface TopicComment ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *commentTableView;
 
 @end
 
@@ -18,8 +20,26 @@
     [super viewDidLoad];
 }
 
+
+- (void)setInitVariableAtInitstate{
+    
+// 注册nib的cell
+    [self.commentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommentsCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CommentsCell class])];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return  3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;{
+    CommentsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CommentsCell class]) forIndexPath:indexPath];
+    
+    return cell;
+}
+
 
 @end

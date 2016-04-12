@@ -7,13 +7,16 @@
 //
 
 #import "QAMainCell.h"
+#import "UIImageView+WebCache.h"
 
 #define SELFWIDTH (self.bounds.size.width - 20)
 
 #define Except_ThemeLabelHeight 120.0
 
 
-@interface QAMainCell ()
+@interface QAMainCell (){
+    NSInteger _commentsIndex;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -32,8 +35,8 @@
     [super setSelected:selected animated:animated];
 }
 
-- (CGFloat)setHeaderImageViewText:(NSString *)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum{
-    _headerImageView.image = [UIImage imageNamed:headerImageText];
+- (CGFloat)setHeaderImageViewText:(NSString *)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum withCommentsIndex:(NSInteger)commentsIndex{
+   [ _headerImageView sd_setImageWithURL:[NSURL URLWithString:headerImageText] placeholderImage:[UIImage imageNamed:@"image_default"]];
     _titleTextLabel.text = titleText;
     _timeLabel.text = timeText;
     _mainTopicLabel.text = themeText;
@@ -42,43 +45,23 @@
     [_commontsBtn setTitle:[NSString stringWithFormat:@"%ld",commentsNum] forState:UIControlStateNormal];
 //    主题是可以有两行的
     CGFloat themeHeight = [self getHeightFrom:themeText withFontSize:16];
-    
+    _commentsIndex = commentsIndex;
     return  themeHeight + Except_ThemeLabelHeight;
     
 }
 
-//- (CGFloat)setTitleTextLabel:(NSString *)titleText
-//               withTimeLabel:(NSString *)timeText
-//        withTextContentLabel:(NSString *)textContentText
-//        withTypeConsultLabel:(NSString *)typeConsultText
-//         withNumberTextLabel:(NSInteger )number{
-//    
-//    self.titleTextLabel.text = titleText;
-//    self.timeLabel.text = timeText;
-//   
-//    
-////    _textContentLabelConstraint.constant = [self getHeightFrom:textContentText withFontSize:number];
-//    
-////    return _textContentLabelConstraint.constant+90;
-//    return 30;
-//}
-
 - (CGFloat)getHeightFrom:(NSString*)text withFontSize:(NSInteger)fontSize {
-    
     CGFloat cellHeight = [text boundingRectWithSize:CGSizeMake(SELFWIDTH, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil].size.height;
     return cellHeight;
 }
 
 - (IBAction)onPraiseClicked:(id)sender {
-    
     NSLog(@"点赞");
 }
 
 - (IBAction)onCommentClicked:(id)sender {
     NSLog(@"评论");
-    [self.mainCellDelegate hasCommentClicked];
-//    这里应该还是会有带有相关的信息
+    [self.mainCellDelegate hasCommentClicked:_commentsIndex];
 }
-
 
 @end

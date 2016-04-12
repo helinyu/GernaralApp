@@ -277,40 +277,62 @@
 
 @end
 
-@implementation restStructTopicItemResponse
+@implementation RestStructTopicItemResponse
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _title = @"";
-        _time = @"";
+        _topic_id = 0;
         _theme = @"";
-        _theme = @"";
-        _loveNum = 0;
+        _owner = @"";
+        _location = @"";
+        _praiseNum = 0;
         _commentsNum = 0;
+        _time = @"";
+        _headerImageUrl = @"";
     }
     return self;
 }
-
-//+ (JSONKeyMapper*)keyMapper{
-//    return <#expression#>
-//}
 
 @end
 
-//restStructTopicsResponse
-@implementation restStructTopicsResponse
+@implementation RestStructTopicResponse
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _topic = (NSArray<restStructTopicItemResponse>*)@[];
+        _topic = (NSArray<RestStructTopicItemResponse>*) @[];
     }
     return self;
 }
 
-//+ (JSONKeyMapper)
+@end
+
+//评论
+@implementation CommentItemStructReponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _content = @"";
+    }
+    return self;
+}
+
+@end
+@implementation CommentsStructResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _number = 0;
+        _data = (NSArray<CommentItemStructReponse>*)@[];
+    }
+    return self;
+}
 
 @end

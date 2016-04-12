@@ -11,13 +11,12 @@
 
 @protocol QAMainCellDelegate <NSObject>
 @required
-- (void)hasCommentClicked;
+- (void)hasCommentClicked:(NSInteger )index;
 @end
 
 @interface QAMainCell : UITableViewCell
 
 @property (nonatomic,weak,nullable) id<QAMainCellDelegate> mainCellDelegate;
 
-- (CGFloat)setHeaderImageViewText:(NSString *)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum;
-
+- (CGFloat)setHeaderImageViewText:(NSString*)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString*)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum withCommentsIndex:(NSInteger)commentsIndex;
 @end

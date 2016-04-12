@@ -96,20 +96,36 @@
 
 //婚恋
 @interface RestStructMarriageLoveResponse: RestStructResponse
-
 @end
 
-@protocol restStructTopicItemResponse <NSObject>
+//话题
+@protocol RestStructTopicItemResponse <NSObject>
 @end
-@interface restStructTopicItemResponse : RestStructResponse
-@property (nonatomic,strong) NSString* headerImageViewStr;
-@property (nonatomic,strong) NSString * title;
-@property (nonatomic,strong) NSString * time;
-@property (nonatomic,strong) NSString * theme;
-@property (nonatomic,strong) NSString * location;
-@property (nonatomic,assign) NSInteger loveNum;
+@interface RestStructTopicItemResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger topic_id;
+@property (nonatomic,strong) NSString *theme;
+@property (nonatomic,strong) NSString *owner;
+@property (nonatomic,strong) NSString *location;
+@property (nonatomic,assign) NSInteger praiseNum;
 @property (nonatomic,assign) NSInteger commentsNum;
+@property (nonatomic,strong) NSString *time;
+@property (nonatomic,strong) NSString *headerImageUrl;
+
 @end
-@interface restStructTopicsResponse: RestStructResponse
-@property (nonatomic,strong) NSArray<restStructTopicItemResponse>* topic;
+@interface RestStructTopicResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger number;
+@property (nonatomic,strong) NSArray<RestStructTopicItemResponse>* topic;
 @end
+
+//评论
+@protocol CommentItemStructReponse <NSObject>
+@end
+@interface CommentItemStructReponse :RestStructResponse
+@property (nonatomic,strong) NSString *content;
+@end
+@interface CommentsStructResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger number;
+@property (nonatomic,strong) NSArray<CommentItemStructReponse>* data;
+@end
+
+
