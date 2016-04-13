@@ -37,30 +37,6 @@
     }];
 }
 
-
-- (void)requestCommetns:(NSInteger)topic_id WithComplete:(void(^)(CommentsServiceData* servicTeData ,NSError *error)) completeToView{
-    
-    CommentsRequest *request = [CommentsRequest new];
-    request.topic_id = topic_id;
-    [RestInterface invokeCommets:request WithComplete:^(CommentsStructResponse *response, NSError *error) {
-        if (error != nil) {
-            completeToView(nil,error);
-            return ;
-        }
-        CommentsServiceData *serviceData = [CommentsServiceData new];
-        serviceData.number = response.number;
-        
-        for (commentItemServiceData *item in response.data) {
-            commentItemServiceData *itemServiceData = [commentItemServiceData new];
-            itemServiceData.content = item.content;
-        }
-        completeToView(serviceData,nil);
-    }];
-}
-
-
-
-
 - (void)requestCreateComments:(NSString*)theme withOwner:(NSString *)owner withLocation:(NSString *)location withPraiseNum:(NSInteger)praiseNum withCommentsNum:(NSInteger)commentsNum withTime:(NSString*)time withHeaderImageUrl:(NSString *)headerImageUrl WithComplete:(void(^)(CommentsCreationServiceData* servicTeData ,NSError *error)) completeToView{
     
     CommentCreationRequest *request = [CommentCreationRequest new];
@@ -81,6 +57,46 @@
         creationServiceData.ret = response.ret;
         completeToView(creationServiceData,nil);
     }];
+}
 
+
+- (void)requestCommentSending:(NSInteger)topic_id withComment:(NSString *)comment WithComplete:(void(^)(CommentSendingServiceData* servicTeData ,NSError *error)) completeToView{
+    
+    CommentSendingRequest *request = [CommentSendingRequest new];
+    request.topic_id = topic_id;
+    request.commentText = comment;
+    
+    [RestInterface invokeCommentSending:request withComplete:^(CommentSendingResponse *reponse, NSError *error) {
+        if (error != nil) {
+            completeToView(nil,error);
+            return ;
+        }
+        CommentSendingServiceData *sendingServiceData = [CommentSendingServiceData new];
+        sendingServiceData.ret = reponse.ret;
+        completeToView(sendingServiceData,nil);
+    }];
+}
+
+
+- (void)requestCommentsOfTopic:(NSInteger)topic_id WithComplete:(void(^)(CommentsServiceData* servicTeData ,NSError *error)) completeToView{
+
+    TopicCommentsRequest *request = [TopicCommentsRequest new];
+    request.topic_id = topic_id;
+
+    [RestInterface invokeCommentsOfTopic:request WithComplete:^(TopicCommentsResponse *response, NSError *error) {
+        if (error != nil) {
+            completeToView(nil,error);
+            return ;
+        }
+        CommentsServiceData *serviceData = [CommentsServiceData new];
+        serviceData.number = response.number;
+
+        for (CommentItemServiceData *item in response.topic) {
+            CommentItemServiceData *itemServiceData = [CommentItemServiceData new];
+            itemServiceData.content = item.content;
+            [serviceData.datas addObject:itemServiceData];
+        }
+        completeToView(serviceData,nil);
+    }];
 }
 @end

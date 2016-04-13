@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLk-Xv-VRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="438"/>
+            <point key="canvasLocation" x="258" y="385"/>
         </scene>
         <!--创建话题-->
         <scene sceneID="QyC-3E-T3u">
@@ -72,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="363" y="771"/>
         </scene>
-        <!--评论-->
+        <!--Comment Delegate-->
         <scene sceneID="brx-Ep-jry">
             <objects>
                 <viewController storyboardIdentifier="TopicComment" id="dut-bR-la2" customClass="TopicComment" sceneMemberID="viewController">
@@ -152,18 +152,35 @@
                                     <outlet property="delegate" destination="dut-bR-la2" id="zLo-vx-VOe"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvf-iQ-cgb" userLabel="comment bottom view" customClass="CommentToBottomView">
+                                <rect key="frame" x="0.0" y="496" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5AW-GR-c1O"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="commentDelegate" destination="dut-bR-la2" id="D6b-ok-Hdj"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bvf-iQ-cgb" firstAttribute="leading" secondItem="5o1-tf-Wzb" secondAttribute="leading" id="9Aw-iz-Y1b"/>
+                            <constraint firstItem="5Qz-C7-dXp" firstAttribute="top" secondItem="Bvf-iQ-cgb" secondAttribute="bottom" id="9xE-gD-BjE"/>
                             <constraint firstItem="pdq-lc-K4z" firstAttribute="leading" secondItem="5o1-tf-Wzb" secondAttribute="leading" id="GjW-zz-SBZ"/>
                             <constraint firstAttribute="trailing" secondItem="pdq-lc-K4z" secondAttribute="trailing" id="S7Z-5y-3xa"/>
                             <constraint firstItem="pdq-lc-K4z" firstAttribute="top" secondItem="yk3-0q-7qi" secondAttribute="bottom" id="SNA-b3-C9i"/>
                             <constraint firstItem="5Qz-C7-dXp" firstAttribute="top" secondItem="pdq-lc-K4z" secondAttribute="bottom" id="bJ2-Ia-bs3"/>
+                            <constraint firstAttribute="trailing" secondItem="Bvf-iQ-cgb" secondAttribute="trailing" id="sTi-Gv-dyO"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zcb-tl-AYK" appends="YES" id="KO3-Ff-Lg4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="评论" id="dts-li-NqU"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="commentBottomToViewConstraint" destination="9xE-gD-BjE" id="6WA-4a-6yr"/>
                         <outlet property="commentTableView" destination="pdq-lc-K4z" id="CWj-fe-pEV"/>
                         <outlet property="locationLabel" destination="apk-RC-AzQ" id="SKT-kS-V2n"/>
                         <outlet property="ownerHeaderImageView" destination="zh6-dc-IvB" id="LDx-JM-u6S"/>
@@ -173,6 +190,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDZ-xH-bpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zcb-tl-AYK">
+                    <connections>
+                        <action selector="onGestureClicked:" destination="dut-bR-la2" id="EWW-BG-oSL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="187" y="111"/>
         </scene>

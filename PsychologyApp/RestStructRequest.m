@@ -297,3 +297,27 @@
 }
 
 @end
+
+@implementation CommentSendingRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic_id = 0 ;
+        _commentText = @"";
+    }
+    return self;
+}
+
+- (void)setTopic_id:(NSInteger)topic_id{
+    _topic_id = topic_id;
+    [self.params setObject:@(topic_id) forKey:@"topic_id"];
+}
+
+- (void)setCommentText:(NSString *)commentText{
+    _commentText = commentText ;
+    [self.params setObject:commentText forKey:@"commentText"];
+}
+
+@end

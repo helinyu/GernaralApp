@@ -16,6 +16,7 @@
 
 @interface QAMainCell (){
     NSInteger _commentsIndex;
+    NSInteger _dataSourceIndex;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;

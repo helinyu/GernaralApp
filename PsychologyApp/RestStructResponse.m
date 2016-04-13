@@ -295,6 +295,20 @@
     return self;
 }
 
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"id":@"topic_id",
+                                                      @"theme":@"theme",
+                                                      @"owner":@"owner",
+                                                      @"location":@"location",
+                                                      @"praiseNum":@"praiseNum",
+                                                      @"commentsNum":@"commentsNum",
+                                                      @"time":@"time",
+                                                      @"headerImageUrl":@"headerImageUrl"
+                                                      }];
+}
+
+
 @end
 
 @implementation RestStructTopicResponse
@@ -303,9 +317,14 @@
 {
     self = [super init];
     if (self) {
+        _number = 0 ;
         _topic = (NSArray<RestStructTopicItemResponse>*) @[];
     }
     return self;
+}
+
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{@"topic":@"topic"}];
 }
 
 @end
@@ -354,7 +373,7 @@
 
 @end
 
-@implementation TopicCommentsResponse
+@implementation TopicCommentsItemResponse
 
 - (instancetype)init
 {
@@ -364,9 +383,44 @@
     }
     return self;
 }
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"conten":@"content"}];
+}
+
+@end
+
+@implementation TopicCommentsResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic = (NSArray<TopicCommentsItemResponse>*)@[];
+        _number = 0;
+    }
+    return self;
+}
 
 + (JSONKeyMapper*)keyMapper{
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"content":@"content",}];
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"topic":@"topic",
+                                                       @"number":@"number"
+                                                       }];
+}
+@end
+
+@implementation CommentSendingResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0 ;
+    }
+    return self;
+}
+
++ (JSONKeyMapper*)keyMapper {
+    return [[JSONKeyMapper alloc]initWithDictionary:@{@"ret":@"ret"}];
 }
 
 @end

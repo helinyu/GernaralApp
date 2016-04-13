@@ -8,6 +8,7 @@
 
 #import "TopicServiceData.h"
 
+//话题（所有）
 @implementation TopicServiceData
 
 - (instancetype)init
@@ -43,7 +44,7 @@
 @end
 
 
-@implementation commentItemServiceData
+@implementation CommentItemServiceData
 
 - (instancetype)init
 {
@@ -63,14 +64,14 @@
     self = [super init];
     if (self) {
         _number = 0;
-        _datas = (NSMutableArray<commentItemServiceData>*)[NSMutableArray new];
+        _datas = (NSMutableArray<CommentItemServiceData>*)[NSMutableArray new];
     }
     return self;
 }
 
 @end
 
-
+//评论创建
 @implementation CommentsCreationServiceData
 
 - (instancetype)init
@@ -84,16 +85,33 @@
 
 @end
 
-@implementation TopicCommentsServiceData
+//@implementation TopicCommentsServiceData
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _content=@"";
+//    }
+//    return self;
+//}
+//
+//@end
+
+
+//评论发表
+@implementation CommentSendingServiceData
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _content=@"";
+        _ret = 0;
     }
     return self;
 }
 
 @end
+
+
 

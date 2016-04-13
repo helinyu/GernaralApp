@@ -68,6 +68,7 @@
 @property (nonatomic,assign) NSInteger topic_id;
 @end
 
+//创建
 @interface CommentCreationRequest : RestStructRequest
 @property (nonatomic,strong) NSString *theme;
 @property (nonatomic,strong) NSString *owner;
@@ -81,4 +82,10 @@
 //获取对应话题的评论
 @interface TopicCommentsRequest : RestStructRequest
 @property (nonatomic,assign) NSInteger topic_id;
+@end
+
+//发表评论
+@interface CommentSendingRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger topic_id;
+@property (nonatomic,strong) NSString *commentText;
 @end

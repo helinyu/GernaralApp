@@ -39,13 +39,17 @@
 //编辑之后保存请求
 + (void)invokeFinishedEditProfile:(RestStructFinishedEditProfileRequest*)request withComplete:(void(^)(RestStructFinishedEditProfileResponse* response,NSError *error))completeToService;
 
+#pragma mark --话题
 //topic
 + (void)invokeTopicsWithComplete:(void(^)(RestStructTopicResponse* response,NSError *error))completeToService;
 
-//topic_comments
-+ (void)invokeCommets:(CommentsRequest*)request WithComplete:(void(^)(CommentsStructResponse* response,NSError *error))completeToService;
-
 //topic creation
 + (void)invokeCommentCreation:(CommentCreationRequest*)request WithComplete:(void(^)(CommentsCreationResponse* response,NSError *error))completeToService;
+
+//话题对应的评论 comment of topic
++ (void)invokeCommentsOfTopic:(TopicCommentsRequest*)request WithComplete:(void(^)(TopicCommentsResponse* response,NSError *error))completeToService;
+
+//发表评论
++ (void)invokeCommentSending:(CommentSendingRequest*)request withComplete:(void(^)(CommentSendingResponse *reponse, NSError *error))completeToService;
 
 @end

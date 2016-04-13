@@ -134,7 +134,17 @@
 @end
 
 //获取话题的评论
-@interface TopicCommentsResponse : RestStructResponse
+@protocol TopicCommentsItemResponse <NSObject>
+@end
+@interface TopicCommentsItemResponse : RestStructResponse
 @property (nonatomic,strong) NSString *content;
 @end
+@interface TopicCommentsResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger number;
+@property (nonatomic,strong) NSArray<TopicCommentsItemResponse> *topic;
+@end
 
+//发表评论
+@interface CommentSendingResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger ret;
+@end

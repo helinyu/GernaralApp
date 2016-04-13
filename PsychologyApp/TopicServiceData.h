@@ -21,21 +21,20 @@
 @property (nonatomic,strong) NSString *time;
 @property (nonatomic,strong) NSString *headerImageUrl;
 @end
-
 @interface TopicServiceData : ServiceData
 @property (nonatomic,assign) NSInteger number;
 @property (nonatomic,strong) NSMutableArray <TopicItemServiceData>* topics;
 @end
 
-//评论
-@protocol commentItemServiceData <NSObject>
+//话题对应的评论
+@protocol CommentItemServiceData <NSObject>
 @end
-@interface commentItemServiceData : ServiceData
+@interface CommentItemServiceData : ServiceData
 @property (nonatomic,strong) NSString *content;
 @end
 @interface CommentsServiceData : ServiceData
 @property (nonatomic,assign) NSInteger number;
-@property (nonatomic,strong) NSMutableArray<commentItemServiceData> *datas;
+@property (nonatomic,strong) NSMutableArray<CommentItemServiceData> *datas;
 @end
 
 //创建评论的结果
@@ -43,6 +42,8 @@
 @property (nonatomic,assign) NSInteger ret;
 @end
 
-@interface  TopicCommentsServiceData: ServiceData
-@property (nonatomic,strong) NSString *content;
+//发表评论
+@interface CommentSendingServiceData: ServiceData
+@property (nonatomic,assign) NSInteger ret;
 @end
+

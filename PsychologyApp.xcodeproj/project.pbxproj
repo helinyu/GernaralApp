@@ -122,6 +122,8 @@
 		DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */; };
 		DCEF80D01C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */; };
 		DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */; };
+		DCF56F111CBE783B007CF046 /* CommentToBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF56F0F1CBE783B007CF046 /* CommentToBottomView.m */; };
+		DCF56F121CBE783B007CF046 /* CommentToBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCF56F101CBE783B007CF046 /* CommentToBottomView.xib */; };
 		DCFECA7B1C787AFE000A4BC9 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA771C787AFE000A4BC9 /* 1.png */; };
 		DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA781C787AFE000A4BC9 /* 2.png */; };
 		DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFECA791C787AFE000A4BC9 /* 3.jpg */; };
@@ -365,6 +367,9 @@
 		DCEF80CD1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultMainSummarizeCell.m; sourceTree = "<group>"; };
 		DCEF80CE1C7B66B20017DDE6 /* ConsultMainSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultMainSummarizeCell.xib; sourceTree = "<group>"; };
 		DCEF80D41C7B76670017DDE6 /* ConsultNewTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultNewTopicCell.xib; sourceTree = "<group>"; };
+		DCF56F0E1CBE783B007CF046 /* CommentToBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentToBottomView.h; sourceTree = "<group>"; };
+		DCF56F0F1CBE783B007CF046 /* CommentToBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentToBottomView.m; sourceTree = "<group>"; };
+		DCF56F101CBE783B007CF046 /* CommentToBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentToBottomView.xib; sourceTree = "<group>"; };
 		DCFECA771C787AFE000A4BC9 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		DCFECA781C787AFE000A4BC9 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		DCFECA791C787AFE000A4BC9 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -1134,6 +1139,16 @@
 			name = ConsultMainSummarizeCell;
 			sourceTree = "<group>";
 		};
+		DCF56F0D1CBE7810007CF046 /* Comment bottom send */ = {
+			isa = PBXGroup;
+			children = (
+				DCF56F0E1CBE783B007CF046 /* CommentToBottomView.h */,
+				DCF56F0F1CBE783B007CF046 /* CommentToBottomView.m */,
+				DCF56F101CBE783B007CF046 /* CommentToBottomView.xib */,
+			);
+			name = "Comment bottom send";
+			sourceTree = "<group>";
+		};
 		DCFECA811C787B33000A4BC9 /* framwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -1164,6 +1179,7 @@
 		DCFECA8D1C78B901000A4BC9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				DCF56F0D1CBE7810007CF046 /* Comment bottom send */,
 				DC2C07F41CB81DFF00726592 /* CommonWeb */,
 				DCAFD6C01CB6C7D900E668ED /* Refresh */,
 				DC3995481CB28D7500ACA64B /* alert */,
@@ -1307,6 +1323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF56F121CBE783B007CF046 /* CommentToBottomView.xib in Resources */,
 				DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */,
 				DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */,
 				DC9A10421CB56222007CC468 /* ReadingTitleLabelCell.xib in Resources */,
@@ -1455,6 +1472,7 @@
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
 				DC2C10971CBC75F3003D3FD3 /* CommentsCell.m in Sources */,
+				DCF56F111CBE783B007CF046 /* CommentToBottomView.m in Sources */,
 				DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */,
 				DC0FCD6F1C760EAF00E5AF6F /* MineShareFriend.m in Sources */,
 				DC60BD4F1C70573300CFDC56 /* HostManager.m in Sources */,
