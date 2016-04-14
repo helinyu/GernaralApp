@@ -123,8 +123,8 @@
 
         NSError * errorOfResponse = nil;
         RestStructPschologyTestSummaryResponse *summaryResponse = [[RestStructPschologyTestSummaryResponse alloc]initWithData:data error:&errorOfResponse];
-        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"arr is ;%@",arr);
+//        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//        NSLog(@"arr is ;%@",arr);
         completeToService(summaryResponse,nil);
     }];
 }
@@ -171,9 +171,9 @@
             return ;
         }
 
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructEditProfileResponse *response = [[RestStructEditProfileResponse alloc]initWithData:data error:&restError];
@@ -191,9 +191,9 @@
             return ;
         }
         
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructFinishedEditProfileResponse *response = [[RestStructFinishedEditProfileResponse alloc]initWithData:data error:&restError];
@@ -211,10 +211,10 @@
             completeToService(nil,error);
             return ;
         }
-        
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructTopicResponse *response = [[RestStructTopicResponse alloc]initWithData:data error:&restError];
@@ -232,11 +232,11 @@
             return ;
         }
       
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
+
         NSError *restError = nil;
-     
         CommentsCreationResponse *response = [[CommentsCreationResponse alloc]initWithData:data error:&restError];
         completeToService(response,error);
     }];
@@ -250,9 +250,9 @@
             completeToService(nil,error);
             return ;
         }
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         CommentSendingResponse *response = [[CommentSendingResponse alloc]initWithData:data error:&restError];
@@ -263,7 +263,7 @@
 //话题对应这的评论
 + (void)invokecommentsOfTopic:(CommentsOfTopicRequest*)request withComplete:(void(^)(CommentsOfTopicResponse *reponse, NSError *error))completeToService{
     
-    [RestInterface _invokeWithUrl:@"/topics/commentsOfTopic.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+    [RestInterface _invokeWithUrl:@"/topics/commentsOfATopic.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
         if (error.code != 0) {
             completeToService(nil,error);
             return ;
@@ -271,10 +271,28 @@
         NSError *structError = nil  ;
         NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
         NSLog(@"arr is : %@",arr);
+
+        NSError *restError = nil;
+        CommentsOfTopicResponse *response = [[CommentsOfTopicResponse alloc] initWithData:data error:&restError];
+        completeToService(response,error);
     }];
-    
 }
 
+//更新点赞数目
++ (void)invokeUpdateTopicPraise:(TopicUPdatePraiseRequest*)request withComplete:(void(^)(TopicUPdatePraiseResponse *reponse, NSError *error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/topics/updateTopicPraise.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+
+        
+    }];
+}
 
 @end
 

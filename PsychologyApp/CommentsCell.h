@@ -15,6 +15,9 @@
 @property (nonatomic,strong) NSString * time;
 @property (nonatomic,assign) NSInteger praiseNum;
 
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageview;
 @property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *themeLabel;
 
 @end

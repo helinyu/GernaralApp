@@ -305,7 +305,10 @@
     self = [super init];
     if (self) {
         _topic_id = 0 ;
-        _commentText = @"";
+        _content = @"";
+        _time = @"";
+        _headerImageUrl = @"";
+        _person_phone = @"";
     }
     return self;
 }
@@ -315,9 +318,24 @@
     [self.params setObject:@(topic_id) forKey:@"topic_id"];
 }
 
-- (void)setCommentText:(NSString *)commentText{
-    _commentText = commentText ;
-    [self.params setObject:commentText forKey:@"commentText"];
+- (void)setContent:(NSString *)content{
+    _content = content ;
+    [self.params setObject:content forKey:@"content"];
+}
+
+- (void)setTime:(NSString *)time{
+    _time = time;
+    [self.params setObject:time forKey:@"time"];
+}
+
+- (void)setHeaderImageUrl:(NSString *)headerImageUrl{
+    _headerImageUrl = headerImageUrl;
+    [self.params setObject:headerImageUrl forKey:@"headerImageUrl"];
+}
+
+- (void)setPerson_phone:(NSString *)person_phone{
+    _person_phone = person_phone;
+    [self.params setObject:person_phone forKey:@"person_phone"];
 }
 
 @end
@@ -336,6 +354,30 @@
 - (void)setTopic_id:(NSInteger)topic_id{
     _topic_id = topic_id;
     [self.params setObject:@(topic_id) forKey:@"topic_id"];
+}
+
+@end
+
+@implementation TopicUPdatePraiseRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic_id = 0;
+        _praiseNum = 0 ;
+    }
+    return self;
+}
+
+- (void)setTopic_id:(NSInteger)topic_id{
+    _topic_id = topic_id;
+    [self.params setObject:@(topic_id) forKey:@"topic_id"];
+}
+
+- (void)setPraiseNum:(NSInteger)praiseNum{
+    _praiseNum = praiseNum;
+    [self.params setObject:@(praiseNum) forKey:@"praiseNum"];
 }
 
 @end

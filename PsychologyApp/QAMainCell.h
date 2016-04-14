@@ -10,8 +10,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol QAMainCellDelegate <NSObject>
-@required
+@optional
 - (void)hasCommentClicked:(NSInteger )index;
+- (void)hasPraseClicked:(NSInteger) praseNumber withTopic_id:(NSInteger)topic_id;
 @end
 
 @interface QAMainCell : UITableViewCell

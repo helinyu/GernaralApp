@@ -37,7 +37,7 @@
 //plist file name
 #define ATTRIBUTE @"attribute"
 
-
+#define Image_Default @"image_default"
 
 
 #endif /* AppDefinition_h */

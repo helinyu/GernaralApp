@@ -31,9 +31,7 @@
             itemServiceData.headerImageUrl = item.headerImageUrl;
             [serviceData.topics addObject:itemServiceData];
         }
-        
         completeToView(serviceData,nil);
-
     }];
 }
 
@@ -60,11 +58,13 @@
 }
 
 
-- (void)requestCommentSending:(NSInteger)topic_id withComment:(NSString *)comment WithComplete:(void(^)(CommentSendingServiceData* servicTeData ,NSError *error)) completeToView{
-    
+- (void)requestCommentSending:(NSInteger)topic_id withComment:(NSString *)comment withPerson_phone:(NSString *)person_phone withHeaderImageUrl:(NSString*)headerImageUrl withTime:(NSString*)time WithComplete:(void(^)(CommentSendingServiceData* servicTeData ,NSError *error)) completeToView{
     CommentSendingRequest *request = [CommentSendingRequest new];
     request.topic_id = topic_id;
-    request.commentText = comment;
+    request.content = comment;
+    request.headerImageUrl = headerImageUrl;
+    request.person_phone = person_phone;
+    request.time = time;
     
     [RestInterface invokeCommentSending:request withComplete:^(CommentSendingResponse *reponse, NSError *error) {
         if (error != nil) {
@@ -88,10 +88,32 @@
             return ;
         }
         
+        CommentsOfTopicServiceData *ServiceData = [CommentsOfTopicServiceData new];
+        ServiceData.number = reponse.number;
         
+        for (CommentsOfTopicItemResponse *item in reponse.datas) {
+            CommentsOfTopicItemServiceData *itemServiceData = [CommentsOfTopicItemServiceData new];
+            itemServiceData.topic_id = item.topic_id;
+            itemServiceData.person_phone = item.person_phone;
+            itemServiceData.content = item.content;
+            itemServiceData.time = item.time;
+            itemServiceData.headerImageUrl = item.headerImageUrl;
+            [ServiceData.datas addObject:itemServiceData];
+        }
+        completeToView(ServiceData,nil);
+    }];
+}
+
+//更新话题点赞的数目
+- (void)requestUPdatePraiseNumWithTopic_id:(NSInteger)topic_id withPraiseNum:(NSInteger)praiseNum WithComplete:(void(^)(TopicPraiseNumServiceData* servicTeData ,NSError *error)) completeToView{
+    
+    TopicUPdatePraiseRequest *request = [TopicUPdatePraiseRequest new];
+    request.topic_id = topic_id;
+    request.praiseNum = praiseNum;
+    
+    [RestInterface invokeUpdateTopicPraise:request withComplete:^(TopicUPdatePraiseResponse *reponse, NSError *error) {
         
     }];
-    
 }
 
 @end

@@ -12,17 +12,21 @@
 #import "CommentToBottomView.h"
 #import "ServiceManager.h"
 #import "VCToast.h"
-
+#import "UIImageView+WebCache.h"
 
 @interface TopicComment ()<UITableViewDelegate,UITableViewDataSource,CommentToBottomViewDelegate>
+{
+    CommentsOfTopicServiceData *_serviceData ;
+    NSMutableArray<CommentsOfTopicItemServiceData> *_itemServiceDatas;
+}
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
-
 @property (weak, nonatomic) IBOutlet UIImageView *ownerHeaderImageView;
 @property (weak, nonatomic) IBOutlet UILabel *ownerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *themeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentBottomToViewConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
 
 @end
 
@@ -32,13 +36,14 @@
     [super viewDidLoad];
     
     [self setInitVariableAtInitstate];
-    
-    [self loadDataAtInitState];
-    
 }
 
 
 - (void)setInitVariableAtInitstate{
+    
+//    初始化数据源
+    _serviceData = [CommentsOfTopicServiceData new];
+    _itemServiceDatas = (NSMutableArray<CommentsOfTopicItemServiceData> *)[NSMutableArray new];
     
 // 注册nib的cell
     [self.commentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommentsCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CommentsCell class])];
@@ -52,16 +57,17 @@
 
 // 注册键盘监听
     [self registerForKeyboardNotifications];
-    
-//    first time load datas
-    [self loadDataAtInitState];
 }
 
 - (void)loadDataAtInitState{
     NSLog(@"topic_id:%ld",(long)_personServiceData.topic_id);
     
-    [OBTAIN_SERVICE(TopicService) requestCommentsOfTopic:14 WithComplete:^(CommentsOfTopicServiceData *servicTeData, NSError *error) {
-        
+    [OBTAIN_SERVICE(TopicService) requestCommentsOfTopic:_personServiceData.topic_id WithComplete:^(CommentsOfTopicServiceData *servicTeData, NSError *error) {
+        NSLog(@"serviceDAta is : %@",servicTeData.description);
+        _serviceData = servicTeData;
+        _itemServiceDatas = servicTeData.datas;
+        self.commentsLabel.text = [NSString stringWithFormat:@"    当前的评论数目:%ld",(long)servicTeData.number];
+        [self.commentTableView reloadData];
     }];
 }
 
@@ -69,19 +75,24 @@
     [super didReceiveMemoryWarning];
 }
 
-
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.commentTableView reloadData];
+    [self loadDataAtInitState];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  13;
+    return  _serviceData.number;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;{
     CommentsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CommentsCell class]) forIndexPath:indexPath];
-    cell.commentsLabel.text = @"有关的评论";
+    CommentsOfTopicItemServiceData *itemServiceData = _itemServiceDatas[indexPath.row];
+    cell.commentsLabel.text = itemServiceData.content;
+    [cell.headerImageview sd_setImageWithURL:[NSURL URLWithString:itemServiceData.headerImageUrl] placeholderImage:[UIImage imageNamed:Image_Default]];
+//    这个东西应该需要进行修改
+    cell.timeLabel.text = itemServiceData.time;
+    cell.themeLabel.text = itemServiceData.person_phone;
+    
     return cell;
 }
 
@@ -122,20 +133,18 @@
 -(void)deliverTextViewText:(NSString*) textviewText{
     NSLog(@"get text :%@",textviewText);
     /**
-     *  话题的id，评论，test topic_id = 14 commentText = hello
+     *  话题的id，评论，test topic_id = 14 commentText = hello ,time ,headerImageUrl
      */
     
-    [OBTAIN_SERVICE(TopicService) requestCommentSending:14 withComment:textviewText WithComplete:^(CommentSendingServiceData *servicTeData, NSError *error) {
-        
+    [OBTAIN_SERVICE(TopicService) requestCommentSending:_personServiceData.topic_id withComment:textviewText withPerson_phone:_personServiceData.owner withHeaderImageUrl:_personServiceData.headerImageUrl withTime:_personServiceData.time WithComplete:^(CommentSendingServiceData *servicTeData, NSError *error) {
         if ( error.code != 0 ) {
             [[VCToast make:@"木有网络咯"] show];
             return ;
         }
         NSLog(@"%ld",(long)servicTeData.ret);
-         [[VCToast make:@"评论成功"] show];
-        
+        [[VCToast make:@"评论成功"] show];
+        [self loadDataAtInitState];
     }];
-    
 }
 
 @end

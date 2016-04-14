@@ -5,34 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Pschology Test-->
-        <scene sceneID="nK5-1J-deJ">
-            <objects>
-                <tableViewController storyboardIdentifier="PschologyTest" id="Qmp-YA-4Fs" customClass="PschologyTest" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F7F-I6-kIG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PschologyTestCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PschologyTestCell" id="cHm-G8-12e" customClass="PschologyTestCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cHm-G8-12e" id="RBi-Zt-QnX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Qmp-YA-4Fs" id="Zse-mp-H48"/>
-                            <outlet property="delegate" destination="Qmp-YA-4Fs" id="Q40-tO-P3Q"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V7g-Hl-XL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="291" y="262"/>
-        </scene>
         <!--Pschology Test Summary-->
         <scene sceneID="Czf-ky-DkC">
             <objects>
@@ -162,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTt-38-fHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="267"/>
+            <point key="canvasLocation" x="1016" y="262"/>
         </scene>
         <!--Pschology Test Detail-->
         <scene sceneID="XvW-dr-zyT">

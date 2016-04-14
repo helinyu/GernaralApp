@@ -100,18 +100,46 @@
 @end
 
 
-//话题对一个的评论
-@implementation CommentsOfTopicServiceData
+//话题对的评论
+@implementation CommentsOfTopicItemServiceData
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        
+        _content= @"";
+        _time = @"";
+        _person_phone = @"";
+        _topic_id = 0;
+        _headerImageUrl = @"";
+    }
+    return self;
+}
+@end
+
+@implementation CommentsOfTopicServiceData
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _number = 0;
+        _datas = (NSMutableArray<CommentsOfTopicItemServiceData>*)[NSMutableArray new];
+    }
+    return self;
+}
+@end
+
+
+@implementation TopicPraiseNumServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0;
     }
     return self;
 }
 
 @end
-
 

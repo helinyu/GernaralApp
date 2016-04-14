@@ -421,5 +421,65 @@
 + (JSONKeyMapper*)keyMapper {
     return [[JSONKeyMapper alloc]initWithDictionary:@{@"ret":@"ret"}];
 }
+@end
+
+
+@implementation CommentsOfTopicItemResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic_id = 0;
+        _person_phone = @"";
+        _time = @"";
+        _content = @"";
+        _headerImageUrl = @"";
+    }
+    return self;
+}
+
++(JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"topic_id":@"topic_id",
+                                                      @"person_phone":@"person_phone",
+                                                      @"time":@"time",
+                                                      @"content":@"content",
+                                                      @"headerImageUrl":@"headerImageUrl"
+                                                      }];
+}
+
+@end
+@implementation CommentsOfTopicResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _number = 0 ;
+        _datas = (NSArray<CommentsOfTopicItemResponse>*)@[];
+    }
+    return self;
+}
+
++ (JSONKeyMapper*)keyMapper{
+    return [[JSONKeyMapper alloc]initWithDictionary:@{
+                                                      @"number":@"number",
+                                                      @"datas":@"datas"
+                                                      }];
+}
+
+@end
+
+@implementation TopicUPdatePraiseResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _ret = 0 ;
+    }
+    return self;
+}
 
 @end

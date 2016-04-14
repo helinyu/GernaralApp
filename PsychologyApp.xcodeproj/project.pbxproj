@@ -32,7 +32,6 @@
 		DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD711C7624CD004ED442 /* MainHomePage.m */; };
 		DC10FD771C762501004ED442 /* MainReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD761C762501004ED442 /* MainReading.m */; };
 		DC10FD7B1C762530004ED442 /* MainTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainTopic.m */; };
-		DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7E1C762546004ED442 /* MainConsult.m */; };
 		DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC185B981C82E041001A0DD1 /* AppServiceData.m */; };
 		DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C07F91CB81E4300726592 /* CommonWeb.m */; };
 		DC2C07FE1CB8219E00726592 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2C07FD1CB8219E00726592 /* Common.storyboard */; };
@@ -205,8 +204,6 @@
 		DC10FD761C762501004ED442 /* MainReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainReading.m; sourceTree = "<group>"; };
 		DC10FD791C762530004ED442 /* MainTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTopic.h; sourceTree = "<group>"; };
 		DC10FD7A1C762530004ED442 /* MainTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTopic.m; sourceTree = "<group>"; };
-		DC10FD7D1C762546004ED442 /* MainConsult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConsult.h; sourceTree = "<group>"; };
-		DC10FD7E1C762546004ED442 /* MainConsult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConsult.m; sourceTree = "<group>"; };
 		DC185B971C82E041001A0DD1 /* AppServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServiceData.h; sourceTree = "<group>"; };
 		DC185B981C82E041001A0DD1 /* AppServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServiceData.m; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
@@ -606,15 +603,6 @@
 			name = Topics;
 			sourceTree = "<group>";
 		};
-		DC10FD7C1C762539004ED442 /* consult */ = {
-			isa = PBXGroup;
-			children = (
-				DC10FD7D1C762546004ED442 /* MainConsult.h */,
-				DC10FD7E1C762546004ED442 /* MainConsult.m */,
-			);
-			name = consult;
-			sourceTree = "<group>";
-		};
 		DC185B961C82E034001A0DD1 /* serviceData */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,7 +976,6 @@
 				DC992DDB1C469ADA00382DFB /* splashScreen */,
 				DC022B121C47E18C00D3FB61 /* Account */,
 				DC992DDD1C46A00400382DFB /* Mine */,
-				DC10FD7C1C762539004ED442 /* consult */,
 				DC10FD781C76251D004ED442 /* Topics */,
 				DC10FD741C7624E7004ED442 /* Reading */,
 				DC10FD6F1C76248E004ED442 /* home page */,
@@ -1480,7 +1467,6 @@
 				DC76B84C1CBAA3AA00526662 /* CreateTopic.m in Sources */,
 				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
 				DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */,
-				DC10FD7F1C762546004ED442 /* MainConsult.m in Sources */,
 				DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,

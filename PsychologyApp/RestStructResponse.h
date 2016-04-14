@@ -141,6 +141,23 @@
 @end
 
 //话题对应的评论
-@interface CommentsOfTopicResponse :RestStructResponse
+@protocol CommentsOfTopicItemResponse <NSObject>
+@end
+@interface CommentsOfTopicItemResponse :RestStructResponse
+@property (nonatomic,assign) NSInteger topic_id;
+@property (nonatomic,strong) NSString *person_phone;
+@property (nonatomic,strong) NSString *time;
+@property (nonatomic,strong) NSString *content;
+@property (nonatomic,strong) NSString *headerImageUrl;
+@end
+@interface CommentsOfTopicResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger number;
+@property (nonatomic,strong) NSArray<CommentsOfTopicItemResponse>* datas;
+@end
+
+
+//更新话题中的点赞内容
+@interface TopicUPdatePraiseResponse :RestStructResponse
+@property (nonatomic,assign) NSInteger ret;
 
 @end

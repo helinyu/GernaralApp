@@ -104,7 +104,27 @@
 }
 
 - (void)hasCommentClicked:(NSInteger)commentIndex{
-    [self tableView:self.mainTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:commentIndex inSection:0]];
+//    topic_id 和indexpath.orw 并不是一一对应的
+    NSInteger index ;
+    TopicItemServiceData* itemData = [TopicItemServiceData new];
+    for (index = _topicData.number-1 ; index >= 0; index--) {
+        itemData = _tmpServiceData[index];
+        if (itemData.topic_id == commentIndex) {
+            break;
+        }
+    }
+    [self tableView:self.mainTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+}
+
+- (void)hasPraseClicked:(NSInteger) praseNumber withTopic_id:(NSInteger)topic_id{
+
+    //界面已经处理，就是对数据的存储了，也就是对数据库的更新
+    //这个就是点赞的内容
+    
+    [OBTAIN_SERVICE(TopicService) requestUPdatePraiseNumWithTopic_id:topic_id withPraiseNum:praseNumber WithComplete:^(TopicPraiseNumServiceData *servicTeData, NSError *error) {
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

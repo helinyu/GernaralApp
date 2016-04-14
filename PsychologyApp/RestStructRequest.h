@@ -87,10 +87,18 @@
 //发表评论
 @interface CommentSendingRequest : RestStructRequest
 @property (nonatomic,assign) NSInteger topic_id;
-@property (nonatomic,strong) NSString *commentText;
+@property (nonatomic,strong) NSString *content;
+@property (nonatomic,strong) NSString *person_phone;
+@property (nonatomic,strong) NSString *headerImageUrl;
+@property (nonatomic,strong) NSString *time;
 @end
 
 //一个话题中的所有评论
 @interface CommentsOfTopicRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger topic_id;
+@end
+
+@interface TopicUPdatePraiseRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger praiseNum;
 @property (nonatomic,assign) NSInteger topic_id;
 @end

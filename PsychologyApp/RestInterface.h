@@ -52,6 +52,6 @@
 //一个话题对应这的评论
 + (void)invokecommentsOfTopic:(CommentsOfTopicRequest*)request withComplete:(void(^)(CommentsOfTopicResponse *reponse, NSError *error))completeToService;
 
-
-
+//更新数据
++ (void)invokeUpdateTopicPraise:(TopicUPdatePraiseRequest*)request withComplete:(void(^)(TopicUPdatePraiseResponse *reponse, NSError *error))completeToService;
 @end
