@@ -98,6 +98,8 @@
 @interface RestStructMarriageLoveResponse: RestStructResponse
 @end
 
+
+#pragma mark -- topic
 //话题
 @protocol RestStructTopicItemResponse <NSObject>
 @end
@@ -117,34 +119,28 @@
 @property (nonatomic,strong) NSArray<RestStructTopicItemResponse>* topic;
 @end
 
-//评论
-@protocol CommentItemStructReponse <NSObject>
-@end
-@interface CommentItemStructReponse :RestStructResponse
-@property (nonatomic,strong) NSString *content;
-@end
-@interface CommentsStructResponse : RestStructResponse
-@property (nonatomic,assign) NSInteger number;
-@property (nonatomic,strong) NSArray<CommentItemStructReponse>* data;
-@end
+////评论
+//@protocol CommentItemStructReponse <NSObject>
+//@end
+//@interface CommentItemStructReponse :RestStructResponse
+//@property (nonatomic,strong) NSString *content;
+//@end
+//@interface CommentsStructResponse : RestStructResponse
+//@property (nonatomic,assign) NSInteger number;
+//@property (nonatomic,strong) NSArray<CommentItemStructReponse>* data;
+//@end
 
 //话题创建 应该改为topic
 @interface CommentsCreationResponse : RestStructResponse
 @property (nonatomic,assign) NSInteger ret;
 @end
 
-//获取话题的评论
-@protocol TopicCommentsItemResponse <NSObject>
-@end
-@interface TopicCommentsItemResponse : RestStructResponse
-@property (nonatomic,strong) NSString *content;
-@end
-@interface TopicCommentsResponse : RestStructResponse
-@property (nonatomic,assign) NSInteger number;
-@property (nonatomic,strong) NSArray<TopicCommentsItemResponse> *topic;
-@end
-
 //发表评论
 @interface CommentSendingResponse : RestStructResponse
 @property (nonatomic,assign) NSInteger ret;
+@end
+
+//话题对应的评论
+@interface CommentsOfTopicResponse :RestStructResponse
+
 @end

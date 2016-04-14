@@ -321,3 +321,21 @@
 }
 
 @end
+
+@implementation CommentsOfTopicRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _topic_id = 0;
+    }
+    return self;
+}
+
+- (void)setTopic_id:(NSInteger)topic_id{
+    _topic_id = topic_id;
+    [self.params setObject:@(topic_id) forKey:@"topic_id"];
+}
+
+@end

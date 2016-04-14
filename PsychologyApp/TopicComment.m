@@ -60,11 +60,9 @@
 - (void)loadDataAtInitState{
     NSLog(@"topic_id:%ld",(long)_personServiceData.topic_id);
     
-    [OBTAIN_SERVICE(TopicService) requestCommentsOfTopic:_personServiceData.topic_id WithComplete:^(CommentsServiceData *servicTeData, NSError *error) {
-
+    [OBTAIN_SERVICE(TopicService) requestCommentsOfTopic:14 WithComplete:^(CommentsOfTopicServiceData *servicTeData, NSError *error) {
+        
     }];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -134,6 +132,8 @@
             return ;
         }
         NSLog(@"%ld",(long)servicTeData.ret);
+         [[VCToast make:@"评论成功"] show];
+        
     }];
     
 }

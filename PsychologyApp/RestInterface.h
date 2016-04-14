@@ -46,10 +46,12 @@
 //topic creation
 + (void)invokeCommentCreation:(CommentCreationRequest*)request WithComplete:(void(^)(CommentsCreationResponse* response,NSError *error))completeToService;
 
-//话题对应的评论 comment of topic
-+ (void)invokeCommentsOfTopic:(TopicCommentsRequest*)request WithComplete:(void(^)(TopicCommentsResponse* response,NSError *error))completeToService;
-
 //发表评论
 + (void)invokeCommentSending:(CommentSendingRequest*)request withComplete:(void(^)(CommentSendingResponse *reponse, NSError *error))completeToService;
+
+//一个话题对应这的评论
++ (void)invokecommentsOfTopic:(CommentsOfTopicRequest*)request withComplete:(void(^)(CommentsOfTopicResponse *reponse, NSError *error))completeToService;
+
+
 
 @end

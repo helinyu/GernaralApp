@@ -242,25 +242,6 @@
     }];
 }
 
-//话题对应的评论
-+ (void)invokeCommentsOfTopic:(TopicCommentsRequest*)request WithComplete:(void(^)(TopicCommentsResponse* response,NSError *error))completeToService{
-    [RestInterface _invokeWithUrl:@"/topics/commentsOfTopic.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
-        
-        if (error.code != 0) {
-            completeToService(nil,error);
-            return ;
-        }
-        
-        NSError *structError = nil  ;
-        NSDictionary* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
-
-        NSError *restError = nil;
-        TopicCommentsResponse *response = [[TopicCommentsResponse alloc]initWithData:data error:&restError];
-        completeToService(response,error);
-    }];
-}
-
 //发表评论
 + (void)invokeCommentSending:(CommentSendingRequest*)request withComplete:(void(^)(CommentSendingResponse *reponse, NSError *error))completeToService{
 
@@ -279,7 +260,20 @@
     }];
 }
 
-
+//话题对应这的评论
++ (void)invokecommentsOfTopic:(CommentsOfTopicRequest*)request withComplete:(void(^)(CommentsOfTopicResponse *reponse, NSError *error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/topics/commentsOfTopic.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+    }];
+    
+}
 
 
 @end

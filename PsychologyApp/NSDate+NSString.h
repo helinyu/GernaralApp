@@ -11,5 +11,7 @@
 @interface NSDate (NSString)
 
 - (NSString *)dateToStringDisplayHourMinuteSecond;
+- (NSString *)dateOfNowToString;
+- (NSInteger)dateOfBeijingTime;
 
 @end

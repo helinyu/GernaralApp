@@ -77,26 +77,21 @@
     }];
 }
 
-
-- (void)requestCommentsOfTopic:(NSInteger)topic_id WithComplete:(void(^)(CommentsServiceData* servicTeData ,NSError *error)) completeToView{
-
-    TopicCommentsRequest *request = [TopicCommentsRequest new];
+- (void)requestCommentsOfTopic:(NSInteger)topic_id WithComplete:(void(^)(CommentsOfTopicServiceData* servicTeData ,NSError *error)) completeToView{
+    
+    CommentsOfTopicRequest *request = [CommentsOfTopicRequest new];
     request.topic_id = topic_id;
-
-    [RestInterface invokeCommentsOfTopic:request WithComplete:^(TopicCommentsResponse *response, NSError *error) {
+    
+    [RestInterface invokecommentsOfTopic:request withComplete:^(CommentsOfTopicResponse *reponse, NSError *error) {
         if (error != nil) {
             completeToView(nil,error);
             return ;
         }
-        CommentsServiceData *serviceData = [CommentsServiceData new];
-        serviceData.number = response.number;
-
-        for (CommentItemServiceData *item in response.topic) {
-            CommentItemServiceData *itemServiceData = [CommentItemServiceData new];
-            itemServiceData.content = item.content;
-            [serviceData.datas addObject:itemServiceData];
-        }
-        completeToView(serviceData,nil);
+        
+        
+        
     }];
+    
 }
+
 @end

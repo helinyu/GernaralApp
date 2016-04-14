@@ -10,6 +10,4 @@
 
 @interface MineMessageCenter : UITableViewController
 
-
-
 @end

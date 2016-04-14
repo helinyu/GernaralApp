@@ -31,6 +31,11 @@
     [super viewDidLoad];
 
     [self setInitVariable];
+//    [self loadDataAtInitState];
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadDataAtInitState];
 }
 

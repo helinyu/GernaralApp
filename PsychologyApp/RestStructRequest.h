@@ -89,3 +89,8 @@
 @property (nonatomic,assign) NSInteger topic_id;
 @property (nonatomic,strong) NSString *commentText;
 @end
+
+//一个话题中的所有评论
+@interface CommentsOfTopicRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger topic_id;
+@end

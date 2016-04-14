@@ -99,6 +99,7 @@
 		DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF0C1C7486A800C1A1AE /* AppService.m */; };
 		DC9DEF131C74881100C1A1AE /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF121C74881100C1A1AE /* SplashScreen.m */; };
 		DCA4E0141C7E1D7F003B5BD2 /* ExpertDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */; };
+		DCADF04C1CBF89CD00860B5E /* LocationFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = DCADF04B1CBF89CD00860B5E /* LocationFetching.m */; };
 		DCAFD6BD1CB6C7CE00E668ED /* AutomationTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6B81CB6C7CE00E668ED /* AutomationTextLabel.m */; };
 		DCAFD6BE1CB6C7CE00E668ED /* VCRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6BA1CB6C7CE00E668ED /* VCRefreshFooter.m */; };
 		DCAFD6BF1CB6C7CE00E668ED /* VCRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAFD6BC1CB6C7CE00E668ED /* VCRefreshHeader.m */; };
@@ -326,6 +327,8 @@
 		DC9DEF111C74881100C1A1AE /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		DC9DEF121C74881100C1A1AE /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		DCA4E0121C7E1D7F003B5BD2 /* ExpertDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailCell.xib; sourceTree = "<group>"; };
+		DCADF04A1CBF89CD00860B5E /* LocationFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationFetching.h; sourceTree = "<group>"; };
+		DCADF04B1CBF89CD00860B5E /* LocationFetching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFetching.m; sourceTree = "<group>"; };
 		DCAFD6B71CB6C7CE00E668ED /* AutomationTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutomationTextLabel.h; sourceTree = "<group>"; };
 		DCAFD6B81CB6C7CE00E668ED /* AutomationTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutomationTextLabel.m; sourceTree = "<group>"; };
 		DCAFD6B91CB6C7CE00E668ED /* VCRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCRefreshFooter.h; sourceTree = "<group>"; };
@@ -624,6 +627,7 @@
 		DC207FE41C564D820011D8C4 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				DCADF0491CBF89C100860B5E /* lcoation */,
 				DC207FE51C564DDF0011D8C4 /* UI+subclass */,
 			);
 			name = external;
@@ -1052,6 +1056,15 @@
 				DC39955B1CB29A0A00ACA64B /* UI+ */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		DCADF0491CBF89C100860B5E /* lcoation */ = {
+			isa = PBXGroup;
+			children = (
+				DCADF04A1CBF89CD00860B5E /* LocationFetching.h */,
+				DCADF04B1CBF89CD00860B5E /* LocationFetching.m */,
+			);
+			name = lcoation;
 			sourceTree = "<group>";
 		};
 		DCAFD6C01CB6C7D900E668ED /* Refresh */ = {
@@ -1506,6 +1519,7 @@
 				DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */,
 				DC06FD8F1CB6876400C67C45 /* ReadingService.m in Sources */,
 				DCFECA851C787B52000A4BC9 /* MJBannnerPlayer.m in Sources */,
+				DCADF04C1CBF89CD00860B5E /* LocationFetching.m in Sources */,
 				DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */,
 				DCB33F811C808C620075FBDD /* ValidateService.m in Sources */,
 				DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */,

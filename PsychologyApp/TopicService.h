@@ -23,6 +23,7 @@
 - (void)requestCommentSending:(NSInteger)topic_id withComment:(NSString *)comment WithComplete:(void(^)(CommentSendingServiceData* servicTeData ,NSError *error)) completeToView;
 
 //话题对应着的评论
-- (void)requestCommentsOfTopic:(NSInteger)topic_id WithComplete:(void(^)(CommentsServiceData* servicTeData ,NSError *error)) completeToView;
+- (void)requestCommentsOfTopic:(NSInteger)topic_id WithComplete:(void(^)(CommentsOfTopicServiceData* servicTeData ,NSError *error)) completeToView;
+
 
 @end

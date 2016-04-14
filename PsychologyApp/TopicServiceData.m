@@ -43,33 +43,33 @@
 
 @end
 
-
-@implementation CommentItemServiceData
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _content = @"";
-    }
-    return self;
-}
-
-@end
-
-@implementation CommentsServiceData
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _number = 0;
-        _datas = (NSMutableArray<CommentItemServiceData>*)[NSMutableArray new];
-    }
-    return self;
-}
-
-@end
+//
+//@implementation CommentItemServiceData
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _content = @"";
+//    }
+//    return self;
+//}
+//
+//@end
+//
+//@implementation CommentsServiceData
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _number = 0;
+//        _datas = (NSMutableArray<CommentItemServiceData>*)[NSMutableArray new];
+//    }
+//    return self;
+//}
+//
+//@end
 
 //评论创建
 @implementation CommentsCreationServiceData
@@ -85,20 +85,6 @@
 
 @end
 
-//@implementation TopicCommentsServiceData
-//
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        _content=@"";
-//    }
-//    return self;
-//}
-//
-//@end
-
-
 //评论发表
 @implementation CommentSendingServiceData
 
@@ -113,5 +99,19 @@
 
 @end
 
+
+//话题对一个的评论
+@implementation CommentsOfTopicServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+@end
 
 

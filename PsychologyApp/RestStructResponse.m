@@ -330,31 +330,31 @@
 @end
 
 //评论
-@implementation CommentItemStructReponse
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _content = @"";
-    }
-    return self;
-}
-
-@end
-@implementation CommentsStructResponse
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _number = 0;
-        _data = (NSArray<CommentItemStructReponse>*)@[];
-    }
-    return self;
-}
-
-@end
+//@implementation CommentItemStructReponse
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _content = @"";
+//    }
+//    return self;
+//}
+//
+//@end
+//@implementation CommentsStructResponse
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _number = 0;
+//        _data = (NSArray<CommentItemStructReponse>*)@[];
+//    }
+//    return self;
+//}
+//
+//@end
 
 @implementation CommentsCreationResponse
 
@@ -373,40 +373,39 @@
 
 @end
 
-@implementation TopicCommentsItemResponse
+//@implementation TopicCommentsItemResponse
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _content = @"";
+//    }
+//    return self;
+//}
+//+ (JSONKeyMapper*)keyMapper{
+//    return [[JSONKeyMapper alloc] initWithDictionary:@{@"conten":@"content"}];
+//}
+//@end
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _content = @"";
-    }
-    return self;
-}
-+ (JSONKeyMapper*)keyMapper{
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"conten":@"content"}];
-}
-
-@end
-
-@implementation TopicCommentsResponse
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _topic = (NSArray<TopicCommentsItemResponse>*)@[];
-        _number = 0;
-    }
-    return self;
-}
-
-+ (JSONKeyMapper*)keyMapper{
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"topic":@"topic",
-                                                       @"number":@"number"
-                                                       }];
-}
-@end
+//@implementation TopicCommentsResponse
+//
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        _topic = (NSArray<TopicCommentsItemResponse>*)@[];
+//        _number = 0;
+//    }
+//    return self;
+//}
+//
+//+ (JSONKeyMapper*)keyMapper{
+//    return [[JSONKeyMapper alloc] initWithDictionary:@{@"topic":@"topic",
+//                                                       @"number":@"number"
+//                                                       }];
+//}
+//@end
 
 @implementation CommentSendingResponse
 
