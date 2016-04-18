@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "TopicServiceData.h"
 
+
+@protocol TopicCommentDelegate <NSObject>
+
+- (void)freshCommentsNumber:(NSInteger)praiseNum;
+
+@end
+
 @interface TopicComment : UIViewController
 @property (nonatomic,strong) TopicItemServiceData *personServiceData;
+@property (nonatomic,weak) id<TopicCommentDelegate> topicCommmetDelegate;
+
 @end

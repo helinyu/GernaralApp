@@ -34,42 +34,15 @@
         _owner = @"";
         _location = @"";
         _commentsNum = 0;
+        _praiseNum = 0 ;
         _time = @"";
         _headerImageUrl = @"";
-        _praiseNum = 0 ;
     }
     return self;
 }
 
 @end
 
-//
-//@implementation CommentItemServiceData
-//
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        _content = @"";
-//    }
-//    return self;
-//}
-//
-//@end
-//
-//@implementation CommentsServiceData
-//
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        _number = 0;
-//        _datas = (NSMutableArray<CommentItemServiceData>*)[NSMutableArray new];
-//    }
-//    return self;
-//}
-//
-//@end
 
 //评论创建
 @implementation CommentsCreationServiceData

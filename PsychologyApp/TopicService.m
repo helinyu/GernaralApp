@@ -27,6 +27,7 @@
             itemServiceData.owner = item.owner;
             itemServiceData.location = item.location;
             itemServiceData.commentsNum = item.commentsNum;
+            itemServiceData.praiseNum = item.praiseNum;
             itemServiceData.time = item.time;
             itemServiceData.headerImageUrl = item.headerImageUrl;
             [serviceData.topics addObject:itemServiceData];
@@ -40,7 +41,11 @@
     CommentCreationRequest *request = [CommentCreationRequest new];
     request.theme = theme;
     request.owner = owner;
-    request.location = location;
+    if (location == nil) {
+        request.location = @"暂时无法获取到位置";
+    }else{
+        request.location = location;
+    }
     request.praiseNum = praiseNum;
     request.commentsNum = commentsNum;
     request.time = time;
@@ -113,6 +118,14 @@
     
     [RestInterface invokeUpdateTopicPraise:request withComplete:^(TopicUPdatePraiseResponse *reponse, NSError *error) {
         
+        if (error != nil) {
+            completeToView(nil,error);
+            return ;
+        }
+
+        TopicPraiseNumServiceData *serviceData = [TopicPraiseNumServiceData new];
+        serviceData.ret = reponse.ret;
+        completeToView(serviceData,nil);
     }];
 }
 

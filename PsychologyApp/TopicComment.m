@@ -18,6 +18,7 @@
 {
     CommentsOfTopicServiceData *_serviceData ;
     NSMutableArray<CommentsOfTopicItemServiceData> *_itemServiceDatas;
+    NSInteger _commentNUm ;
 }
 @property (weak, nonatomic) IBOutlet UITableView *commentTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *ownerHeaderImageView;
@@ -38,6 +39,11 @@
     [self setInitVariableAtInitstate];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self.topicCommmetDelegate freshCommentsNumber:_commentNUm];
+}
+
 
 - (void)setInitVariableAtInitstate{
     
@@ -49,7 +55,7 @@
     [self.commentTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CommentsCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([CommentsCell class])];
     
 //  comments owenr's information
-    [self.ownerHeaderImageView sd_setImageWithURL:[NSURL URLWithString:self.personServiceData.headerImageUrl] placeholderImage:[UIImage imageNamed:@"imageback"]];
+    [self.ownerHeaderImageView sd_setImageWithURL:[NSURL URLWithString:self.personServiceData.headerImageUrl] placeholderImage:[UIImage imageNamed:Image_Default]];
     self.ownerNameLabel.text = self.personServiceData.owner;
     self.timeLabel.text = self.personServiceData.time;
     self.themeLabel.text = self.personServiceData.theme;
@@ -67,6 +73,7 @@
         _serviceData = servicTeData;
         _itemServiceDatas = servicTeData.datas;
         self.commentsLabel.text = [NSString stringWithFormat:@"    当前的评论数目:%ld",(long)servicTeData.number];
+        _commentNUm = servicTeData.number;
         [self.commentTableView reloadData];
     }];
 }

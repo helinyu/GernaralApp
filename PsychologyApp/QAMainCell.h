@@ -19,5 +19,5 @@
 
 @property (nonatomic,weak,nullable) id<QAMainCellDelegate> mainCellDelegate;
 
-- (CGFloat)setHeaderImageViewText:(NSString*)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString*)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum withCommentsIndex:(NSInteger)commentsIndex;
+- (CGFloat)setHeaderImageViewText:(NSString*)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withCommentsIndex:(NSInteger)commentsIndex;
 @end

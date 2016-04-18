@@ -8,8 +8,8 @@ target 'PsychologyApp' do
  pod 'JSONModel'
  pod 'SDWebImage'
  pod 'MJRefresh'
- pod 'Fabric'
- pod 'Crashlytics'
+# pod 'Fabric'
+# pod 'Crashlytics'
 
 end
 

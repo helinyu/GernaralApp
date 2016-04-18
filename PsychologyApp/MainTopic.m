@@ -12,6 +12,7 @@
 #import "CreateTopic.h"
 #import "TopicComment.h"
 #import "ServiceManager.h"
+#import "VCToast.h"
 
 @interface MainTopic ()<UITableViewDataSource,UITableViewDelegate,QAMainCellDelegate>
 {
@@ -80,7 +81,7 @@
     _topicItemData = _tmpServiceData[indexPath.row];
     
 //    这里可以优化
-    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withComments:_topicItemData.commentsNum withCommentsIndex:_topicItemData.topic_id];
+    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withCommentsIndex:_topicItemData.topic_id];
     _cellHeight = cellHeight;
     cell.mainCellDelegate = self;
     return cell;
@@ -120,12 +121,16 @@
 
     //界面已经处理，就是对数据的存储了，也就是对数据库的更新
     //这个就是点赞的内容
-    
+
     [OBTAIN_SERVICE(TopicService) requestUPdatePraiseNumWithTopic_id:topic_id withPraiseNum:praseNumber WithComplete:^(TopicPraiseNumServiceData *servicTeData, NSError *error) {
-        
+        if (error.code != 0) {
+            return ;
+        }
+        [[VCToast make:@"谢谢点赞"] show];
     }];
-    
 }
+
+//返回来后者怎么样都是可以进行的
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

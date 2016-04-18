@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Helper+Style.h"
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
+//#import <Fabric/Fabric.h>
+//#import <Crashlytics/Crashlytics.h>
 #import "AppDefinition.h"
 #import "AuthOfLocalNotification.h"
 
@@ -26,7 +26,7 @@
 //    [NSStringFromClass(@"WebView") _enableRemoteInspector];
 
     
-    [Fabric with:@[[Crashlytics class]]];
+//    [Fabric with:@[[Crashlytics class]]];
     //设置导航栏
     
     

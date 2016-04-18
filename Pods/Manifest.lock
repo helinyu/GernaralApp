@@ -14,9 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Crashlytics (3.7.0):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.7)
   - JSONModel (1.2.0)
   - MJRefresh (3.1.0)
   - SDWebImage (3.7.5):
@@ -25,16 +22,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - Crashlytics
-  - Fabric
   - JSONModel
   - MJRefresh
   - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

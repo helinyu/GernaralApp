@@ -36,14 +36,14 @@
     [super setSelected:selected animated:animated];
 }
 
-- (CGFloat)setHeaderImageViewText:(NSString *)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withComments:(NSInteger)commentsNum withCommentsIndex:(NSInteger)commentsIndex{
+- (CGFloat)setHeaderImageViewText:(NSString*)headerImageText withTittleText:(NSString *)titleText withTimeText:(NSString *)timeText  withMainTopicText:(NSString *)themeText withLocationText:(NSString *)locationText withPriceBtn:(NSInteger)priseNum withCommentsIndex:(NSInteger)commentsIndex{
    [ _headerImageView sd_setImageWithURL:[NSURL URLWithString:headerImageText] placeholderImage:[UIImage imageNamed:@"image_default"]];
     _titleTextLabel.text = titleText;
     _timeLabel.text = timeText;
     _mainTopicLabel.text = themeText;
     _locationLabel.text = locationText;
     [_praiseBtn setTitle:[NSString stringWithFormat:@"%ld",priseNum] forState:UIControlStateNormal];
-    [_commontsBtn setTitle:[NSString stringWithFormat:@"%ld",commentsNum] forState:UIControlStateNormal];
+//    [_commontsBtn setTitle:[NSString stringWithFormat:@"%ld",commentsNum] forState:UIControlStateNormal];
 //    主题是可以有两行的
     CGFloat themeHeight = [self getHeightFrom:themeText withFontSize:16];
     _commentsIndex = commentsIndex;

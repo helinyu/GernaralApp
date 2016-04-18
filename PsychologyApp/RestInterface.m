@@ -29,6 +29,23 @@
     [task resume];
 }
 
++ (void)_invokeWithGETUrl:(NSString *)urlStr withComplete:(void (^)(NSData *data,NSError *error))completeBlock{
+    NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    sessionConfig.timeoutIntervalForRequest = 30;
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@%@",OBTAIN_COMMON_HOST,urlStr]]];
+    urlRequest.HTTPMethod = @"GET";
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            completeBlock(nil,error);
+        }else{
+            completeBlock(data,nil);
+        }
+    }];
+    [task resume];
+}
+
 //注册
 + (void)invokeRegisterWithRequest:(RestStructRegisterByPhoneRequest*)request withComplete:(void(^)(RestStructRegisterResponse *response,NSError *error))completeBlock{
 
@@ -232,9 +249,9 @@
             return ;
         }
       
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
 
         NSError *restError = nil;
         CommentsCreationResponse *response = [[CommentsCreationResponse alloc]initWithData:data error:&restError];
@@ -286,12 +303,34 @@
             completeToService(nil,error);
             return ;
         }
-        NSError *structError = nil  ;
+        
+             NSError *structError = nil  ;
         NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
         NSLog(@"arr is : %@",arr);
-
+        
+        NSError *restError = nil;
+        TopicUPdatePraiseResponse *response = [[TopicUPdatePraiseResponse alloc] initWithData:data error:&error];
+        completeToService(response,restError);
         
     }];
+//    NSArray *keys = request.params.allKeys;
+//    NSMutableString* urlParamsStr = [NSMutableString new];
+//    for (NSString* key in keys) {
+//        [urlParamsStr appendString:[NSString stringWithFormat:@"%@=%@&",key,request.params[key]]];
+//    }
+//    NSString* tailPHPStr = @"/topics/updateTopicPraise.php?";
+//    
+//    NSString *urlStr = [tailPHPStr stringByAppendingString:urlParamsStr];
+//    
+//    [RestInterface _invokeWithGETUrl:urlStr withComplete:^(NSData *data, NSError *error) {
+//        if (error.code != 0) {
+//            completeToService(nil,error);
+//            return ;
+//        }
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
+//    }];
 }
 
 @end
