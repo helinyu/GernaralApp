@@ -19,8 +19,7 @@
 #import "NSString+plist.h"
 #import "AccountLogin.h"
 
-#define From_Time @"From_Time"
-#define To_time @"To_Time"
+
 
 @interface MineSetting ()
 {
@@ -28,10 +27,8 @@
 }
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *signOutBtn;
-
 @property (weak, nonatomic) IBOutlet UILabel *timeBeingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeToLabel;
-
 @property (weak, nonatomic) IBOutlet UISwitch *wakeUpSwitch;
 
 @end
@@ -43,8 +40,6 @@
     self.versionLabel.text = [Helper getAppVersion];
       _isLogined =[[NSUserDefaults standardUserDefaults] boolForKey:IS_LOGINED] ;
     [self configureSignOutBtn:_isLogined];
-    
-    
     // 查看switch是否是开启的
     [self correctWakeUpSwitch];
 }
@@ -84,18 +79,15 @@
     EntityUser *user = [[Model sharedInstance] loadUseByUId:phone];
     user.isLogined = false ;
     [[Model sharedInstance] commitUser];
-//    [self.navigationController popToRootViewControllerAnimated:true];
     [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Account" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class]) ] animated:true];
-}
-
-- (IBAction)onCheckUpUPdateClicked:(id)sender {
-    NSLog(@"检查更新");
-    
 }
 
 - (IBAction)onWakeUpSwitchClicked:(id)sender {
     UISwitch *switchTime = (UISwitch*)sender;
     NSLog(@"%d",switchTime.on);
+    
+    [[NSUserDefaults standardUserDefaults] setBool:switchTime.on forKey:SWITCH_ON];
+    
     [NSString setAttributeForKeyword:SWITCH_ON withValue:[NSString stringWithFormat:@"%d",switchTime.on] withFileName:ATTRIBUTE];
 }
 
@@ -103,14 +95,20 @@
     FLDatePicker *picker = [FLDatePicker makeWithTitle:@"标题"];
     [picker showInView:self.view withConfirm:^(NSDate *date, NSInteger index) {
         NSLog(@"date is ;%@",date);
+        NSInteger dataNum = [date timeIntervalSince1970];
+        [[NSUserDefaults standardUserDefaults] setInteger:dataNum forKey:From_Date_Num];
+
         self.timeBeingLabel.text = [date dateToStringDisplayHourMinuteSecond];
         [[NSUserDefaults standardUserDefaults] setObject:self.timeBeingLabel.text forKey:From_Time];
     }];
 }
+
 - (IBAction)onTimeToClicked:(id)sender {
     FLDatePicker *picker = [FLDatePicker makeWithTitle:@"标题"];
     [picker showInView:self.view withConfirm:^(NSDate *date, NSInteger index) {
         NSLog(@"date is ;%@",date);
+        NSInteger dataNum = [date timeIntervalSince1970];
+        [[NSUserDefaults standardUserDefaults] setInteger:dataNum forKey:To_Date_Num];
         self.timeToLabel.text = [date dateToStringDisplayHourMinuteSecond];
         [[NSUserDefaults standardUserDefaults] setObject:self.timeToLabel.text forKey:To_time];
     }];
@@ -130,8 +128,7 @@
                 if (buttonIndex == 0) {
                     [[VCToast make:@"取消升级"] show];
                 } else if (buttonIndex == 1) {
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:serviceData.url]];
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/app/jie-zou-da-shi/id493901993?mt=8"]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:serviceData.url]];
                 }
             }];
         }else{

@@ -14,7 +14,6 @@
 #import "EditProfileServiceData.h"
 #import "VCToast.h"
 
-
 @interface MineEditProfile ()
 {
     NSString *_personName;
@@ -27,8 +26,6 @@
 @property (nonatomic,strong) NSMutableArray *profilesAttibutes;
 @property (weak, nonatomic) IBOutlet UILabel *headerPersonNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *personHeaderImageView;
-
-
 
 @end
 
@@ -57,12 +54,10 @@
 }
 
 - (void)loadEditProfile{
-    
     [OBTAIN_SERVICE(EditProfileService) requestEditProfie:_personName withComplete:^(EditProfileServiceData *serviceData, NSError *error) {
         NSLog(@"serviceData si : %@",serviceData);
         _profileValueS = serviceData;
         [self.tableView reloadData];
-//        NSLog(@"_profileValueS is : %@",_profileValueS);
     }];
 }
 
@@ -129,7 +124,6 @@
 
 #pragma mark --UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
 }
 
 
@@ -159,9 +153,7 @@
         }
         [[VCToast make:@"编辑并保存成成功"] show];
         [self.navigationController popViewControllerAnimated:true];
-    }];
-    
-//    插入数据的请求
+    }];    
 }
 
 

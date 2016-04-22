@@ -34,29 +34,29 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gZ-He-haL">
-                                        <rect key="frame" x="10" y="28" width="30" height="24"/>
+                                        <rect key="frame" x="10" y="28" width="40" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="从"/>
+                                        <state key="normal" title="时间从："/>
                                         <connections>
                                             <action selector="onTimeBeginClicked:" destination="x8B-bg-o7L" eventType="touchUpInside" id="tZm-qK-ol4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9H-4w-M8K" userLabel="Button 2">
-                                        <rect key="frame" x="10" y="52" width="30" height="24"/>
+                                        <rect key="frame" x="10" y="52" width="40" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="到"/>
+                                        <state key="normal" title="时间到："/>
                                         <connections>
                                             <action selector="onTimeToClicked:" destination="x8B-bg-o7L" eventType="touchUpInside" id="r8w-po-eb3"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-Vj-J64">
-                                        <rect key="frame" x="40" y="58" width="20" height="12"/>
+                                        <rect key="frame" x="60" y="58" width="20" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CE-LR-xPi" userLabel="time begin ">
-                                        <rect key="frame" x="40" y="34" width="20" height="12"/>
+                                        <rect key="frame" x="60" y="34" width="20" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -66,16 +66,16 @@
                                 <constraints>
                                     <constraint firstItem="v4k-mN-cpq" firstAttribute="top" secondItem="3ga-Gl-MxI" secondAttribute="top" constant="8" id="0F5-kN-CRg"/>
                                     <constraint firstItem="B9H-4w-M8K" firstAttribute="leading" secondItem="8gZ-He-haL" secondAttribute="leading" id="4mx-wc-k4p"/>
+                                    <constraint firstItem="ugT-Vj-J64" firstAttribute="leading" secondItem="B9H-4w-M8K" secondAttribute="trailing" constant="10" id="8Uy-0M-ar2"/>
                                     <constraint firstAttribute="trailing" secondItem="WlI-7E-KrD" secondAttribute="trailing" constant="20" id="Gp8-me-e1W"/>
+                                    <constraint firstItem="ugT-Vj-J64" firstAttribute="centerY" secondItem="B9H-4w-M8K" secondAttribute="centerY" id="H3q-dr-VJe"/>
                                     <constraint firstItem="2CE-LR-xPi" firstAttribute="centerY" secondItem="8gZ-He-haL" secondAttribute="centerY" id="J2J-br-X7z"/>
-                                    <constraint firstItem="2CE-LR-xPi" firstAttribute="leading" secondItem="8gZ-He-haL" secondAttribute="trailing" id="TSV-6K-zv4"/>
+                                    <constraint firstItem="2CE-LR-xPi" firstAttribute="leading" secondItem="8gZ-He-haL" secondAttribute="trailing" constant="10" id="TSV-6K-zv4"/>
                                     <constraint firstItem="8gZ-He-haL" firstAttribute="top" secondItem="v4k-mN-cpq" secondAttribute="bottom" id="WFd-cD-T2s"/>
                                     <constraint firstItem="B9H-4w-M8K" firstAttribute="top" secondItem="8gZ-He-haL" secondAttribute="bottom" id="WJc-6Q-rlu"/>
                                     <constraint firstAttribute="height" constant="80" id="Wwy-gr-A4q"/>
-                                    <constraint firstItem="ugT-Vj-J64" firstAttribute="centerY" secondItem="B9H-4w-M8K" secondAttribute="centerY" id="dcZ-gf-iq0"/>
                                     <constraint firstItem="WlI-7E-KrD" firstAttribute="centerY" secondItem="3ga-Gl-MxI" secondAttribute="centerY" id="hc7-68-yol"/>
                                     <constraint firstItem="v4k-mN-cpq" firstAttribute="leading" secondItem="3ga-Gl-MxI" secondAttribute="leading" constant="10" id="mIu-Sl-YRg"/>
-                                    <constraint firstItem="B9H-4w-M8K" firstAttribute="trailing" secondItem="ugT-Vj-J64" secondAttribute="leading" id="o2u-63-N2f"/>
                                     <constraint firstItem="8gZ-He-haL" firstAttribute="leading" secondItem="v4k-mN-cpq" secondAttribute="leading" id="tMO-EQ-iTj"/>
                                 </constraints>
                             </view>
@@ -89,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="214" width="600" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTj-yi-h14" userLabel="检查更新">
-                                        <rect key="frame" x="272" y="12.5" width="56" height="29"/>
+                                        <rect key="frame" x="272" y="12" width="56" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="检查更新"/>
                                         <connections>

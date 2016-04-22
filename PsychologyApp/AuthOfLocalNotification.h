@@ -10,8 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AuthOfLocalNotification : NSObject
-
 + (void)registerLocalPush;
-
-
 @end

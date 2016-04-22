@@ -117,6 +117,7 @@
 		DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */; };
 		DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB967121C95D0F8004E3229 /* HomePageService.m */; };
 		DCBE26271CC9C9D200959E12 /* MineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBE26261CC9C9D200959E12 /* MineService.m */; };
+		DCBE262D1CCA1DBD00959E12 /* UISwitch+On.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBE262C1CCA1DBD00959E12 /* UISwitch+On.m */; };
 		DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */; };
 		DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A0391C8FBF2D002E9287 /* Entity.m */; };
 		DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A03C1C8FBF4B002E9287 /* Model.m */; };
@@ -360,6 +361,8 @@
 		DCB967121C95D0F8004E3229 /* HomePageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageService.m; sourceTree = "<group>"; };
 		DCBE26251CC9C9D200959E12 /* MineService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineService.h; sourceTree = "<group>"; };
 		DCBE26261CC9C9D200959E12 /* MineService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineService.m; sourceTree = "<group>"; };
+		DCBE262B1CCA1DBD00959E12 /* UISwitch+On.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+On.h"; sourceTree = "<group>"; };
+		DCBE262C1CCA1DBD00959E12 /* UISwitch+On.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+On.m"; sourceTree = "<group>"; };
 		DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileCell.h; sourceTree = "<group>"; };
 		DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileCell.m; sourceTree = "<group>"; };
 		DCD6A0381C8FBF2D002E9287 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -764,6 +767,8 @@
 				DC39954F1CB28E4500ACA64B /* UIView+FrameMethods.m */,
 				DC9DEF041C74861500C1A1AE /* UIImageView+WebRequest.h */,
 				DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */,
+				DCBE262B1CCA1DBD00959E12 /* UISwitch+On.h */,
+				DCBE262C1CCA1DBD00959E12 /* UISwitch+On.m */,
 			);
 			name = "UI+";
 			sourceTree = "<group>";
@@ -1448,6 +1453,7 @@
 				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
 				DCB967031C95836E004E3229 /* PschologyTestCell.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
+				DCBE262D1CCA1DBD00959E12 /* UISwitch+On.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
 				DC2C10821CBBF577003D3FD3 /* TopicService.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,

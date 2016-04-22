@@ -34,6 +34,8 @@
 @interface MineController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *_arrays;
+    NSArray *_pictures;
+    NSString *_cacheStr;
     BOOL _isLogined;
 }
 @property (weak, nonatomic) IBOutlet UILabel *loginUserLabel;
@@ -46,11 +48,20 @@
 
 
 - (void)viewDidLoad{
+    
+//    CGFloat cacheSize = [self checkCacheImageSize];
+//    _cacheStr = [NSString stringWithFormat:@"缓存了 %1.1fMB",cacheSize];
     _arrays = @[
                @[@"测试"],
                @[@"编辑资料"],
-               @[@"反馈意见",@"设置",@"清除缓存"]
+               @[@"反馈意见",@"设置",@"缓存了 0.0MB"]
                ];
+    
+    _pictures = @[
+                  @[@"icon_timeOfAppointment"],
+                  @[@"Editing"],
+                  @[@"Editing",@"setting",@"clear_trash"]
+                  ];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByRegister:) name:REGISTER_PHONE object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByLogin:) name:LOGIN_PHONE object:nil];
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -58,6 +69,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    _cacheStr = [NSString stringWithFormat:@"缓存了 %1.1fMB",[self checkCacheImageSize]];
     [self isLogined];
 }
 
@@ -102,9 +114,11 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FLTableViewCell class]) forIndexPath:indexPath];
-    
-    [cell cellWithImage:[UIImage imageNamed:@"icon_timeOfAppointment"] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
-    
+
+    [cell cellWithImage:[UIImage imageNamed:_pictures[indexPath.section][indexPath.row]] andGeneralizatonWithtext:_arrays[indexPath.section][indexPath.row]];
+    if ((indexPath.section == 2) && (indexPath.row == 2)) {
+        [cell cellWithImage:[UIImage imageNamed:_pictures[indexPath.section][indexPath.row]] andGeneralizatonWithtext:_cacheStr];
+    }
     return cell;
 }
 
@@ -117,7 +131,6 @@
                     [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineTest class])] animated:YES];
                     break;
                 }
-                    
                 default:
                     break;
             }
@@ -152,6 +165,9 @@
                 }
                 case 2:{
                     NSLog(@"清除缓存");
+                    if ([_cacheStr isEqualToString:@"缓存了 0.0MB"]) {
+                        return;
+                    }
                     
                    [[VCAlertView new] showWithTitle:@"提示" message:@"清除缓存？" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" tapBlock:^(NSInteger buttonIndex) {
                        
@@ -161,6 +177,7 @@
                            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
                                [[VCToast make:@"已经清空所有缓存"] show];
                            }];
+                           
                        }
                    }];
                 }
@@ -174,8 +191,6 @@
 }
 
 - (IBAction)onAccountLoginTap:(id)sender {
-    
-    
     if ( _isLogined == true) {
         [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:EditProfileIndexPathRow inSection:EditProfileIndexPathSection]];
         return ;
@@ -184,5 +199,10 @@
     [self.navigationController pushViewController:accountLogin animated:YES];
 }
 
+
+- (CGFloat)checkCacheImageSize{
+    CGFloat size = [[SDImageCache sharedImageCache] getSize] /1024 /1024 ;
+    return size;
+}
 
 @end

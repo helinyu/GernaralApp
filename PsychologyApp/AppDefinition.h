@@ -40,4 +40,11 @@
 #define Image_Default @"image_default"
 
 
+//避免干扰时间的设置
+#define From_Time @"From_Time"
+#define To_time @"To_Time"
+#define From_Date_Num @"From_Date_Num"
+#define To_Date_Num @"To_Date_Num"
+
+
 #endif /* AppDefinition_h */

@@ -91,6 +91,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)onFinishedClicked:(id)sender {
+    if ((self.textView.text.length == 0)|| ([self.textView.text isEqualToString:@"请输入建议"])) {
+        [[VCToast make:@"请输入反馈内容"] show];
+        return;
+    }
     //发送后台
     [OBTAIN_SERVICE(MineService) requestFeedbackWithImageUrl1:@"" WithImageUrl2:@"" WithImageUrl3:@"" WithFeedback_text:self.textView.text withComplete:^(RetServiceData *serviceData, NSError *error) {
         if (error != nil) {
