@@ -159,5 +159,8 @@
 //更新话题中的点赞内容
 @interface TopicUPdatePraiseResponse :RestStructResponse
 @property (nonatomic,assign) NSInteger ret;
+@end
 
+@interface RetResponse : RestStructResponse
+@property (nonatomic,assign) NSInteger ret;
 @end

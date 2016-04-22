@@ -116,6 +116,7 @@
 		DCB9670C1C95A921004E3229 /* PschologyTestSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9670B1C95A921004E3229 /* PschologyTestSummary.m */; };
 		DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */; };
 		DCB967131C95D0F8004E3229 /* HomePageService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB967121C95D0F8004E3229 /* HomePageService.m */; };
+		DCBE26271CC9C9D200959E12 /* MineService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBE26261CC9C9D200959E12 /* MineService.m */; };
 		DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */; };
 		DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A0391C8FBF2D002E9287 /* Entity.m */; };
 		DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD6A03C1C8FBF4B002E9287 /* Model.m */; };
@@ -357,6 +358,8 @@
 		DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestDetail.m; sourceTree = "<group>"; };
 		DCB967111C95D0F8004E3229 /* HomePageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageService.h; sourceTree = "<group>"; };
 		DCB967121C95D0F8004E3229 /* HomePageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageService.m; sourceTree = "<group>"; };
+		DCBE26251CC9C9D200959E12 /* MineService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineService.h; sourceTree = "<group>"; };
+		DCBE26261CC9C9D200959E12 /* MineService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineService.m; sourceTree = "<group>"; };
 		DCCB58A21C8C610700F5C6AF /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileCell.h; sourceTree = "<group>"; };
 		DCCB58A31C8C610700F5C6AF /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileCell.m; sourceTree = "<group>"; };
 		DCD6A0381C8FBF2D002E9287 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -615,6 +618,7 @@
 		DC207FE41C564D820011D8C4 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				DCB33F781C80866C0075FBDD /* helper */,
 				DCADF0491CBF89C100860B5E /* lcoation */,
 				DC207FE51C564DDF0011D8C4 /* UI+subclass */,
 			);
@@ -702,6 +706,8 @@
 		DC39953F1CB281EC00ACA64B /* MineServices */ = {
 			isa = PBXGroup;
 			children = (
+				DCBE26251CC9C9D200959E12 /* MineService.h */,
+				DCBE26261CC9C9D200959E12 /* MineService.m */,
 				DC3995601CB2B5FB00ACA64B /* MineEditProfile */,
 				DC3995411CB2820800ACA64B /* MineSettings */,
 			);
@@ -1185,7 +1191,6 @@
 				DC3995481CB28D7500ACA64B /* alert */,
 				DC39951E1CB2125400ACA64B /* dates */,
 				DCB966FF1C95833B004E3229 /* Cells */,
-				DCB33F781C80866C0075FBDD /* helper */,
 				DCEF80CB1C7B661F0017DDE6 /* ConsultMainSummarizeCell */,
 				DC7CE39A1C7A05670067B19E /* Topic_QAMainCell */,
 				DC7CE3941C79D7BC0067B19E /* ReadingDetailCell */,
@@ -1528,6 +1533,7 @@
 				DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */,
 				DC39955F1CB29A3900ACA64B /* NSString+plist.m in Sources */,
 				DCB33F771C8086600075FBDD /* Helper+Style.m in Sources */,
+				DCBE26271CC9C9D200959E12 /* MineService.m in Sources */,
 				DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */,
 				DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */,
 				DC3995181CB2105C00ACA64B /* NSString+Helper.m in Sources */,

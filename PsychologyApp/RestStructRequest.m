@@ -381,3 +381,40 @@
 }
 
 @end
+
+//反馈内容
+@implementation FeedbackRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _iamgeurl_1 = @"";
+        _iamgeurl_2 = @"";
+        _iamgeurl_3 = @"";
+        _feedback_text = @"";
+    }
+    return self;
+}
+
+- (void)setIamgeurl_1:(NSString *)iamgeurl_1{
+    _iamgeurl_1 = iamgeurl_1;
+    [self.params setObject:_iamgeurl_1 forKey:@"iamgeurl_1"];
+}
+
+- (void)setIamgeurl_2:(NSString *)iamgeurl_2{
+    _iamgeurl_2 = iamgeurl_2;
+    [self.params setObject:_iamgeurl_2 forKey:@"iamgeurl_2"];
+}
+
+- (void)setIamgeurl_3:(NSString *)iamgeurl_3{
+    _iamgeurl_3 = iamgeurl_3;
+    [self.params setObject:_iamgeurl_3 forKey:@"iamgeurl_3"];
+}
+
+- (void)setFeedback_text:(NSString *)feedback_text{
+    _feedback_text = feedback_text;
+    [self.params setObject:_feedback_text forKey:@"feedback_text"];
+}
+
+@end

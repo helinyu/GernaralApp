@@ -25,24 +25,21 @@
 @implementation AccountLogin
 
 - (void)viewDidLoad{
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
-
 }
 
 - (IBAction)onBackClicked:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
+    
 }
-
 
 - (IBAction)onLoginWithMobileClicked:(id)sender {
     NSLog(@"这里进行实现登录");
     phone = self.phoneTextField.text;
     password = self.passwordTextField.text;
-    
+
     [OBTAIN_SERVICE(UserService) requestLoginWithMobile:phone withPassword:password withComplete:^(NSInteger ret) {
         NSLog(@"ret is : %ld",ret);
-        
         if (ret == 0) {
             [[VCToast make:@"登录成功"] show];
             [[NSNotificationCenter defaultCenter] postNotificationName:LOGIN_PHONE object:nil userInfo:@{LOGIN_PHONE:self.phoneTextField.text}];
@@ -51,7 +48,6 @@
             [[VCToast make:@"登录失败"] show];
         }
     }];
-    
 }
 
 @end

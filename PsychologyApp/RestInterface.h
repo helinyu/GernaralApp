@@ -54,4 +54,7 @@
 
 //更新数据
 + (void)invokeUpdateTopicPraise:(TopicUPdatePraiseRequest*)request withComplete:(void(^)(TopicUPdatePraiseResponse *reponse, NSError *error))completeToService;
+
+//反馈
++ (void)invokeFeedback:(FeedbackRequest*)request withComplete:(void(^)(RetResponse *reponse, NSError *error))completeToService;
 @end

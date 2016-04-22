@@ -95,7 +95,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PschologyTestSummaryCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PschologyTestSummaryCell class]) forIndexPath:indexPath];
-    [cell setcontentLabel:@"测试职工的"];
+    [cell setcontentLabel:@""];
     
     return cell;
 }

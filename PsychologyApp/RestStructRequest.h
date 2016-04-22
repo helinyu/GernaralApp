@@ -102,3 +102,12 @@
 @property (nonatomic,assign) NSInteger praiseNum;
 @property (nonatomic,assign) NSInteger topic_id;
 @end
+
+//反馈内容
+@interface FeedbackRequest :RestStructRequest
+@property (nonatomic,strong) NSString* iamgeurl_1;
+@property (nonatomic,strong) NSString* iamgeurl_2;
+@property (nonatomic,strong) NSString* iamgeurl_3;
+@property (nonatomic,strong) NSString* feedback_text;
+@end
+

@@ -248,10 +248,6 @@
             completeToService(nil,error);
             return ;
         }
-      
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
 
         NSError *restError = nil;
         CommentsCreationResponse *response = [[CommentsCreationResponse alloc]initWithData:data error:&restError];
@@ -267,9 +263,6 @@
             completeToService(nil,error);
             return ;
         }
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         CommentSendingResponse *response = [[CommentSendingResponse alloc]initWithData:data error:&restError];
@@ -285,9 +278,9 @@
             completeToService(nil,error);
             return ;
         }
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
 
         NSError *restError = nil;
         CommentsOfTopicResponse *response = [[CommentsOfTopicResponse alloc] initWithData:data error:&restError];
@@ -303,34 +296,22 @@
             completeToService(nil,error);
             return ;
         }
-        
-             NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
-        
         NSError *restError = nil;
         TopicUPdatePraiseResponse *response = [[TopicUPdatePraiseResponse alloc] initWithData:data error:&error];
         completeToService(response,restError);
-        
     }];
-//    NSArray *keys = request.params.allKeys;
-//    NSMutableString* urlParamsStr = [NSMutableString new];
-//    for (NSString* key in keys) {
-//        [urlParamsStr appendString:[NSString stringWithFormat:@"%@=%@&",key,request.params[key]]];
-//    }
-//    NSString* tailPHPStr = @"/topics/updateTopicPraise.php?";
-//    
-//    NSString *urlStr = [tailPHPStr stringByAppendingString:urlParamsStr];
-//    
-//    [RestInterface _invokeWithGETUrl:urlStr withComplete:^(NSData *data, NSError *error) {
-//        if (error.code != 0) {
-//            completeToService(nil,error);
-//            return ;
-//        }
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
-//    }];
+}
+
++ (void)invokeFeedback:(FeedbackRequest*)request withComplete:(void(^)(RetResponse *reponse, NSError *error))completeToService{
+    [RestInterface _invokeWithUrl:@"/mine/feedback.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        NSError *restError = nil;
+        RetResponse *response = [[RetResponse alloc] initWithData:data error:&error];
+        completeToService(response,restError);
+    }];
 }
 
 @end

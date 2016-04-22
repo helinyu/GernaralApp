@@ -13,10 +13,13 @@
 @interface Service : NSObject
 @end
 
+@interface ServiceDataAdapter : NSObject
++ (void)convertFrom:(id)fromData to:(id)toData;
+@end
+
 @interface ServiceData : NSObject
 @end
 
-@interface ServiceDataAdapter : NSObject
-+ (void)convertFrom:(id)fromData to:(id)toData;
-
+@interface RetServiceData : ServiceData
+@property (nonatomic,assign) NSInteger ret;
 @end

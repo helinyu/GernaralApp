@@ -7,10 +7,12 @@
 //
 
 #import "MineFeedback.h"
+#import "ServiceManager.h"
+#import "VCToast.h"
 
 #define GWidth [[UIScreen mainScreen] bounds].size.width
 #define HEIGHT_TEN 10
-
+#define WIDTH_SPACE 10
 
 @interface MineFeedback ()<UIImagePickerControllerDelegate,UINavigationBarDelegate>
 
@@ -65,7 +67,7 @@
 
     //    add ImageView
     UIImageView *imageView;
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(addImageButtonX, 0, GWidth/3, GWidth/3)];
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(addImageButtonX, 0, GWidth/3-WIDTH_SPACE, GWidth/3)];
         imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
     imageView.userInteractionEnabled = true;
     [imageView addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(viewLargerPicktures:)]];
@@ -73,7 +75,7 @@
 
 //    configure button
     if ( addImageButtonX != GWidth * 2 / 3 ){
-        self.addImageButton.frame = CGRectMake(addImageButtonX+GWidth/3, 0, GWidth/3, GWidth/3);
+        self.addImageButton.frame = CGRectMake(addImageButtonX+GWidth/3, 0, GWidth/3-WIDTH_SPACE, GWidth/3);
     }else{
         self.addImageButton.hidden = true ;
     }
@@ -85,17 +87,22 @@
     [picker dismissViewControllerAnimated:true completion:nil];
 }
 
-
 - (IBAction)onBackClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (IBAction)onFinishedClicked:(id)sender {
     //发送后台
-    
-    
-    //返回
-    [self.navigationController popViewControllerAnimated:true];
-
+    [OBTAIN_SERVICE(MineService) requestFeedbackWithImageUrl1:@"" WithImageUrl2:@"" WithImageUrl3:@"" WithFeedback_text:self.textView.text withComplete:^(RetServiceData *serviceData, NSError *error) {
+        if (error != nil) {
+            [[VCToast make:@"反馈失败"] show];
+            return ;
+        }
+        NSInteger ret = serviceData.ret;
+        if ( ret == 0 ){
+            [[VCToast make:@"反馈成功"] show];
+            [self.navigationController popViewControllerAnimated:true];
+         }
+    }];
 }
 
 - (void)viewLargerPicktures:(UILongPressGestureRecognizer* ) gestureRecognizer{

@@ -31,10 +31,6 @@
 }
 
 - (IBAction)confirmRegister:(id)sender {
-//    NSLog(@"确认注册");
-//    NSLog(@"密码是：%@",self.passwordTextfield.text);
-//    NSLog(@"确认是：%@",self.confirmTextfield.text);
-//    NSLog(@"手机号码：%@",self.phoneTexfield.text);
     
     if (([self.passwordTextfield.text isEqualToString:@""]) || ([self.confirmTextfield.text isEqualToString:@""])) {
         NSLog(@"password is not will be nil");

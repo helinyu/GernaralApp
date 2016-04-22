@@ -17,6 +17,7 @@
 #import "VCAlertView.h"
 #import "VCToast.h"
 #import "NSString+plist.h"
+#import "AccountLogin.h"
 
 #define From_Time @"From_Time"
 #define To_time @"To_Time"
@@ -83,7 +84,8 @@
     EntityUser *user = [[Model sharedInstance] loadUseByUId:phone];
     user.isLogined = false ;
     [[Model sharedInstance] commitUser];
-    [self.navigationController popToRootViewControllerAnimated:true];
+//    [self.navigationController popToRootViewControllerAnimated:true];
+    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Account" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class]) ] animated:true];
 }
 
 - (IBAction)onCheckUpUPdateClicked:(id)sender {
@@ -129,6 +131,7 @@
                     [[VCToast make:@"取消升级"] show];
                 } else if (buttonIndex == 1) {
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:serviceData.url]];
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/app/jie-zou-da-shi/id493901993?mt=8"]];
                 }
             }];
         }else{
