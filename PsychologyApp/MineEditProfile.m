@@ -15,10 +15,11 @@
 #import "VCToast.h"
 
 
-@interface MineEditProfile () <UITableViewDataSource,UITableViewDelegate>
+@interface MineEditProfile ()
 {
     NSString *_personName;
     UIImage *_personImage;
+    NSInteger _attributeCount;
     EditProfileServiceData *_profileValueS ;
 }
 
@@ -44,6 +45,7 @@
     _profileValueS = [EditProfileServiceData new];
     
     self.profiles = @[@"昵称:",@"密码:",@"性别:",@"年龄:",@"地区:",@"简介:"];
+    _attributeCount = self.profiles.count;
     _profilesAttibutes = [NSMutableArray new];
     
 //    请求数据
@@ -127,21 +129,34 @@
 
 #pragma mark --UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  
+
 }
 
 
 //这里应该需要监听UITextfield的代理方法
 - (IBAction)onfinishedEditingClicked:(id)sender {
-    NSLog(@"完成编辑");
-
-    [OBTAIN_SERVICE(EditProfileService) requestFinishedEditProfie:@"12345678900" withPassword:@"1ll456" withAge:22 withSex:true withRegion:@"zhognguo" withBriefIntroduction:@"jieshoa" withNickname:@"nickname" withComplete:^(EditProfileFinishedServiceData *serviceData, NSError *error) {
+    
+    NSString *phone = [[NSUserDefaults standardUserDefaults] objectForKey:LOGIN_PHONE];
+    NSArray<__kindof EditProfileCell *> *visibleCells = self.tableView.visibleCells;
+    NSString *nickName = [visibleCells firstObject].valueTextField.text;
+    NSString *password = visibleCells[1].valueTextField.text;
+    NSString *sexStr = visibleCells[2].valueTextField.text;
+    NSInteger age = [visibleCells[3].valueTextField.text integerValue];
+    NSString *regionText = visibleCells[4].valueTextField.text;
+    NSString *briefIntroductionText = visibleCells[5].valueTextField.text;
+    BOOL sex = false;
+    if ([sexStr isEqualToString:@"男"]) {
+        sex = true;
+    }else{
+        sex = false;
+    }
+    
+    [OBTAIN_SERVICE(EditProfileService) requestFinishedEditProfie:phone withPassword:password withAge:age withSex:true withRegion:regionText withBriefIntroduction:briefIntroductionText withNickname:nickName withComplete:^(EditProfileFinishedServiceData *serviceData, NSError *error) {
         
         if (error != nil) {
             NSLog(@"出现错误");
             return ;
         }
-
         [[VCToast make:@"编辑并保存成成功"] show];
         [self.navigationController popViewControllerAnimated:true];
     }];
