@@ -49,8 +49,6 @@
 
 - (void)viewDidLoad{
     
-//    CGFloat cacheSize = [self checkCacheImageSize];
-//    _cacheStr = [NSString stringWithFormat:@"缓存了 %1.1fMB",cacheSize];
     _arrays = @[
                @[@"测试"],
                @[@"编辑资料"],
@@ -70,6 +68,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     _cacheStr = [NSString stringWithFormat:@"缓存了 %1.1fMB",[self checkCacheImageSize]];
+    [self.tableView reloadData];
     [self isLogined];
 }
 
@@ -164,18 +163,20 @@
                     break;
                 }
                 case 2:{
-                    NSLog(@"清除缓存");
                     if ([_cacheStr isEqualToString:@"缓存了 0.0MB"]) {
+                        [[VCToast make:@"现在没有缓存,不用清理哦"] show];
                         return;
                     }
                     
                    [[VCAlertView new] showWithTitle:@"提示" message:@"清除缓存？" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" tapBlock:^(NSInteger buttonIndex) {
-                       
                        if (buttonIndex == 0) {
                            return ;
                        }else{
                            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                               
                                [[VCToast make:@"已经清空所有缓存"] show];
+                               _cacheStr = @"缓存了 0.0MB";
+                               [self.tableView reloadData];
                            }];
                            
                        }
@@ -201,7 +202,7 @@
 
 
 - (CGFloat)checkCacheImageSize{
-    CGFloat size = [[SDImageCache sharedImageCache] getSize] /1024 /1024 ;
+    CGFloat size = ([[SDImageCache sharedImageCache] getSize] /1024.0 )/1024.0 ;
     return size;
 }
 

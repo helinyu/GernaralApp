@@ -40,5 +40,24 @@
             </objects>
             <point key="canvasLocation" x="464" y="-368"/>
         </scene>
+        <!--文章详情页-->
+        <scene sceneID="oRb-aB-Ni9">
+            <objects>
+                <viewController storyboardIdentifier="CommonDetailWeb" id="gHf-lm-4nq" customClass="CommonDetailWeb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VVh-j4-OtA"/>
+                        <viewControllerLayoutGuide type="bottom" id="RMf-Oj-n1K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zzR-t9-ROh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="文章详情页" id="aNl-rZ-pDE"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1d2-h3-SZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
 </document>

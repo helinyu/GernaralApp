@@ -47,3 +47,17 @@
     return self;
 }
 @end
+
+@implementation PschologyTestResultServiceData
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _result_title = @"";
+        _result_text = @"";
+    }
+    return self;
+}
+
+@end

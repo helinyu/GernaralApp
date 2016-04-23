@@ -22,4 +22,7 @@
 - (void)requestfromViewControllerPschologyTestDetail:(NSString*)title andComplete:(void (^)(PschologyTestDetail_ServiceData *serviceData, NSError *error ))completeToViewData;
 
 
+//测试结果
+- (void)requestResultWithtitle:(NSString *)title WithComplete:(void (^)(PschologyTestResultServiceData *serviceData, NSError *error ))completeToViewData;
+
 @end

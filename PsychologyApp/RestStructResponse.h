@@ -71,6 +71,12 @@
 @property (strong, nonatomic) NSArray<RestStructPschologyTestDetailResponseItem>* data;
 @end
 
+//测试之后的结果
+@interface ResultTestResponse : RestStructResponse
+@property (nonatomic,strong) NSString *result_title;
+@property (nonatomic,strong) NSString *result_text;
+@end
+
 //update
 @interface RestStructUpdateResponse : RestStructResponse
 @property (strong,nonatomic) NSString *version;

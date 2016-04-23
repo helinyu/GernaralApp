@@ -314,5 +314,20 @@
     }];
 }
 
+//测试的结果
++ (void)invokeTestResult:(ResultTestStructRequest*)request WithComplete:(void (^)(ResultTestResponse *response, NSError * error))completeToService{
+
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/result_test.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        NSError *restError = nil;
+        ResultTestResponse *response = [[ResultTestResponse alloc] initWithData:data error:&error];
+        completeToService(response,restError);
+    }];
+}
+
+
 @end
 

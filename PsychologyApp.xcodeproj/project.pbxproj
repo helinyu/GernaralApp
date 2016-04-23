@@ -59,6 +59,9 @@
 		DC39955F1CB29A3900ACA64B /* NSString+plist.m in Sources */ = {isa = PBXBuildFile; fileRef = DC39955E1CB29A3900ACA64B /* NSString+plist.m */; };
 		DC3995661CB2B62F00ACA64B /* EditProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995651CB2B62F00ACA64B /* EditProfileService.m */; };
 		DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */; };
+		DC44DC841CCA8ABE00FC84AC /* PschologyTestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC44DC831CCA8ABE00FC84AC /* PschologyTestResult.m */; };
+		DC44DC8E1CCA97CB00FC84AC /* PschologyTestDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC44DC8C1CCA97CB00FC84AC /* PschologyTestDetailCell.m */; };
+		DC44DC8F1CCA97CB00FC84AC /* PschologyTestDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC44DC8D1CCA97CB00FC84AC /* PschologyTestDetailCell.xib */; };
 		DC60BD3E1C704EB900CFDC56 /* VCLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD361C704EB900CFDC56 /* VCLoading.m */; };
 		DC60BD3F1C704EB900CFDC56 /* VCLoading.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60BD371C704EB900CFDC56 /* VCLoading.xib */; };
 		DC60BD401C704EB900CFDC56 /* VCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC60BD391C704EB900CFDC56 /* VCToast.m */; };
@@ -83,6 +86,9 @@
 		DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE3971C79D7D50067B19E /* ReadingDetailCell.xib */; };
 		DC7CE39E1C7A05920067B19E /* QAMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE39C1C7A05920067B19E /* QAMainCell.m */; };
 		DC7CE39F1C7A05920067B19E /* QAMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE39D1C7A05920067B19E /* QAMainCell.xib */; };
+		DC7FD1D31CCB1A330082AD32 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7FD1D21CCB1A330082AD32 /* libxml2.2.tbd */; };
+		DC7FD1DA1CCB1BE30082AD32 /* CommonDetailWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7FD1D91CCB1BE30082AD32 /* CommonDetailWeb.m */; };
+		DC7FD1DC1CCB21050082AD32 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7FD1DB1CCB21050082AD32 /* libxml2.tbd */; };
 		DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */; };
 		DC992DA11C46947400382DFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA01C46947400382DFB /* main.m */; };
 		DC992DA41C46947400382DFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DA31C46947400382DFB /* AppDelegate.m */; };
@@ -255,6 +261,11 @@
 		DC3995651CB2B62F00ACA64B /* EditProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileService.m; sourceTree = "<group>"; };
 		DC3995671CB2B69200ACA64B /* EditProfileServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileServiceData.h; sourceTree = "<group>"; };
 		DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileServiceData.m; sourceTree = "<group>"; };
+		DC44DC821CCA8ABE00FC84AC /* PschologyTestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestResult.h; sourceTree = "<group>"; };
+		DC44DC831CCA8ABE00FC84AC /* PschologyTestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestResult.m; sourceTree = "<group>"; };
+		DC44DC8B1CCA97CB00FC84AC /* PschologyTestDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestDetailCell.h; sourceTree = "<group>"; };
+		DC44DC8C1CCA97CB00FC84AC /* PschologyTestDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestDetailCell.m; sourceTree = "<group>"; };
+		DC44DC8D1CCA97CB00FC84AC /* PschologyTestDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PschologyTestDetailCell.xib; sourceTree = "<group>"; };
 		DC60BD351C704EB900CFDC56 /* VCLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLoading.h; sourceTree = "<group>"; };
 		DC60BD361C704EB900CFDC56 /* VCLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLoading.m; sourceTree = "<group>"; };
 		DC60BD371C704EB900CFDC56 /* VCLoading.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCLoading.xib; sourceTree = "<group>"; };
@@ -298,6 +309,10 @@
 		DC7CE39B1C7A05920067B19E /* QAMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAMainCell.h; sourceTree = "<group>"; };
 		DC7CE39C1C7A05920067B19E /* QAMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAMainCell.m; sourceTree = "<group>"; };
 		DC7CE39D1C7A05920067B19E /* QAMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QAMainCell.xib; sourceTree = "<group>"; };
+		DC7FD1D21CCB1A330082AD32 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		DC7FD1D81CCB1BE30082AD32 /* CommonDetailWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDetailWeb.h; sourceTree = "<group>"; };
+		DC7FD1D91CCB1BE30082AD32 /* CommonDetailWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonDetailWeb.m; sourceTree = "<group>"; };
+		DC7FD1DB1CCB21050082AD32 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		DC8BA9FA1C703EEF00184CD8 /* AccountRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountRegister.h; sourceTree = "<group>"; };
 		DC8BA9FB1C703EEF00184CD8 /* AccountRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountRegister.m; sourceTree = "<group>"; };
 		DC992D9C1C46947400382DFB /* PsychologyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychologyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -396,6 +411,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7FD1DC1CCB21050082AD32 /* libxml2.tbd in Frameworks */,
+				DC7FD1D31CCB1A330082AD32 /* libxml2.2.tbd in Frameworks */,
 				DC39953E1CB24F1E00ACA64B /* libsqlite3.tbd in Frameworks */,
 				184F1243EDB74A828314F2AE /* libPods-PsychologyApp.a in Frameworks */,
 			);
@@ -649,6 +666,7 @@
 		DC2C07F41CB81DFF00726592 /* CommonWeb */ = {
 			isa = PBXGroup;
 			children = (
+				DC7FD1D41CCB1B770082AD32 /* CommonDetailWeb */,
 				DC2C07F81CB81E4300726592 /* CommonWeb.h */,
 				DC2C07F91CB81E4300726592 /* CommonWeb.m */,
 				DC2C07FD1CB8219E00726592 /* Common.storyboard */,
@@ -793,6 +811,16 @@
 			name = MineEditProfile;
 			sourceTree = "<group>";
 		};
+		DC44DC851CCA8F7700FC84AC /* PschologyTestDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC44DC8B1CCA97CB00FC84AC /* PschologyTestDetailCell.h */,
+				DC44DC8C1CCA97CB00FC84AC /* PschologyTestDetailCell.m */,
+				DC44DC8D1CCA97CB00FC84AC /* PschologyTestDetailCell.xib */,
+			);
+			name = PschologyTestDetailCell;
+			sourceTree = "<group>";
+		};
 		DC60BD431C704F0D00CFDC56 /* helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +917,15 @@
 				DC2C10961CBC75F3003D3FD3 /* CommentsCell.xib */,
 			);
 			name = Topic_QAMainCell;
+			sourceTree = "<group>";
+		};
+		DC7FD1D41CCB1B770082AD32 /* CommonDetailWeb */ = {
+			isa = PBXGroup;
+			children = (
+				DC7FD1D81CCB1BE30082AD32 /* CommonDetailWeb.h */,
+				DC7FD1D91CCB1BE30082AD32 /* CommonDetailWeb.m */,
+			);
+			name = CommonDetailWeb;
 			sourceTree = "<group>";
 		};
 		DC992D931C46947400382DFB = {
@@ -1102,6 +1139,8 @@
 				DCB9670B1C95A921004E3229 /* PschologyTestSummary.m */,
 				DCB9670D1C95C209004E3229 /* PschologyTestDetail.h */,
 				DCB9670E1C95C209004E3229 /* PschologyTestDetail.m */,
+				DC44DC821CCA8ABE00FC84AC /* PschologyTestResult.h */,
+				DC44DC831CCA8ABE00FC84AC /* PschologyTestResult.m */,
 			);
 			name = PschologyTest;
 			sourceTree = "<group>";
@@ -1190,8 +1229,9 @@
 		DCFECA8D1C78B901000A4BC9 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				DCF56F0D1CBE7810007CF046 /* Comment bottom send */,
 				DC2C07F41CB81DFF00726592 /* CommonWeb */,
+				DC44DC851CCA8F7700FC84AC /* PschologyTestDetailCell */,
+				DCF56F0D1CBE7810007CF046 /* Comment bottom send */,
 				DCAFD6C01CB6C7D900E668ED /* Refresh */,
 				DC3995481CB28D7500ACA64B /* alert */,
 				DC39951E1CB2125400ACA64B /* dates */,
@@ -1219,6 +1259,8 @@
 		DF0A591797B8082647A87384 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC7FD1DB1CCB21050082AD32 /* libxml2.tbd */,
+				DC7FD1D21CCB1A330082AD32 /* libxml2.2.tbd */,
 				DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */,
 				50D03B2D88032C5AE65A73AF /* libPods-PsychologyApp.a */,
 			);
@@ -1340,6 +1382,7 @@
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
 				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
+				DC44DC8F1CCA97CB00FC84AC /* PschologyTestDetailCell.xib in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DCB967041C95836E004E3229 /* PschologyTestCell.xib in Resources */,
 				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
@@ -1450,11 +1493,13 @@
 			files = (
 				DCD6A03A1C8FBF2D002E9287 /* Entity.m in Sources */,
 				DCFECA921C78BA05000A4BC9 /* ArticleAndTestCell.m in Sources */,
+				DC7FD1DA1CCB1BE30082AD32 /* CommonDetailWeb.m in Sources */,
 				DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */,
 				DCB967031C95836E004E3229 /* PschologyTestCell.m in Sources */,
 				DC9DEF0D1C7486A800C1A1AE /* AppService.m in Sources */,
 				DCBE262D1CCA1DBD00959E12 /* UISwitch+On.m in Sources */,
 				DC7917E31C5671DF00BB3FA9 /* RestInterface.m in Sources */,
+				DC44DC841CCA8ABE00FC84AC /* PschologyTestResult.m in Sources */,
 				DC2C10821CBBF577003D3FD3 /* TopicService.m in Sources */,
 				DC0FCD731C760EF400E5AF6F /* MineAttentionOrFan.m in Sources */,
 				DC76B84F1CBAA98000526662 /* TopicComment.m in Sources */,
@@ -1531,6 +1576,7 @@
 				DC60BD4C1C7052C100CFDC56 /* VCButton.m in Sources */,
 				DC992DE01C46A04200382DFB /* MineController.m in Sources */,
 				DC3995301CB23E9400ACA64B /* NSString+Time.m in Sources */,
+				DC44DC8E1CCA97CB00FC84AC /* PschologyTestDetailCell.m in Sources */,
 				DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */,
 				DC3995501CB28E4500ACA64B /* UIView+FrameMethods.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,

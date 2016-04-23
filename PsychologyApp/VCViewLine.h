@@ -1,5 +1,4 @@
 //
-//  GMViewLine.h
 //  guimiquan
 //
 //  Created by Daly on 15/4/9.

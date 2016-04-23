@@ -8,6 +8,7 @@ target 'PsychologyApp' do
  pod 'JSONModel'
  pod 'SDWebImage'
  pod 'MJRefresh'
+ pod 'hpple', '~> 0.2.0'
 # pod 'Fabric'
 # pod 'Crashlytics'
 

@@ -133,7 +133,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTt-38-fHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="262"/>
+            <point key="canvasLocation" x="958" y="259"/>
         </scene>
         <!--Pschology Test Detail-->
         <scene sceneID="XvW-dr-zyT">
@@ -148,10 +148,10 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-bT-pnP" customClass="VCButton">
-                                    <rect key="frame" x="260" y="7" width="80" height="30"/>
+                                    <rect key="frame" x="260" y="8" width="80" height="28"/>
                                     <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                     <state key="normal" title="查询结果">
-                                        <color key="titleColor" red="1" green="0.76470588240000004" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleColor" red="0.4431372549" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -190,7 +190,67 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kw-6V-qhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="262"/>
+            <point key="canvasLocation" x="1556" y="121"/>
+        </scene>
+        <!--查询结果-->
+        <scene sceneID="LZQ-2M-TTK">
+            <objects>
+                <viewController storyboardIdentifier="PschologyTestResult" id="sx4-3Z-m1M" customClass="PschologyTestResult" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l9x-IN-gY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="bQL-73-sXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rUY-im-sN2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="建议：应该对自己多点规划" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wbo-SF-Gvm">
+                                <rect key="frame" x="20" y="115" width="560" height="465"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="msH-8S-gfB" appends="YES" id="atV-wh-XpT"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的生活有点混乱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bh-Dk-qYO">
+                                <rect key="frame" x="20" y="64" width="560" height="50"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xol-n9-VjB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6bh-Dk-qYO" firstAttribute="top" secondItem="l9x-IN-gY8" secondAttribute="bottom" id="0JB-Sp-2rW"/>
+                            <constraint firstItem="bQL-73-sXV" firstAttribute="top" secondItem="Wbo-SF-Gvm" secondAttribute="bottom" constant="20" id="JYD-KR-IqU"/>
+                            <constraint firstItem="Wbo-SF-Gvm" firstAttribute="leading" secondItem="rUY-im-sN2" secondAttribute="leading" constant="20" id="Mbd-Mm-zDq"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbo-SF-Gvm" secondAttribute="trailing" constant="20" id="cXq-RE-zbe"/>
+                            <constraint firstItem="Wbo-SF-Gvm" firstAttribute="top" secondItem="6bh-Dk-qYO" secondAttribute="bottom" constant="1" id="cYW-Ft-DlV"/>
+                            <constraint firstItem="6bh-Dk-qYO" firstAttribute="leading" secondItem="rUY-im-sN2" secondAttribute="leading" constant="20" id="fdR-hB-kk4"/>
+                            <constraint firstAttribute="trailing" secondItem="6bh-Dk-qYO" secondAttribute="trailing" constant="20" id="smw-hb-rbZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="查询结果" id="LvI-eH-SqU"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="resultTextView" destination="Wbo-SF-Gvm" id="EQM-Hh-9ar"/>
+                        <outlet property="resultTitleLabel" destination="6bh-Dk-qYO" id="MUk-zB-jhm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAK-oC-6R9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="msH-8S-gfB">
+                    <connections>
+                        <action selector="onTapGestureClicked:" destination="sx4-3Z-m1M" id="8Mg-pK-gwa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2231" y="114"/>
         </scene>
     </scenes>
 </document>

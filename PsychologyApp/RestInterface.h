@@ -57,4 +57,8 @@
 
 //反馈
 + (void)invokeFeedback:(FeedbackRequest*)request withComplete:(void(^)(RetResponse *reponse, NSError *error))completeToService;
+
+//测试的结果
++ (void)invokeTestResult:(ResultTestStructRequest*)request WithComplete:(void (^)(ResultTestResponse *response, NSError * error))completeToService;
+
 @end

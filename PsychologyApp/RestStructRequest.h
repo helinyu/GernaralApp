@@ -111,3 +111,7 @@
 @property (nonatomic,strong) NSString* feedback_text;
 @end
 
+@interface ResultTestStructRequest : RestStructRequest
+@property (nonatomic,strong) NSString* title;
+
+@end

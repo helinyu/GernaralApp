@@ -283,7 +283,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="话题" id="FWj-dg-qo3">
-                        <barButtonItem key="leftBarButtonItem" image="consult_funnel" id="Elm-r0-kHO"/>
+                        <barButtonItem key="leftBarButtonItem" id="Elm-r0-kHO"/>
                         <barButtonItem key="rightBarButtonItem" image="icon_add" id="vGI-58-d5b">
                             <connections>
                                 <action selector="onCreateTopicClicked:" destination="2t3-TZ-1fF" id="9EZ-20-wot"/>
@@ -311,26 +311,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHd-hL-xRy" userLabel="seperator View">
-                                <rect key="frame" x="563" y="0.0" width="1" height="36"/>
+                                <rect key="frame" x="599" y="0.0" width="1" height="36"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="GRh-vW-aQE"/>
                                     <constraint firstAttribute="height" constant="36" id="PE4-Lw-4mZ"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-Qg-XsN">
-                                <rect key="frame" x="564" y="0.0" width="36" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="fo9-KD-vvT"/>
-                                    <constraint firstAttribute="width" constant="36" id="ibR-48-pQH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.090786637931034489" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-eF-b3S">
-                                <rect key="frame" x="20" y="0.0" width="543" height="36"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="HZz-Oe-e9S"/>
@@ -421,15 +410,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3Sx-eF-b3S" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" constant="20" id="C77-hW-4sM"/>
-                            <constraint firstAttribute="trailing" secondItem="GM0-Qg-XsN" secondAttribute="trailing" id="HKo-At-kfv"/>
+                            <constraint firstItem="3Sx-eF-b3S" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="C77-hW-4sM"/>
                             <constraint firstItem="3Sx-eF-b3S" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="MI9-dH-DxD"/>
                             <constraint firstItem="T5o-4U-Mz7" firstAttribute="top" secondItem="UCz-8r-uFh" secondAttribute="bottom" id="UGX-Vn-3Wx"/>
-                            <constraint firstItem="GM0-Qg-XsN" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="YWw-tb-bBD"/>
                             <constraint firstAttribute="trailing" secondItem="UCz-8r-uFh" secondAttribute="trailing" id="bgK-oL-c8y"/>
+                            <constraint firstAttribute="trailing" secondItem="WHd-hL-xRy" secondAttribute="trailing" id="dlF-gQ-7VF"/>
                             <constraint firstItem="UCz-8r-uFh" firstAttribute="top" secondItem="WHd-hL-xRy" secondAttribute="bottom" id="qkL-ww-Pfo"/>
-                            <constraint firstItem="GM0-Qg-XsN" firstAttribute="leading" secondItem="WHd-hL-xRy" secondAttribute="trailing" id="rbo-ol-1u6"/>
-                            <constraint firstItem="WHd-hL-xRy" firstAttribute="leading" secondItem="3Sx-eF-b3S" secondAttribute="trailing" id="sP0-Iz-rLy"/>
+                            <constraint firstAttribute="trailing" secondItem="3Sx-eF-b3S" secondAttribute="trailing" id="ru1-Rr-NIf"/>
                             <constraint firstItem="UCz-8r-uFh" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="vdL-6j-aJT"/>
                             <constraint firstItem="WHd-hL-xRy" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="w3R-cu-175"/>
                         </constraints>
@@ -579,7 +566,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="consult_funnel" width="22" height="23"/>
         <image name="icon_add" width="16" height="16"/>
         <image name="icon_logo" width="80" height="80"/>
         <image name="icon_mine_default_header_protriat" width="76" height="76"/>

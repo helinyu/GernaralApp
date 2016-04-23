@@ -418,3 +418,20 @@
 }
 
 @end
+
+@implementation ResultTestStructRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"";
+    }
+    return self;
+}
+
+- (void)setTitle:(NSString *)title{
+    _title = title;
+    [self.params setObject:_title forKey:@"title"];
+}
+@end

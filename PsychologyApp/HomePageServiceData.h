@@ -51,5 +51,9 @@
 @property (strong,nonatomic) NSMutableArray<PschologyTestDetailItem_ServiceData> * dataItem;
 @end
 
+@interface PschologyTestResultServiceData : HomePageServiceData
+@property (nonatomic,strong) NSString *result_title;
+@property (nonatomic,strong) NSString *result_text;
+@end
 
 

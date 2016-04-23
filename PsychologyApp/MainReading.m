@@ -14,6 +14,7 @@
 #import "VCRefreshHeader.h"
 #import "VCRefreshFooter.h"
 #import "CommonWeb.h"
+#import "CommonDetailWeb.h"
 
 @implementation TitleCategoryCell
 @end
@@ -52,18 +53,14 @@
     [super viewDidLoad];
         
     [self initBaseVariable];
-
     [self feedDataAtInitState:0];
     
 }
 
 - (void)initBaseVariable{
     
-//标题
     NSString *titlePath = [[NSBundle mainBundle] pathForResource:@"ReadingTitle" ofType:@"plist"];
     _titles = [NSArray arrayWithContentsOfFile:titlePath];
-
-//存储数据
     _dataSource = [NSMutableArray new];
 }
 
@@ -93,7 +90,6 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"index pahthis ; %ld",indexPath.row);
     [self.contentCollectionView selectItemAtIndexPath:indexPath animated:true scrollPosition:UICollectionViewScrollPositionLeft];
     [self feedDataAtInitState:indexPath.row];
 }
@@ -113,9 +109,7 @@
         
         NSError *structError = nil  ;
         NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr1 is : %@",dict[@"data"]);
         NSArray *tmpDatasource = dict[@"data"];
-        NSLog(@"datasoruce is : %ld",tmpDatasource.count);
         [_dataSource setArray:tmpDatasource];
         ReadingContentCell* cell = (ReadingContentCell*)self.contentCollectionView.visibleCells.firstObject;
         [cell.contentTableView reloadData];
@@ -136,10 +130,7 @@
         
         NSError *structError = nil  ;
         NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr1 is : %@",dict[@"data"]);
         NSArray *tmpDatasource = dict[@"data"];
-        NSLog(@"datasoruce is : %ld",tmpDatasource.count);
-//        [_dataSource setArray:tmpDatasource];
         [_dataSource addObjectsFromArray:tmpDatasource];
         [cell.contentTableView reloadData];
     }];
@@ -163,10 +154,6 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ReadingDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ReadingDetailCell class]) forIndexPath:indexPath];
-    NSLog(@"cover is ； %@",_dataSource[indexPath.row][@"cover"]);
-    NSLog(@"app_title is ；%@",_dataSource[indexPath.row][@"app_title"]);
-    NSLog(@"tags is : %@",_dataSource[indexPath.row][@"tags"]);
-    NSLog(@"viewnum is : %@",_dataSource[indexPath.row][@"viewnum"]);
     [cell setLeftImageView:_dataSource[indexPath.row][@"cover"] withTitleLabel:_dataSource[indexPath.row][@"app_title"] withDetailLabel:_dataSource[indexPath.row][@"tags"] withNumberLabel:_dataSource[indexPath.row][@"viewnum"]];
     
     return cell;
@@ -178,14 +165,14 @@
 
 // UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"%@",[_dataSource[indexPath.row] objectForKey:@"id"]);
-    
     NSString *_id = [_dataSource[indexPath.row] objectForKey:@"id"];
-    
     CommonWeb *web = [[UIStoryboard storyboardWithName:@"Common" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonWeb class])];
     web.pageId = [NSString stringWithFormat:@"%@",_id];
     [self.navigationController pushViewController:web animated:true];
-   
+//
+//    CommonDetailWeb* commonDetailWeb = [[UIStoryboard storyboardWithName:@"Common" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonDetailWeb class])];
+//    commonDetailWeb.pageId = _id;
+//    [self.navigationController pushViewController:commonDetailWeb animated:true];
 }
 
 #pragma mark -- UIScrollviewDelegate

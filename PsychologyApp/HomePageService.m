@@ -71,4 +71,25 @@
     }];
 }
 
+- (void)requestResultWithtitle:(NSString *)title WithComplete:(void (^)(PschologyTestResultServiceData *serviceData, NSError *error ))completeToViewData{
+    ResultTestStructRequest *request = [ResultTestStructRequest new];
+    request.title = title;
+    [RestInterface invokeTestResult:request WithComplete:^(ResultTestResponse *response, NSError *error) {
+    
+        [RestInterface invokeTestResult:request WithComplete:^(ResultTestResponse *response, NSError *error) {
+            
+            if (error != nil) {
+                completeToViewData(nil,error);
+            }
+            
+            PschologyTestResultServiceData * resultServiceData = [PschologyTestResultServiceData new];
+            resultServiceData.result_title = response.result_title;
+            resultServiceData.result_text = response.result_text;
+            completeToViewData(resultServiceData,nil);
+        }];
+        
+    }];
+    
+}
+
 @end

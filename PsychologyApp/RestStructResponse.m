@@ -208,6 +208,20 @@
 
 @end
 
+@implementation ResultTestResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _result_title = @"";
+        _result_text = @"";
+    }
+    return self;
+}
+
+@end
+
 @implementation RestStructUpdateResponse
 
 - (instancetype)init

@@ -115,9 +115,9 @@
 }
 
 - (IBAction)onCheckUpdateClicked:(id)sender {
-    NSLog(@"更新");    
+
     [OBTAIN_SERVICE(SettingService) requestUpdate:^(SettingServiceData *serviceData, NSError *error) {
-        NSLog(@"servidata version is ; %@",serviceData.version);
+        NSLog(@"app version is ; %@",serviceData.version);
         
         NSString *localVersion = [Helper getAppVersion];
         NSString *latestversion = serviceData.version;
