@@ -219,6 +219,26 @@
 }
 
 #pragma mark -- 对应的话题
+//一个topic_id的话题
++ (void)invokeTopic:(TopicIdStructRequest*)request WithComplete:(void(^)(RestStructTopicItemResponse* response,NSError *error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/mine/topic_byTopicId.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+
+        NSError *structError = nil  ;
+        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        RestStructTopicItemResponse *response = [[RestStructTopicItemResponse alloc]initWithData:data error:&restError];
+        completeToService(response,error);
+    }];
+    
+}
 //所有的话题
 + (void)invokeTopicsWithComplete:(void(^)(RestStructTopicResponse* response,NSError *error))completeToService{
     

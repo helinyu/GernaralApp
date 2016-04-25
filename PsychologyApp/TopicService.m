@@ -36,6 +36,29 @@
     }];
 }
 
+- (void)requestTopic:(NSInteger)topic_Id WithComplete:(void(^)(TopicItemServiceData* itemServicTeData ,NSError *error)) completeToView{
+    TopicIdStructRequest *request = [TopicIdStructRequest new];
+    request.topic_id = topic_Id;
+    
+    [RestInterface invokeTopic:request WithComplete:^(RestStructTopicItemResponse *response, NSError *error) {
+        if (error!=nil) {
+            completeToView(nil,error);
+            return ;
+        }
+        
+        TopicItemServiceData *itemServiceData = [TopicItemServiceData new];
+        itemServiceData.topic_id = response.topic_id;
+        itemServiceData.theme = response.theme;
+        itemServiceData.owner = response.owner;
+        itemServiceData.location = response.location;
+        itemServiceData.commentsNum = response.commentsNum;
+        itemServiceData.praiseNum = response.praiseNum;
+        itemServiceData.time = response.time;
+        itemServiceData.headerImageUrl = response.headerImageUrl;
+          completeToView(itemServiceData,nil);
+    }];
+}
+
 - (void)requestCreateComments:(NSString*)theme withOwner:(NSString *)owner withLocation:(NSString *)location withPraiseNum:(NSInteger)praiseNum withCommentsNum:(NSInteger)commentsNum withTime:(NSString*)time withHeaderImageUrl:(NSString *)headerImageUrl WithComplete:(void(^)(CommentsCreationServiceData* servicTeData ,NSError *error)) completeToView{
     
     CommentCreationRequest *request = [CommentCreationRequest new];

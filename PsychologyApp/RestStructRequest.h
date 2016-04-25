@@ -16,6 +16,10 @@
 
 @end
 
+@interface TopicIdStructRequest : RestStructRequest
+@property (nonatomic,assign) NSInteger topic_id;
+@end
+
 @interface RestStructRegisterByPhoneRequest : RestStructRequest
 @property (strong, nonatomic) NSString *phone;
 @property (strong, nonatomic) NSString *password;

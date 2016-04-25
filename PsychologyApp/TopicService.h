@@ -13,6 +13,8 @@
 
 @interface TopicService : Service
 
+- (void)requestTopic:(NSInteger)topic_Id WithComplete:(void(^)(TopicItemServiceData* itemServicTeData ,NSError *error)) completeToView;
+
 //所有的话题
 - (void)requestTopicsWithComplete:(void(^)(TopicServiceData* servicTeData ,NSError *error)) completeToView;
 
@@ -27,5 +29,8 @@
 
 //更新点赞的数目
 - (void)requestUPdatePraiseNumWithTopic_id:(NSInteger)topic_id withPraiseNum:(NSInteger)praiseNum WithComplete:(void(^)(TopicPraiseNumServiceData* servicTeData ,NSError *error)) completeToView;
+
+//有关的内容的写法
+//- (void)requestTopics:(NSInteger)topic_Id WithComplete:(void(^)(TopicServiceData* servicTeData ,NSError *error)) completeToView;
 
 @end

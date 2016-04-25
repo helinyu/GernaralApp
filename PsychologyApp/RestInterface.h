@@ -40,6 +40,8 @@
 + (void)invokeFinishedEditProfile:(RestStructFinishedEditProfileRequest*)request withComplete:(void(^)(RestStructFinishedEditProfileResponse* response,NSError *error))completeToService;
 
 #pragma mark --话题
+
++ (void)invokeTopic:(TopicIdStructRequest*)request WithComplete:(void(^)(RestStructTopicItemResponse* response,NSError *error))completeToService;
 //topic
 + (void)invokeTopicsWithComplete:(void(^)(RestStructTopicResponse* response,NSError *error))completeToService;
 

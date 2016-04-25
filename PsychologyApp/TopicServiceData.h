@@ -26,17 +26,6 @@
 @property (nonatomic,strong) NSMutableArray <TopicItemServiceData>* topics;
 @end
 
-////话题对应的评论
-//@protocol CommentItemServiceData <NSObject>
-//@end
-//@interface CommentItemServiceData : ServiceData
-//@property (nonatomic,strong) NSString *content;
-//@end
-//@interface CommentsServiceData : ServiceData
-//@property (nonatomic,assign) NSInteger number;
-//@property (nonatomic,strong) NSMutableArray<CommentItemServiceData> *datas;
-//@end
-
 //创建评论的结果
 @interface CommentsCreationServiceData: ServiceData
 @property (nonatomic,assign) NSInteger ret;

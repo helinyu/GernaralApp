@@ -68,14 +68,11 @@
 }
 //判断有多少个内容，将从重复的去掉
 - (void)removeDuplicateTopic_idOfComments{
-    
     for (CommentsOfTopicItemServiceData *item in _itemCommentsServiceDatas) {
-        
         if (_topicIds.count == 0) {
             [_topicIds addObject:@(item.topic_id)];
             continue;
         }
-        
         BOOL hasResult = true;
         for (NSInteger  index =0 ; index<_topicIds.count; index++) {
             if ([@(item.topic_id) isEqual:_topicIds[index]]) {
@@ -117,17 +114,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-#warning 这里需要添加进去相关的网络请求直接复制到那边，这样达到统一
-    
-    TopicComment * comment = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
-//    comment.personServiceData = _itemCommentsServiceDatas[indexPath.row];[indexPath.row];
-    [self.navigationController pushViewController:comment animated:true];
-    
+    CommentsOfTopicItemServiceData *itemCommentServiceData = _itemCommentsServiceDatas[indexPath.row];
+    [OBTAIN_SERVICE(TopicService) requestTopic:itemCommentServiceData.topic_id WithComplete:^(TopicItemServiceData *itemServicTeData, NSError *error) {
+        TopicComment* topicComment = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:@"TopicComment"];
+        topicComment.personServiceData = itemServicTeData;
+        [self.navigationController pushViewController:topicComment animated:true];
+    }];
 }
 
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
