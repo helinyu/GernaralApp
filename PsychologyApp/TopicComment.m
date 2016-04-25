@@ -57,7 +57,11 @@
 //  comments owenr's information
     [self.ownerHeaderImageView sd_setImageWithURL:[NSURL URLWithString:self.personServiceData.headerImageUrl] placeholderImage:[UIImage imageNamed:Image_Default]];
     self.ownerNameLabel.text = self.personServiceData.owner;
-    self.timeLabel.text = self.personServiceData.time;
+    
+    NSInteger timeI = [self.personServiceData.time integerValue];
+    NSDate *timeDate = [NSDate dateWithTimeIntervalSince1970:timeI];
+
+    self.timeLabel.text = [NSString stringWithFormat:@"%@",timeDate];
     self.themeLabel.text = self.personServiceData.theme;
     self.locationLabel.text = self.personServiceData.location;
 
@@ -97,7 +101,9 @@
     cell.commentsLabel.text = itemServiceData.content;
     [cell.headerImageview sd_setImageWithURL:[NSURL URLWithString:itemServiceData.headerImageUrl] placeholderImage:[UIImage imageNamed:Image_Default]];
 //    这个东西应该需要进行修改
-    cell.timeLabel.text = itemServiceData.time;
+    double timeI = [itemServiceData.time doubleValue];
+    NSDate *timeDate = [NSDate dateWithTimeIntervalSince1970:timeI];
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@",timeDate];
     cell.themeLabel.text = itemServiceData.person_phone;
     
     return cell;
@@ -143,13 +149,23 @@
      *  话题的id，评论，test topic_id = 14 commentText = hello ,time ,headerImageUrl
      */
     
-    [OBTAIN_SERVICE(TopicService) requestCommentSending:_personServiceData.topic_id withComment:textviewText withPerson_phone:_personServiceData.owner withHeaderImageUrl:_personServiceData.headerImageUrl withTime:_personServiceData.time WithComplete:^(CommentSendingServiceData *servicTeData, NSError *error) {
+//    获取当前登录用户的号码而不是创建用户的号码
+//    时间是当前创建的时间 ， 东八区的时间已经处理了
+//    当前用户的头像
+    
+    double nowTimeNum = [[NSDate new] timeIntervalSince1970];
+    nowTimeNum += 8 * 60 * 60;
+    
+    NSString *phoneOfWhoComment = [[NSUserDefaults standardUserDefaults] objectForKey:LOGIN_PHONE];
+    
+    [OBTAIN_SERVICE(TopicService) requestCommentSending:_personServiceData.topic_id withComment:textviewText withPerson_phone:phoneOfWhoComment withHeaderImageUrl:_personServiceData.headerImageUrl withTime:[NSString stringWithFormat:@"%f",nowTimeNum] WithComplete:^(CommentSendingServiceData *servicTeData, NSError *error) {
         if ( error.code != 0 ) {
             [[VCToast make:@"木有网络咯"] show];
             return ;
         }
         NSLog(@"%ld",(long)servicTeData.ret);
         [[VCToast make:@"评论成功"] show];
+        
         [self loadDataAtInitState];
     }];
 }

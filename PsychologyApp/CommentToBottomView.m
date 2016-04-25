@@ -7,6 +7,7 @@
 //
 
 #import "CommentToBottomView.h"
+#import "VCToast.h"
 
 @interface CommentToBottomView()
 @property (strong, nonatomic) IBOutlet UIView *contentView;
@@ -41,7 +42,12 @@
 
 - (IBAction)onSendClicked:(id)sender {
     NSLog(@"text:%@",self.contentTextView.text);
+    if ([self.contentTextView.text isEqualToString:@""]) {
+        [[VCToast make:@"请输入内容"] show];
+    }
     [self.commentDelegate deliverTextViewText:self.contentTextView.text];
+    self.contentTextView.text = @"";
+
 }
 
 
