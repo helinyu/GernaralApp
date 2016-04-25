@@ -138,7 +138,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
 
     if ([collectionView isEqual:self.titleCollectionView]) {
-        return CGSizeMake(50, 36);
+        return CGSizeMake([[UIScreen mainScreen] bounds].size.width/6, 36);
     }else{
         return collectionView.bounds.size;
     }
