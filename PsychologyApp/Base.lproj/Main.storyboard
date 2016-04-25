@@ -363,8 +363,16 @@
                                     <outlet property="delegate" destination="k90-rz-w6F" id="5Nv-aN-Gri"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwR-ks-I6a" userLabel="tips of lines">
+                                <rect key="frame" x="0.0" y="36" width="100" height="2"/>
+                                <color key="backgroundColor" red="0.4431372549" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="LzB-Sr-dVQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="h4Q-wK-MnC"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-8r-uFh" userLabel="content Collection View">
-                                <rect key="frame" x="0.0" y="36" width="600" height="471"/>
+                                <rect key="frame" x="0.0" y="38" width="600" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="QUk-gV-q94">
                                     <size key="itemSize" width="600" height="450"/>
@@ -374,7 +382,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReadingContentCell" id="vPX-OI-Q2p" customClass="ReadingContentCell">
-                                        <rect key="frame" x="0.0" y="10.5" width="600" height="450"/>
+                                        <rect key="frame" x="0.0" y="9.5" width="600" height="450"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
@@ -410,12 +418,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dwR-ks-I6a" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="2nm-yX-1VT"/>
+                            <constraint firstItem="dwR-ks-I6a" firstAttribute="top" secondItem="3Sx-eF-b3S" secondAttribute="bottom" id="5Pp-EH-D5G"/>
                             <constraint firstItem="3Sx-eF-b3S" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="C77-hW-4sM"/>
                             <constraint firstItem="3Sx-eF-b3S" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="MI9-dH-DxD"/>
                             <constraint firstItem="T5o-4U-Mz7" firstAttribute="top" secondItem="UCz-8r-uFh" secondAttribute="bottom" id="UGX-Vn-3Wx"/>
                             <constraint firstAttribute="trailing" secondItem="UCz-8r-uFh" secondAttribute="trailing" id="bgK-oL-c8y"/>
                             <constraint firstAttribute="trailing" secondItem="WHd-hL-xRy" secondAttribute="trailing" id="dlF-gQ-7VF"/>
-                            <constraint firstItem="UCz-8r-uFh" firstAttribute="top" secondItem="WHd-hL-xRy" secondAttribute="bottom" id="qkL-ww-Pfo"/>
+                            <constraint firstItem="UCz-8r-uFh" firstAttribute="top" secondItem="WHd-hL-xRy" secondAttribute="bottom" constant="2" id="qkL-ww-Pfo"/>
                             <constraint firstAttribute="trailing" secondItem="3Sx-eF-b3S" secondAttribute="trailing" id="ru1-Rr-NIf"/>
                             <constraint firstItem="UCz-8r-uFh" firstAttribute="leading" secondItem="adr-Gt-42d" secondAttribute="leading" id="vdL-6j-aJT"/>
                             <constraint firstItem="WHd-hL-xRy" firstAttribute="top" secondItem="XN4-ly-P19" secondAttribute="bottom" id="w3R-cu-175"/>
@@ -424,6 +434,8 @@
                     <navigationItem key="navigationItem" title="阅读" id="Zl7-Iw-9ye"/>
                     <connections>
                         <outlet property="contentCollectionView" destination="UCz-8r-uFh" id="Eld-Hk-NLE"/>
+                        <outlet property="tipsLineConstraint" destination="h4Q-wK-MnC" id="zgc-IC-Tw6"/>
+                        <outlet property="tipsLineLeadingConstraint" destination="2nm-yX-1VT" id="uPH-6J-ZqJ"/>
                         <outlet property="titleCollectionView" destination="3Sx-eF-b3S" id="62x-ah-Vqm"/>
                     </connections>
                 </viewController>

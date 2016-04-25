@@ -146,7 +146,7 @@ NSInteger viewIndex = 9;
                     [self.scrollView addSubview:centerImageView];
                     ControlBeginConstraint = ControlBeginConstraint + centerImageView.bounds.size.height + View_height_Constraint;
                     self.scrollView.contentSize = CGSizeMake(Screen_Width, ControlBeginConstraint);
-                    NSLog(@"bounds is ;%f",centerImageView.bounds.size.height);
+//                    NSLog(@"bounds is ;%f",centerImageView.bounds.size.height);
                     continue;
                     
 //                    不含有剧中的图片
@@ -159,7 +159,7 @@ NSInteger viewIndex = 9;
                     [self.scrollView addSubview:centerImageView];
                     ControlBeginConstraint = ControlBeginConstraint + centerImageView.bounds.size.height + View_height_Constraint;
                     self.scrollView.contentSize = CGSizeMake(Screen_Width, ControlBeginConstraint);
-                    NSLog(@"bounds is ;%f",centerImageView.bounds.size.height);
+//                    NSLog(@"bounds is ;%f",centerImageView.bounds.size.height);
                     continue;
                 }
                 

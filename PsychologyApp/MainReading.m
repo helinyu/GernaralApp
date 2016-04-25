@@ -26,6 +26,13 @@
 @end
 
 
+
+typedef NS_ENUM(NSInteger, UIScrollViewDirectStyle) {
+    UIScrollViewDirectStyleHorizontal = 0,
+    UIScrollViewDirectStyleVertical,
+};
+
+
 #define limitAdd 10
 
 @interface MainReading ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
@@ -39,6 +46,8 @@
     NSInteger _limit;
 }
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tipsLineLeadingConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tipsLineConstraint;
 @property (weak, nonatomic) IBOutlet UICollectionView *titleCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *contentCollectionView;
 
@@ -59,6 +68,9 @@
     NSString *titlePath = [[NSBundle mainBundle] pathForResource:@"ReadingTitle" ofType:@"plist"];
     _titles = [NSArray arrayWithContentsOfFile:titlePath];
     _dataSource = [NSMutableArray new];
+    self.tipsLineConstraint.constant = [[UIScreen mainScreen] bounds].size.width/6;
+    _collectionCellIndex = 0 ;
+    UIScrollViewDirectStyle scrollViewStyle = UIScrollViewDirectStyleHorizontal;
 }
 
 - (void)viewDidLayoutSubviews{
@@ -87,11 +99,16 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.tipsLineLeadingConstraint.constant = indexPath.row * self.tipsLineConstraint.constant;
+    
     [self.contentCollectionView selectItemAtIndexPath:indexPath animated:true scrollPosition:UICollectionViewScrollPositionLeft];
     [self feedDataAtInitState:indexPath.row];
 }
 
 - (void)feedDataAtInitState:(NSInteger)index{
+    
+    [_dataSource removeAllObjects];
     
     _collectionCellIndex = index;
     _limit = 10;
@@ -145,6 +162,24 @@
 }
 
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"停止拖拽%f",scrollView.bounds.origin.x);
+    
+    if (scrollView.bounds.origin.x == 0.0 ) {
+        if ( _collectionCellIndex != 0 ) {
+            [self feedDataAtInitState:0];
+        }else{
+            [self pullAndLoadData];
+        }
+    }else{
+        NSInteger indexPathRow = scrollView.bounds.origin.x / [[UIScreen mainScreen] bounds].size.width;
+        
+        
+        [self feedDataAtInitState:indexPathRow];
+        [self collectionView:self.titleCollectionView didSelectItemAtIndexPath:[NSIndexPath indexPathForRow:indexPathRow inSection:0]];
+    }
+}
+
 #pragma mark -- UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return  _dataSource.count;
@@ -166,10 +201,7 @@
     CommonWeb *web = [[UIStoryboard storyboardWithName:@"Common" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonWeb class])];
     web.pageId = [NSString stringWithFormat:@"%@",_id];
     [self.navigationController pushViewController:web animated:true];
-//
-//    CommonDetailWeb* commonDetailWeb = [[UIStoryboard storyboardWithName:@"Common" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CommonDetailWeb class])];
-//    commonDetailWeb.pageId = _id;
-//    [self.navigationController pushViewController:commonDetailWeb animated:true];
+
 }
 
 #pragma mark -- UIScrollviewDelegate
