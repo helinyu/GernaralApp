@@ -14,7 +14,6 @@
 #import "VCRefreshHeader.h"
 #import "VCRefreshFooter.h"
 #import "CommonWeb.h"
-#import "CommonDetailWeb.h"
 
 @implementation TitleCategoryCell
 @end
@@ -22,8 +21,6 @@
 @implementation ReadingContentCell
 
 - (void)awakeFromNib{
-    
-//    self.contentTableView.mj_footer = 
     
 }
 @end
