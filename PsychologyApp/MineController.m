@@ -11,12 +11,12 @@
 #import "AccountLogin.h"
 #import "MineSetting.h"
 #import "MineFeedback.h"
+#import "MineComments.h"
 #import "MineShareFriend.h"
-#import "MineAttentionOrFan.h"
 #import "MineEditProfile.h"
 #import "MineConsultingexpert.h"
 #import "MineCollection.h"
-#import "MineTest.h"
+#import "MineComments.h"
 #import "MineQA.h"
 #import "MineArticle.h"
 #import "MineBookingManagement.h"
@@ -50,7 +50,7 @@
 - (void)viewDidLoad{
     
     _arrays = @[
-               @[@"测试"],
+               @[@"我的评论"],
                @[@"编辑资料"],
                @[@"反馈意见",@"设置",@"缓存了 0.0MB"]
                ];
@@ -127,7 +127,7 @@
         case 0:
             switch (indexPath.row) {
                 case 0:{
-                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineTest class])] animated:YES];
+                    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Mine" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([MineComments class])] animated:YES];
                     break;
                 }
                 default:
@@ -150,7 +150,6 @@
                     break;
             }
             break;
-            
         case 2:
             switch (indexPath.row) {
                 case 0:{
@@ -167,7 +166,6 @@
                         [[VCToast make:@"现在没有缓存,不用清理哦"] show];
                         return;
                     }
-                    
                    [[VCAlertView new] showWithTitle:@"提示" message:@"清除缓存？" cancelButtonTitle:@"取消" otherButtonTitle:@"确定" tapBlock:^(NSInteger buttonIndex) {
                        if (buttonIndex == 0) {
                            return ;
@@ -178,7 +176,6 @@
                                _cacheStr = @"缓存了 0.0MB";
                                [self.tableView reloadData];
                            }];
-                           
                        }
                    }];
                 }

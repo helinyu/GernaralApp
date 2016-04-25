@@ -17,6 +17,7 @@
 @end
 
 @interface TopicComment : UIViewController
+
 @property (nonatomic,strong) TopicItemServiceData *personServiceData;
 @property (nonatomic,weak) id<TopicCommentDelegate> topicCommmetDelegate;
 

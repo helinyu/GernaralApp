@@ -423,10 +423,10 @@
             </objects>
             <point key="canvasLocation" x="361" y="-1166"/>
         </scene>
-        <!--测试-->
+        <!--评论-->
         <scene sceneID="mwO-fH-UfZ">
             <objects>
-                <viewController storyboardIdentifier="MineTest" id="sOe-OE-vTz" customClass="MineTest" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MineComments" id="sOe-OE-vTz" customClass="MineComments" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WzB-tX-hy6"/>
                         <viewControllerLayoutGuide type="bottom" id="tZz-Z8-3nX"/>
@@ -434,10 +434,29 @@
                     <view key="view" contentMode="scaleToFill" id="EgB-GS-W96">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-Wt-6zo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOe-OE-vTz" id="L2x-kQ-keC"/>
+                                    <outlet property="delegate" destination="sOe-OE-vTz" id="1KE-I1-sRp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MTN-Wt-6zo" secondAttribute="trailing" id="Hib-07-vBL"/>
+                            <constraint firstItem="MTN-Wt-6zo" firstAttribute="leading" secondItem="EgB-GS-W96" secondAttribute="leading" id="Mbp-8m-DjS"/>
+                            <constraint firstItem="tZz-Z8-3nX" firstAttribute="top" secondItem="MTN-Wt-6zo" secondAttribute="bottom" id="R0I-FK-3d5"/>
+                            <constraint firstItem="MTN-Wt-6zo" firstAttribute="top" secondItem="WzB-tX-hy6" secondAttribute="bottom" id="gAT-uM-be6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="测试" id="k1x-xL-sdT"/>
+                    <navigationItem key="navigationItem" title="评论" id="k1x-xL-sdT"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableview" destination="MTN-Wt-6zo" id="FvG-2o-eXc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyH-u8-dFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

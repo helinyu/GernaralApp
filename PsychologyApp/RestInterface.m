@@ -328,6 +328,20 @@
     }];
 }
 
+//我的页面的comment集合
++ (void)invoketopicOfMyComments:(MyCommentsStructRequest*)request  WithComplete:(void (^)(CommentsOfTopicResponse *response, NSError * error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/mine/my_comments.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+        NSError *restError = nil;
+        CommentsOfTopicResponse *response = [[CommentsOfTopicResponse alloc] initWithData:data error:&restError];
+        completeToService(response,error);
+    }];
+}
 
 @end
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineTest : UIViewController
+@interface MineComments : UIViewController
 
 @end

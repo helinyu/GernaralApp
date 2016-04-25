@@ -61,4 +61,7 @@
 //测试的结果
 + (void)invokeTestResult:(ResultTestStructRequest*)request WithComplete:(void (^)(ResultTestResponse *response, NSError * error))completeToService;
 
+//我的评论
++ (void)invoketopicOfMyComments:(MyCommentsStructRequest*)request  WithComplete:(void (^)(CommentsOfTopicResponse *response, NSError * error))completeToService;
+
 @end

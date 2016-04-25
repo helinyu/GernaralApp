@@ -113,5 +113,8 @@
 
 @interface ResultTestStructRequest : RestStructRequest
 @property (nonatomic,strong) NSString* title;
+@end
 
+@interface MyCommentsStructRequest : RestStructRequest
+@property (nonatomic,strong) NSString * person_phone;
 @end

@@ -435,3 +435,21 @@
     [self.params setObject:_title forKey:@"title"];
 }
 @end
+
+@implementation MyCommentsStructRequest
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _person_phone = @"";
+    }
+    return self;
+}
+
+- (void)setPerson_phone:(NSString *)person_phone{
+    _person_phone = person_phone;
+    [self.params setObject:person_phone forKey:@"person_phone"];
+}
+
+@end

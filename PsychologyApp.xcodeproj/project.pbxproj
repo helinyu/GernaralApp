@@ -23,7 +23,7 @@
 		DC0FCD7B1C7611A700E5AF6F /* MineConsultingexpert.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD7A1C7611A700E5AF6F /* MineConsultingexpert.m */; };
 		DC0FCD7F1C76136100E5AF6F /* MineArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD7E1C76136100E5AF6F /* MineArticle.m */; };
 		DC0FCD831C76139200E5AF6F /* MineQA.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD821C76139200E5AF6F /* MineQA.m */; };
-		DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD861C7613A900E5AF6F /* MineTest.m */; };
+		DC0FCD871C7613A900E5AF6F /* MineComments.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD861C7613A900E5AF6F /* MineComments.m */; };
 		DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */; };
 		DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */; };
 		DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */; };
@@ -193,8 +193,8 @@
 		DC0FCD7E1C76136100E5AF6F /* MineArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineArticle.m; sourceTree = "<group>"; };
 		DC0FCD811C76139200E5AF6F /* MineQA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineQA.h; sourceTree = "<group>"; };
 		DC0FCD821C76139200E5AF6F /* MineQA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineQA.m; sourceTree = "<group>"; };
-		DC0FCD851C7613A900E5AF6F /* MineTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineTest.h; sourceTree = "<group>"; };
-		DC0FCD861C7613A900E5AF6F /* MineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineTest.m; sourceTree = "<group>"; };
+		DC0FCD851C7613A900E5AF6F /* MineComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineComments.h; sourceTree = "<group>"; };
+		DC0FCD861C7613A900E5AF6F /* MineComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineComments.m; sourceTree = "<group>"; };
 		DC0FCD891C7613D400E5AF6F /* MineCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCollection.h; sourceTree = "<group>"; };
 		DC0FCD8A1C7613D400E5AF6F /* MineCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineCollection.m; sourceTree = "<group>"; };
 		DC0FCD8D1C7615D300E5AF6F /* MineMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineMessageCenter.h; sourceTree = "<group>"; };
@@ -549,8 +549,8 @@
 		DC0FCD841C76139900E5AF6F /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				DC0FCD851C7613A900E5AF6F /* MineTest.h */,
-				DC0FCD861C7613A900E5AF6F /* MineTest.m */,
+				DC0FCD851C7613A900E5AF6F /* MineComments.h */,
+				DC0FCD861C7613A900E5AF6F /* MineComments.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -1542,7 +1542,7 @@
 				DCEF80CF1C7B66B20017DDE6 /* ConsultMainSummarizeCell.m in Sources */,
 				DC3995471CB2831900ACA64B /* SettingServiceData.m in Sources */,
 				DC0FCD8B1C7613D400E5AF6F /* MineCollection.m in Sources */,
-				DC0FCD871C7613A900E5AF6F /* MineTest.m in Sources */,
+				DC0FCD871C7613A900E5AF6F /* MineComments.m in Sources */,
 				DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */,
 				DCAFD6BF1CB6C7CE00E668ED /* VCRefreshHeader.m in Sources */,
 				DC8BA9FC1C703EEF00184CD8 /* AccountRegister.m in Sources */,

@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, UIScrollViewDirectStyle) {
     _dataSource = [NSMutableArray new];
     self.tipsLineConstraint.constant = [[UIScreen mainScreen] bounds].size.width/6;
     _collectionCellIndex = 0 ;
-    UIScrollViewDirectStyle scrollViewStyle = UIScrollViewDirectStyleHorizontal;
+//    UIScrollViewDirectStyle scrollViewStyle = UIScrollViewDirectStyleHorizontal;
 }
 
 - (void)viewDidLayoutSubviews{
