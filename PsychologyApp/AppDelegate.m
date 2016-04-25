@@ -21,19 +21,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-//    [NSStringFromClass(@"WebView") _enableRemoteInspector];
+//设置navigation的bar 颜色
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:113/225.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    [UIBarButtonItem appearance].tintColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+    [UIFont systemFontOfSize:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
 
-    
-//    [Fabric with:@[[Crashlytics class]]];
-    //设置导航栏
-    
+//[Fabric with:@[[Crashlytics class]]];
+//设置导航栏
     
 //    注册本地推送
     [AuthOfLocalNotification registerLocalPush];
  
-    
     return YES;
 }
 

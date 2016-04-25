@@ -120,14 +120,14 @@
                         <viewControllerLayoutGuide type="bottom" id="3rA-23-mS2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ebZ-26-Ed6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-E6-bie">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="507"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="VXB-Of-3Kq" userLabel="header View">
-                                    <rect key="frame" x="0.0" y="44" width="600" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mine_default_header_protriat" translatesAutoresizingMaskIntoConstraints="NO" id="qwi-iO-0tC" userLabel="icon Image View">
@@ -164,7 +164,7 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FLTableViewCell" rowHeight="30" id="lyi-fH-I4s" customClass="FLTableViewCell">
-                                        <rect key="frame" x="0.0" y="243.5" width="600" height="30"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="600" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lyi-fH-I4s" id="vhL-ax-Kvw">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="29.5"/>
@@ -216,8 +216,6 @@
                         <barButtonItem key="leftBarButtonItem" id="xDF-3o-wgW" userLabel="返回"/>
                         <barButtonItem key="rightBarButtonItem" id="GIk-hO-23I" userLabel="完成"/>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="headerImageView" destination="qwi-iO-0tC" id="vnt-l5-NO2"/>
                         <outlet property="loginUserLabel" destination="IIa-hZ-p6b" id="86t-FX-b7F"/>
@@ -320,7 +318,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Sx-eF-b3S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="36"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="HZz-Oe-e9S"/>
                                 </constraints>
@@ -441,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUB-OQ-CC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876" y="116"/>
+            <point key="canvasLocation" x="2854" y="135"/>
         </scene>
         <!--Main Index-->
         <scene sceneID="SsC-2K-6uv">
@@ -470,7 +468,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qAS-XQ-Jjy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="阅读" image="read_book" id="RMy-Yv-0rS"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gLm-2h-T26">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="gLm-2h-T26">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -481,7 +479,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdC-Nb-MQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="137"/>
+            <point key="canvasLocation" x="2135" y="135"/>
         </scene>
         <!--我的-->
         <scene sceneID="r8O-oJ-JdR">
@@ -489,11 +487,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wIF-Io-tmk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="my_page" id="aD8-OF-g1u"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="ehB-es-mmL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.44181034479999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -514,10 +510,9 @@
                     <tabBarItem key="tabBarItem" title="话题" image="qa_page" id="Llm-gG-GcC"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="hhM-bX-nF9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="hhM-bX-nF9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.44181034479999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -528,17 +523,17 @@
             </objects>
             <point key="canvasLocation" x="2194" y="1518"/>
         </scene>
-        <!--Pschology Test-->
+        <!--测试-->
         <scene sceneID="jSs-37-BFB">
             <objects>
-                <tableViewController storyboardIdentifier="PschologyTest" id="Cp2-wo-Sfo" customClass="PschologyTest" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PschologyTest" title="测试" id="Cp2-wo-Sfo" customClass="PschologyTest" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CHe-D4-g1M">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PschologyTestCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PschologyTestCell" id="UnB-uL-vRE" customClass="PschologyTestCell">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UnB-uL-vRE" id="nk1-4C-x2P">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -551,7 +546,7 @@
                             <outlet property="delegate" destination="Cp2-wo-Sfo" id="wVc-4d-lcx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jln-59-XdU"/>
+                    <navigationItem key="navigationItem" title="测试" id="jln-59-XdU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icJ-oU-7am" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -563,7 +558,7 @@
                 <navigationController title="测试" automaticallyAdjustsScrollViewInsets="NO" id="E8o-BU-hxc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="测试" image="icon_test" id="Xs9-al-Dwp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4VP-Eg-wBS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="4VP-Eg-wBS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

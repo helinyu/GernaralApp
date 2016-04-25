@@ -30,7 +30,7 @@ NSInteger viewIndex = 9;
 #define View_height_Constraint 5
 
 //label height of font large
-#define Height_Of_LabelALine_Of_12 11.93359375
+#define Height_Of_LabelALine_Of_10 11.93359375
 #define Height_Of_LabelALine_Of_12 14.3203125
 #define Height_Of_LabelALine_Of_14 16.70703125
 #define Height_Of_LabelALine_Of_16 19.09375

@@ -148,7 +148,6 @@ typedef NS_ENUM(NSInteger, UIScrollViewDirectStyle) {
         [_dataSource addObjectsFromArray:tmpDatasource];
         [cell.contentTableView reloadData];
     }];
-
 }
 
 #pragma mark -- UICollectionViewDelegateFlowLayout
