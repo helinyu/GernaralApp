@@ -55,7 +55,6 @@
 
 - (void)loadEditProfile{
     [OBTAIN_SERVICE(EditProfileService) requestEditProfie:_personName withComplete:^(EditProfileServiceData *serviceData, NSError *error) {
-        NSLog(@"serviceData si : %@",serviceData);
         _profileValueS = serviceData;
         [self.tableView reloadData];
     }];

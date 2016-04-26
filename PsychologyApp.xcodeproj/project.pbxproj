@@ -59,6 +59,7 @@
 		DC3995661CB2B62F00ACA64B /* EditProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995651CB2B62F00ACA64B /* EditProfileService.m */; };
 		DC3995691CB2B69200ACA64B /* EditProfileServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */; };
 		DC3F23301CCE67F6008FD210 /* FLIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3F232F1CCE67F6008FD210 /* FLIndexPath.m */; };
+		DC3F23B11CCF4DD3008FD210 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3F23B01CCF4DD3008FD210 /* UIViewController+Navigation.m */; };
 		DC44DC841CCA8ABE00FC84AC /* PschologyTestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DC44DC831CCA8ABE00FC84AC /* PschologyTestResult.m */; };
 		DC44DC8E1CCA97CB00FC84AC /* PschologyTestDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC44DC8C1CCA97CB00FC84AC /* PschologyTestDetailCell.m */; };
 		DC44DC8F1CCA97CB00FC84AC /* PschologyTestDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC44DC8D1CCA97CB00FC84AC /* PschologyTestDetailCell.xib */; };
@@ -260,6 +261,8 @@
 		DC3995681CB2B69200ACA64B /* EditProfileServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileServiceData.m; sourceTree = "<group>"; };
 		DC3F232E1CCE67F6008FD210 /* FLIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLIndexPath.h; sourceTree = "<group>"; };
 		DC3F232F1CCE67F6008FD210 /* FLIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLIndexPath.m; sourceTree = "<group>"; };
+		DC3F23AF1CCF4DD2008FD210 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		DC3F23B01CCF4DD3008FD210 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		DC44DC821CCA8ABE00FC84AC /* PschologyTestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestResult.h; sourceTree = "<group>"; };
 		DC44DC831CCA8ABE00FC84AC /* PschologyTestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PschologyTestResult.m; sourceTree = "<group>"; };
 		DC44DC8B1CCA97CB00FC84AC /* PschologyTestDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PschologyTestDetailCell.h; sourceTree = "<group>"; };
@@ -455,6 +458,8 @@
 		DC022B181C4810C900D3FB61 /* UI+externds */ = {
 			isa = PBXGroup;
 			children = (
+				DC3F23AF1CCF4DD2008FD210 /* UIViewController+Navigation.h */,
+				DC3F23B01CCF4DD3008FD210 /* UIViewController+Navigation.m */,
 				DC022B191C48110800D3FB61 /* GMToast.h */,
 				DC022B1A1C48110800D3FB61 /* GMToast.m */,
 			);
@@ -1526,6 +1531,7 @@
 				DC3995441CB2822600ACA64B /* SettingService.m in Sources */,
 				DC39950F1CB2085900ACA64B /* Helper+App.m in Sources */,
 				DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */,
+				DC3F23B11CCF4DD3008FD210 /* UIViewController+Navigation.m in Sources */,
 				DCCB58A41C8C610700F5C6AF /* EditProfileCell.m in Sources */,
 				DC60BD491C704F2F00CFDC56 /* Helper.m in Sources */,
 				DC2C10971CBC75F3003D3FD3 /* CommentsCell.m in Sources */,

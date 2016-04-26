@@ -15,6 +15,7 @@
 #import "MJRefresh.h"
 
 #import "PschologyTest.h"
+//#import "UIViewController+Navigation.h"
 
 
 @interface MainHomePage ()<MJBannnerPlayerDeledage,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>

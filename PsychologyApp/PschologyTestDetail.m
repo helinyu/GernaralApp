@@ -12,7 +12,6 @@
 #import "PschologyTestDetailCell.h"
 #import "FLIndexPath.h"
 
-
 #define NUMBERLABEL_OF_DETAIL 4
 
 @interface PschologyTestDetail ()<PschologyTestDetailCellDelegate>

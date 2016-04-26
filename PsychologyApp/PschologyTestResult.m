@@ -9,7 +9,6 @@
 #import "PschologyTestResult.h"
 #import "ServiceManager.h"
 
-
 @interface PschologyTestResult ()
 {
     NSInteger _gradeScore;
