@@ -155,7 +155,13 @@
     }];    
 }
 
-
+- (IBAction)onTapChangeHeaderImage:(id)sender {
+    NSLog(@"换图片");
+//    切换图片
+//    self.personHeaderImageView.image = [UIImage imageNamed:@"image_default"];
+    
+    
+}
 
 /*
 #pragma mark - Navigation

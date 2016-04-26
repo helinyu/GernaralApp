@@ -28,10 +28,13 @@
 #import "SDImageCache.h"
 #import "VCToast.h"
 
+
 #define EditProfileIndexPathSection 1
 #define EditProfileIndexPathRow 0
 
-@interface MineController ()<UITableViewDataSource,UITableViewDelegate>
+#define Header_Image @"Header_Image.png"
+
+@interface MineController ()<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,UINavigationBarDelegate>
 {
     NSArray *_arrays;
     NSArray *_pictures;
@@ -46,7 +49,6 @@
 
 @implementation MineController
 
-
 - (void)viewDidLoad{
     
     _arrays = @[
@@ -54,7 +56,7 @@
                @[@"编辑资料"],
                @[@"反馈意见",@"设置",@"缓存了 0.0MB"]
                ];
-    
+
     _pictures = @[
                   @[@"icon_timeOfAppointment"],
                   @[@"Editing"],
@@ -63,6 +65,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByRegister:) name:REGISTER_PHONE object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchNotificationByLogin:) name:LOGIN_PHONE object:nil];
     self.automaticallyAdjustsScrollViewInsets = NO;
+   
+    NSString* imagePath = [[self documentFolderPath] stringByAppendingPathComponent:Header_Image];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:imagePath]) {
+        self.headerImageView.image = [UIImage imageNamed:imagePath];
+    }else{
+        self.headerImageView.image = [UIImage imageNamed:@"icon_mine_default_header_protriat"];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -73,9 +83,10 @@
 }
 
 - (void)isLogined{
-    //    数据处理
+    //数据处理
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString* userId =  [userDefaults objectForKey:LOGIN_PHONE];
+    
     //数据的处理
     Model *model = [Model sharedInstance];
     EntityUser *user = [model loadUseByUId:userId];
@@ -171,7 +182,6 @@
                            return ;
                        }else{
                            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-                               
                                [[VCToast make:@"已经清空所有缓存"] show];
                                _cacheStr = @"缓存了 0.0MB";
                                [self.tableView reloadData];
@@ -189,18 +199,60 @@
 }
 
 - (IBAction)onAccountLoginTap:(id)sender {
-    if ( _isLogined == true) {
-        [self tableView:self.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:EditProfileIndexPathRow inSection:EditProfileIndexPathSection]];
-        return ;
-    }
-    AccountLogin *accountLogin = [[UIStoryboard storyboardWithName:@"Account" bundle:nil]instantiateViewControllerWithIdentifier:NSStringFromClass([AccountLogin class])];
-    [self.navigationController pushViewController:accountLogin animated:YES];
+     NSLog(@"切换图片");
+    [self addImageAndConfigureButton:(UIButton*)sender];
 }
 
 
 - (CGFloat)checkCacheImageSize{
     CGFloat size = ([[SDImageCache sharedImageCache] getSize] /1024.0 )/1024.0 ;
     return size;
+}
+
+//图片处理
+- (void)addImageAndConfigureButton:(UIButton*)button{
+    
+    //    增加图片
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    picker.editing = true;
+    [self presentViewController:picker animated:true completion:nil];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
+    self.headerImageView.image = image;
+}
+
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.headerImageView.image = image;
+//    [[NSUserDefaults standardUserDefaults] setObject:image forKey:Header_Image];
+
+    [self saveImage:image WithName:Header_Image];
+    [picker dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)saveImage:(UIImage *)tempImage WithName:(NSString *)imageName
+{
+    NSData* imageData = UIImagePNGRepresentation(tempImage);
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    // Now we get the full path to the file
+    NSString* fullPathToFile = [documentsDirectory stringByAppendingPathComponent:imageName];
+    // and then we write it out
+    [imageData writeToFile:fullPathToFile atomically:NO];
+}
+
+- (NSString *)documentFolderPath
+{
+    return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
 }
 
 @end

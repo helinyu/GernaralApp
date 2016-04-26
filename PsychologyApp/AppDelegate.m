@@ -24,10 +24,10 @@
     
 //设置navigation的bar 颜色
     [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:113/225.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
-    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-    [UIBarButtonItem appearance].tintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].tintColor = [UIColor blackColor];
+    [UIBarButtonItem appearance].tintColor = [UIColor blackColor];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-    [UIFont systemFontOfSize:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+    [UIFont systemFontOfSize:20],NSFontAttributeName,[UIColor blackColor],NSForegroundColorAttributeName,nil]];
     
 //[Fabric with:@[[Crashlytics class]]];
 //设置导航栏

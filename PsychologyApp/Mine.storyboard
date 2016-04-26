@@ -500,11 +500,14 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_head" translatesAutoresizingMaskIntoConstraints="NO" id="p32-dh-sY5">
+                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_head" translatesAutoresizingMaskIntoConstraints="NO" id="p32-dh-sY5">
                                     <rect key="frame" x="10" y="5" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="p32-dh-sY5" secondAttribute="height" id="pbw-nY-e2q"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="1rt-LI-bI3" appends="YES" id="Wkg-SW-TQk"/>
+                                    </connections>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.44181034479999998" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -570,6 +573,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rx-h0-j5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1rt-LI-bI3">
+                    <connections>
+                        <action selector="onTapChangeHeaderImage:" destination="uPf-kg-LFU" id="RKU-lG-TbS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="493" y="-575"/>
         </scene>

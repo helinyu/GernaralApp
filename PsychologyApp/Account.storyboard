@@ -106,7 +106,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkr-5x-pOv" customClass="VCButton">
                                 <rect key="frame" x="80" y="241" width="440" height="49"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.84181034480000005" alpha="0.84516289889999996" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="t1A-9g-rnJ"/>
                                 </constraints>
@@ -123,7 +123,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="0.84181034480000005" alpha="0.84516289889999996" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -288,7 +288,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-kG-RjW" customClass="VCButton">
                                 <rect key="frame" x="20" y="269" width="560" height="49"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.84181034482758621" alpha="0.84516289893617025" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4431372549" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="c3l-c1-zX4"/>
                                 </constraints>
@@ -303,7 +303,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="0.84181034480000005" alpha="0.84516289889999996" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>

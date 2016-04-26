@@ -65,7 +65,7 @@
     
     CGFloat addImageButtonX = self.addImageButton.frame.origin.x;
 
-    //    add ImageView
+    // add ImageView
     UIImageView *imageView;
         imageView = [[UIImageView alloc]initWithFrame:CGRectMake(addImageButtonX, 0, GWidth/3-WIDTH_SPACE, GWidth/3)];
         imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -95,6 +95,7 @@
         [[VCToast make:@"请输入反馈内容"] show];
         return;
     }
+    
     //发送后台
     [OBTAIN_SERVICE(MineService) requestFeedbackWithImageUrl1:@"" WithImageUrl2:@"" WithImageUrl3:@"" WithFeedback_text:self.textView.text withComplete:^(RetServiceData *serviceData, NSError *error) {
         if (error != nil) {

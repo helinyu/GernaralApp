@@ -10,7 +10,6 @@
 #import "HostManager.h"
 #import "AFNetworking.h"
 #import <UIKit/UIKit.h>
-//#import "AFHTTPRequestOperationManager.h"
 
 @implementation RestInterface
 
@@ -143,8 +142,6 @@
 
         NSError * errorOfResponse = nil;
         RestStructPschologyTestSummaryResponse *summaryResponse = [[RestStructPschologyTestSummaryResponse alloc]initWithData:data error:&errorOfResponse];
-//        NSArray * arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//        NSLog(@"arr is ;%@",arr);
         completeToService(summaryResponse,nil);
     }];
 }
@@ -190,10 +187,6 @@
             completeToService(nil,error);
             return ;
         }
-
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructEditProfileResponse *response = [[RestStructEditProfileResponse alloc]initWithData:data error:&restError];
@@ -210,10 +203,6 @@
             completeToService(nil,error);
             return ;
         }
-        
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructFinishedEditProfileResponse *response = [[RestStructFinishedEditProfileResponse alloc]initWithData:data error:&restError];
@@ -251,10 +240,6 @@
             completeToService(nil,error);
             return ;
         }
-//        
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructTopicResponse *response = [[RestStructTopicResponse alloc]initWithData:data error:&restError];
@@ -356,10 +341,6 @@
             completeToService(nil,error);
             return ;
         }
-        
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         ScoreResultTestResponse *response = [[ScoreResultTestResponse alloc] initWithData:data error:&error];
