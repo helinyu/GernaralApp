@@ -232,9 +232,9 @@
             return ;
         }
 
-        NSError *structError = nil  ;
-        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-        NSLog(@"arr is : %@",arr);
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
         
         NSError *restError = nil;
         RestStructTopicItemResponse *response = [[RestStructTopicItemResponse alloc]initWithData:data error:&restError];

@@ -28,7 +28,6 @@
 		DC0FCD8F1C7615D300E5AF6F /* MineMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD8E1C7615D300E5AF6F /* MineMessageCenter.m */; };
 		DC0FCD931C7615F800E5AF6F /* MineBookingManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */; };
 		DC0FCD961C76227700E5AF6F /* MainIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD951C76227700E5AF6F /* MainIndex.m */; };
-		DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD981C7622B500E5AF6F /* MainController.m */; };
 		DC10FD721C7624CD004ED442 /* MainHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD711C7624CD004ED442 /* MainHomePage.m */; };
 		DC10FD771C762501004ED442 /* MainReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD761C762501004ED442 /* MainReading.m */; };
 		DC10FD7B1C762530004ED442 /* MainTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainTopic.m */; };
@@ -204,8 +203,6 @@
 		DC0FCD921C7615F800E5AF6F /* MineBookingManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineBookingManagement.m; sourceTree = "<group>"; };
 		DC0FCD941C76227700E5AF6F /* MainIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainIndex.h; sourceTree = "<group>"; };
 		DC0FCD951C76227700E5AF6F /* MainIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainIndex.m; sourceTree = "<group>"; };
-		DC0FCD971C7622B500E5AF6F /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		DC0FCD981C7622B500E5AF6F /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		DC10FD701C7624CD004ED442 /* MainHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainHomePage.h; sourceTree = "<group>"; };
 		DC10FD711C7624CD004ED442 /* MainHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainHomePage.m; sourceTree = "<group>"; };
 		DC10FD751C762501004ED442 /* MainReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainReading.h; sourceTree = "<group>"; };
@@ -1060,8 +1057,6 @@
 			isa = PBXGroup;
 			children = (
 				DC10FD6E1C76238D004ED442 /* MainIndex */,
-				DC0FCD971C7622B500E5AF6F /* MainController.h */,
-				DC0FCD981C7622B500E5AF6F /* MainController.m */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -1588,7 +1583,6 @@
 				DC6F2E6D1C96E4B600738E03 /* HomePageServiceData.m in Sources */,
 				DC3995501CB28E4500ACA64B /* UIView+FrameMethods.m in Sources */,
 				DC992DA11C46947400382DFB /* main.m in Sources */,
-				DC0FCD991C7622B500E5AF6F /* MainController.m in Sources */,
 				DCB9670F1C95C209004E3229 /* PschologyTestDetail.m in Sources */,
 				DC3995381CB24B7800ACA64B /* EntityApp.m in Sources */,
 				DC39955F1CB29A3900ACA64B /* NSString+plist.m in Sources */,
