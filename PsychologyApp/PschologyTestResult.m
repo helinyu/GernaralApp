@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *resultTitleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *resultTextView;
+
 @end
 
 @implementation PschologyTestResult

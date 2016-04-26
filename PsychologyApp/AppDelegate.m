@@ -28,7 +28,7 @@
     [UIBarButtonItem appearance].tintColor = [UIColor whiteColor];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
     [UIFont systemFontOfSize:20],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
-
+    
 //[Fabric with:@[[Crashlytics class]]];
 //设置导航栏
     
