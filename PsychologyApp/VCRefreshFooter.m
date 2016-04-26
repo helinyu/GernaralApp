@@ -10,6 +10,7 @@
 #import "AutomationTextLabel.h"
 #import "LoadOnAnimateView.h"
 
+
 @interface VCRefreshFooter()
 
 @property (weak, nonatomic) AutomationTextLabel *label;

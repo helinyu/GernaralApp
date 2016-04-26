@@ -66,7 +66,8 @@
             if (self.width > 25 || self.height > 25) {
                 _animationView.animationImages = @[[UIImage imageNamed:@"icon_common_spinning_large_0"],
                                                    [UIImage imageNamed:@"icon_common_spinning_large_1"],
-                                                   [UIImage imageNamed:@"icon_common_spinning_large_2"],
+                                                   [UIImage
+                                                    imageNamed:@"icon_common_spinning_large_2"],
                                                    [UIImage imageNamed:@"icon_common_spinning_large_3"],
                                                    [UIImage imageNamed:@"icon_common_spinning_large_4"],
                                                    [UIImage imageNamed:@"icon_common_spinning_large_5"],

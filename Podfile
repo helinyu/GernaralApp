@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'PsychologyApp' do
- pod 'AFNetworking'
+ pod 'AFNetworking’,’~> 3.0.2’
  pod 'JSONModel'
  pod 'SDWebImage'
  pod 'MJRefresh'

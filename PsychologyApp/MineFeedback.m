@@ -42,7 +42,7 @@
 }
 
 - (void)configureTextView{
-    self.textViewTopConstraint.constant = GWidth/3+HEIGHT_TEN;
+//    self.textViewTopConstraint.constant = GWidth/3+HEIGHT_TEN;
     [self.view setNeedsLayout];
 }
 
@@ -66,19 +66,19 @@
     CGFloat addImageButtonX = self.addImageButton.frame.origin.x;
 
     // add ImageView
-    UIImageView *imageView;
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(addImageButtonX, 0, GWidth/3-WIDTH_SPACE, GWidth/3)];
-        imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    imageView.userInteractionEnabled = true;
-    [imageView addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(viewLargerPicktures:)]];
-    [self.view addSubview:imageView];
-
-//    configure button
-    if ( addImageButtonX != GWidth * 2 / 3 ){
-        self.addImageButton.frame = CGRectMake(addImageButtonX+GWidth/3, 0, GWidth/3-WIDTH_SPACE, GWidth/3);
-    }else{
-        self.addImageButton.hidden = true ;
-    }
+//    UIImageView *imageView;
+//        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(addImageButtonX, 0, GWidth/3-WIDTH_SPACE, GWidth/3)];
+//        imageView.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//    imageView.userInteractionEnabled = true;
+//    [imageView addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(viewLargerPicktures:)]];
+//    [self.view addSubview:imageView];
+//
+////    configure button
+//    if ( addImageButtonX != GWidth * 2 / 3 ){
+//        self.addImageButton.frame = CGRectMake(addImageButtonX+GWidth/3, 0, GWidth/3-WIDTH_SPACE, GWidth/3);
+//    }else{
+//        self.addImageButton.hidden = true ;
+//    }
     
     [picker dismissViewControllerAnimated:true completion:nil];
 }

@@ -11,7 +11,6 @@
 		DC022B111C47DCC100D3FB61 /* FLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B101C47DCC100D3FB61 /* FLTableViewCell.m */; };
 		DC022B151C47E1A500D3FB61 /* AccountLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B141C47E1A500D3FB61 /* AccountLogin.m */; };
 		DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC022B161C47E86D00D3FB61 /* Account.storyboard */; };
-		DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DC022B1A1C48110800D3FB61 /* GMToast.m */; };
 		DC06FD8F1CB6876400C67C45 /* ReadingService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06FD8E1CB6876400C67C45 /* ReadingService.m */; };
 		DC06FD921CB688A800C67C45 /* MarriageLoveServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06FD911CB688A800C67C45 /* MarriageLoveServiceData.m */; };
 		DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0FCD641C76038F00E5AF6F /* MineSetting.m */; };
@@ -32,6 +31,9 @@
 		DC10FD771C762501004ED442 /* MainReading.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD761C762501004ED442 /* MainReading.m */; };
 		DC10FD7B1C762530004ED442 /* MainTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = DC10FD7A1C762530004ED442 /* MainTopic.m */; };
 		DC185B991C82E042001A0DD1 /* AppServiceData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC185B981C82E041001A0DD1 /* AppServiceData.m */; };
+		DC1CB5A31CCF6A9000DAE71F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1CB5A21CCF6A9000DAE71F /* SystemConfiguration.framework */; };
+		DC1CB5A51CCF6A9E00DAE71F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1CB5A41CCF6A9E00DAE71F /* MobileCoreServices.framework */; };
+		DC1CB5E71CCF8D6F00DAE71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1CB5E51CCF8D6F00DAE71F /* Main.storyboard */; };
 		DC2C07FA1CB81E4300726592 /* CommonWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C07F91CB81E4300726592 /* CommonWeb.m */; };
 		DC2C07FE1CB8219E00726592 /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2C07FD1CB8219E00726592 /* Common.storyboard */; };
 		DC2C10821CBBF577003D3FD3 /* TopicService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2C10811CBBF577003D3FD3 /* TopicService.m */; };
@@ -97,7 +99,6 @@
 		DC992DBA1C46947400382DFB /* PsychologyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DB91C46947400382DFB /* PsychologyAppTests.m */; };
 		DC992DC51C46947400382DFB /* PsychologyAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DC41C46947400382DFB /* PsychologyAppUITests.m */; };
 		DC992DE01C46A04200382DFB /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC992DDF1C46A04200382DFB /* MineController.m */; };
-		DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC992DE11C46B59E00382DFB /* Main.storyboard */; };
 		DC9A10411CB56222007CC468 /* ReadingTitleLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9A103F1CB56222007CC468 /* ReadingTitleLabelCell.m */; };
 		DC9A10421CB56222007CC468 /* ReadingTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9A10401CB56222007CC468 /* ReadingTitleLabelCell.xib */; };
 		DC9DEF061C74861500C1A1AE /* UIImageView+WebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9DEF051C74861500C1A1AE /* UIImageView+WebRequest.m */; };
@@ -170,8 +171,6 @@
 		DC022B131C47E1A500D3FB61 /* AccountLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountLogin.h; sourceTree = "<group>"; };
 		DC022B141C47E1A500D3FB61 /* AccountLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountLogin.m; sourceTree = "<group>"; };
 		DC022B161C47E86D00D3FB61 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
-		DC022B191C48110800D3FB61 /* GMToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMToast.h; sourceTree = "<group>"; };
-		DC022B1A1C48110800D3FB61 /* GMToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMToast.m; sourceTree = "<group>"; };
 		DC06FD8D1CB6876400C67C45 /* ReadingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingService.h; sourceTree = "<group>"; };
 		DC06FD8E1CB6876400C67C45 /* ReadingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingService.m; sourceTree = "<group>"; };
 		DC06FD901CB688A800C67C45 /* MarriageLoveServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarriageLoveServiceData.h; sourceTree = "<group>"; };
@@ -212,6 +211,9 @@
 		DC10FD7A1C762530004ED442 /* MainTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTopic.m; sourceTree = "<group>"; };
 		DC185B971C82E041001A0DD1 /* AppServiceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServiceData.h; sourceTree = "<group>"; };
 		DC185B981C82E041001A0DD1 /* AppServiceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServiceData.m; sourceTree = "<group>"; };
+		DC1CB5A21CCF6A9000DAE71F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC1CB5A41CCF6A9E00DAE71F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DC1CB5E61CCF8D6F00DAE71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC207FE91C564E9C0011D8C4 /* AppDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefinition.h; sourceTree = "<group>"; };
 		DC2C07F81CB81E4300726592 /* CommonWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonWeb.h; sourceTree = "<group>"; };
 		DC2C07F91CB81E4300726592 /* CommonWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonWeb.m; sourceTree = "<group>"; };
@@ -330,7 +332,6 @@
 		DC992DC61C46947400382DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC992DDE1C46A04200382DFB /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		DC992DDF1C46A04200382DFB /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
-		DC992DE21C46B59E00382DFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC9A103E1CB56222007CC468 /* ReadingTitleLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingTitleLabelCell.h; sourceTree = "<group>"; };
 		DC9A103F1CB56222007CC468 /* ReadingTitleLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingTitleLabelCell.m; sourceTree = "<group>"; };
 		DC9A10401CB56222007CC468 /* ReadingTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadingTitleLabelCell.xib; sourceTree = "<group>"; };
@@ -411,6 +412,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1CB5A51CCF6A9E00DAE71F /* MobileCoreServices.framework in Frameworks */,
+				DC1CB5A31CCF6A9000DAE71F /* SystemConfiguration.framework in Frameworks */,
 				DC7FD1D31CCB1A330082AD32 /* libxml2.2.tbd in Frameworks */,
 				DC7FD1DC1CCB21050082AD32 /* libxml2.tbd in Frameworks */,
 				DC39953E1CB24F1E00ACA64B /* libsqlite3.tbd in Frameworks */,
@@ -460,8 +463,6 @@
 			children = (
 				DC3F23AF1CCF4DD2008FD210 /* UIViewController+Navigation.h */,
 				DC3F23B01CCF4DD3008FD210 /* UIViewController+Navigation.m */,
-				DC022B191C48110800D3FB61 /* GMToast.h */,
-				DC022B1A1C48110800D3FB61 /* GMToast.m */,
 			);
 			name = "UI+externds";
 			sourceTree = "<group>";
@@ -1024,7 +1025,7 @@
 		DC992DD21C46959000382DFB /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DC992DE11C46B59E00382DFB /* Main.storyboard */,
+				DC1CB5E51CCF8D6F00DAE71F /* Main.storyboard */,
 				DC022B161C47E86D00D3FB61 /* Account.storyboard */,
 				DC0FCD661C7603AC00E5AF6F /* Mine.storyboard */,
 				DCB966FD1C9582A5004E3229 /* HomePage.storyboard */,
@@ -1267,6 +1268,8 @@
 		DF0A591797B8082647A87384 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC1CB5A41CCF6A9E00DAE71F /* MobileCoreServices.framework */,
+				DC1CB5A21CCF6A9000DAE71F /* SystemConfiguration.framework */,
 				DC7FD1DB1CCB21050082AD32 /* libxml2.tbd */,
 				DC7FD1D21CCB1A330082AD32 /* libxml2.2.tbd */,
 				DC39953D1CB24F1E00ACA64B /* libsqlite3.tbd */,
@@ -1389,11 +1392,11 @@
 				DC9A10421CB56222007CC468 /* ReadingTitleLabelCell.xib in Resources */,
 				DCFECA7D1C787AFE000A4BC9 /* 3.jpg in Resources */,
 				DCEF80D61C7B76670017DDE6 /* ConsultNewTopicCell.xib in Resources */,
-				DC992DE31C46B59E00382DFB /* Main.storyboard in Resources */,
 				DC44DC8F1CCA97CB00FC84AC /* PschologyTestDetailCell.xib in Resources */,
 				DC992DAF1C46947400382DFB /* LaunchScreen.storyboard in Resources */,
 				DCB967041C95836E004E3229 /* PschologyTestCell.xib in Resources */,
 				DC7CE3991C79D7D50067B19E /* ReadingDetailCell.xib in Resources */,
+				DC1CB5E71CCF8D6F00DAE71F /* Main.storyboard in Resources */,
 				DCFECA7C1C787AFE000A4BC9 /* 2.png in Resources */,
 				DC022B171C47E86D00D3FB61 /* Account.storyboard in Resources */,
 				DC39954D1CB28D8100ACA64B /* VCAlertView.xib in Resources */,
@@ -1522,7 +1525,6 @@
 				DC60BD421C704EB900CFDC56 /* VCViewLine.m in Sources */,
 				DCD6A03D1C8FBF4B002E9287 /* Model.m in Sources */,
 				DCB33F7B1C8086F10075FBDD /* UIColor+Helper.m in Sources */,
-				DC022B1B1C48110800D3FB61 /* GMToast.m in Sources */,
 				DC9A10411CB56222007CC468 /* ReadingTitleLabelCell.m in Sources */,
 				DCAFD6BE1CB6C7CE00E668ED /* VCRefreshFooter.m in Sources */,
 				DC0FCD651C76038F00E5AF6F /* MineSetting.m in Sources */,
@@ -1632,20 +1634,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DC1CB5E51CCF8D6F00DAE71F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC1CB5E61CCF8D6F00DAE71F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		DC992DAD1C46947400382DFB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DC992DAE1C46947400382DFB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		DC992DE11C46B59E00382DFB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC992DE21C46B59E00382DFB /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -27,7 +27,7 @@
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
 #import "VCToast.h"
-
+#import "AFNetworking.h"
 
 #define EditProfileIndexPathSection 1
 #define EditProfileIndexPathRow 0
@@ -203,7 +203,6 @@
     [self addImageAndConfigureButton:(UIButton*)sender];
 }
 
-
 - (CGFloat)checkCacheImageSize{
     CGFloat size = ([[SDImageCache sharedImageCache] getSize] /1024.0 )/1024.0 ;
     return size;
@@ -211,7 +210,6 @@
 
 //图片处理
 - (void)addImageAndConfigureButton:(UIButton*)button{
-    
     //    增加图片
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -244,15 +242,46 @@
     NSData* imageData = UIImagePNGRepresentation(tempImage);
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* documentsDirectory = [paths objectAtIndex:0];
-    // Now we get the full path to the file
     NSString* fullPathToFile = [documentsDirectory stringByAppendingPathComponent:imageName];
-    // and then we write it out
-    [imageData writeToFile:fullPathToFile atomically:NO];
+  BOOL result = [imageData writeToFile:fullPathToFile atomically:NO];
+    if (result) {
+//        [self uploadPictures:fullPathToFile];
+        [self uploadPictures:documentsDirectory withFileName:Header_Image];
+    }
 }
 
 - (NSString *)documentFolderPath
 {
     return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+}
+
+- (void)uploadPictures:(NSString*)imagePath withFileName:(NSString*)name{
+    
+   NSMutableURLRequest *requestParams = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"http://localhost/foreheard/mine/uploadHeaderImage.php" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+       [formData appendPartWithFileURL:[NSURL fileURLWithPath:imagePath] name:name fileName:@"uploadFile" mimeType:@"image/png" error:nil];
+    }
+    error:nil];
+
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionUploadTask *uploadTask;
+    uploadTask = [manager
+                  uploadTaskWithStreamedRequest:requestParams
+                  progress:^(NSProgress * _Nonnull uploadProgress) {
+                      dispatch_async(dispatch_get_main_queue(), ^{
+                          //Update the progress view
+                          [[UIProgressView new] setProgress:uploadProgress.fractionCompleted];
+                      });
+                  }
+                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                      if (error) {
+                          NSLog(@"Error: %@", error);
+                      } else {
+                          NSLog(@"%@ %@", response, responseObject);
+                          NSLog(@"上传成功");
+                      }
+                  }];
+    [uploadTask resume];
 }
 
 @end
