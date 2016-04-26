@@ -222,6 +222,25 @@
 
 @end
 
+@implementation ScoreResultTestResponse
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _title = @"";
+        _grade1 = @"";
+        _grade2 = @"";
+        _grade3 = @"";
+        _grade4 = @"";
+        _grade5 = @"";
+        _grade6 = @"";
+    }
+    return self;
+}
+
+@end
+
 @implementation RestStructUpdateResponse
 
 - (instancetype)init

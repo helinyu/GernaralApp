@@ -11,6 +11,7 @@
 @interface PschologyTestDetailCell()
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *choiceBtn;
+@property (strong,nonatomic) FLIndexPath *indexPath;
 @end
 
 @implementation PschologyTestDetailCell
@@ -23,13 +24,20 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configureCellOfDescription:(NSString*)description{
+- (void)configureCellOfDescription:(NSString*)description withNSIndexPath:(FLIndexPath*)indexpath{
+    
+    if (indexpath.hasChoice == true) {
+        [self.choiceBtn setImage:[UIImage imageNamed:@"has_choice"] forState:UIControlStateNormal];
+    }else{
+        [self.choiceBtn setImage:[UIImage imageNamed:@"no_choice"] forState:UIControlStateNormal];
+    }
     self.descriptionLabel.text = description;
+    self.indexPath = indexpath;
 }
 
 - (IBAction)onChooseClicked:(id)sender {
-    NSLog(@"clicked");
-    [self.choiceBtn setImage:[UIImage imageNamed:@"has_choice"] forState:UIControlStateNormal];
+    NSLog(@" PschologyTestDetailCell clicked");
+    [self.detailCellDelegate hasClickedCellBtnIndex:self.indexPath];
 }
 
 @end

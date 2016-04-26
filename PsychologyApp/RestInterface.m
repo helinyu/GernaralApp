@@ -8,6 +8,9 @@
 
 #import "RestInterface.h"
 #import "HostManager.h"
+#import "AFNetworking.h"
+#import <UIKit/UIKit.h>
+//#import "AFHTTPRequestOperationManager.h"
 
 @implementation RestInterface
 
@@ -298,9 +301,6 @@
             completeToService(nil,error);
             return ;
         }
-//        NSError *structError = nil  ;
-//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
-//        NSLog(@"arr is : %@",arr);
 
         NSError *restError = nil;
         CommentsOfTopicResponse *response = [[CommentsOfTopicResponse alloc] initWithData:data error:&restError];
@@ -348,6 +348,27 @@
     }];
 }
 
+//测试结果score
++ (void)invokeTestScoreResult:(ResultTestStructRequest*)request WithComplete:(void (^)(ScoreResultTestResponse *response, NSError * error))completeToService{
+    
+    [RestInterface _invokeWithUrl:@"/homePage/psychology_test/score_result.php" withRequest:request withComplete:^(NSData *data, NSError *error) {
+        if (error.code != 0) {
+            completeToService(nil,error);
+            return ;
+        }
+        
+//        NSError *structError = nil  ;
+//        NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&structError];
+//        NSLog(@"arr is : %@",arr);
+        
+        NSError *restError = nil;
+        ScoreResultTestResponse *response = [[ScoreResultTestResponse alloc] initWithData:data error:&error];
+        completeToService(response,restError);
+    }];
+}
+
+
+
 //我的页面的comment集合
 + (void)invoketopicOfMyComments:(MyCommentsStructRequest*)request  WithComplete:(void (^)(CommentsOfTopicResponse *response, NSError * error))completeToService{
     
@@ -362,6 +383,35 @@
         completeToService(response,error);
     }];
 }
+
++ (void)_invokeUploadWithUrl:(NSURL *)url withRequest:(RestStructRequest *)request withResponseCallback:(void (^)(NSString *interface, NSData* response))responseBlock {
+
+    NSMutableURLRequest *requestParams = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"http:upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileURL:[NSURL fileURLWithPath:@"http://localhost/upload_Photo/"] name:@"file" fileName:@"file.jpg" mimeType:@"image/jpeg" error:nil];
+        
+    } error:nil];
+    
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionUploadTask *uploadTask;
+    uploadTask = [manager
+                  uploadTaskWithStreamedRequest:requestParams
+                  progress:^(NSProgress * _Nonnull uploadProgress) {
+                      dispatch_async(dispatch_get_main_queue(), ^{
+                          //Update the progress view
+                          [[UIProgressView new] setProgress:uploadProgress.fractionCompleted];
+                      });
+                  }
+                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                      if (error) {
+                          NSLog(@"Error: %@", error);
+                      } else {
+                          NSLog(@"%@ %@", response, responseObject);
+                      }
+                  }];
+        [uploadTask resume];
+}
+
 
 @end
 

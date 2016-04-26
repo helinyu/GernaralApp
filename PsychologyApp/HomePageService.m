@@ -89,7 +89,44 @@
         }];
         
     }];
-    
 }
+
+- (void)requestScoreResultByTitle:(NSString *)title WithComplete:(void (^)(PschologyScoreResultServiceData *serviceData, NSError *error ))completeToViewData{
+    ResultTestStructRequest *request = [ResultTestStructRequest new];
+    request.title = title;
+    
+    [RestInterface invokeTestScoreResult:request WithComplete:^(ScoreResultTestResponse *response, NSError *error) {
+        if (error != nil) {
+            completeToViewData(nil,error);
+        }
+        PschologyScoreResultServiceData * resultServiceData = [PschologyScoreResultServiceData new];
+        resultServiceData.title = response.title;
+        resultServiceData.grade0 = response.grade0;
+        resultServiceData.grade1 = response.grade1;
+        resultServiceData.grade2 = response.grade2;
+        resultServiceData.grade3 = response.grade3;
+        resultServiceData.grade4 = response.grade4;
+        resultServiceData.grade5 = response.grade5;
+        resultServiceData.grade6 = response.grade6;
+        completeToViewData(resultServiceData,nil);
+    }];
+    
+//    ResultTestStructRequest *request = [ResultTestStructRequest new];
+//           [RestInterface invokeTestResult:request WithComplete:^(ScoreResultTestResponse *response, NSError *error) {
+//            
+//            if (error != nil) {
+//                completeToViewData(nil,error);
+//            }
+//            
+//            PschologyScoreResultServiceData * resultServiceData = [PschologyScoreResultServiceData new];
+//               
+////            resultServiceData.result_title = response.result_title;
+////            resultServiceData.result_text = response.result_text;
+//            completeToViewData(resultServiceData,nil);
+//        }];
+}
+
+
+
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface PschologyTestResult : UIViewController
-
+- (void)deliverGradeScore:(NSInteger)score withTitle:(NSString *)title;
 @end

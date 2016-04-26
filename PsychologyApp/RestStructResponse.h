@@ -77,6 +77,17 @@
 @property (nonatomic,strong) NSString *result_text;
 @end
 
+@interface ScoreResultTestResponse : RestStructResponse
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *grade0;
+@property (nonatomic,strong) NSString *grade1;
+@property (nonatomic,strong) NSString *grade2;
+@property (nonatomic,strong) NSString *grade3;
+@property (nonatomic,strong) NSString *grade4;
+@property (nonatomic,strong) NSString *grade5;
+@property (nonatomic,strong) NSString *grade6;
+@end
+
 //update
 @interface RestStructUpdateResponse : RestStructResponse
 @property (strong,nonatomic) NSString *version;

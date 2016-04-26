@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLIndexPath.h"
+
+
+@protocol PschologyTestDetailCellDelegate <NSObject>
+@optional
+- (void)hasClickedCellBtnIndex:(FLIndexPath*)indexpath;
+@end
 
 @interface PschologyTestDetailCell : UITableViewCell
-- (void)configureCellOfDescription:(NSString*)description;
+@property (nonatomic,weak) id<PschologyTestDetailCellDelegate> detailCellDelegate;
+- (void)configureCellOfDescription:(NSString*)description withNSIndexPath:(FLIndexPath*)indexpath;
 @end

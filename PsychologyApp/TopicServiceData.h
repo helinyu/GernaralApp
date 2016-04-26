@@ -23,7 +23,7 @@
 @end
 @interface TopicServiceData : ServiceData
 @property (nonatomic,assign) NSInteger number;
-@property (nonatomic,strong) NSMutableArray <TopicItemServiceData>* topics;
+@property (nonatomic,strong) NSMutableArray<TopicItemServiceData>* topics;
 @end
 
 //创建评论的结果

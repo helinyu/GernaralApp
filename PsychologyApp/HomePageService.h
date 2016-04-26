@@ -25,4 +25,6 @@
 //测试结果
 - (void)requestResultWithtitle:(NSString *)title WithComplete:(void (^)(PschologyTestResultServiceData *serviceData, NSError *error ))completeToViewData;
 
+//测试结果 grade
+- (void)requestScoreResultByTitle:(NSString *)title WithComplete:(void (^)(PschologyScoreResultServiceData *serviceData, NSError *error ))completeToViewData;
 @end

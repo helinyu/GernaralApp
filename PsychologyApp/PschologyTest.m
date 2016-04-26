@@ -22,8 +22,12 @@
 
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PschologyTestCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([PschologyTestCell class])];
 
+//    [self loadTestCellData];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadTestCellData];
-    
 }
 
 - (void)loadTestCellData{
