@@ -10,7 +10,7 @@
 #import "UISwitch+On.h"
 #import "NSDate+NSString.h"
 
-CGFloat const backLocalTimeInterval3 = 24*60*60;
+CGFloat const backLocalTimeInterval3 = 5;
 
 @implementation LocalPushService
 - (void)scheduleBackActivity {

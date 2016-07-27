@@ -16,14 +16,13 @@
 
 @interface MainTopic ()<UITableViewDataSource,UITableViewDelegate,QAMainCellDelegate>
 {
-       CGFloat _cellHeight;
+    CGFloat _cellHeight;
     TopicServiceData *_topicData ;
     NSMutableArray<TopicItemServiceData> *_tmpServiceData ;
     TopicItemServiceData *_topicItemData;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-
 @end
 
 @implementation MainTopic
@@ -80,8 +79,10 @@
     _tmpServiceData = _topicData.topics;
     _topicItemData = _tmpServiceData[indexPath.row];
     
+    double time = [_topicItemData.time doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
 //    这里可以优化
-    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:_topicItemData.time withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withCommentsIndex:_topicItemData.topic_id];
+    CGFloat cellHeight = [cell setHeaderImageViewText:_topicItemData.headerImageUrl withTittleText:_topicItemData.owner withTimeText:[NSString stringWithFormat:@"%@",date] withMainTopicText:_topicItemData.theme  withLocationText:_topicItemData.location withPriceBtn:_topicItemData.praiseNum withCommentsIndex:_topicItemData.topic_id];
     _cellHeight = cellHeight;
     cell.mainCellDelegate = self;
     return cell;
@@ -99,7 +100,7 @@
 
 - (IBAction)onCreateTopicClicked:(id)sender {
     NSLog(@"创建话题");
-//    BbsArticleRead 闺蜜圈
+//
     CreateTopic *newTopic = [[UIStoryboard storyboardWithName:@"Topic" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CreateTopic class])];
     [self.navigationController pushViewController:newTopic animated:true];
 }

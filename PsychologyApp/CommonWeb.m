@@ -12,7 +12,6 @@
 #import "XPathQuery.h"
 #import "UIImageView+WebRequest.h"
 
-
 NSInteger titleIndex = 2;
 NSInteger sourceIndex = 5;
 NSInteger timeIndex = 7;
@@ -29,6 +28,8 @@ NSInteger viewIndex = 9;
 #define Article_Width [[UIScreen mainScreen] bounds].size.width - Article_to_Edge_Constraint * 2
 #define View_height_Constraint 5
 
+
+
 //label height of font large
 #define Height_Of_LabelALine_Of_10 11.93359375
 #define Height_Of_LabelALine_Of_12 14.3203125
@@ -37,10 +38,15 @@ NSInteger viewIndex = 9;
 #define Height_Of_LabelALine_Of_18 21.48046875
 
 @interface CommonWeb ()
+{
+  BOOL _switchOn;
+}
 
 @property (nonatomic,strong) NSString *articleTitle;
 @property (nonatomic,strong) NSString *articleLocation;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 
 @end
 
@@ -55,6 +61,13 @@ NSInteger viewIndex = 9;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+//    _switchOn = true;
+//    
+//    if (_switchOn) {
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:pageHost]]];
+//        self.scrollView.hidden = true;
+//        return ;
+//    }
     
     CGFloat ControlBeginConstraint = 10.0;
     

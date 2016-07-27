@@ -65,7 +65,7 @@
     request.theme = theme;
     request.owner = owner;
     if (location == nil) {
-        request.location = @"暂时无法获取到位置";
+        request.location = @"广东 深圳";
     }else{
         request.location = location;
     }

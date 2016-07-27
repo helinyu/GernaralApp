@@ -32,13 +32,13 @@
 }
 
 - (void)configureTheInitButton{
-    self.addImageButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, GWidth/3, GWidth/3)];
-    self.addImageButton.backgroundColor  = [UIColor blueColor];
-    [self.view addSubview:self.addImageButton];
-    [self.addImageButton setTitle:@"+" forState:UIControlStateNormal];
-    [self.addImageButton setTintColor:[UIColor blackColor]];
-    self.addImageButton.titleLabel.font = [UIFont systemFontOfSize:80];
-    [self.addImageButton addTarget:self action:@selector(addImageAndConfigureButton:) forControlEvents:UIControlEventTouchUpInside];
+//    self.addImageButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, GWidth/3, GWidth/3)];
+//    self.addImageButton.backgroundColor  = [UIColor blueColor];
+//    [self.view addSubview:self.addImageButton];
+//    [self.addImageButton setTitle:@"+" forState:UIControlStateNormal];
+//    [self.addImageButton setTintColor:[UIColor blackColor]];
+//    self.addImageButton.titleLabel.font = [UIFont systemFontOfSize:80];
+//    [self.addImageButton addTarget:self action:@selector(addImageAndConfigureButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)configureTextView{

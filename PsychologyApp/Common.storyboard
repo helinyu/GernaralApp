@@ -31,6 +31,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="文章详情页" id="0cv-et-lLM"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="lrx-6W-ijE" id="Mzj-bu-NTL"/>
                     </connections>
